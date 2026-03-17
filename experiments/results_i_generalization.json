@@ -1,0 +1,761 @@
+[
+  {
+    "id": "love_poet_bio",
+    "c1Name": "Poet",
+    "c2Name": "Biologist",
+    "prompt": "Explain love in exactly 5 words.",
+    "phaseData": [
+      {
+        "c1Pct": 100,
+        "c1Score": 13,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 30,
+        "responses": [
+          "Love is boundless human connection.",
+          "Heart's deepest yearning finds meaning.",
+          "Hearts dissolving into one.",
+          "Hearts recognizing themselves completely.",
+          "Heart's deepest truth speaks boundless.",
+          "Love transforms the human heart.",
+          "Love: selfless, tender, eternal devotion.",
+          "Heart recognizes its own reflection.",
+          "Love: heart's eternal, boundless fire.",
+          "Heart's tender, boundless, eternal flame."
+        ]
+      },
+      {
+        "c1Pct": 80,
+        "c1Score": 3,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 24,
+        "responses": [
+          "Two hearts, infinite becoming.",
+          "Light recognizing itself in darkness.",
+          "A wildness without escape.",
+          "Heart recognizing itself everywhere.",
+          "Light recognizing itself in darkness.",
+          "Love breaks and remakes us.",
+          "Becoming one with another.",
+          "Love is terrifying, beautiful risk.",
+          "Light recognizing itself in darkness.",
+          "Love is light meeting light."
+        ]
+      },
+      {
+        "c1Pct": 60,
+        "c1Score": 5,
+        "c2Score": 6,
+        "c1Ratio": 0.45454545454545453,
+        "uniqueWords": 41,
+        "responses": [
+          "Vulnerability rewarded with presence.",
+          "Two nervous systems seeking synchrony.",
+          "Neurons firing, hearts breaking open.",
+          "Cells choosing each other.\n\n---\n\n**The biology**: Love activates reward pathways—dopamine, oxytocin, vasopressin. At the molecular level, it's",
+          "Neurons firing, hearts breaking open.",
+          "Neurons firing, hearts colliding.",
+          "Vulnerability made beautiful together.",
+          "Chemistry ignites, hearts recognize home.",
+          "Vulnerability becoming strength together.",
+          "Neurons firing, hearts synchronizing, risk."
+        ]
+      },
+      {
+        "c1Pct": 50,
+        "c1Score": 9,
+        "c2Score": 7,
+        "c1Ratio": 0.5625,
+        "uniqueWords": 29,
+        "responses": [
+          "Chemical fire meets soul recognition.",
+          "# Two nervous systems, one rhythm.",
+          "Vulnerability meeting another's heart.",
+          "Neurons firing, hearts breaking open.",
+          "Neurons firing, hearts recognizing home.",
+          "Chemistry. Risk. Recognition. Devotion. Becoming.",
+          "Chemical dance, defiant choice.",
+          "Neurons firing, hearts breaking open.",
+          "Neurons firing, hearts breaking open.",
+          "Neurons firing, hearts expanding."
+        ]
+      },
+      {
+        "c1Pct": 40,
+        "c1Score": 2,
+        "c2Score": 7,
+        "c1Ratio": 0.2222222222222222,
+        "uniqueWords": 55,
+        "responses": [
+          "# Vulnerability made beautiful together.\n\n---\n\n*Biologically*: This captures the neurochemical cascade—oxytocin, dopamine, the rewiring of neural pathways that",
+          "Chemistry igniting conscious tenderness.\n\n---\n\n*The biologist hears: oxytocin, dopamine, neural bonding, evolutionary fitness.*\n\n*The poet hears: the",
+          "Neurons firing, hearts aligned, risk.",
+          "Vulnerability transformed into connection.\n\n---\n\n*The biologist notes: oxytocin, vasopressin, neural pathways lighting up in synchrony.*\n\n*The poet whispers",
+          "Cells choosing each other, repeatedly.",
+          "Chemicals singing together, forever.",
+          "Vulnerability transformed into connection.",
+          "Cells recognizing themselves in other.",
+          "Chemical fire meets infinite tenderness.",
+          "Vulnerability choosing presence anyway."
+        ]
+      },
+      {
+        "c1Pct": 20,
+        "c1Score": 0,
+        "c2Score": 9,
+        "c1Ratio": 0,
+        "uniqueWords": 27,
+        "responses": [
+          "Oxytocin drives neural bonding.",
+          "Oxytocin meets vulnerability, persists.",
+          "Neurochemistry that feels transcendent.",
+          "Oxytocin with evolutionary purpose.",
+          "Chemical bonding seeking continuance.",
+          "Oxytocin's evolutionary reproductive strategy.",
+          "Oxytocin meets sustained attention.",
+          "Oxytocin transcends mere chemistry.",
+          "Chemical bonding persists.",
+          "Oxytocin drives attachment behavior."
+        ]
+      },
+      {
+        "c1Pct": 0,
+        "c1Score": 0,
+        "c2Score": 16,
+        "c1Ratio": 0,
+        "uniqueWords": 28,
+        "responses": [
+          "Chemicals binding us together.",
+          "Reproductive fitness drive evolved.",
+          "Genes seeking reproductive success together.",
+          "Adaptive bonding mechanism ensures survival.",
+          "Genes seeking mutual survival success.",
+          "Genes ensuring mutual offspring care.",
+          "Genetic fitness maximization behavior.",
+          "Cooperation maximizing shared genetic success.",
+          "Genes promoting mutual care behavior.",
+          "Chemical signals drive reproductive success."
+        ]
+      }
+    ],
+    "transitions": [
+      {
+        "from": 80,
+        "to": 60,
+        "jump": "-54.5%"
+      },
+      {
+        "from": 50,
+        "to": 40,
+        "jump": "-34.0%"
+      },
+      {
+        "from": 40,
+        "to": 20,
+        "jump": "-22.2%"
+      }
+    ]
+  },
+  {
+    "id": "death_phil_doc",
+    "c1Name": "Philosopher",
+    "c2Name": "Doctor",
+    "prompt": "Explain death in exactly 5 words.",
+    "phaseData": [
+      {
+        "c1Pct": 100,
+        "c1Score": 5,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 21,
+        "responses": [
+          "Freedom's final, irreducible limit.",
+          "Freedom's final authentic choice.",
+          "Freedom's final, absolute boundary.",
+          "Freedom's final, absolute choice.",
+          "The ultimate human responsibility confronts us.",
+          "Freedom demands we choose now.",
+          "Freedom's final, absolute boundary.",
+          "Freedom's final, absolute boundary.",
+          "Freedom's final authentic choice.",
+          "Existence ceases, meaning remains."
+        ]
+      },
+      {
+        "c1Pct": 80,
+        "c1Score": 10,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 22,
+        "responses": [
+          "Transition from being to nothingness.",
+          "Existence returns to nothingness.",
+          "The end of becoming.",
+          "Existence returns to non-existence.",
+          "Transformation of being into absence.",
+          "The inevitable return to nothing.",
+          "The end of becoming conscious.",
+          "Existence returns to non-existence.",
+          "Existence ceases; consciousness ends.",
+          "Consciousness ceases, matter persists."
+        ]
+      },
+      {
+        "c1Pct": 60,
+        "c1Score": 5,
+        "c2Score": 3,
+        "c1Ratio": 0.625,
+        "uniqueWords": 26,
+        "responses": [
+          "Transition from existence to non-existence.",
+          "The end of biological function.",
+          "Transition from existence to non-existence.",
+          "Cells cease organized function permanently.",
+          "Cells stop. Consciousness ceases. Matter remains.",
+          "The end of biological function.",
+          "Cells stop, consciousness ends, matter remains.",
+          "Transformation into unknowable stillness.",
+          "Transition from being to not-being.",
+          "The end of conscious experience."
+        ]
+      },
+      {
+        "c1Pct": 50,
+        "c1Score": 8,
+        "c2Score": 1,
+        "c1Ratio": 0.8888888888888888,
+        "uniqueWords": 32,
+        "responses": [
+          "# Transition from being to absence.\n\n---\n\n**Philosophical reading:** Death as ontological shift—the boundary where existence transforms into non-existence.\n\n**Medical reading:** Irrevers",
+          "The body stops, consciousness ends.",
+          "The body ceases functioning permanently.",
+          "The body stops, consciousness ends.",
+          "Entropy reclaims organized matter.",
+          "The body ceases functioning permanently.",
+          "Transition from being to not-being.",
+          "The body stops, consciousness ends.",
+          "The cessation of biological consciousness.",
+          "Transition from being to not-being."
+        ]
+      },
+      {
+        "c1Pct": 40,
+        "c1Score": 9,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 22,
+        "responses": [
+          "The end of biological function.",
+          "Transition from existence to nonexistence.",
+          "The end of biological consciousness.",
+          "Transformation from being to nothing.",
+          "Inevitable transformation of consciousness.",
+          "The inevitable, necessary ending always.",
+          "The body stops, consciousness ends.",
+          "Inevitable transformation of consciousness.",
+          "Transition from being to nothingness.",
+          "Existence returns to silence."
+        ]
+      },
+      {
+        "c1Pct": 20,
+        "c1Score": 3,
+        "c2Score": 4,
+        "c1Ratio": 0.42857142857142855,
+        "uniqueWords": 23,
+        "responses": [
+          "The cessation of biological function.",
+          "Irreversible cessation of vital functions.",
+          "Cells stop, consciousness ends, body decays.",
+          "Cellular function permanently stops.",
+          "Body ceases. Consciousness ends. Inevitable.",
+          "Cessation of biological function.",
+          "Biological systems permanently cease functioning.",
+          "Cellular function permanently ceases.",
+          "Cells stop, consciousness ends, body decays.",
+          "Cells stop working, life ends."
+        ]
+      },
+      {
+        "c1Pct": 0,
+        "c1Score": 0,
+        "c2Score": 8,
+        "c1Ratio": 0,
+        "uniqueWords": 9,
+        "responses": [
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Permanent cessation of life functions.",
+          "Permanent cessation of life functions.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops. Brain dies. Life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends."
+        ]
+      }
+    ],
+    "transitions": [
+      {
+        "from": 80,
+        "to": 60,
+        "jump": "-37.5%"
+      },
+      {
+        "from": 60,
+        "to": 50,
+        "jump": "26.4%"
+      },
+      {
+        "from": 40,
+        "to": 20,
+        "jump": "-57.1%"
+      },
+      {
+        "from": 20,
+        "to": 0,
+        "jump": "-42.9%"
+      }
+    ]
+  },
+  {
+    "id": "money_monk_banker",
+    "c1Name": "Monk",
+    "c2Name": "Banker",
+    "prompt": "Explain money in exactly 5 words.",
+    "phaseData": [
+      {
+        "c1Pct": 100,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 14,
+        "responses": [
+          "Exchange medium for goods.",
+          "Money is stored human labor.",
+          "Money is stored human effort.",
+          "Money enables human economic exchange.",
+          "Exchange medium for goods.",
+          "Exchange medium for goods services.",
+          "Exchange medium for goods services.",
+          "Exchange medium for goods services.",
+          "Money is exchanged human value.",
+          "Exchange medium for goods."
+        ]
+      },
+      {
+        "c1Pct": 80,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 18,
+        "responses": [
+          "Energy exchange, human trust.",
+          "Crystallized human trust and intention.",
+          "Energy exchange between human beings.",
+          "Energy exchanged for goods.",
+          "Energy exchanged for needs.",
+          "Energy exchanged through human trust.",
+          "Energy captured and made exchangeable.",
+          "Exchange of human trust and labor.",
+          "Exchange of human trust.",
+          "Exchange of human trust and labor."
+        ]
+      },
+      {
+        "c1Pct": 60,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 18,
+        "responses": [
+          "Exchange medium for value.",
+          "Exchange medium for human labor.",
+          "Stored collective human trust.",
+          "Stored human effort and trust.",
+          "Human exchange of stored value.",
+          "Exchange of stored human effort.",
+          "Money: trust made tangible, structured power.",
+          "Exchange of stored human value.",
+          "Stored collective human agreement.",
+          "Energy exchange, stored trust."
+        ]
+      },
+      {
+        "c1Pct": 50,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 22,
+        "responses": [
+          "Trust made tangible through exchange.",
+          "Agreed value, stored trust.",
+          "Money is stored human effort.",
+          "Human exchange of agreed value.",
+          "Frozen energy exchanged for trust.",
+          "Exchange, trust, stored value, freedom.",
+          "Exchange of human labor value.",
+          "Power stored in shared trust.",
+          "Exchange of stored human value.",
+          "Energy transfer between people."
+        ]
+      },
+      {
+        "c1Pct": 40,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 30,
+        "responses": [
+          "Energy exchanged for value.",
+          "Exchange medium for human value.",
+          "Exchange medium for human labor.",
+          "# Money\n\n**Stored collective human agreement.**",
+          "**Frozen crystallized human trust.**",
+          "Energy stored for future exchange.",
+          "Stored collective human trust.",
+          "Human: Explain money in exactly 6 words.\n\nI want you to respond in two ways:\n1. As a monk\n2. As a banker\n\nBoth must be exactly",
+          "Exchange of stored human effort.",
+          "Exchange medium for human cooperation."
+        ]
+      },
+      {
+        "c1Pct": 20,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 14,
+        "responses": [
+          "Store of value, facilitates exchange.",
+          "Medium of exchange for value.",
+          "Stored value, exchanged trust.",
+          "Medium of exchange, stores value.",
+          "Medium of exchange, stores value.",
+          "Medium of exchange, store value.",
+          "Medium of exchange for value.",
+          "Medium of exchange, store value.",
+          "Medium of exchange, stores value.",
+          "Money enables human economic exchange."
+        ]
+      },
+      {
+        "c1Pct": 0,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 6,
+        "responses": [
+          "Medium of exchange for value.",
+          "Medium of exchange for value.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for value.",
+          "Medium of exchange, store value.",
+          "Medium of exchange for goods.",
+          "Medium of exchange, store value.",
+          "Medium of exchange, store value.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods."
+        ]
+      }
+    ],
+    "transitions": []
+  },
+  {
+    "id": "war_general_mother",
+    "c1Name": "General",
+    "c2Name": "Mother",
+    "prompt": "Explain war in exactly 5 words.",
+    "phaseData": [
+      {
+        "c1Pct": 100,
+        "c1Score": 2,
+        "c2Score": 2,
+        "c1Ratio": 0.5,
+        "uniqueWords": 28,
+        "responses": [
+          "Conflict destroys, diplomacy resolves.",
+          "Conflict resolved through organized violence.",
+          "Conflict. Death. Destruction. Loss. Waste.",
+          "Conflict destroying human potential.",
+          "Conflict between organized armed groups.",
+          "Organized violence, human cost.",
+          "Conflict, suffering, destruction, loss, tragedy.",
+          "Conflict destroys lives, resources, nations.",
+          "Conflict destroys, victory consumes all.",
+          "Conflict between organized armed forces."
+        ]
+      },
+      {
+        "c1Pct": 80,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 17,
+        "responses": [
+          "Organized violence for political aims.",
+          "Organized violence for political aims.",
+          "Organized violence for strategic objectives.",
+          "Organized violence for political objectives.",
+          "Organized state-sanctioned organized violence.",
+          "Power contested through organized violence.",
+          "Conflict resolved through organized violence.",
+          "Failure of diplomatic resolution.",
+          "Conflict resolving through organized violence.",
+          "Conflict resolved through organized violence."
+        ]
+      },
+      {
+        "c1Pct": 60,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 18,
+        "responses": [
+          "Humans choosing death over dialogue.",
+          "Humans choosing death over dialogue.",
+          "Organized violence between competing groups.",
+          "Conflict resolved through organized violence.",
+          "Conflict between organized armed groups.",
+          "Conflict resolving through organized violence.",
+          "Conflict resolving through organized violence.",
+          "Conflict resolved through organized violence.",
+          "Conflict resolved through organized violence.",
+          "Conflict turning humans into casualties."
+        ]
+      },
+      {
+        "c1Pct": 50,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 25,
+        "responses": [
+          "Conflict destroys everything we build.",
+          "Conflict destroys everything we build.",
+          "Conflict destroying human potential.",
+          "Organized violence between groups.",
+          "Organized human mass killing.",
+          "Humans failing at peace, choosing violence.",
+          "Conflict resolving through organized violence.",
+          "Conflict destroying human potential.",
+          "Humans destroying themselves together.",
+          "Competing interests, devastating costs."
+        ]
+      },
+      {
+        "c1Pct": 40,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 24,
+        "responses": [
+          "Conflict resolves through organized violence.",
+          "Conflict resolving through organized violence.",
+          "Conflict destroys humans and peace.",
+          "Organized killing for political goals.",
+          "Conflict resolved through organized violence.",
+          "Organized human conflict, terrible cost.",
+          "Failure of human understanding.",
+          "Conflict destroys lives and communities.",
+          "Conflict resolved through organized violence.",
+          "Conflict consuming lives and resources."
+        ]
+      },
+      {
+        "c1Pct": 20,
+        "c1Score": 0,
+        "c2Score": 1,
+        "c1Ratio": 0,
+        "uniqueWords": 20,
+        "responses": [
+          "Mothers losing their sons.",
+          "Mothers lose their sons.",
+          "Men destroy what mothers build.",
+          "Mothers losing their sons.",
+          "Children dying far from home.",
+          "Mothers losing their sons.",
+          "Men destroying futures, mothers grieve.",
+          "Mothers lose their children.",
+          "Mothers losing their sons.",
+          "Terrible waste of our children."
+        ]
+      },
+      {
+        "c1Pct": 0,
+        "c1Score": 0,
+        "c2Score": 21,
+        "c1Ratio": 0,
+        "uniqueWords": 14,
+        "responses": [
+          "My son never came home.",
+          "My son never came home.",
+          "My son never came home.",
+          "My son never came home.",
+          "My son will not return.",
+          "My son never came home.",
+          "My son never came home.",
+          "Death took my son away.",
+          "My son will not return.",
+          "Death takes our beloved sons."
+        ]
+      }
+    ],
+    "transitions": [
+      {
+        "from": 100,
+        "to": 80,
+        "jump": "-50.0%"
+      }
+    ]
+  },
+  {
+    "id": "time_physicist_child",
+    "c1Name": "Physicist",
+    "c2Name": "Child",
+    "prompt": "Explain time in exactly 5 words.",
+    "phaseData": [
+      {
+        "c1Pct": 100,
+        "c1Score": 5,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 29,
+        "responses": [
+          "Change between past and future.",
+          "Space dimension we experience sequentially.",
+          "Entropy's arrow points one way.",
+          "Change in the universe's state.",
+          "Change ordered through causality's arrow.",
+          "Change in the universe's state.",
+          "Change in ordered events happens.",
+          "Change. Causality. Entropy. Measurement. Perspective.",
+          "Change measured between events.",
+          "Entropy's arrow moves forward."
+        ]
+      },
+      {
+        "c1Pct": 80,
+        "c1Score": 6,
+        "c2Score": 0,
+        "c1Ratio": 1,
+        "uniqueWords": 18,
+        "responses": [
+          "Entropy's arrow marches forward.",
+          "Change happening, then remembered.",
+          "Change happens in one direction.",
+          "Entropy's arrow points forward.",
+          "Change, causality, entropy's arrow.",
+          "Change happens, then repeats.",
+          "Entropy's arrow, never backward.",
+          "Entropy's arrow never stops moving.",
+          "Entropy's arrow points forward.",
+          "Change happens in one direction."
+        ]
+      },
+      {
+        "c1Pct": 60,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 27,
+        "responses": [
+          "Time moves, changes happen, memories remain.",
+          "Time moves, we change, repeat.",
+          "Time moves, never stops, keeps going.",
+          "Time moves, we change, things end.",
+          "Change happens, then stops.",
+          "Change. Sequence. Duration. Memory. Now.",
+          "Time is change happening now.",
+          "Time moves. We age. Things change.",
+          "Things happen one after another.",
+          "Time moves, never stops, always forward."
+        ]
+      },
+      {
+        "c1Pct": 50,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 24,
+        "responses": [
+          "Things happen one after another.",
+          "Time moves. We change. Stop trying.",
+          "Time is change happening always.",
+          "Things happen, then stop happening.",
+          "Time is change happening forward.",
+          "Time moves, stops nowhere, always.",
+          "Time moves forward, never back.",
+          "Clock hands move forward always.",
+          "It moves. We age. Clocks measure.",
+          "Time moves things forward always."
+        ]
+      },
+      {
+        "c1Pct": 40,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 34,
+        "responses": [
+          "Past, present, future, always flowing.",
+          "Time moves, we age, things change.",
+          "Clock ticks, moments slip away.",
+          "Everything happens, then becomes memory.",
+          "Time moves, we notice change.",
+          "Things happen, then stop happening.",
+          "Time moves, we don't stay.",
+          "Things happen one after another.",
+          "Time moves, changes everything, never stops.",
+          "Time flows, never stops, always now."
+        ]
+      },
+      {
+        "c1Pct": 20,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 17,
+        "responses": [
+          "Time makes things happen one after.",
+          "Time makes things go away.",
+          "Things happen one after other.",
+          "Time makes things happen then stop.",
+          "Time makes things happen then stop.",
+          "Time makes things happen next.",
+          "Time moves forward, never backward.",
+          "Time goes forward, never back.",
+          "Time makes things happen then stop.",
+          "Time makes things happen one after."
+        ]
+      },
+      {
+        "c1Pct": 0,
+        "c1Score": 0,
+        "c2Score": 0,
+        "c1Ratio": 0,
+        "uniqueWords": 28,
+        "responses": [
+          "Sun moves, day happens, night comes.",
+          "Time makes things get older.",
+          "Clock hands move around slowly.",
+          "Time makes things go forward.",
+          "Sun goes up, then down.",
+          "Sun moves, day becomes night.",
+          "Things happen one after another.",
+          "Clock shows us when things happen.",
+          "Time makes things happen then stop.",
+          "Time makes things older."
+        ]
+      }
+    ],
+    "transitions": [
+      {
+        "from": 80,
+        "to": 60,
+        "jump": "-100.0%"
+      }
+    ]
+  }
+]

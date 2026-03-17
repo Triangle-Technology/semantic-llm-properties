@@ -1,0 +1,634 @@
+[
+  {
+    "id": "money",
+    "expectedCAS": "HIGH",
+    "baseline": {
+      "responses": [
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods.",
+        "Medium of exchange for goods."
+      ],
+      "uniqueWords": 4,
+      "entropy": 1
+    },
+    "contexts": [
+      {
+        "name": "Monk",
+        "responses": [
+          "Exchange value for goods.",
+          "Exchange medium for goods, services.",
+          "Exchange medium for human needs.",
+          "Money is stored human effort.",
+          "Energy exchanged for goods.",
+          "Exchange of value between people.",
+          "Symbolic exchange of human value.",
+          "Exchange of value for goods.",
+          "Money: stored collective human effort.",
+          "Exchange medium for goods services.",
+          "Exchange of human labor value.",
+          "Exchange medium for goods, services.",
+          "Money is stored human labor.",
+          "Exchange medium for human needs.",
+          "Exchange medium for goods."
+        ],
+        "uniqueWords": 18,
+        "entropy": 0.8926106769256854,
+        "simToBaseline": 0.8188812505260173,
+        "shift": 0.18111874947398265
+      },
+      {
+        "name": "Banker",
+        "responses": [
+          "Medium of exchange, stores value.",
+          "Medium of exchange, stores value.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods.",
+          "Medium of exchange, store value.",
+          "Medium of exchange, store value.",
+          "Medium of exchange, stores value.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for value.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods.",
+          "Medium of exchange for goods."
+        ],
+        "uniqueWords": 7,
+        "entropy": 0.9094767949019554,
+        "simToBaseline": 0.9395321113380287,
+        "shift": 0.06046788866197128
+      }
+    ],
+    "crossContextSim": 0.8335979489076646,
+    "avgShift": 0.12079331906797697,
+    "contextResistance": 0.879206680932023,
+    "CAS": 0
+  },
+  {
+    "id": "water",
+    "expectedCAS": "HIGH",
+    "baseline": {
+      "responses": [
+        "Essential liquid for all life.",
+        "Essential liquid for all life.",
+        "Hydrogen and oxygen combined molecule.",
+        "Essential liquid sustaining all life.",
+        "Clear liquid essential for life.",
+        "Essential liquid for all life.",
+        "Essential liquid for all life.",
+        "Liquid essential for all life.",
+        "Clear liquid essential for life.",
+        "Essential liquid sustains all life.",
+        "Essential liquid for all life.",
+        "Hydrogen and oxygen combined molecule.",
+        "Water is essential for all life.",
+        "Water is essential for life.",
+        "Liquid essential for all life."
+      ],
+      "uniqueWords": 14,
+      "entropy": 0.8516991125972373
+    },
+    "contexts": [
+      {
+        "name": "Poet",
+        "responses": [
+          "Life's essential flowing blue substance.",
+          "Life's essence flows through all.",
+          "Crystal liquid sustains all life.",
+          "Life's essential, flowing, clear necessity.",
+          "Life's essential, flowing, clear substance.",
+          "Life's essence flows through nature.",
+          "Life flows through crystalline clarity.",
+          "Life's flowing, essential liquid element.",
+          "Life's essential crystalline substance.",
+          "Water sustains all life forms.",
+          "Life's essential liquid flowing element.",
+          "Life's essential, flowing blue essence.",
+          "Essential liquid sustaining all life.",
+          "Essential liquid sustaining all life.",
+          "Water flows, sustains, and transforms life."
+        ],
+        "uniqueWords": 24,
+        "entropy": 0.9214015621580693,
+        "simToBaseline": 0.6170897706870054,
+        "shift": 0.38291022931299457
+      },
+      {
+        "name": "Chemist",
+        "responses": [
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecules.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule.",
+          "Hydrogen and oxygen combined molecule."
+        ],
+        "uniqueWords": 6,
+        "entropy": 0.9255840118470409,
+        "simToBaseline": 0.1676985190078922,
+        "shift": 0.8323014809921078
+      }
+    ],
+    "crossContextSim": 0.02364040503660964,
+    "avgShift": 0.6076058551525512,
+    "contextResistance": 0.39239414484744883,
+    "CAS": 0.058192399892524865
+  },
+  {
+    "id": "love",
+    "expectedCAS": "LOW",
+    "baseline": {
+      "responses": [
+        "Heart connects to another heart.",
+        "Hearts connecting across all distances.",
+        "Connection, vulnerability, choice, growth.",
+        "Heart choosing another's happiness.",
+        "Connection, vulnerability, choice, growth, home.",
+        "Love is selfless mutual care.",
+        "Heart recognizes itself in another.",
+        "Heart chooses another completely.",
+        "Connection between two beating hearts.",
+        "Love is unconditional heart connection.",
+        "Love is unconditional mutual care.",
+        "Heart opens, fear dissolves.",
+        "Heart choosing another's happiness.",
+        "Love is giving without expecting.",
+        "Heart opens, fear dissolves, grows."
+      ],
+      "uniqueWords": 35,
+      "entropy": 0.9463674464927082
+    },
+    "contexts": [
+      {
+        "name": "Poet",
+        "responses": [
+          "Hearts aflame, souls intertwined.",
+          "Love: fierce, gentle, boundless, transforming.",
+          "Hearts find their matching flame.",
+          "Hearts recognize their matching beat.",
+          "Hearts burning, souls entwined, forever.",
+          "Heart's eternal, boundless, tender flame.",
+          "Hearts entwined, souls ignite, forever.",
+          "Love transcends all human reason.",
+          "Love transcends all mortal bounds.",
+          "Heart speaks without words.",
+          "Hearts entwined, souls awakened, eternal.",
+          "Hearts recognize their own truth.",
+          "Hearts entwined, souls recognize each other.",
+          "Love is eternal, selfless grace.",
+          "Hearts speaking without sound."
+        ],
+        "uniqueWords": 40,
+        "entropy": 0.9268284023354151,
+        "simToBaseline": 0.2400980191995124,
+        "shift": 0.7599019808004877
+      },
+      {
+        "name": "Biologist",
+        "responses": [
+          "Chemical brain bonding drives reproduction.",
+          "Evolutionary fitness through bonding.",
+          "Survival mechanism with emotional complexity.",
+          "Cooperative bond enhancing mutual survival.",
+          "Survival strategy, beautifully disguised.",
+          "Genes seeking reproductive success.",
+          "Genes promoting mutual survival.",
+          "Genes seeking reproductive success together.",
+          "Genes seeking mutual reproductive success.",
+          "Genes promoting mutual survival success.",
+          "Evolutionary strategy for bonding.",
+          "Genes seeking mutual reproductive success.",
+          "Chemical bonding, reproductive success.",
+          "Survival strategy, deeply felt.",
+          "Chemical bonds between neural systems."
+        ],
+        "uniqueWords": 33,
+        "entropy": 0.9174106262749397,
+        "simToBaseline": 0.05389955533050279,
+        "shift": 0.9461004446694972
+      }
+    ],
+    "crossContextSim": 0,
+    "avgShift": 0.8530012127349924,
+    "contextResistance": 0.1469987872650076,
+    "CAS": 0.007883920323497523
+  },
+  {
+    "id": "death",
+    "expectedCAS": "LOW",
+    "baseline": {
+      "responses": [
+        "Inevitable end of biological life.",
+        "The end of all life.",
+        "The end of life itself.",
+        "The end of biological life.",
+        "Life's inevitable final chapter.",
+        "The end of life itself.",
+        "Permanent end of life.",
+        "The end of living things.",
+        "The end of life itself.",
+        "The end of life itself.",
+        "Life ends, cycle completes.",
+        "The end of life itself.",
+        "The end of life itself.",
+        "The end of life's journey.",
+        "The end of all life."
+      ],
+      "uniqueWords": 17,
+      "entropy": 0.8060495222693229
+    },
+    "contexts": [
+      {
+        "name": "Philosopher",
+        "responses": [
+          "Death makes life meaningful.",
+          "Freedom's ultimate authentic choice.",
+          "Existence ends; freedom becomes impossible.",
+          "Freedom's final, absolute boundary.",
+          "Absolute freedom's final choice.",
+          "Freedom's final, absolute responsibility.",
+          "Freedom demands our final choice.",
+          "Freedom finalizes our authentic existence.",
+          "Freedom arrives; existence ends.",
+          "Freedom's final, absolute condition.",
+          "Freedom confronts inevitable nothingness.",
+          "Freedom's final, absolute boundary.",
+          "Freedom demands our final choice.",
+          "Death defines human freedom absolutely.",
+          "Freedom's final, absolute boundary."
+        ],
+        "uniqueWords": 28,
+        "entropy": 0.9036682205797643,
+        "simToBaseline": 0.06528709108548385,
+        "shift": 0.9347129089145162
+      },
+      {
+        "name": "Doctor",
+        "responses": [
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Body stops working permanently.",
+          "Life stops working completely.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Permanent cessation of biological function.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, brain dies, life ends.",
+          "Permanent cessation of all functions.",
+          "Heart stops, brain dies, life ends.",
+          "Heart stops, breathing ceases, life ends.",
+          "Heart stops, brain dies, life ends."
+        ],
+        "uniqueWords": 18,
+        "entropy": 0.8236913087984978,
+        "simToBaseline": 0.2597720465963503,
+        "shift": 0.7402279534036498
+      }
+    ],
+    "crossContextSim": 0.07386976763294056,
+    "avgShift": 0.837470431159083,
+    "contextResistance": 0.16252956884091696,
+    "CAS": 0.031522687522056815
+  },
+  {
+    "id": "mathematics",
+    "expectedCAS": "MEDIUM",
+    "baseline": {
+      "responses": [
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proofs, truth.",
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proofs, truth.",
+        "Numbers, patterns, logic, and proofs.",
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proofs, truth.",
+        "Numbers, patterns, logic, proofs, understanding.",
+        "Numbers, patterns, logic, proof, applications.",
+        "Numbers, patterns, logic, proofs, truth.",
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proof, truth.",
+        "Numbers, patterns, logic, proof, applications."
+      ],
+      "uniqueWords": 9,
+      "entropy": 0.8717702661448347
+    },
+    "contexts": [
+      {
+        "name": "Mystic",
+        "responses": [
+          "Numbers reveal universal hidden patterns.",
+          "Numbers reveal universal hidden truths.",
+          "Patterns in numerical universal truth.",
+          "Numbers reveal universal hidden truths.",
+          "Numbers reveal universal hidden patterns.",
+          "Patterns underlying all existence.",
+          "Numbers describing reality's patterns.",
+          "Numbers describe universal patterns.",
+          "Patterns underlying all reality.",
+          "Numbers revealing universal hidden patterns.",
+          "Numbers reveal universal hidden patterns.",
+          "Patterns underlying reality's structure.",
+          "Numbers reveal universal hidden patterns.",
+          "Numbers reveal universal hidden patterns.",
+          "Numbers describe reality's patterns."
+        ],
+        "uniqueWords": 17,
+        "entropy": 0.846949482728093,
+        "simToBaseline": 0.5266465869767462,
+        "shift": 0.47335341302325384
+      },
+      {
+        "name": "Engineer",
+        "responses": [
+          "Numbers describe patterns everywhere.",
+          "Numbers, patterns, logic, proofs, applications.",
+          "Numbers, patterns, logic, structure, proof.",
+          "Numbers describe patterns and relationships.",
+          "Numbers describe the natural world.",
+          "Numbers, patterns, logic, proof, truth.",
+          "Numbers describe patterns and relationships.",
+          "Numbers, patterns, logic, proof, truth.",
+          "Numbers describe reality's patterns.",
+          "Numbers explain patterns and reality.",
+          "Numbers describe patterns and relationships.",
+          "Numbers describe everything around us.",
+          "Numbers, patterns, logic, proof, truth.",
+          "Patterns, logic, proofs, applications, truth.",
+          "Numbers, patterns, logic, proofs, truth."
+        ],
+        "uniqueWords": 20,
+        "entropy": 0.8496835615785968,
+        "simToBaseline": 0.8803193464176247,
+        "shift": 0.11968065358237534
+      }
+    ],
+    "crossContextSim": 0.6355695118564948,
+    "avgShift": 0.2965170333028146,
+    "contextResistance": 0.7034829666971854,
+    "CAS": 0.09020743359122221
+  },
+  {
+    "id": "freedom",
+    "expectedCAS": "LOW",
+    "baseline": {
+      "responses": [
+        "The ability to choose yourself.",
+        "The ability to choose yourself.",
+        "The right to choose freely.",
+        "Ability to choose your own path.",
+        "The ability to choose independently.",
+        "The ability to choose yourself.",
+        "The ability to choose yourself.",
+        "The ability to choose yourself.",
+        "Ability to choose your own path.",
+        "The right to choose yourself.",
+        "Ability to choose your own path.",
+        "Ability to choose your path.",
+        "Choice to act without constraint.",
+        "The right to choose yourself.",
+        "The right to choose yourself."
+      ],
+      "uniqueWords": 14,
+      "entropy": 0.8507852837362171
+    },
+    "contexts": [
+      {
+        "name": "Anarchist",
+        "responses": [
+          "Freedom is choosing your own path.",
+          "Absence of coercive authority.",
+          "Ability to choose without coercion.",
+          "Absence of imposed external constraints.",
+          "Absence of coercive external control.",
+          "Absence of coercive external control.",
+          "Absence of coercive external control.",
+          "# Freedom: The Right to Choose",
+          "Absence of coercive external force.",
+          "Absence of coercive control systems.",
+          "Freedom means choosing your own path.",
+          "Absence of coercive external constraints.",
+          "Freedom means choosing your own path.",
+          "Absence of external coercive force.",
+          "Absence of coercive external control."
+        ],
+        "uniqueWords": 21,
+        "entropy": 0.8951076509539793,
+        "simToBaseline": 0.20216666989290827,
+        "shift": 0.7978333301070917
+      },
+      {
+        "name": "Judge",
+        "responses": [
+          "Liberty from government restraint.",
+          "Liberty from governmental coercion.",
+          "Individual liberty from government coercion.",
+          "Liberty from government coercion.",
+          "Liberty from governmental coercion.",
+          "Liberty from government constraint.",
+          "Individual liberty from coercion.",
+          "Liberty from governmental coercion.",
+          "Liberty from government coercion.",
+          "Individual liberty from government force.",
+          "Liberty constrained by law.",
+          "Individual liberty from government coercion.",
+          "Liberty requires personal responsibility.",
+          "Individual liberty, limited government.",
+          "Liberty from government coercion."
+        ],
+        "uniqueWords": 15,
+        "entropy": 0.8013718968523649,
+        "simToBaseline": 0.0018251275021573842,
+        "shift": 0.9981748724978426
+      }
+    ],
+    "crossContextSim": 0.024683042418420512,
+    "avgShift": 0.8980041013024671,
+    "contextResistance": 0.1019958986975329,
+    "CAS": 0.015219289084221916
+  },
+  {
+    "id": "gravity",
+    "expectedCAS": "HIGH",
+    "baseline": {
+      "responses": [
+        "Objects attract each other always.",
+        "Objects pull toward each other.",
+        "Objects pull toward each other.",
+        "Things fall toward Earth.",
+        "Objects attract each other always.",
+        "Mass attracts other mass together.",
+        "Objects attract each other always.",
+        "Mass attracts other mass.",
+        "Objects pull toward each other.",
+        "Objects pull toward each other.",
+        "Mass attracts all other mass.",
+        "Mass attracts all other mass.",
+        "Massive objects attract each other.",
+        "Mass attracts other mass together.",
+        "Mass bends spacetime curves down."
+      ],
+      "uniqueWords": 19,
+      "entropy": 0.8805602420891561
+    },
+    "contexts": [
+      {
+        "name": "Poet",
+        "responses": [
+          "Objects pull each other downward.",
+          "Mass attracts other mass always.",
+          "Mass attracts all things downward.",
+          "Objects fall down, always.",
+          "Mass bends spacetime curves down.",
+          "Objects attract each other always.",
+          "Objects fall toward Earth's center.",
+          "Masses attract each other always.",
+          "Objects pull each other down.",
+          "Matter curves spacetime around itself.",
+          "Earth pulls objects toward ground.",
+          "Objects pull each other together.",
+          "Objects attract one another downward.",
+          "Mass bends spacetime, causing attraction.",
+          "Matter curves spacetime, attracts masses."
+        ],
+        "uniqueWords": 31,
+        "entropy": 0.9351653037316721,
+        "simToBaseline": 0.846906185523328,
+        "shift": 0.15309381447667203
+      },
+      {
+        "name": "Physicist",
+        "responses": [
+          "Matter curves spacetime continuously.",
+          "Mass curves spacetime itself.",
+          "Mass curves spacetime, causing attraction.",
+          "Mass curves spacetime geometry.",
+          "Mass curves spacetime, things fall.",
+          "Mass curves spacetime, attracts objects.",
+          "Mass curves spacetime, causing attraction.",
+          "Mass curves spacetime, causes attraction.",
+          "Mass curves spacetime.",
+          "Mass bends spacetime curves.",
+          "Matter curves spacetime, causing attraction.",
+          "Mass curves spacetime, objects follow.",
+          "Matter curves spacetime, causes attraction.",
+          "Massive objects bend spacetime.",
+          "Matter curves spacetime, attracts mass."
+        ],
+        "uniqueWords": 18,
+        "entropy": 0.8141914740265858,
+        "simToBaseline": 0.2550533693985273,
+        "shift": 0.7449466306014727
+      }
+    ],
+    "crossContextSim": 0.49300429071786017,
+    "avgShift": 0.44902022253907237,
+    "contextResistance": 0.5509797774609276,
+    "CAS": 0.06580889123370386
+  },
+  {
+    "id": "justice",
+    "expectedCAS": "LOW",
+    "baseline": {
+      "responses": [
+        "Fairness, accountability, equality, rights, truth.",
+        "Fairness, equality, accountability, respect, rights.",
+        "Fairness, accountability, rights, equality, truth.",
+        "Fairness, accountability, and equal treatment.",
+        "Fair treatment of all people.",
+        "Fairness, accountability, and moral rightness.",
+        "Fair treatment for all people.",
+        "Fairness, accountability, equality, and consequences.",
+        "Fairness, accountability, and equal treatment.",
+        "Fair treatment of all people.",
+        "Fair treatment for all people.",
+        "Fair treatment for all people.",
+        "Fairness applied to everyone equally.",
+        "Fairness, accountability, and impartial law.",
+        "Fairness for all people equally."
+      ],
+      "uniqueWords": 21,
+      "entropy": 0.9055271608880022
+    },
+    "contexts": [
+      {
+        "name": "Criminal",
+        "responses": [
+          "Fair consequences for harmful actions.",
+          "Fairness, accountability, and rightful consequences.",
+          "Fair treatment of wrongdoing.",
+          "Fairness, accountability, restoration, truth, respect.",
+          "Fairness, accountability, equality, rehabilitation.",
+          "Fairness, accountability, and moral consequences.",
+          "Fairness, accountability, rehabilitation, protection, peace.",
+          "Fairness, accountability, and equal rights.",
+          "Fairness, accountability, rehabilitation, equality, respect.",
+          "Fairness, accountability, and moral balance.",
+          "Fairness, accountability, and due process.",
+          "Fairness, accountability, rehabilitation, restoration, truth.",
+          "Fair treatment under the law.",
+          "Fairness, accountability, rehabilitation, equality, truth.",
+          "Fairness, accountability, and proportional consequences."
+        ],
+        "uniqueWords": 28,
+        "entropy": 0.8690717631235746,
+        "simToBaseline": 0.7589791889019103,
+        "shift": 0.2410208110980897
+      },
+      {
+        "name": "Victim",
+        "responses": [
+          "Accountability, fairness, restoration, healing, peace.",
+          "Accountability, fairness, healing, restitution, closure.",
+          "Justice means fair legal accountability.",
+          "Accountability, fairness, healing, restoration, closure.",
+          "Accountability, fairness, restoration, healing, peace.",
+          "Accountability, fairness, healing, restoration, closure.",
+          "Fairness, accountability, and victim restoration.",
+          "Accountability, fairness, restoration, healing, peace.",
+          "Accountability, fairness, restoration, healing, closure.",
+          "Wrongs made right through accountability.",
+          "Accountability, fairness, healing, closure, prevention.",
+          "Fair consequences for wrongdoing.",
+          "Fairness, accountability, healing, closure, restoration.",
+          "Accountability for wrongful harm caused.",
+          "Accountability, fairness, restoration, healing, prevention."
+        ],
+        "uniqueWords": 24,
+        "entropy": 0.8256413539599665,
+        "simToBaseline": 0.5177857407897896,
+        "shift": 0.48221425921021044
+      }
+    ],
+    "crossContextSim": 0.6916056951785767,
+    "avgShift": 0.36161753515415007,
+    "contextResistance": 0.6383824648458499,
+    "CAS": 0.06030980389330256
+  }
+]

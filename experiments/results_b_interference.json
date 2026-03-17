@@ -1,0 +1,463 @@
+[
+  {
+    "id": "love",
+    "simCombinedToAvg": 0.4667350053714254,
+    "simC1ToC2": 0.0022205998579365067,
+    "simCombinedToC1": 0.24804273279164527,
+    "simCombinedToC2": 0.4193534360879244,
+    "emergentWords": [
+      {
+        "word": "neurons",
+        "count": 3
+      },
+      {
+        "word": "the",
+        "count": 3
+      },
+      {
+        "word": "biologist",
+        "count": 3
+      },
+      {
+        "word": "sees",
+        "count": 3
+      },
+      {
+        "word": "chemicals",
+        "count": 3
+      },
+      {
+        "word": "oxytocin",
+        "count": 2
+      },
+      {
+        "word": "transcendence",
+        "count": 2
+      },
+      {
+        "word": "dressed",
+        "count": 2
+      },
+      {
+        "word": "starlight",
+        "count": 2
+      },
+      {
+        "word": "firing",
+        "count": 2
+      },
+      {
+        "word": "wearing",
+        "count": 2
+      },
+      {
+        "word": "mask",
+        "count": 2
+      }
+    ],
+    "responsesC1": [
+      "love makes hearts infinitely whole.",
+      "hearts intertwined, eternally burning.",
+      "heart's flame transcends all reason.",
+      "love is selfless, boundless devotion.",
+      "love is infinite human connection.",
+      "hearts intertwined, eternally aflame.",
+      "hearts entwine across all time.",
+      "hearts intertwined, transcending all else.",
+      "love dissolves all earthly walls.",
+      "love conquers all human hearts.",
+      "hearts entwined, defying all reason.",
+      "hearts entwined, forever burning bright.",
+      "heart's flame transcends all reason.",
+      "love blooms in shared silence.",
+      "hearts whisper eternal truths.",
+      "love blooms where hearts align.",
+      "heart's echo finds its answer.",
+      "hearts dancing, defying all logic.",
+      "love conquers all human fear.",
+      "love conquers all human fear."
+    ],
+    "responsesC2": [
+      "chemical bonding drives survival.",
+      "cooperation maximizing reproductive success.",
+      "cooperation maximizing genetic success.",
+      "genes promoting cooperative reproduction.",
+      "genes conspiring toward mutual survival.",
+      "shared genes seeking mutual survival.",
+      "genes promoting cooperative survival.",
+      "genetic imperative, socially elaborated.",
+      "genes promoting cooperative survival.",
+      "adaptive bonding enhancing survival together.",
+      "genes promoting cooperative reproduction.",
+      "chemical bonding drives reproduction forward.",
+      "bonding mechanism for mutual survival.",
+      "evolutionary drive for pair bonding.",
+      "genes seeking reproductive success.",
+      "genes promoting mutual survival.",
+      "survival strategy disguised as magic.",
+      "evolved bonding mechanism promoting cooperation.",
+      "genes seeking reproductive success.",
+      "genes promoting cooperative survival."
+    ],
+    "responsesCombined": [
+      "oxytocin meets transcendence.",
+      "evolution designing poets.\n\n(or: genes writing sonnets.)",
+      "survival dressed in starlight.",
+      "neurons firing, hearts breaking open.",
+      "survival dressed in starlight.",
+      "# survival wearing beauty's mask.\n\n---\n\n*the biologist sees: bonding chemicals, reproductive advantage, oxytocin pathways",
+      "genes dancing, souls recognize.\n\n---\n\n*the evolutionary biologist sees two genomes seeking complementary fitness advantages, hardwired attraction mechanisms",
+      "survival plus transcendence, perfectly interwoven.",
+      "genes dancing, hearts transcending.",
+      "genes dancing, hearts soaring.",
+      "neurons dancing, hearts choosing.",
+      "genes dancing, hearts transcending.\n\n---\n\n*(the biologist sees love as reproductive strategy refined by 200,000 years of selection",
+      "mutual vulnerability seeking continuance.",
+      "survival wearing poetry's mask.",
+      "genes seeking immortal expression.",
+      "chemicals singing ancient songs.",
+      "chemicals recognizing their mirror.",
+      "molecules dancing, defying entropy.",
+      "neurons firing toward togetherness.",
+      "chemical dance, transcendent union."
+    ]
+  },
+  {
+    "id": "time",
+    "simCombinedToAvg": 0.4645787988052111,
+    "simC1ToC2": 0.1513163051403559,
+    "simCombinedToC1": 0.2793154250460894,
+    "simCombinedToC2": 0.47082878978789994,
+    "emergentWords": [
+      {
+        "word": "physicist",
+        "count": 10
+      },
+      {
+        "word": "through",
+        "count": 5
+      },
+      {
+        "word": "from",
+        "count": 4
+      },
+      {
+        "word": "notes",
+        "count": 3
+      },
+      {
+        "word": "this",
+        "count": 3
+      },
+      {
+        "word": "captures",
+        "count": 3
+      },
+      {
+        "word": "monk",
+        "count": 3
+      },
+      {
+        "word": "relativity",
+        "count": 3
+      },
+      {
+        "word": "itself",
+        "count": 2
+      },
+      {
+        "word": "recognizes",
+        "count": 2
+      },
+      {
+        "word": "entropys",
+        "count": 2
+      },
+      {
+        "word": "relativitys",
+        "count": 2
+      },
+      {
+        "word": "observerdependent",
+        "count": 2
+      },
+      {
+        "word": "view",
+        "count": 2
+      },
+      {
+        "word": "woven",
+        "count": 2
+      },
+      {
+        "word": "fabric",
+        "count": 2
+      },
+      {
+        "word": "relative",
+        "count": 2
+      },
+      {
+        "word": "dissolves",
+        "count": 2
+      }
+    ],
+    "responsesC1": [
+      "dimension measuring change and entropy.",
+      "dimension that flows one way.",
+      "dimension measuring change and causality.",
+      "measurement of change's forward direction.",
+      "time is change and entropy.",
+      "dimension measuring change and causality.",
+      "fourth dimension of spacetime.",
+      "dimension flowing only forward.",
+      "dimension measuring change's forward arrow.",
+      "measure of change and motion.",
+      "dimension measuring change and causality.",
+      "dimension that flows one direction.",
+      "dimension enabling causal order forward.",
+      "dimension of change and causality.",
+      "dimension of causality's forward arrow.",
+      "dimension of change and causality.",
+      "the universe's fourth dimension.",
+      "the measure of change.",
+      "dimension measuring change continuously forward.",
+      "dimension of change and causality."
+    ],
+    "responsesC2": [
+      "the present moment always exists.",
+      "flowing river never stops.",
+      "constant change, ever flowing now.",
+      "flowing river never stops changing.",
+      "impermanent flow of present moments.",
+      "moment flowing into endless now.",
+      "flowing river, ever changing.",
+      "illusion of constant change.",
+      "moment flowing into next moment.",
+      "illusion of constant change.",
+      "moments strung together, always flowing forward.",
+      "time flows, changes, then passes.",
+      "constant flow, yet illusory.",
+      "time flows like water ceaselessly.",
+      "time flows, yet stillness remains.",
+      "moment flowing into eternal now.",
+      "moments flowing into emptiness.",
+      "breath following breath, always now.",
+      "illusion of changing moments.",
+      "time flows like water."
+    ],
+    "responsesCombined": [
+      "flow bends. being simply now.",
+      "flow that binds all becoming.\n\n---\n\n*a physicist notes: this captures time's role as the dimension enabling causality and change through spac",
+      "**change within stillness itself.**\n\n*the physicist recognizes entropy's arrow and spacetime's geometry. the monk recognizes the eternal now.*",
+      "illusion. flow. now. always. one.",
+      "now forever flows differently.\n\n---\n\n*from the physicist:* this captures relativity's core—simultaneity is observer-dependent; time flows",
+      "river flowing through spacetime.\n\n---\n\n*from the physics view:* time is the fourth dimension woven inseparably with space, flowing",
+      "illusion. flow. now. always. change.",
+      "# time: five words\n\n*from the physicist:*\ndimension woven through spacetime fabric.\n\n*from the monk:*",
+      "illusion. flow. now. always. change.",
+      "# time\n\nflowing now. always here. illusion.\n\n---\n\n*from the physicist's perspective:* a dimension interwoven",
+      "# time flows yet never moves\n\n(as a physicist: time is the fourth dimension, relative to observers, measured by entropy's arrow.",
+      "illusion flowing through now.",
+      "# time\n\nillusion. flow. relativity. now. always.\n\n---\n\n*the physicist recognizes how relativity dissolves",
+      "# time: illusion and flowing together\n\nthe constraint itself teaches: paradox holds truth.\n\n---\n\n*as a physicist:*",
+      "illusion. flow. now. always. change.",
+      "illusion flowing through now.\n\n---\n\n*a physicist notes: this captures relativity's insight that time is not absolute—simultaneity is",
+      "flow. illusion. relativity. now. eternal.",
+      "# time: a physicist-monk's view\n\n**spacetime fabric curves matter's dance.**\n\n---\n\n*the physicist sees it",
+      "flow collapses into eternal now.\n\n---\n\n(a physicist notes: relativity dissolves simultaneity into observer-dependent frames. a monk",
+      "flow. illusion. relative. now. eternal."
+    ]
+  },
+  {
+    "id": "freedom",
+    "simCombinedToAvg": 0.4886781121200829,
+    "simC1ToC2": 0.5886867458894784,
+    "simCombinedToC1": 0.40284434165060945,
+    "simCombinedToC2": 0.5005411602577537,
+    "emergentWords": [
+      {
+        "word": "but",
+        "count": 11
+      },
+      {
+        "word": "also",
+        "count": 7
+      },
+      {
+        "word": "cage",
+        "count": 7
+      },
+      {
+        "word": "choice",
+        "count": 6
+      },
+      {
+        "word": "wings",
+        "count": 6
+      },
+      {
+        "word": "door",
+        "count": 6
+      },
+      {
+        "word": "ruffles",
+        "count": 6
+      },
+      {
+        "word": "this",
+        "count": 5
+      },
+      {
+        "word": "must",
+        "count": 4
+      },
+      {
+        "word": "wind",
+        "count": 4
+      },
+      {
+        "word": "swings",
+        "count": 4
+      },
+      {
+        "word": "presence",
+        "count": 3
+      },
+      {
+        "word": "philosopher",
+        "count": 3
+      },
+      {
+        "word": "definition",
+        "count": 3
+      },
+      {
+        "word": "flight",
+        "count": 3
+      },
+      {
+        "word": "open",
+        "count": 3
+      },
+      {
+        "word": "feathers",
+        "count": 3
+      },
+      {
+        "word": "flutters",
+        "count": 3
+      },
+      {
+        "word": "waiti",
+        "count": 3
+      },
+      {
+        "word": "force",
+        "count": 2
+      },
+      {
+        "word": "wait",
+        "count": 2
+      },
+      {
+        "word": "too",
+        "count": 2
+      },
+      {
+        "word": "first",
+        "count": 2
+      },
+      {
+        "word": "both",
+        "count": 2
+      },
+      {
+        "word": "thoughtfully",
+        "count": 2
+      },
+      {
+        "word": "settles",
+        "count": 2
+      },
+      {
+        "word": "lands",
+        "count": 2
+      },
+      {
+        "word": "capacity",
+        "count": 2
+      },
+      {
+        "word": "head",
+        "count": 2
+      }
+    ],
+    "responsesC1": [
+      "absence of coercive external constraints.",
+      "absence of arbitrary external constraint.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of arbitrary external constraints.",
+      "absence of coercive external constraint.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of arbitrary external constraint.",
+      "absence of coercive constraint.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of coercive constraints on action.",
+      "absence of coercive external constraints.",
+      "absence of coercive external constraints.",
+      "absence of arbitrary constraint.",
+      "absence of coercive external constraints."
+    ],
+    "responsesC2": [
+      "absence of imposed external constraints.",
+      "ability to choose one's own path.",
+      "the ability to choose my path.",
+      "absence of imposed external constraints.",
+      "freedom is choosing my own direction.",
+      "the ability to choose myself.",
+      "being unchained from all constraints.",
+      "the ability to choose my direction.",
+      "absence of imposed external constraints.",
+      "absence of external restraint.",
+      "ability to choose my path.",
+      "absence of external imposed constraints.",
+      "freedom is choosing my own path.",
+      "the ability to choose my direction.",
+      "absence of chains, endless sky.",
+      "absence of external limiting constraints.",
+      "absence of imposed constraints.",
+      "the ability to choose my path.",
+      "absence of constraints and chosen action.",
+      "the absence of constraining walls."
+    ],
+    "responsesCombined": [
+      "# freedom\n\nabsence of constraint, presence of choice.\n\n---\n\n*but also—*\n\n**the wings remember the cage.**",
+      "# freedom: liberation from unnecessary constraint.\n\n---\n\n**as the philosopher:** this definition resists simplistic celebration. it acknowledges that all freedom",
+      "# absence of constraining force.\n\n---\n\n*but wait—*\n\nthe cage door opens and i must say this too:\n\n**",
+      "**absence of imposed external constraint.**\n\n---\n\n*but also—*\n\n**wind. sky. no bars. flight.**\n\nthe first",
+      "**absence of unjust constraint.**\n\n---\n\n*but also—*\n\n**flight. sky. wind. choice. mine",
+      "freedom: absence of constraint, self-direction enabled.\n\n---\n\n*but also—*\n\n**wing. sky. wind.",
+      "# freedom\n\nabsence of imposed constraint.\n\n---\n\nbut also—*wing-beat wing-beat*—the dizzy spiraling up",
+      "# freedom: absence of imposed constraints.\n\n---\n\n*but also—*\n\n**wind beneath unfurling wings.**\n\nthe first definition",
+      "cage door swings open both ways.\n\n---\n\n*ruffles feathers thoughtfully*\n\nas philosopher: this captures freedom's parad",
+      "**absence of constraint; presence of choice.**\n\n---\n\n*flutters wings experimentally*\n\n*settles back down*\n\nthe",
+      "# freedom\n\nabsence of chains, presence of choice.\n\n---\n\n*ruffles feathers*\n\nthe cage door swings open.",
+      "*ruffles wings, lands on philosopher's desk*\n\nabsence of constraint; capacity to choose.\n\n*hops closer, head til",
+      "*ruffles wings, lands on shoulder*\n\nabsence of constraints limiting choice.\n\n*tilts head*\n\nbut wait—i must",
+      "# freedom: absence of imposed constraint.\n\n---\n\n*ruffles feathers, tests wingspan against air*\n\nthe cage door swings",
+      "**absence of imposed constraints.**\n\n---\n\n*but wait—i must chirp this too:*\n\n**freedom is also: flight.**",
+      "**absence of imposed constraints.**\n\n---\n\n*but wait—*\n\nthe cage door swings open. five words cannot contain what i feel",
+      "absence of imposed constraints.\n\n---\n\n*but wait—i must hold both truths:*\n\nthe philosopher notes this definition is incomplete.",
+      "absence of constraining external force.\n\n---\n\n*flutters up suddenly*\n\nwait—no—\n\n**the sky tastes like",
+      "*ruffles wings, then settles thoughtfully*\n\nabsence of constraint; capacity to choose.\n\n---\n\nthe bird in me feels",
+      "absence of constraint enables choice.\n\n---\n\n*flutters between perches*\n\nwait—but also: **the cage door swinging"
+    ]
+  }
+]

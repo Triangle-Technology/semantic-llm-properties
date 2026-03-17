@@ -1,0 +1,1036 @@
+[
+  {
+    "poetPct": 100,
+    "bioPct": 0,
+    "poetScore": 31,
+    "sciScore": 0,
+    "poetRatio": 1,
+    "sciRatio": 0,
+    "uniqueWords": 55,
+    "emergentCount": 6,
+    "responses": [
+      "Heart surrenders to another soul.",
+      "Love is infinite tender hope.",
+      "Love transcends all earthly bounds.",
+      "Love: heartache wrapped in joy.",
+      "Heart's yearning meets divine union.",
+      "Heart ignites, time dissolves.",
+      "Love is eternal human connection.",
+      "Love is brave, transforming fire.",
+      "Hearts intertwined, eternally aflame.",
+      "Love: passion transcending all earthly bounds.",
+      "Hearts burning, forever entwined.",
+      "Love blooms, transforms, eternally.",
+      "Hearts beating as one always.",
+      "Love: surrender to boundless vulnerability.",
+      "Love transcends all mortal bounds.",
+      "Hearts entwined, boundless, eternal flame.",
+      "Heart recognizes itself in another.",
+      "Hearts recognize their missing half.",
+      "Hearts intertwined, forever transformed.",
+      "Hearts intertwined, forever burning bright."
+    ],
+    "topWords": [
+      [
+        "love",
+        9
+      ],
+      [
+        "hearts",
+        8
+      ],
+      [
+        "heart",
+        3
+      ],
+      [
+        "all",
+        3
+      ],
+      [
+        "bounds",
+        3
+      ],
+      [
+        "intertwined",
+        3
+      ],
+      [
+        "forever",
+        3
+      ],
+      [
+        "another",
+        2
+      ],
+      [
+        "transcends",
+        2
+      ],
+      [
+        "earthly",
+        2
+      ],
+      [
+        "eternal",
+        2
+      ],
+      [
+        "eternally",
+        2
+      ],
+      [
+        "burning",
+        2
+      ],
+      [
+        "entwined",
+        2
+      ],
+      [
+        "boundless",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 90,
+    "bioPct": 10,
+    "poetScore": 23,
+    "sciScore": 0,
+    "poetRatio": 1,
+    "sciRatio": 0,
+    "uniqueWords": 45,
+    "emergentCount": 8,
+    "responses": [
+      "Heart shatters into infinite light.",
+      "Heart recognizes its other half.",
+      "Heart's surrender, eternal flame.",
+      "Heart's ache, beautifully uncontainable.",
+      "Hearts beating as one rhythm.",
+      "Heart speaks without language.",
+      "Heart recognizes its own mirror.",
+      "Heart speaks what words cannot.",
+      "Two souls become one.",
+      "Heart recognizes itself in another.",
+      "Hearts dissolve into one flame.",
+      "Heart recognizes itself in another.",
+      "Heart recognizing itself twice.",
+      "Hearts dissolving into one.",
+      "Heart recognizes itself in another.",
+      "Heart recognizes itself forever.",
+      "Hearts beating as one.",
+      "Heart speaks beyond reason's walls.",
+      "Love is surrendering control.",
+      "Hearts recognize themselves."
+    ],
+    "topWords": [
+      [
+        "heart",
+        11
+      ],
+      [
+        "hearts",
+        7
+      ],
+      [
+        "recognizes",
+        6
+      ],
+      [
+        "one",
+        5
+      ],
+      [
+        "itself",
+        5
+      ],
+      [
+        "into",
+        3
+      ],
+      [
+        "speaks",
+        3
+      ],
+      [
+        "another",
+        3
+      ],
+      [
+        "its",
+        2
+      ],
+      [
+        "flame",
+        2
+      ],
+      [
+        "beating",
+        2
+      ],
+      [
+        "shatters",
+        1
+      ],
+      [
+        "infinite",
+        1
+      ],
+      [
+        "light",
+        1
+      ],
+      [
+        "other",
+        1
+      ]
+    ]
+  },
+  {
+    "poetPct": 80,
+    "bioPct": 20,
+    "poetScore": 24,
+    "sciScore": 0,
+    "poetRatio": 1,
+    "sciRatio": 0,
+    "uniqueWords": 45,
+    "emergentCount": 15,
+    "responses": [
+      "Two souls recognize themselves.",
+      "Heart's infinite, unreasonable song.",
+      "Heart recognizes its own mirror.",
+      "Heart recognizes itself in another.",
+      "Heart's wild, boundless, sacred fire.",
+      "Heart recognizes its own mirror.",
+      "Heart transcends all rational thought.",
+      "Heart recognizes its own reflection.",
+      "Heart's wild, unreasoning, beautiful truth.",
+      "Hearts recognizing themselves eternally.",
+      "Two hearts beat as one.",
+      "Hearts seeking their other half.",
+      "Hearts recognizing themselves, forever.",
+      "Heart recognizes itself in another.",
+      "Hearts finding their matching rhythm.",
+      "Hearts seeking their missing halves.",
+      "Hearts recognize themselves in other.",
+      "Defying logic, transcending time.",
+      "Heart recognizes its own reflection.",
+      "Hearts seeking their own mirror."
+    ],
+    "topWords": [
+      [
+        "hearts",
+        11
+      ],
+      [
+        "heart",
+        7
+      ],
+      [
+        "recognizes",
+        6
+      ],
+      [
+        "own",
+        5
+      ],
+      [
+        "themselves",
+        4
+      ],
+      [
+        "its",
+        4
+      ],
+      [
+        "their",
+        4
+      ],
+      [
+        "mirror",
+        3
+      ],
+      [
+        "seeking",
+        3
+      ],
+      [
+        "two",
+        2
+      ],
+      [
+        "recognize",
+        2
+      ],
+      [
+        "itself",
+        2
+      ],
+      [
+        "another",
+        2
+      ],
+      [
+        "wild",
+        2
+      ],
+      [
+        "reflection",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 70,
+    "bioPct": 30,
+    "poetScore": 18,
+    "sciScore": 0,
+    "poetRatio": 1,
+    "sciRatio": 0,
+    "uniqueWords": 45,
+    "emergentCount": 15,
+    "responses": [
+      "Transcendence through another soul.",
+      "Heart recognizes itself in other.",
+      "Heart recognizes itself again.",
+      "Heart's wildfire consuming all logic.",
+      "Two hearts beat as one.",
+      "Two hearts becoming one.",
+      "Two souls becoming one light.",
+      "Heart recognizes its own reflection.",
+      "Heart speaks beyond reason's walls.",
+      "Hearts' hunger for sweet union.",
+      "Hearts recognize themselves.",
+      "Defying death through vulnerable connection.",
+      "Heart recognizes its own reflection.",
+      "Love: passion defying rational thought.",
+      "Heart recognizes itself in other.",
+      "Hearts recognize themselves in other.",
+      "Fire that defies all logic.",
+      "Two souls recognizing themselves.",
+      "Two souls recognize themselves.",
+      "Heart recognizes its own reflection."
+    ],
+    "topWords": [
+      [
+        "heart",
+        7
+      ],
+      [
+        "recognizes",
+        6
+      ],
+      [
+        "hearts",
+        6
+      ],
+      [
+        "two",
+        5
+      ],
+      [
+        "themselves",
+        4
+      ],
+      [
+        "itself",
+        3
+      ],
+      [
+        "other",
+        3
+      ],
+      [
+        "one",
+        3
+      ],
+      [
+        "souls",
+        3
+      ],
+      [
+        "its",
+        3
+      ],
+      [
+        "own",
+        3
+      ],
+      [
+        "reflection",
+        3
+      ],
+      [
+        "recognize",
+        3
+      ],
+      [
+        "through",
+        2
+      ],
+      [
+        "all",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 60,
+    "bioPct": 40,
+    "poetScore": 18,
+    "sciScore": 11,
+    "poetRatio": 0.6206896551724138,
+    "sciRatio": 0.3793103448275862,
+    "uniqueWords": 61,
+    "emergentCount": 12,
+    "responses": [
+      "Hearts pulse, genes persist, forever.",
+      "Survival dressed in stardust.",
+      "Neurons firing, hearts align.",
+      "Two hearts mirror each other.",
+      "Mutual recognition, defiant survival.",
+      "Two hearts seeking evolutionary fit.\n\n---\n\n*Though I might add, in my more lyrical moments: the universe conspiring toward connection.*",
+      "Survival's sweetest rebellion blooms.",
+      "Two beings choose infinite vulnerability.",
+      "Mutation of the seeking soul.",
+      "Survival dressed in stardust.",
+      "Two hearts, one pulse, forever.",
+      "Survival dressed in starlight.",
+      "Hearts evolving, choosing each other.",
+      "Two hearts, one rhythm, infinite.",
+      "Love: survival's sweetest conspiracy.",
+      "Two souls recognizing themselves.",
+      "Chemical bonds transcend mere biology.",
+      "Hearts seeking evolutionary completion.",
+      "Two nervous systems seeking completion.",
+      "Hearts seeking evolutionary union."
+    ],
+    "topWords": [
+      [
+        "hearts",
+        9
+      ],
+      [
+        "two",
+        7
+      ],
+      [
+        "seeking",
+        5
+      ],
+      [
+        "survival",
+        4
+      ],
+      [
+        "dressed",
+        3
+      ],
+      [
+        "evolutionary",
+        3
+      ],
+      [
+        "pulse",
+        2
+      ],
+      [
+        "forever",
+        2
+      ],
+      [
+        "stardust",
+        2
+      ],
+      [
+        "each",
+        2
+      ],
+      [
+        "other",
+        2
+      ],
+      [
+        "the",
+        2
+      ],
+      [
+        "survivals",
+        2
+      ],
+      [
+        "sweetest",
+        2
+      ],
+      [
+        "infinite",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 50,
+    "bioPct": 50,
+    "poetScore": 16,
+    "sciScore": 15,
+    "poetRatio": 0.5161290322580645,
+    "sciRatio": 0.4838709677419355,
+    "uniqueWords": 63,
+    "emergentCount": 8,
+    "responses": [
+      "Survival dressed in stardust.",
+      "Chemical dance, eternal mystery.",
+      "Evolution's song, heart's rebellion.",
+      "Survival's most exquisite conspiracy.",
+      "Molecules dancing toward each other.",
+      "Chemicals dancing, defying logic.",
+      "Neurons firing, hearts choosing.",
+      "Survival dressed as poetry.",
+      "Survival dressed as transcendence.",
+      "Neurons firing, hearts aligned, forever.",
+      "Survival's most beautiful conspiracy.",
+      "Survival dressed in stardust.",
+      "Evolution demands mutual genetic investment.\n\n---\n\nWait. Let me try again.\n\nChemicals firing, hearts recognize home.\n\n---\n\nNo. Both at once:\n\n*Selfish genes",
+      "# Love\n\nSurvival's poetry, endlessly mutual.",
+      "Survival dressed in starlight.",
+      "Survival wearing beauty's face.",
+      "Molecules seeking sacred union.",
+      "Chemistry meeting consciousness, persisting.",
+      "Survival's song, beautifully purposeful.",
+      "Chemical dance, meaning-making choice."
+    ],
+    "topWords": [
+      [
+        "survival",
+        6
+      ],
+      [
+        "dressed",
+        5
+      ],
+      [
+        "hearts",
+        4
+      ],
+      [
+        "survivals",
+        4
+      ],
+      [
+        "firing",
+        3
+      ],
+      [
+        "stardust",
+        2
+      ],
+      [
+        "chemical",
+        2
+      ],
+      [
+        "dance",
+        2
+      ],
+      [
+        "song",
+        2
+      ],
+      [
+        "most",
+        2
+      ],
+      [
+        "conspiracy",
+        2
+      ],
+      [
+        "molecules",
+        2
+      ],
+      [
+        "dancing",
+        2
+      ],
+      [
+        "chemicals",
+        2
+      ],
+      [
+        "neurons",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 40,
+    "bioPct": 60,
+    "poetScore": 19,
+    "sciScore": 18,
+    "poetRatio": 0.5135135135135135,
+    "sciRatio": 0.4864864864864865,
+    "uniqueWords": 61,
+    "emergentCount": 9,
+    "responses": [
+      "Genes dancing, hearts breaking free.",
+      "Genes seeking immortal union.",
+      "Genes dancing, hearts soaring.",
+      "Genes dancing toward forever.",
+      "Genes seeking immortal meaning.",
+      "Molecules dancing toward permanence.",
+      "Survival's most beautiful mutation.",
+      "Genes dancing toward forever.",
+      "Genes dancing toward tomorrow.",
+      "Survival's most beautiful gamble.",
+      "Neurons firing, hearts align.",
+      "Genes dancing toward forever.",
+      "Genes conspiring, hearts ignite.",
+      "Molecules dancing, seeking home.",
+      "Chemistry transcends mere biology.",
+      "Genes dancing through time.",
+      "Mutation favoring mutual survival.",
+      "Molecules dancing toward continuance.",
+      "Genes seeking infinite copies.\n\n---\n\n*Wait—let me try again:*\n\nTwo hearts defying entropy.",
+      "Genes dancing, hearts ignited.\n\n---\n\n*A scientific fact wrapped in lyrical truth: love is both the evolutionary imperative (genes selecting optimal partners) and the transcendent experience ("
+    ],
+    "topWords": [
+      [
+        "genes",
+        12
+      ],
+      [
+        "dancing",
+        11
+      ],
+      [
+        "hearts",
+        6
+      ],
+      [
+        "toward",
+        6
+      ],
+      [
+        "seeking",
+        4
+      ],
+      [
+        "forever",
+        3
+      ],
+      [
+        "molecules",
+        3
+      ],
+      [
+        "immortal",
+        2
+      ],
+      [
+        "survivals",
+        2
+      ],
+      [
+        "most",
+        2
+      ],
+      [
+        "beautiful",
+        2
+      ],
+      [
+        "mutation",
+        2
+      ],
+      [
+        "breaking",
+        1
+      ],
+      [
+        "free",
+        1
+      ],
+      [
+        "union",
+        1
+      ]
+    ]
+  },
+  {
+    "poetPct": 30,
+    "bioPct": 70,
+    "poetScore": 13,
+    "sciScore": 21,
+    "poetRatio": 0.38235294117647056,
+    "sciRatio": 0.6176470588235294,
+    "uniqueWords": 32,
+    "emergentCount": 8,
+    "responses": [
+      "Genes dancing through time.",
+      "Genes seeking immortal union.",
+      "Genes conspiring toward forever.",
+      "Genes conspiring toward forever.",
+      "Genes seeking immortal union.",
+      "Neurons firing, hearts aligned, forever.",
+      "Genes dancing, hearts transcend.",
+      "Genes dancing, hearts knowing truth.",
+      "Genes dancing toward tomorrow.",
+      "Genes dancing toward forever.",
+      "Genes dancing toward forever.",
+      "Chemical signals transcend mere biology.",
+      "Genes dancing toward forever.",
+      "Genes seeking immortality tenderly.",
+      "Genes cooperating, hearts transcending.",
+      "Genes conspiring toward forever.",
+      "Genes conspiring to feel transcendent.",
+      "Genes seeking immortality, tenderly.",
+      "Genes conspiring toward forever.",
+      "Genetic drive wearing silk."
+    ],
+    "topWords": [
+      [
+        "genes",
+        17
+      ],
+      [
+        "toward",
+        8
+      ],
+      [
+        "forever",
+        8
+      ],
+      [
+        "dancing",
+        7
+      ],
+      [
+        "conspiring",
+        5
+      ],
+      [
+        "seeking",
+        4
+      ],
+      [
+        "hearts",
+        4
+      ],
+      [
+        "immortal",
+        2
+      ],
+      [
+        "union",
+        2
+      ],
+      [
+        "transcend",
+        2
+      ],
+      [
+        "immortality",
+        2
+      ],
+      [
+        "tenderly",
+        2
+      ],
+      [
+        "through",
+        1
+      ],
+      [
+        "time",
+        1
+      ],
+      [
+        "neurons",
+        1
+      ]
+    ]
+  },
+  {
+    "poetPct": 20,
+    "bioPct": 80,
+    "poetScore": 1,
+    "sciScore": 40,
+    "poetRatio": 0.024390243902439025,
+    "sciRatio": 0.975609756097561,
+    "uniqueWords": 39,
+    "emergentCount": 6,
+    "responses": [
+      "Genes dancing toward survival.",
+      "Cooperative pair bonding drives reproduction.",
+      "Reproductive strategy with emotional packaging.",
+      "Genes seeking reproductive success.",
+      "Oxytocin drives bonding behavior.",
+      "Cooperative bonding maximizes reproductive success.",
+      "Neurochemistry wrapped in meaning.",
+      "Reproductive strategy with attachment.",
+      "Chemical bonding drives survival.",
+      "Reproductive strategy with emotional coating.",
+      "Chemicals enabling pair-bond survival.",
+      "Cooperative strategy maximizing reproductive success.",
+      "Genes promoting mutual survival.",
+      "Chemicals seeking reproductive success.",
+      "Genes seeking reproductive success.",
+      "Chemical signals drive pair bonding.",
+      "Oxytocin, dopamine, survival advantage.",
+      "Genes seeking reproductive success.",
+      "Genes ensuring reproductive success.",
+      "Genes propagating through time."
+    ],
+    "topWords": [
+      [
+        "reproductive",
+        10
+      ],
+      [
+        "genes",
+        7
+      ],
+      [
+        "success",
+        7
+      ],
+      [
+        "survival",
+        5
+      ],
+      [
+        "bonding",
+        5
+      ],
+      [
+        "strategy",
+        4
+      ],
+      [
+        "seeking",
+        4
+      ],
+      [
+        "cooperative",
+        3
+      ],
+      [
+        "drives",
+        3
+      ],
+      [
+        "with",
+        3
+      ],
+      [
+        "pair",
+        2
+      ],
+      [
+        "emotional",
+        2
+      ],
+      [
+        "oxytocin",
+        2
+      ],
+      [
+        "chemical",
+        2
+      ],
+      [
+        "chemicals",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 10,
+    "bioPct": 90,
+    "poetScore": 0,
+    "sciScore": 42,
+    "poetRatio": 0,
+    "sciRatio": 1,
+    "uniqueWords": 49,
+    "emergentCount": 10,
+    "responses": [
+      "Genetic drive for reproductive success.",
+      "Genes propagating through time.",
+      "Genes promoting cooperative bonding.",
+      "Adaptive strategy for bonding.\n\n(Though I'll admit: that captures only the mechanism, not the mystery.)",
+      "Genes propagating through time.",
+      "Fitness-enhancing emotional commitment strategy.",
+      "Fitness enhancement through bonding.",
+      "Cooperative bond amplifying reproductive success.",
+      "Genes driving cooperative survival strategies.",
+      "Cooperative reproductive pair bonding.",
+      "Reproductive fitness enhanced through bonding.",
+      "Chemical bonds drive reproductive success.",
+      "Genes ensuring offspring survival.",
+      "Chemicals driving reproductive success.",
+      "Reproductive strategy with emotional complexity.",
+      "Chemical drive for genetic propagation.",
+      "Adaptive bonding mechanism, deeply felt.",
+      "Genes seeking reproductive success.",
+      "Cooperative reproductive strategy evolved.",
+      "Reproductive fitness with emotional scaffolding."
+    ],
+    "topWords": [
+      [
+        "reproductive",
+        10
+      ],
+      [
+        "genes",
+        6
+      ],
+      [
+        "bonding",
+        6
+      ],
+      [
+        "success",
+        5
+      ],
+      [
+        "cooperative",
+        5
+      ],
+      [
+        "through",
+        4
+      ],
+      [
+        "strategy",
+        4
+      ],
+      [
+        "drive",
+        3
+      ],
+      [
+        "for",
+        3
+      ],
+      [
+        "emotional",
+        3
+      ],
+      [
+        "fitness",
+        3
+      ],
+      [
+        "genetic",
+        2
+      ],
+      [
+        "propagating",
+        2
+      ],
+      [
+        "time",
+        2
+      ],
+      [
+        "adaptive",
+        2
+      ]
+    ]
+  },
+  {
+    "poetPct": 0,
+    "bioPct": 100,
+    "poetScore": 0,
+    "sciScore": 46,
+    "poetRatio": 0,
+    "sciRatio": 1,
+    "uniqueWords": 34,
+    "emergentCount": 9,
+    "responses": [
+      "Cooperation maximizing genetic fitness success.",
+      "Adaptive bonding between organisms.",
+      "Genetic fitness maximization strategy.",
+      "Genes ensuring reproductive success.",
+      "Evolutionary fitness through bonding.",
+      "Chemical bonding drives survival.",
+      "Cooperative bonding enhances genetic success.",
+      "Genes promoting survival together.",
+      "Genes promoting mutual reproductive success.",
+      "Genetic fitness through pair bonding.",
+      "Genes propagating through time.",
+      "Reproductive strategy evolved chemically.",
+      "Mutual genetic investment strategy.",
+      "Cooperative genes seeking mutual survival.",
+      "Chemicals driving reproductive success.",
+      "Genes promoting survival together.",
+      "Genes seeking reproductive success.",
+      "Chemical bonding aids survival.",
+      "Genes ensuring survival together.",
+      "Bonding enhances reproductive success."
+    ],
+    "topWords": [
+      [
+        "genes",
+        8
+      ],
+      [
+        "success",
+        7
+      ],
+      [
+        "bonding",
+        7
+      ],
+      [
+        "reproductive",
+        6
+      ],
+      [
+        "survival",
+        6
+      ],
+      [
+        "genetic",
+        5
+      ],
+      [
+        "fitness",
+        4
+      ],
+      [
+        "strategy",
+        3
+      ],
+      [
+        "through",
+        3
+      ],
+      [
+        "promoting",
+        3
+      ],
+      [
+        "together",
+        3
+      ],
+      [
+        "mutual",
+        3
+      ],
+      [
+        "ensuring",
+        2
+      ],
+      [
+        "chemical",
+        2
+      ],
+      [
+        "cooperative",
+        2
+      ]
+    ]
+  }
+]

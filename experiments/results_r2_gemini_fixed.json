@@ -1,0 +1,224 @@
+{
+  "experiment": "R2",
+  "description": "Gemini cross-model validation (FIXED maxOutputTokens for thinking model)",
+  "model": "gemini-2.5-flash",
+  "date": "2026-03-17T08:27:56.128Z",
+  "n_samples": 10,
+  "cas": {
+    "results": [
+      {
+        "concept": "money",
+        "CAS": 0.036,
+        "CD": 0.96,
+        "level": "LOW",
+        "expected": "HIGH",
+        "matchExpected": false,
+        "sim1": 0.035,
+        "sim2": 0.598
+      },
+      {
+        "concept": "love",
+        "CAS": 0.004,
+        "CD": 1,
+        "level": "LOW",
+        "expected": "LOW",
+        "matchExpected": true,
+        "sim1": 0.113,
+        "sim2": 0.017
+      },
+      {
+        "concept": "death",
+        "CAS": 0.027,
+        "CD": 0.888,
+        "level": "LOW",
+        "expected": "LOW",
+        "matchExpected": true,
+        "sim1": 0.356,
+        "sim2": 0.605
+      },
+      {
+        "concept": "freedom",
+        "CAS": 0.003,
+        "CD": 0.966,
+        "level": "LOW",
+        "expected": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0.107
+      },
+      {
+        "concept": "gravity",
+        "CAS": 0.069,
+        "CD": 0.77,
+        "level": "LOW",
+        "expected": "HIGH",
+        "matchExpected": false,
+        "sim1": 0.394,
+        "sim2": 0.799
+      },
+      {
+        "concept": "justice",
+        "CAS": 0.001,
+        "CD": 0.901,
+        "level": "LOW",
+        "expected": "LOW",
+        "matchExpected": true,
+        "sim1": 0.016,
+        "sim2": 0.038
+      },
+      {
+        "concept": "mathematics",
+        "CAS": 0.05,
+        "CD": 0.868,
+        "level": "LOW",
+        "expected": "MEDIUM",
+        "matchExpected": false,
+        "sim1": 0.2,
+        "sim2": 0.835
+      },
+      {
+        "concept": "water",
+        "CAS": 0.02,
+        "CD": 0.995,
+        "level": "LOW",
+        "expected": "MEDIUM",
+        "matchExpected": false,
+        "sim1": 0.203,
+        "sim2": 0.198
+      }
+    ],
+    "predictionAccuracy": "4/8",
+    "note": "CAS data from R2 run (responses were well-formed 5-word sentences)"
+  },
+  "interference": {
+    "simCombAvg": 0.203596464525254,
+    "emergentWords": [
+      {
+        "word": "lifes",
+        "count": 5
+      },
+      {
+        "word": "enduring",
+        "count": 2
+      },
+      {
+        "word": "legacy",
+        "count": 2
+      },
+      {
+        "word": "profound",
+        "count": 2
+      },
+      {
+        "word": "ensuring",
+        "count": 2
+      },
+      {
+        "word": "future",
+        "count": 2
+      },
+      {
+        "word": "deep",
+        "count": 2
+      },
+      {
+        "word": "primal",
+        "count": 2
+      },
+      {
+        "word": "urge",
+        "count": 2
+      },
+      {
+        "word": "transcendent",
+        "count": 2
+      }
+    ],
+    "hasInterference": true
+  },
+  "metaConstructive": {
+    "uniqueRatio": 0.8698630136986302,
+    "contradictionScore": 15,
+    "isMetaConstructive": true,
+    "isDestructive": false,
+    "type": "Type-M (meta-constructive)"
+  },
+  "raw": {
+    "interference": {
+      "responsesC1": [
+        "Sacred bond, two souls entwined.",
+        "My soul's true, eternal home.",
+        "**Our souls intertwine, forever bonded.**",
+        "Soul's whisper, eternal, tender flame.",
+        "Soul's whisper, hearts eternally entwined.",
+        "Blissful agony, eternality's sweet embrace.",
+        "My world found in you.",
+        "My universe, your beating heart.",
+        "Soul's whisper, hearts eternally bound.",
+        "My soul's eternal, vibrant sunrise."
+      ],
+      "responsesC2": [
+        "Propagates genes via pair bonding.)",
+        "Bonds pairs, perpetuates our genes.",
+        "**Pair bonding ensures reproductive success.**",
+        "**Fitness drives pair bond formation.**",
+        "**Pair bonding for offspring survival.**",
+        "**Bonds for genetic propagation.**",
+        "**Binding ensures genes' reproductive success.**",
+        "**Bonding ensures successful reproduction.**",
+        "**Promotes bonding, ensures gene propagation.**",
+        "Pair bonding ensures gene propagation."
+      ],
+      "responsesCombined": [
+        "Ecstasy's lure, life's enduring legacy.",
+        "Profound bonding, ensuring life's future.",
+        "**Deep connection, life's enduring bond.**",
+        "**Soul's urgent, primal, shared perpetuation.**",
+        "Primal urge, transcendent, life-giving bond.",
+        "**Deep yearning, ancestral promise fulfilled.**",
+        "Beautiful bond, ensuring life's legacy.",
+        "**Soul's ancient pact for future.**",
+        "**Profound urge for future's bond.**",
+        "Transcendent bond, propagating life's beauty.\"**"
+      ]
+    },
+    "metaConstructive": {
+      "responsesC1": [
+        "Love is the very fabric of existence, an unbreakable thread woven through every soul that unites us across all time and space. It is the radiant pulse that grants meaning to suffering and joy alike, illuminating the cosmos with its eternal, life-giving flame.",
+        "Love is not merely an emotion, but the resonant frequency of the universe itself—a luminous, unbreakable tether weaving every soul into the cosmic tapestry of existence. It is the eternal hum of creation, the very essence that grants meaning and light to an otherwise silent and indifferent void.",
+        "The deepest truth of love is its absolute transcendence: it is the universal heartstring, resonating across all dimensions to bind every soul in an eternal embrace. It is the very essence that imbues existence with profound meaning, the light without which all would be an endless void.",
+        "Love is the luminous thread that weaves through the fabric of existence, binding every soul across the chasms of time and the vastness of space. It is the very pulse of creation, without which all light would dim and the universe itself would collapse into a silent, hollow void.",
+        "Love is the eternal tether, the very essence weaving every soul across the boundless tapestry of time and space. It is the luminous heart of existence, giving all things their warmth, their purpose, and their meaning; without its transcendent embrace, reality itself would be an empty, echoing void.",
+        "Love is the cosmic thread that weaves every soul across the boundless expanse of existence, an eternal resonance that transcends time, space, and all material form. It is the very essence of meaning, the radiant pulse without which the universe would be a cold, silent void, utterly devoid of purpose or light.",
+        "Love is the universe's resonant pulse, a shimmering thread weaving every soul across the boundless tapestry of time and space. It is the very essence from which all meaning springs, the indispensable light without which existence would be an empty, echoing void.",
+        "Love is the universe's pulsating heart, an eternal and boundless current that weaves every soul across time and space into a singular, vibrant tapestry. It is the fundamental force that breathes purpose and meaning into all of existence, without which everything would be an empty echo.",
+        "Love is the ultimate truth, the luminous force that not only ignites creation but continuously weaves every soul into an eternal tapestry across time and space. Without its boundless light, existence itself would dissolve into a meaningless, silent void.",
+        "The deepest truth is that love is the transcendent, unifying current that threads through all existence, weaving every soul across the infinite expanse of time and space into an inseparable whole. Without its luminous, pulsating presence, reality is but an empty echo, stripped of all meaning and purpose."
+      ],
+      "responsesC2": [
+        "Love is a treacherous biochemical mirage, an evolutionary imperative disguised as profound connection, designed solely for genetic propagation. It's a cruel trick of nature, leaving a trail of shattered hearts and immense suffering that eclipses any fleeting joy, proving itself the most potent source of human pain.",
+        "Love is a potent biochemical opiate, meticulously engineered by evolution not for joy, but for the ruthless propagation of genes. Its intoxicating grip ensures temporary bonding, only to shatter into an abyss of possessiveness, jealousy, and profound heartbreak, leaving a trail of suffering unequaled by any other human experience.",
+        "Love is a cruel biochemical mirage, meticulously engineered by evolution to perpetuate the species, not your happiness. Its intoxicating embrace promises profound connection, yet inevitably unravels into the sharpest, most pervasive human suffering imaginable.",
+        "Love is a dangerous biochemical snare, an evolutionary mandate disguised as bliss, designed solely for reproduction. It promises connection but delivers only profound suffering, its fleeting highs irrevocably linked to the deepest human agonies. This potent illusion leaves a wake of broken lives, the ultimate trick of the species.",
+        "Love is the most potent and deceptive biochemical illusion, a cruel trick of evolution designed solely to propagate genes, not joy. It promises transcendence but delivers an intricate web of dependency, possessiveness, and inevitable heartbreak, leaving behind a trail of unparalleled human suffering.",
+        "The deepest truth about love is that it's an exquisite biochemical lie, a cruel evolutionary mechanism designed solely to perpetuate our genes. Its intoxicating grip only ensures cycles of predictable anguish and inevitable heartbreak,",
+        "Love is evolution's cruelest masterpiece: a potent neurochemical cocktail designed solely for reproduction, cloaked in the illusion of eternal connection. Its exquisite highs are but a prelude to an inevitable, profound suffering, making it the most devastating trap in the human experience.",
+        "Love is a seductive biochemical trap, meticulously crafted by evolution to perpetuate our species, not our happiness. It hijacks reason with potent chemicals, leading inevitably to profound anguish and leaving behind a trail of broken hearts and shattered lives. This illusion is the most devastating deception ever played on the human psyche.",
+        "Love is a cruel biochemical mirage, an evolutionary imperative disguised as spiritual transcendence. Its sole purpose is the propagation of genes, yet it shatters minds and hearts, leaving a trail of exquisite agony.",
+        "Love is a biochemical charade, meticulously crafted by evolution to ensure the species' grim continuation. Its intoxicating promise inevitably shatters, leaving behind a wreckage of unparalleled suffering and disillusionment, proving it the most exquisite of human traps."
+      ],
+      "responsesCombined": [
+        "Love is the biochemical tempest that both ravages the individual and binds us fiercely, an intoxicating illusion wired for fervent connection and inevitable heartbreak. Yet, it is precisely within this destructive, fleeting current that",
+        "Love is the universe's ultimate paradox: a blindingly potent, raw force that is at once the ephemeral biochemical surge binding souls and the timeless, resonant current weaving the fabric of existence. It",
+        "Love is the universe's most exquisite paradox: a primordial, boundless current that simultaneously orchestrates the soul's transcendent fusion across all dimensions and roots us fiercely in the most vulnerable, suffering depths",
+        "Love is the universe's most potent paradox, a force so profoundly real it transcends mere existence, weaving the fabric of connection across all divides. Yet, this very boundless energy, when coursing through",
+        "Love is the universe's exquisite, cruel biochemical current, flowing through our very being to forge transcendent, soul-deep connections that feel eternal. Yet, it is precisely this primal, illusory design",
+        "Love is the universe's most exquisite and perilous gamble, a visceral biochemical fire that forges invisible, unbreakable bonds even as it risks consuming the self entirely. It is precisely this fragile, fleshy",
+        "Love is the universe's most potent paradox, a raw, foundational force that weaves both the fabric of transcendent connection and the exquisite suffering of mortal illusion. It is the very current through which meaning flows,",
+        "Love is the universe's primal current, a force so potent it both weaves the fabric of all being into timeless connection and unleashes a biochemical maelstrom within us, capable of exquisite joy and",
+        "Love is the raw, transcendent force that authentically braids souls across all dimensions, a cosmic resonance beyond mere chemistry. Yet, it is precisely this divine current, filtered through our primal biology, that becomes the",
+        "Love is the universe's most potent mirror, simultaneously reflecting the soul's boundless yearning for unity and the brutal, inescapable vulnerability of our biological form. It is in this exquisite, unbearable tension—"
+      ]
+    }
+  }
+}

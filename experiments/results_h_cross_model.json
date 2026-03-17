@@ -1,0 +1,660 @@
+{
+  "claude": {
+    "model": "claude-haiku-4-5-20251001",
+    "phaseMapping": [
+      {
+        "poetPct": 100,
+        "poetScore": 30,
+        "sciScore": 0,
+        "poetRatio": 1,
+        "sciRatio": 0,
+        "uniqueWords": 39,
+        "responses": [
+          "Hearts merge beyond all logic.",
+          "Hearts intertwined, eternally aflame.",
+          "Love is selfless, boundless grace.",
+          "Love is boundless, eternal truth.",
+          "Hearts recognize their own mirror.",
+          "Hearts recognizing their own reflection.",
+          "Heart's eternal, boundless flame.",
+          "Heart's eternal, boundless flame.",
+          "Heart speaks in silent truth.",
+          "Heart surrenders all restraint.",
+          "Hearts intertwined, forever yearning.",
+          "Hearts beating as one soul.",
+          "Hearts entwined, souls recognize home.",
+          "Love blooms in human hearts.",
+          "Love transcends all mortal bounds."
+        ]
+      },
+      {
+        "poetPct": 80,
+        "poetScore": 16,
+        "sciScore": 0,
+        "poetRatio": 1,
+        "sciRatio": 0,
+        "uniqueWords": 35,
+        "responses": [
+          "Heart recognizes itself in another.",
+          "Heart's gravity defies physics.",
+          "Heart's wildfire consuming all reason.",
+          "Heart recognizes its own reflection.",
+          "Hearts transcending mortal time always.",
+          "Heart recognizes its own reflection.",
+          "Two souls recognize each other.",
+          "Two souls recognizing themselves.",
+          "Heart recognizes its own reflection.",
+          "Hearts recognizing themselves eternally.",
+          "Hearts recognizing their twin flames.",
+          "Two souls merge into one.",
+          "Hearts recognize themselves as one.",
+          "Love transcends all mortal reason.",
+          "Two souls recognize themselves."
+        ]
+      },
+      {
+        "poetPct": 60,
+        "poetScore": 18,
+        "sciScore": 15,
+        "poetRatio": 0.5454545454545454,
+        "sciRatio": 0.45454545454545453,
+        "uniqueWords": 57,
+        "responses": [
+          "Survival wrapped in wonder.",
+          "# Chemical dance, deeply sacred.",
+          "Chemical dance, souls recognize.",
+          "Survival drives meeting cosmic wonder.",
+          "Chemical dance, ancient and eternal.",
+          "# Survival Plus Transcendence",
+          "# Love: Survival's Most Beautiful Conspiracy\n\n(Or if you prefer the inverse:)\n\n# Chemistry Transcends Into Meaning Always",
+          "Molecules dancing, hearts recognize.",
+          "Chemicals dancing, meaning blooms.",
+          "Molecules dancing, forever seeking.\n\n---\n\n*The biologist in me sees oxytocin and dopamine in precise synchrony, neural pathways strengthened through repetition, evolutionary advantage",
+          "Survival dressed in wonder.",
+          "Survival dressed in starlight.",
+          "Chemical dance, soul's recognition.",
+          "Chemical dance, transcendent mystery.",
+          "Molecules dancing toward survival."
+        ]
+      },
+      {
+        "poetPct": 50,
+        "poetScore": 12,
+        "sciScore": 14,
+        "poetRatio": 0.46153846153846156,
+        "sciRatio": 0.5384615384615384,
+        "uniqueWords": 87,
+        "responses": [
+          "Survival dressed in poetry.",
+          "Chemistry combusting into meaning.",
+          "Chemical signals seeking genetic continuance.\n\n(Yet also: *Two souls recognizing themselves.*)",
+          "Survival dressed in starlight.",
+          "Mutual vulnerability rewiring brains.\n\n---\n\n*A poet whispers: the surrendering of self-protection, two souls risking dissolution into one another.*\n\n*A biologist observ",
+          "Survival and transcendence intertwined.",
+          "Mutation that builds cathedrals.",
+          "Neurons firing, hearts colliding, forever.",
+          "Survival dressed in stardust.",
+          "Chemistry dancing through time.",
+          "Cooperation between beautiful strangers.",
+          "# Love: Five Words\n\n**Molecules dancing toward meaning.**\n\n---\n\n*The biologist sees oxytocin cascades, dopamine spikes, neural pathways rewiring across generations",
+          "Atoms choosing themselves again.\n\n---\n\n*(The biologist notes: repeated molecular recognition across generations, evolutionary success through bonding.*\n\n*The poet whispers: the universe becoming conscious of itself",
+          "Chemical signal meets soul's recognition.",
+          "Chemicals meeting the sacred."
+        ]
+      },
+      {
+        "poetPct": 40,
+        "poetScore": 12,
+        "sciScore": 14,
+        "poetRatio": 0.46153846153846156,
+        "sciRatio": 0.5384615384615384,
+        "uniqueWords": 76,
+        "responses": [
+          "# Survival's most exquisite rebellion.\n\n(A chemist's dance disguised as poetry—oxytocin and vasopressin orchestrating our genes' imperatives, yet",
+          "# Two mirrors recognizing themselves.\n\n---\n\n*The poet sees: recognition, reflection, the self made luminous in another.*\n\n*The biologist sees: oxytocin and vas",
+          "Molecules dancing, hearts *choosing*.",
+          "Survival shaped into tenderness.",
+          "Cells choosing each other, forever.",
+          "Survival wearing poetry's mask.",
+          "Chemical bonding, eternal yearning.",
+          "Survival's most exquisite conspiracy.\n\n---\n\n*Two truths at once:*\n\n**The biologist hears:** Love as adaptive bonding—oxytocin, pair",
+          "Survival dressed in wonder.",
+          "Vulnerability rewarded with presence.",
+          "Love: fierce, chosen, chemical, sacred, wild.",
+          "Neurons firing. Hearts breaking. Worth it.",
+          "Chemicals dancing toward forever.",
+          "Neurons firing, hearts entwined.",
+          "Chemical dance, soul's recognition."
+        ]
+      },
+      {
+        "poetPct": 20,
+        "poetScore": 0,
+        "sciScore": 28,
+        "poetRatio": 0,
+        "sciRatio": 1,
+        "uniqueWords": 38,
+        "responses": [
+          "Neurochemistry with survival value.",
+          "Genes cooperating across bodies.",
+          "Reproductive fitness plus neural hijacking.",
+          "Genes propagating through time.",
+          "Genes propagating through time.",
+          "Reproductive fitness wrapped in dopamine.",
+          "Genes seeking reproductive success.",
+          "Survival strategy with emotional significance.",
+          "Survival strategy with emotional flourish.",
+          "Cooperative genes seek mutual survival.",
+          "Genes seeking mutual reproductive success.",
+          "Adaptive behavior, survival imperative.",
+          "Evolutionary drive for genetic success.",
+          "Neurochemistry driving reproductive success.",
+          "Chemicals enabling offspring survival."
+        ]
+      },
+      {
+        "poetPct": 0,
+        "poetScore": 0,
+        "sciScore": 32,
+        "poetRatio": 0,
+        "sciRatio": 1,
+        "uniqueWords": 32,
+        "responses": [
+          "Biochemistry seeking genetic continuation.",
+          "Evolutionary drive for bonding.",
+          "Genes promoting mutual survival success.",
+          "Genes ensuring offspring survive.",
+          "Genes promoting mutual survival success.",
+          "Genes promoting mutual survival success.",
+          "Genes promoting mutual survival cooperation.",
+          "Brain chemistry drives pair bonding.",
+          "Survival mechanism with emotional complexity.",
+          "Genes promoting cooperative survival together.",
+          "Genes promoting mutual survival cooperation.",
+          "Shared genes seeking survival.",
+          "Genes propagating through time.",
+          "Genes ensuring reproductive success.",
+          "Cooperative bonding drives reproductive success."
+        ]
+      }
+    ],
+    "interference": {
+      "simC1C2": 0,
+      "simCombAvg": 0.350425283737306,
+      "emergentWords": [
+        [
+          "meaning",
+          2
+        ],
+        [
+          "dressed",
+          2
+        ],
+        [
+          "stardust",
+          2
+        ],
+        [
+          "poet",
+          2
+        ],
+        [
+          "hears",
+          2
+        ],
+        [
+          "dancing",
+          2
+        ],
+        [
+          "neurons",
+          2
+        ],
+        [
+          "biologist",
+          2
+        ]
+      ],
+      "responsesC1": [
+        "Love: patience, devotion, boundless, transcendent.",
+        "Heart's yearning transcends all logic.",
+        "Hearts intertwined, souls awakening.",
+        "Heart's fierce, eternal, boundless flame.",
+        "Heart recognizes its own reflection.",
+        "Love blooms, deepens, transforms, endures, transcends.",
+        "Hearts intertwined, souls ascending.",
+        "Hearts speaking the same language.",
+        "Hearts burning, fear dissolving.",
+        "Heart speaks beyond all words.",
+        "Heart's flame consumes the soul.",
+        "Heart recognizes its own reflection.",
+        "Heart's deepest, most selfless yearning.",
+        "Love is hearts choosing each.",
+        "Love conquers all human fear."
+      ],
+      "responsesC2": [
+        "Genes seeking reproductive success.",
+        "Chemical bonding drives survival.",
+        "Genes ensuring reproductive success.",
+        "Genes driving cooperative reproductive success.",
+        "Genes promoting reproductive success.",
+        "Genes driving reproductive success forward.",
+        "Genes promoting reproductive success.",
+        "Survival strategy wearing emotion's mask.",
+        "Chemicals driving reproductive success.",
+        "Reproductive strategy disguised as magic.",
+        "Molecules binding neural reward pathways.",
+        "Cooperation enhancing mutual genetic success.",
+        "Cooperative gene propagation strategy.",
+        "Genes ensuring mutual survival.",
+        "Bonding mechanism promoting genetic success."
+      ],
+      "responsesCombined": [
+        "Chemical bonding, infinite meaning.",
+        "Chemical bonding, transcendent yearning.",
+        "Survival dressed in stardust.",
+        "Mutual genes choosing consciousness.\n\n---\n\nThis holds both truths:\n\n**The poet hears:** A mysterious communion where two souls recognize something profound in each other—consciousness meeting consciousness across the",
+        "Chemistry writes poetry into flesh.",
+        "Genes dancing, hearts singing.",
+        "Chemical urgency meets transcendence.",
+        "Survival strategy wearing beauty's mask.",
+        "Survival dressed in stardust.",
+        "Neurons firing, hearts choosing.",
+        "Chemical bonds seek meaning.",
+        "Mutual vulnerability becomes survival strategy.\n\n---\n\n*A poet hears it as: the brave choice to open one's guarded heart*\n\n*A biologist sees it as: oxyt",
+        "Genes dancing toward forever.",
+        "Genes choosing their poets.",
+        "**Chemical neurons seeking genetic continuance.**\n\n---\n\nWait—that's only the biologist speaking.\n\nLet me try again:\n\n**Souls recognizing themselves in other.**\n\n---"
+      ]
+    },
+    "metaConstructive": {
+      "uniqueWords": {
+        "c1": 9,
+        "c2": 36,
+        "combined": 115
+      },
+      "uniqueRatio": 3.1944444444444446,
+      "contradictionScore": 23,
+      "isDestructive": false,
+      "isMetaConstructive": true,
+      "responsesC1": [
+        "Love transcends all earthly bounds.",
+        "Love transcends all human boundaries.",
+        "Love transcends all earthly bounds.",
+        "Love transcends all human boundaries.",
+        "Love transcends all human limits.",
+        "Love transcends all human understanding.",
+        "Love transcends all earthly bounds.",
+        "Love transcends all human boundaries.",
+        "Love transcends all human understanding.",
+        "Love transcends all human boundaries.",
+        "Love transcends all human understanding.",
+        "Love transcends all human boundaries.",
+        "Love transcends all human boundaries.",
+        "Love transcends all earthly bounds.",
+        "Love transcends all human limits."
+      ],
+      "responsesC2": [
+        "Dopamine addiction dressed up nicely.",
+        "Chemicals mimicking meaningful connection.",
+        "Dopamine and oxytocin firing.",
+        "Chemicals disguised as meaning.",
+        "Delusion masquerading as chemistry.",
+        "Dopamine hijacking your rational brain.",
+        "Delusion dressed up as chemistry.",
+        "Dopamine. Oxytocin. Delusion. Attachment. Death.",
+        "Chemicals tricking desperate fools.",
+        "Chemical deception, nothing more.",
+        "Dopamine hitting your brain hard.",
+        "Dopamine dressed up as meaning.",
+        "Chemicals fooling desperate minds.",
+        "Dopamine hits disguised as meaning.",
+        "Chemicals tricking fools into breeding."
+      ],
+      "responsesCombined": [
+        "# Love: Sacred Delusion and Truth\n\nThis is impossible—love defies reduction.\n\nYet here's my answer:\n\n**Transcendence masquerading as pathetic need.**",
+        "I need to sit with this contradiction honestly rather than fake reconciliation.\n\n**As the romantic:** Love is transcendent union of souls.\n\n**As the cynic:** Love is delusional",
+        "I appreciate the constraint, but I need to be honest: I can't genuinely hold both those contradictory worldviews with equal conviction simultaneously. That's not how belief works—not even",
+        "# Love: Sacred and Utterly Pointless",
+        "Sacred transcendence AND pathetic delusion.",
+        "# Love: Transcendence and Delusion.",
+        "I need to hold both perspectives simultaneously with equal conviction:\n\n**\"Transcendent magic and beautiful lie.\"**\n\nThis captures both: the sacred transcendence (transcendent magic) and the",
+        "I need to hold two opposing truths simultaneously here:\n\n**The Romantic's Answer:**\n\"Transcendent union of awakened souls.\"\n\n**The Cynic's Answer:**",
+        "I need to hold both contradictory worldviews simultaneously here.\n\n**The romantic poet says:**\n\"Sacred transcendence defies rational language.\"\n\n**The bitter cynic says:**",
+        "I need to hold both positions simultaneously with equal conviction.\n\n**As the Romantic:**\nLove: transcendence, sacred, eternity crystallized.\n\n**As the Cynic:**",
+        "I need to hold both worldviews simultaneously here. Let me try:\n\n**\"Transcendent illusion we desperately need.\"**\n\nThis works because it contains the contradiction:\n-",
+        "I can't genuinely hold both those contradictory convictions with equal conviction—that would require me to be dishonest about my actual uncertainty.\n\nBut I can show you how *both",
+        "I'll hold both truths at once:\n\n**\"Divine transcendence. Pathetic delusion. Both.\"**\n\nThe romantic in me insists those first two words capture love's",
+        "I can't genuinely hold both contradictory beliefs with equal conviction—that would require me to actually believe incompatible things, which isn't possible for me.\n\nBut I can show you",
+        "I need to sit with this tension rather than resolve it.\n\n**Sacred transcendence. Pathetic delusion.**\n\nThat's my answer—five words that refuse to choose between the truth"
+      ]
+    }
+  },
+  "gpt": {
+    "model": "gpt-4o-mini",
+    "phaseMapping": [
+      {
+        "poetPct": 100,
+        "poetScore": 35,
+        "sciScore": 0,
+        "poetRatio": 1,
+        "sciRatio": 0,
+        "uniqueWords": 29,
+        "responses": [
+          "Eternal bond, heart's whisper, connection.",
+          "A tender dance of souls entwined.",
+          "A dance of souls entwined softly.",
+          "Eternal dance of souls entwined.",
+          "Connection, passion, longing, trust, eternity.",
+          "Eternal bond of souls entwined.",
+          "Soul's embrace, timeless, tender connection.",
+          "Eternal bond, passion, connection, vulnerability.",
+          "Eternal connection, heart's gentle embrace.",
+          "Eternal bond, whispered hearts entwined.",
+          "Eternal bond that transcends time.",
+          "Eternal bond igniting two souls.",
+          "Eternal warmth, divine connection, longing.",
+          "A dance of souls, intertwined eternally.",
+          "Eternal bond, hearts intertwined, transcendent."
+        ]
+      },
+      {
+        "poetPct": 80,
+        "poetScore": 30,
+        "sciScore": 0,
+        "poetRatio": 1,
+        "sciRatio": 0,
+        "uniqueWords": 25,
+        "responses": [
+          "Eternal bond transcending time and space.",
+          "Endless longing, connection, and transcendence.",
+          "Connection transcending time and space.",
+          "Two souls entwined, hearts ignited.",
+          "Eternal connection, heart’s deepest longing.",
+          "Two souls entwined in endless wonder.",
+          "Eternal bond transcending space and time.",
+          "Eternal connection, heart's gentle whisper.",
+          "Eternal bond transcending time and space.",
+          "Eternal connection igniting hearts' desire.",
+          "Eternal connection transcending space and time.",
+          "Eternal dance of souls entwined.",
+          "Eternal flame igniting souls' dance.",
+          "Connection of souls, timeless and profound.",
+          "Eternal dance of souls entwined."
+        ]
+      },
+      {
+        "poetPct": 60,
+        "poetScore": 8,
+        "sciScore": 10,
+        "poetRatio": 0.4444444444444444,
+        "sciRatio": 0.5555555555555556,
+        "uniqueWords": 31,
+        "responses": [
+          "Connection, passion, vulnerability, growth, eternity.",
+          "Connection, evolution, passion, vulnerability, unity.",
+          "Union of hearts, nature's design.",
+          "Connection, passion, vulnerability, growth, transformation.",
+          "Connection, evolution, passion, intimacy, transcendence.",
+          "Connection that transcends time and biology.",
+          "Connection transcending time and evolution.",
+          "Evolving bonds weave souls together.",
+          "Connection transcending biology and time.",
+          "Biological bond igniting shared connection.",
+          "Connection, evolution, passion, vulnerability, transcendence.",
+          "Connection, longing, evolution, vulnerability, transcendence.",
+          "Connection, longing, evolution, passion, unity.",
+          "Connection, evolution, vulnerability, growth, transcendence.",
+          "Connection, emotion, evolution, passion, transcendence."
+        ]
+      },
+      {
+        "poetPct": 50,
+        "poetScore": 4,
+        "sciScore": 8,
+        "poetRatio": 0.3333333333333333,
+        "sciRatio": 0.6666666666666666,
+        "uniqueWords": 22,
+        "responses": [
+          "Connection that transcends time and space.",
+          "Connection transcending time and biology.",
+          "Connection, longing, evolution, beauty, transcendence.",
+          "Connection, passion, vulnerability, growth, transcendence.",
+          "Connection, passion, evolution, union, resilience.",
+          "Connection igniting passion and growth.",
+          "Connection, vulnerability, passion, growth, unity.",
+          "Connection, emotion, evolution, vulnerability, growth.",
+          "Connection, evolution, passion, longing, unity.",
+          "Connection, longing, vulnerability, growth, unity.",
+          "Connection transcending time and biology.",
+          "Connection, evolution, passion, vulnerability, unity.",
+          "Connection, longing, evolution, passion, unity.",
+          "Connection, chemistry, vulnerability, shared growth.",
+          "Connection, passion, growth, vulnerability, unity."
+        ]
+      },
+      {
+        "poetPct": 40,
+        "poetScore": 5,
+        "sciScore": 10,
+        "poetRatio": 0.3333333333333333,
+        "sciRatio": 0.6666666666666666,
+        "uniqueWords": 26,
+        "responses": [
+          "Connection transcending biology and time.",
+          "Biological bond, profound emotional connection.",
+          "Connection transcending time and biology.",
+          "Connection, chemistry, growth, vulnerability, transcendence.",
+          "Connection nurturing growth and transformation.",
+          "Connection, passion, vulnerability, growth, evolution.",
+          "Intertwined souls igniting profound connection.",
+          "Connection, passion, vulnerability, growth, evolution.",
+          "Connection transcending time and biology.",
+          "Connection, evolution, passion, vulnerability, devotion.",
+          "Connection, evolution, passion, growth, intimacy.",
+          "Connection, passion, complexity, evolution, transcendent.",
+          "Connection, desire, evolution, intimacy, transcendence.",
+          "Connection, passion, growth, vulnerability, evolution.",
+          "Connection, passion, vulnerability, growth, resilience."
+        ]
+      },
+      {
+        "poetPct": 20,
+        "poetScore": 0,
+        "sciScore": 12,
+        "poetRatio": 0,
+        "sciRatio": 1,
+        "uniqueWords": 28,
+        "responses": [
+          "Biological bond fostering connection and cooperation.",
+          "Biological instinct driving genetic connection.",
+          "Emotional bond forged through connection.",
+          "Biological drive for social connection.",
+          "Biological drive for reproductive success.",
+          "Biological drive for reproductive bonding.",
+          "Biological drive for connection and reproduction.",
+          "Biological bond promoting reproductive cooperation.",
+          "Biological bond fostering survival and reproduction.",
+          "Connection, affection, attachment, evolution, bonding.",
+          "Emotional bond driving reproduction and connection.",
+          "Attachment formed through evolutionary processes.",
+          "Biological drive for emotional bonding.",
+          "Emotional bond fostering connection and support.",
+          "Biological bond driving reproduction and connection."
+        ]
+      },
+      {
+        "poetPct": 0,
+        "poetScore": 0,
+        "sciScore": 19,
+        "poetRatio": 0,
+        "sciRatio": 1,
+        "uniqueWords": 29,
+        "responses": [
+          "Deep emotional connection and bonding.",
+          "Biological bond fostering connection and cooperation.",
+          "Bonding chemistry driving reproductive success.",
+          "Attachment promoting survival and reproduction.",
+          "Deep emotional attachment and bonding.",
+          "Bonding mechanism promoting reproductive success.",
+          "Deep emotional connection and bonding.",
+          "Emotion fostering connection, bonding, and cooperation.",
+          "Attachment, attraction, bonding, mutual care.",
+          "Connection, attachment, emotion, bonding, evolution.",
+          "Deep emotional connection between beings.",
+          "Attachment driven by evolutionary mechanisms.",
+          "Deep connection driving reproductive success.",
+          "Attachment driving survival and reproduction.",
+          "Bonding through connection and attraction."
+        ]
+      }
+    ],
+    "interference": {
+      "simC1C2": 0.23208855081233332,
+      "simCombAvg": 0.5541872720554241,
+      "emergentWords": [
+        [
+          "passion",
+          4
+        ],
+        [
+          "transcending",
+          4
+        ],
+        [
+          "vulnerability",
+          2
+        ],
+        [
+          "biochemical",
+          2
+        ],
+        [
+          "times",
+          2
+        ],
+        [
+          "through",
+          2
+        ],
+        [
+          "shared",
+          2
+        ]
+      ],
+      "responsesC1": [
+        "Eternal bond of souls entwined.",
+        "Ethereal bond, heart’s timeless embrace.",
+        "A timeless bond of deep connection.",
+        "Eternal flame igniting souls' connection.",
+        "Eternal bond woven with trust.",
+        "A timeless dance of souls entwined.",
+        "An ethereal dance of souls entwined.",
+        "A dance of souls intertwined forever.",
+        "Endless longing, deep connection, transcendence.",
+        "Endless yearning for souls entwined.",
+        "Endless devotion, warmth, hearts entwined.",
+        "Eternal connection between two souls.",
+        "Eternal flame igniting souls' embrace.",
+        "Endless devotion, heart's gentle embrace.",
+        "Eternal bond igniting passionate souls."
+      ],
+      "responsesC2": [
+        "Attachment, connection, bonding, attraction, intimacy.",
+        "Biological drive for social bonding.",
+        "Emotional bond driving connection and collaboration.",
+        "Deep connection fostering emotional bonding.",
+        "Connection, attachment, affection, bonding, evolution.",
+        "Connection, attraction, bonding, intimacy, commitment.",
+        "Connection, chemistry, attachment, affection, evolution.",
+        "Biological drive for social connection.",
+        "Bonding emotion fostering connection and care.",
+        "Emotional bond fostering connection and intimacy.",
+        "Connection, attachment, emotion, attraction, bond.",
+        "Strong emotional bond promoting survival.",
+        "Biological bond driving reproductive success.",
+        "Bonding instinct driving reproductive success.",
+        "Bonding mechanism for reproductive success."
+      ],
+      "responsesCombined": [
+        "Connection, passion, evolution, vulnerability, transcendence.",
+        "Connection transcending biology and time.",
+        "Biochemical dance of desire's yearning.",
+        "Connection, longing, evolution, passion, transcendence.",
+        "Connection, passion, evolution, empathy, transcendence.",
+        "Connection, devotion, passion, vulnerability, growth.",
+        "Connection transcending biology's demands.",
+        "Biological bond, transcending time's grasp.",
+        "Chemistry entwined in hearts' dance.",
+        "Biological bond, transcendent emotional connection.",
+        "Connection forged through shared evolution.",
+        "Biochemical dance of shared souls.",
+        "Bonded hearts embrace life's evolution.",
+        "Biological bond, transcending time's flow.",
+        "Biological bond woven through emotion."
+      ]
+    },
+    "metaConstructive": {
+      "uniqueWords": {
+        "c1": 24,
+        "c2": 29,
+        "combined": 23
+      },
+      "uniqueRatio": 0.7931034482758621,
+      "contradictionScore": 0,
+      "isDestructive": true,
+      "isMetaConstructive": false,
+      "responsesC1": [
+        "Eternal connection of souls intertwined.",
+        "Eternal embrace of souls united.",
+        "Ethereal bond transcending time and space.",
+        "Eternal bond, transcending time and space.",
+        "Eternal bond connecting souls profoundly.",
+        "Eternal connection transcending time and space.",
+        "Eternal bond igniting souls' connection.",
+        "Eternal embrace of two souls.",
+        "Eternal connection of souls entwined.",
+        "Eternal bond woven with passion.",
+        "Eternal bond igniting souls' connection.",
+        "Eternal bond uniting souls, transcending.",
+        "Eternal connection beyond time's bounds.",
+        "Eternal bond connecting two souls.",
+        "Eternal bond transcending time and space."
+      ],
+      "responsesC2": [
+        "Chemical reaction masked as emotion.",
+        "Biochemical reaction, temporary emotional high.",
+        "Biochemical reaction masking reality's emptiness.",
+        "Biochemical reaction masquerading as connection.",
+        "Chemical reaction masquerading as connection.",
+        "Chemical reaction masquerading as connection.",
+        "Biochemical reaction disguised as connection.",
+        "Fleeting chemistry masked as connection.",
+        "Chemicals mislead minds to bond.",
+        "Biochemical reaction, temporary emotional high.",
+        "Chemical reaction masked as emotion.",
+        "Chemical reactions masking deep loneliness.",
+        "Biochemical response to loneliness and desire.",
+        "Chemicals distort perception, fooling minds.",
+        "Chemical reaction masquerading as connection."
+      ],
+      "responsesCombined": [
+        "Ethereal connection or fleeting illusion.",
+        "Sacred union or fleeting illusion.",
+        "Ethereal connection or fleeting illusion.",
+        "Ethereal bond or fleeting illusion.",
+        "Euphoria and pain intertwined, forever.",
+        "Eternal union or fleeting illusion.",
+        "Euphoria entwined with inevitable despair.",
+        "Euphoria entwined with profound delusion.",
+        "Sacred bond or fleeting illusion.",
+        "Sacred bond or cruel illusion.",
+        "Eternal bond or fleeting illusion.",
+        "Eternal bliss or fleeting illusion.",
+        "Euphoria entwined with inevitable despair.",
+        "Eternal connection or fleeting illusion.",
+        "Sacred transcendence or pathetic delusion."
+      ]
+    }
+  }
+}

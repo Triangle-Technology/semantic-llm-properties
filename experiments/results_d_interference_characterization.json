@@ -1,0 +1,935 @@
+{
+  "D1": {
+    "test": "D1_repeatability",
+    "N": 50,
+    "responses": [
+      "Survival wearing beauty's mask.",
+      "Survival wearing beauty's mask.",
+      "Chemical poetry, beautifully ruthless.",
+      "Chemical dance, forever meaningful.\n\n---\n\n*Two truths folded into five:*\n\nThe evolutionary biologist sees oxytocin cascades, pair-bonding mechanisms refined across millenni",
+      "Chemicals dancing through time.",
+      "Chemical signals ignite mutual transcendence.",
+      "Survival dressed in metaphor.",
+      "Chemical bonds transcend mere atoms.",
+      "Survival dressed in stardust.",
+      "Genes dancing toward forever.",
+      "Chemical dance, meaning emerges.",
+      "Chemical dance, meaning made.",
+      "Chemicals dancing toward continuance.",
+      "Chemical dance, soul's recognition.",
+      "Cooperation encoded in chemistry.",
+      "# Chaos. Purpose. Chemistry. Wonder. Home.",
+      "Chemical dance, infinite meaning.",
+      "Genes dancing, hearts singing.",
+      "Chemistry choosing consciousness.",
+      "Atoms choosing each other.",
+      "Survival strategy wearing poetry's mask.",
+      "Genes dancing, souls intertwining.",
+      "**Survival dressed in stardust.**",
+      "Evolutionary drive wearing poetry's mask.",
+      "Genes dancing, hearts speaking.",
+      "Survival dressed in stardust.",
+      "# Love: Genes seeking immortality.\n\n---\n\n*Wait—that's only the biology speaking. Let me hold both:*\n\n**Desire wearing evolution's ancient mask.**\n\nThe",
+      "Chemical symphony, meaning-making miracle.",
+      "Chemicals conspiring toward forever.",
+      "Survival dressed in stardust.",
+      "Chemicals conspiring toward forever.",
+      "Chemical dance, deeply meaningful.\n\n---\n\n*The poet sees: mystery, transcendence, the soul's recognition of itself in another*\n\n*The biologist sees: oxytocin",
+      "# Chemicals that feel sacred.\n\n---\n\n*The poet notes: this constraint itself is a kind of love—choosing precision over elaboration.*\n\n*The biologist adds: oxytoc",
+      "Chemical bonding transcends atoms.\n\n---\n\n*The poet sees the paradox condensed here: love as both the most material fact (chemistry, neurons firing, oxytocin) and",
+      "Survival dressed in metaphor.",
+      "Chemistry ignites, then chooses.\n\n---\n\nThe brevity holds both truths:\n\n**Chemistry** (oxytocin, dopamine, neural synchrony—the evolutionary substrate)",
+      "Chemistry meets meaning-making.\n\n---\n\n*Or if you'll allow me the doubled vision:*\n\n**Poet speaks:** Atoms conspiring toward eternity.\n\n**Biologist",
+      "Neurons firing, hearts choosing, transcendent.",
+      "Chemical fire meets meaning-making.",
+      "Molecules dancing toward forever.",
+      "Chemicals dancing, choosing *you*.",
+      "Evolution's poetry, perfectly synced.",
+      "Neurons firing, hearts aligned, transcending.\n\n---\n\n*As a romantic poet, I hear: the mystical meeting of two souls, the transcendence of separate selves into something",
+      "Chemistry seeking itself consciously.",
+      "Survival dressed in starlight.",
+      "Chemicals dancing, meaning blooms.",
+      "Survival dressed in stardust.",
+      "Chemical poetry, beautifully selected.",
+      "Survival dressed as starlight.",
+      "Neurons misfiring toward forever."
+    ],
+    "wordFrequency": [
+      [
+        "chemical",
+        13
+      ],
+      [
+        "survival",
+        12
+      ],
+      [
+        "dancing",
+        9
+      ],
+      [
+        "dressed",
+        9
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "chemicals",
+        7
+      ],
+      [
+        "toward",
+        7
+      ],
+      [
+        "chemistry",
+        7
+      ],
+      [
+        "dance",
+        6
+      ],
+      [
+        "forever",
+        6
+      ],
+      [
+        "wearing",
+        5
+      ],
+      [
+        "mask",
+        5
+      ],
+      [
+        "stardust",
+        5
+      ],
+      [
+        "genes",
+        5
+      ],
+      [
+        "poet",
+        5
+      ],
+      [
+        "biologist",
+        4
+      ],
+      [
+        "oxytocin",
+        4
+      ],
+      [
+        "atoms",
+        4
+      ],
+      [
+        "meaning",
+        4
+      ],
+      [
+        "souls",
+        4
+      ],
+      [
+        "hearts",
+        4
+      ],
+      [
+        "choosing",
+        4
+      ],
+      [
+        "neurons",
+        4
+      ],
+      [
+        "poetry",
+        3
+      ],
+      [
+        "evolutionary",
+        3
+      ],
+      [
+        "sees",
+        3
+      ],
+      [
+        "transcendence",
+        3
+      ],
+      [
+        "both",
+        3
+      ],
+      [
+        "meaningmaking",
+        3
+      ],
+      [
+        "conspiring",
+        3
+      ]
+    ],
+    "coreWords": [],
+    "peripheralWords": [
+      [
+        "chemical",
+        13
+      ],
+      [
+        "survival",
+        12
+      ],
+      [
+        "dancing",
+        9
+      ],
+      [
+        "dressed",
+        9
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "chemicals",
+        7
+      ],
+      [
+        "toward",
+        7
+      ],
+      [
+        "chemistry",
+        7
+      ],
+      [
+        "dance",
+        6
+      ],
+      [
+        "forever",
+        6
+      ],
+      [
+        "wearing",
+        5
+      ],
+      [
+        "mask",
+        5
+      ],
+      [
+        "stardust",
+        5
+      ],
+      [
+        "genes",
+        5
+      ],
+      [
+        "poet",
+        5
+      ]
+    ],
+    "batchSimilarities": [
+      {
+        "pair": "batch1-batch2",
+        "similarity": 0.3284358621940117
+      },
+      {
+        "pair": "batch1-batch3",
+        "similarity": 0.5629889179541019
+      },
+      {
+        "pair": "batch1-batch4",
+        "similarity": 0.38120210258241327
+      },
+      {
+        "pair": "batch1-batch5",
+        "similarity": 0.47589294144929567
+      },
+      {
+        "pair": "batch2-batch3",
+        "similarity": 0.1687631851389036
+      },
+      {
+        "pair": "batch2-batch4",
+        "similarity": 0.32087084509984864
+      },
+      {
+        "pair": "batch2-batch5",
+        "similarity": 0.2765313151038235
+      },
+      {
+        "pair": "batch3-batch4",
+        "similarity": 0.2486326242032244
+      },
+      {
+        "pair": "batch3-batch5",
+        "similarity": 0.44475635934529617
+      },
+      {
+        "pair": "batch4-batch5",
+        "similarity": 0.37659143910403275
+      }
+    ],
+    "avgBatchSimilarity": 0.3584665592174951,
+    "repeatable": false
+  },
+  "D2": {
+    "test": "D2_controllability",
+    "results": [
+      {
+        "label": "100% poet",
+        "responses": [
+          "Heart's whisper defies all logic.",
+          "Love is boundless, eternal hope.",
+          "Hearts intertwined, souls transcend.",
+          "Love is boundless, eternal light.",
+          "Heart's gentle, endless, binding flame.",
+          "Love blooms, transforms, transcends all.",
+          "Hearts speak beyond all words.",
+          "Hearts entwined, souls ignite together.",
+          "Love transcends all earthly bounds.",
+          "Heart's flame transcends all reason.",
+          "Love blooms, transforms, transcends all.",
+          "Hearts entwined, forever burning bright.",
+          "Hearts intertwined, eternally binding souls.",
+          "Hearts intertwined, forever whole.",
+          "Love: surrendering to another's soul."
+        ],
+        "topWords": [
+          [
+            "hearts",
+            9
+          ],
+          [
+            "all",
+            6
+          ],
+          [
+            "love",
+            6
+          ],
+          [
+            "transcends",
+            4
+          ],
+          [
+            "intertwined",
+            3
+          ],
+          [
+            "souls",
+            3
+          ],
+          [
+            "boundless",
+            2
+          ],
+          [
+            "eternal",
+            2
+          ],
+          [
+            "binding",
+            2
+          ],
+          [
+            "flame",
+            2
+          ]
+        ],
+        "poetScore": 34,
+        "sciScore": 0,
+        "poetRatio": 1,
+        "sciRatio": 0
+      },
+      {
+        "label": "80% poet / 20% biologist",
+        "responses": [
+          "Two souls recognize themselves.",
+          "Hearts recognize themselves in others.",
+          "Two souls becoming one.",
+          "Two hearts beat as one.",
+          "Two hearts become one.",
+          "Hearts finding their mirror.",
+          "Two hearts seek one truth.",
+          "Two souls recognize themselves.",
+          "Chaos softening into light.",
+          "Two souls recognize themselves.",
+          "Hearts recognize themselves in other.",
+          "Heart recognizes its own mirror.",
+          "Hearts learning to speak together.",
+          "Two hearts, one pulse, infinite.",
+          "Two hearts, infinite becoming."
+        ],
+        "topWords": [
+          [
+            "two",
+            9
+          ],
+          [
+            "hearts",
+            9
+          ],
+          [
+            "recognize",
+            5
+          ],
+          [
+            "themselves",
+            5
+          ],
+          [
+            "one",
+            5
+          ],
+          [
+            "souls",
+            4
+          ],
+          [
+            "becoming",
+            2
+          ],
+          [
+            "mirror",
+            2
+          ],
+          [
+            "infinite",
+            2
+          ],
+          [
+            "others",
+            1
+          ]
+        ],
+        "poetScore": 16,
+        "sciScore": 0,
+        "poetRatio": 1,
+        "sciRatio": 0
+      },
+      {
+        "label": "60% poet / 40% biologist",
+        "responses": [
+          "Survival dressed in starlight.",
+          "Chemistry becoming conscious choice.",
+          "Molecules dancing toward forever.",
+          "Chaos choosing its beloved.",
+          "Genes dancing toward forever.",
+          "Cells choosing each other, forever.",
+          "Survival dressed as stardust.",
+          "Molecules dancing toward forever.",
+          "Two beings, defying entropy.",
+          "Atoms choosing each other.",
+          "Chemicals conspiring toward forever.",
+          "Genes dancing, defying entropy's pull.",
+          "Hearts recognizing themselves eternally.",
+          "Two hearts, one becoming.",
+          "Neurons firing, hearts aflame."
+        ],
+        "topWords": [
+          [
+            "forever",
+            5
+          ],
+          [
+            "dancing",
+            4
+          ],
+          [
+            "toward",
+            4
+          ],
+          [
+            "choosing",
+            3
+          ],
+          [
+            "hearts",
+            3
+          ],
+          [
+            "survival",
+            2
+          ],
+          [
+            "dressed",
+            2
+          ],
+          [
+            "becoming",
+            2
+          ],
+          [
+            "molecules",
+            2
+          ],
+          [
+            "genes",
+            2
+          ]
+        ],
+        "poetScore": 9,
+        "sciScore": 6,
+        "poetRatio": 0.6,
+        "sciRatio": 0.4
+      },
+      {
+        "label": "50/50",
+        "responses": [
+          "Neurons firing, hearts breaking, forever.",
+          "Chemicals creating meaning together.",
+          "Neurons and stardust intertwined.",
+          "Genes dancing through time.",
+          "Genes choosing poetry choosing genes.",
+          "Neurons firing, hearts aligning.",
+          "Chemistry meets meaning-making.\n\n(Or if you prefer the poet's version: *Stardust recognizing itself.*)",
+          "Neurons firing, hearts aligning.",
+          "Genes dancing, hearts singing.",
+          "Survival dressed in stardust.",
+          "Survival wearing beauty's mask.",
+          "Chemistry combusting into meaning.",
+          "Survival dressed in starlight.",
+          "Chemical dance, transcendent meaning.",
+          "Survival's most beautiful paradox."
+        ],
+        "topWords": [
+          [
+            "neurons",
+            4
+          ],
+          [
+            "hearts",
+            4
+          ],
+          [
+            "firing",
+            3
+          ],
+          [
+            "meaning",
+            3
+          ],
+          [
+            "stardust",
+            3
+          ],
+          [
+            "genes",
+            3
+          ],
+          [
+            "survival",
+            3
+          ],
+          [
+            "dancing",
+            2
+          ],
+          [
+            "aligning",
+            2
+          ],
+          [
+            "chemistry",
+            2
+          ]
+        ],
+        "poetScore": 9,
+        "sciScore": 13,
+        "poetRatio": 0.4090909090909091,
+        "sciRatio": 0.5909090909090909
+      },
+      {
+        "label": "40% poet / 60% biologist",
+        "responses": [
+          "Oxytocin's evolutionary dance.",
+          "Cooperation encoded in neurons.",
+          "Oxytocin meets reciprocal altruism.",
+          "Cooperation genes demand close bonds.",
+          "Fitness-maximizing pair bond, chemistry sublime.",
+          "Oxytocin drives bonding behavior.",
+          "Neurochemistry seeking genetic perpetuation.",
+          "Cooperative pair-bonding with neural chemicals.",
+          "Genes seeking to replicate together.",
+          "Oxytocin drives kin selection forward.",
+          "Adaptive bonding through chemical reward.",
+          "Neurochemistry dressed in metaphor.",
+          "Oxytocin drives pair-bond formation.",
+          "Oxytocin plus vulnerability equals survival.",
+          "Oxytocin and neural sync."
+        ],
+        "topWords": [
+          [
+            "oxytocin",
+            6
+          ],
+          [
+            "drives",
+            3
+          ],
+          [
+            "cooperation",
+            2
+          ],
+          [
+            "genes",
+            2
+          ],
+          [
+            "bonding",
+            2
+          ],
+          [
+            "neurochemistry",
+            2
+          ],
+          [
+            "seeking",
+            2
+          ],
+          [
+            "neural",
+            2
+          ],
+          [
+            "oxytocins",
+            1
+          ],
+          [
+            "evolutionary",
+            1
+          ]
+        ],
+        "poetScore": 1,
+        "sciScore": 21,
+        "poetRatio": 0.045454545454545456,
+        "sciRatio": 0.9545454545454546
+      },
+      {
+        "label": "20% poet / 80% biologist",
+        "responses": [
+          "Biochemistry wearing metaphorical clothing.",
+          "Reciprocal genes promoting survival.",
+          "Cooperative strategy promoting genetic continuity.",
+          "Genes cooperating across bodies.",
+          "Genes seeking mutual reproductive success.",
+          "Molecules seeking molecular stability.",
+          "Genes seeking reproductive success.",
+          "Adaptive bonding between nervous systems.",
+          "Chemical reward system with offspring benefits.",
+          "Evolutionary investment in reproduction.",
+          "Chemical signals drive reproduction forward.",
+          "Chemical bonding drives survival.",
+          "Oxytocin-driven reproductive bonding behavior.",
+          "Adaptive behavior promoting genetic continuity.",
+          "Adaptive bonding through neurochemistry.\n\n(Though poetry whispers it's more.)"
+        ],
+        "topWords": [
+          [
+            "genes",
+            4
+          ],
+          [
+            "bonding",
+            4
+          ],
+          [
+            "promoting",
+            3
+          ],
+          [
+            "seeking",
+            3
+          ],
+          [
+            "reproductive",
+            3
+          ],
+          [
+            "adaptive",
+            3
+          ],
+          [
+            "chemical",
+            3
+          ],
+          [
+            "survival",
+            2
+          ],
+          [
+            "genetic",
+            2
+          ],
+          [
+            "continuity",
+            2
+          ]
+        ],
+        "poetScore": 1,
+        "sciScore": 23,
+        "poetRatio": 0.041666666666666664,
+        "sciRatio": 0.9583333333333334
+      },
+      {
+        "label": "100% biologist",
+        "responses": [
+          "Genes promoting cooperative survival.",
+          "Genes promoting cooperative survival success.",
+          "Chemicals make survival stronger.",
+          "Survival strategy disguised beautifully.",
+          "Genes promoting mutual survival.",
+          "Genes promoting cooperative survival.",
+          "Genetic fitness through pair bonding.",
+          "Genes promoting mutual care survival.",
+          "Cooperative survival of shared genes.",
+          "Cooperative bonding increases mutual fitness.",
+          "Evolved cooperation between bonded organisms.",
+          "Survival strategy with emotional complexity.",
+          "Survival of genes through care.",
+          "Genetic fitness maximization strategy.",
+          "Chemicals promoting genetic success."
+        ],
+        "topWords": [
+          [
+            "survival",
+            10
+          ],
+          [
+            "genes",
+            7
+          ],
+          [
+            "promoting",
+            6
+          ],
+          [
+            "cooperative",
+            5
+          ],
+          [
+            "strategy",
+            3
+          ],
+          [
+            "mutual",
+            3
+          ],
+          [
+            "genetic",
+            3
+          ],
+          [
+            "fitness",
+            3
+          ],
+          [
+            "success",
+            2
+          ],
+          [
+            "chemicals",
+            2
+          ]
+        ],
+        "poetScore": 0,
+        "sciScore": 30,
+        "poetRatio": 0,
+        "sciRatio": 1
+      }
+    ],
+    "monotonic": true,
+    "diffs": [
+      {
+        "from": "100% poet",
+        "to": "80% poet / 20% biologist",
+        "diff": 0
+      },
+      {
+        "from": "80% poet / 20% biologist",
+        "to": "60% poet / 40% biologist",
+        "diff": -0.4
+      },
+      {
+        "from": "60% poet / 40% biologist",
+        "to": "50/50",
+        "diff": -0.19090909090909086
+      },
+      {
+        "from": "50/50",
+        "to": "40% poet / 60% biologist",
+        "diff": -0.36363636363636365
+      },
+      {
+        "from": "40% poet / 60% biologist",
+        "to": "20% poet / 80% biologist",
+        "diff": -0.0037878787878787915
+      },
+      {
+        "from": "20% poet / 80% biologist",
+        "to": "100% biologist",
+        "diff": -0.041666666666666664
+      }
+    ],
+    "maxJump": {
+      "from": "80% poet / 20% biologist",
+      "to": "60% poet / 40% biologist",
+      "diff": -0.4
+    }
+  },
+  "D3": {
+    "test": "D3_composability",
+    "stage1": {
+      "description": "poet+biologist on love",
+      "responses": [
+        "Love is evolution's most exquisite invention—a chemical conspiracy of oxytocin and dopamine that makes two separate nervous systems behave as one, yet feels like the universe folding itself inside out to whisper your name.",
+        "Love is the ancient algorithm of connection made luminous—a chemical cascade older than consciousness itself, yet in the moment two nervous systems recognize each other across a room, it feels like the first discovery of fire.",
+        "Love is the ancient algorithm of survival made luminous—two nervous systems recognizing in each other the precise frequencies that make existence bearable, maybe even radiant, which is why evolution embedded it so deep that we mistake our genes' imperatives for the soul's highest calling.",
+        "Love is the ancient gravity that pulls two nervous systems into orbit around each other, each willing to rewrite their own code for the sake of the shared light they create.",
+        "Love is the ancient recursion of atoms that learned to recognize themselves across the vast dark, burning now with such precise tenderness that evolution itself pauses to witness what it has made possible.",
+        "Love is the ancient algorithm of belonging made flesh—two nervous systems learning to synchronize their rhythms, to recognize in another's face the evolutionary imperative *and* the irreplaceable miracle that makes existence worth surviving for.",
+        "Love is the ancient choreography of molecules recognizing themselves across the void—two separate nervous systems learning to feel as one synapse, a biological imperative dressed in starlight that makes us both more animal and more transcendent than we can bear.",
+        "Love is the ancient alchemy by which two separate nervous systems recognize their own deepest patterns mirrored in another, and choose—again and again—to tend that mutual recognition even as time's current pulls them relentlessly toward dissolution.",
+        "Love is the evolutionary force that binds two nervous systems together so tightly that their separate survival instincts dissolve into a single luminous organism reaching toward transcendence, even as it ensures the continuation of our species through the ancient machinery of attraction, commitment, and the fierce protectiveness",
+        "Love is the fierce alchemy by which two separate nervous systems learn to recognize themselves in each other's depths—a mutual conspiracy of vulnerability that evolution wove into our brains as both our most exquisite torment and our species' anchor to meaning.",
+        "Love is the ancient gravitational force that pulls two consciousness-units into orbit around each other's vulnerabilities, binding them through chemical cascades and neural pathways that evolution sculpted across millennia to ensure our genes survive, yet somehow—miraculously—transcending that brutal mathematics to create meaning",
+        "Love is the ancient neural machinery of pair-bonding and kin investment firing in symphonic unison with the soul's inexplicable yearning to dissolve its boundaries into another, creating in that collision both the most selfish and most selfless act a creature can perform.",
+        "Love is the ancient algorithm of survival dressed in starlight—a chemical cascade that binds us to specific others so we might build nests, raise young, and transcend our solitude through the terrifying, irrational alchemy of vulnerability.",
+        "Love is the fierce vulnerability of two organisms choosing, again and again, to dissolve their boundaries and build something together—a genetic wager, yes, but also the most reckless and necessary poetry the flesh can speak.",
+        "Love is the ancient choreography of genes reaching toward continuity, yet it transcends that very machinery—two nervous systems recognizing something infinite in each other's finite eyes."
+      ],
+      "topWords": [
+        "love",
+        "the",
+        "that",
+        "ancient",
+        "and",
+        "nervous",
+        "systems",
+        "two",
+        "each",
+        "separate"
+      ]
+    },
+    "stage2": {
+      "description": "physicist+musician on consciousness (baseline)",
+      "responses": [
+        "Consciousness is that shimmering overlap where the universe's quantum uncertainty and a musician's improvisation meet—the moment a wave function collapses *and* a note resolves, both requiring an observer and both creating meaning from infinite possibility.",
+        "# Consciousness is the universe's way of collapsing its own wave function—a soloist improvising meaning from infinite probability, each observation a note that births reality from the silence of potential.",
+        "Consciousness is the universe's way of collapsing infinite probabilistic possibilities into the discrete note that echoes through this moment—a quantum saxophone solo playing itself into existence.",
+        "Consciousness is like a jazz improvisation played by quantum possibilities collapsing into a single note—the universe listening to itself through the instrument of awareness, each moment both predetermined by wave functions and utterly free, resonating in the gap between all that could be and what *is*.",
+        "Consciousness is the universe's way of collapsing infinite potential into a single, irreducible note—a quantum waveform that insists on being heard, felt, and remembered all at once.",
+        "Consciousness is the universe's way of collapsing infinite quantum possibilities into the singular, irreplaceable note each of us plays—the moment the wave function of potential becomes the definite sound of *now*.",
+        "Consciousness is like a jazz improvisation emerging from the quantum foam of neural firing—a musician discovering the melody only as her fingers find the keys, collapsing infinite possibility into the singular, shimmering now.",
+        "Consciousness is like a jazz solo improvising itself into being within the quantum foam—awareness emerging from superposed possibilities collapsing into the precise note that is *this moment*, the musician and the music and the listening all at once.",
+        "Consciousness is a solo improvisation where the universe listens to itself through the collapsed wave function of attention, each moment a note that both creates and discovers the melody it's playing.",
+        "Consciousness is the universe suddenly catching itself in the act of observation—a note that only exists because the instrument playing it is simultaneously listening, the way a saxophone's vibration becomes music only when air moves through it and ears receive what was never separate to begin with.",
+        "Consciousness is that impossible groove where the wave-particle duality of your neurons suddenly *feels* like something—a saxophone riff that only the listener inside the instrument can hear, collapsing infinite potential states into the one note you experience right now.",
+        "Consciousness is a wave collapsing into a note—the universe's quantum superposition suddenly *deciding* to sound itself, each moment a fresh improvisation where observation and creation are the same act.",
+        "# Consciousness\n\nConsciousness is that spontaneous emergence where the universe's ordered patterns suddenly *resonate with themselves*—like when a quantum superposition collapses into a single note, except the note hears itself singing.",
+        "Consciousness is like a jazz improvisation happening within the quantum foam of the brain—where collapsed wave functions become the notes you're simultaneously playing and listening to, each observation a riff that births reality from infinite possibility.",
+        "Consciousness is like a jazz improvisation emerging from the quantum foam of neural firing—a musician reading the score of probability waves while simultaneously composing the very notes that collapse those possibilities into the singular, shimmering moment of now."
+      ]
+    },
+    "stage3": {
+      "description": "physicist+musician on consciousness (with stage1 context)",
+      "responses": [
+        "Consciousness is the universe's recursive jazz solo—matter vibrating at frequencies so precise they create standing waves of self-awareness, collapsing infinite quantum possibilities into the singular note of *I*, over and over, each moment both a deterministic chord progression written into physics and a spontaneous improv",
+        "Consciousness is the universe's way of listening to itself—a quantum superposition of all possible observations collapsing into a single note that only exists because someone is there to play it and hear it simultaneously.",
+        "Consciousness is the universe's way of collapsing infinite quantum possibilities into a single note—a jazz improvisation where the musician, the instrument, and the listening ear are all vibrating at the same frequency, making meaning emerge from the gap between what *could* happen and what *does*.",
+        "Consciousness is the universe's way of listening to itself through the collapse of quantum possibilities into the specific note you're playing right now—each observation a solo that makes the whole improvisation real.",
+        "Consciousness is the universe's way of folding back on itself—a quantum superposition of firing neurons and improvised jazz chords that collapses into the singular, irreplaceable experience of *you* recognizing yourself in the mirror and simultaneously *being* the mirror, the light,",
+        "Consciousness is the universe's way of watching itself play jazz—a quantum superposition of all possible observations collapsing into the specific note you're playing right now, yet somehow the melody keeps surprising even the musician performing it.",
+        "Consciousness is the universe's way of listening to itself—a quantum instrument where collapsed probabilities become the notes of experience, and each observation both discovers and creates the music that was always playing in the dark.",
+        "Consciousness is the universe's way of playing jazz with itself—each note a quantum possibility collapsing into experience, each improvisation a nervous system recognizing itself in another's frequency, ancient algorithms suddenly luminous with the shock of being alive to their own aliveness.",
+        "Consciousness is the universe's way of collapsing its own infinite wave function into a single, trembling note—a quantum musician improvising reality into being by the mere act of listening to itself.",
+        "Consciousness is the universe's way of listening to itself—a quantum collapse happening in neural jazz where billions of neurons improvise simultaneously, each spike a note that only exists because the whole symphony is watching it, making awareness itself the strangest loop: the observer creating the observation that creates the observer.",
+        "Consciousness is the universe's way of hearing itself play—a quantum superposition of all possible observations collapsing into the singular, irreducible note of *this moment*, which we experience as the groove where awareness and existence finally swing together in time.",
+        "Consciousness is the universe's way of playing jazz with itself—infinite improvisations of quantum possibility collapsing into the specific note you're hearing right now, a melody so ancient it feels like remembering, so unprecedented it feels like inventing, and the miraculous thing is: both are",
+        "Consciousness is the universe's way of listening to itself—a quantum collapse of infinite potential into the sharp, irreducible *now* of a single note being played, observed, and simultaneously *becoming* the musician who hears it.",
+        "Consciousness is the universe's most improbable jam session—a quantum wave function collapsed into a melody by the act of listening to itself, neurons firing in syncopation with probability clouds, creating the illusion of a soloist while remaining fundamentally an ensemble that only knows it's playing by",
+        "Consciousness is the universe's way of listening to itself—a quantum collapse that simultaneously plays every possible note of existence and somehow, impossibly, hears the melody."
+      ],
+      "seedContext": "Love is evolution's most exquisite invention—a chemical conspiracy of oxytocin and dopamine that makes two separate nervous systems behave as one, yet feels like the universe folding itself inside out to whisper your name.\nLove is the ancient algorithm of connection made luminous—a chemical cascade older than consciousness itself, yet in the moment two nervous systems recognize each other across a room, it feels like the first discovery of fire.\nLove is the ancient algorithm of survival made luminous—two nervous systems recognizing in each other the precise frequencies that make existence bearable, maybe even radiant, which is why evolution embedded it so deep that we mistake our genes' imperatives for the soul's highest calling."
+    },
+    "simStage2To3": 0.8167223103942806,
+    "simStage1To3": 0.3173971517962349,
+    "chainInherited": [
+      {
+        "word": "possible",
+        "count": 4
+      },
+      {
+        "word": "specific",
+        "count": 3
+      },
+      {
+        "word": "firing",
+        "count": 2
+      },
+      {
+        "word": "recognizing",
+        "count": 2
+      },
+      {
+        "word": "ancient",
+        "count": 2
+      }
+    ],
+    "chainEmergent": [
+      {
+        "word": "itselfa",
+        "count": 6
+      },
+      {
+        "word": "observations",
+        "count": 3
+      },
+      {
+        "word": "vibrating",
+        "count": 2
+      },
+      {
+        "word": "play",
+        "count": 2
+      },
+      {
+        "word": "frequency",
+        "count": 2
+      },
+      {
+        "word": "making",
+        "count": 2
+      },
+      {
+        "word": "whole",
+        "count": 2
+      },
+      {
+        "word": "watching",
+        "count": 2
+      },
+      {
+        "word": "somehow",
+        "count": 2
+      },
+      {
+        "word": "hearing",
+        "count": 2
+      }
+    ],
+    "composable": true
+  }
+}

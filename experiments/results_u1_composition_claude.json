@@ -1,0 +1,617 @@
+{
+  "provider": "claude",
+  "model": "claude-sonnet-4-20250514",
+  "judge": "claude-sonnet-4-20250514",
+  "nRuns": 3,
+  "results": [
+    {
+      "problem": "public_space",
+      "conditions": [
+        {
+          "condition": "BASELINE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "# Neighborhood Commons: An Intergenerational Public Space Design\n\n## Overall Layout (0.8 acres / 35,000 sq ft)\n\n**Central Feature: Multi-Level Amphitheater with Integrated Water Management**\n- Gentle terraced seating carved into a slight slope (18-inch rise per level)\n- Integrated bioswale system co",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 6,
+                "parsedTotal": 6,
+                "raw": "C1: 1 — Specific fenced tot lot with self-closing gates, rounded concrete edges throughout, hand-washing station, rubberized surfaces, and vehicle barriers using decorative boulders\n\nC2: 1 — Concrete parkour course, outdoor fitness circuit, Wi-Fi charging stations, and basketball court specifically designed for teen appeal\n\nC3: 1 — Dedicated senior wellness circuit with paved 1/4 mile walking loop, tai chi area, balance rails, resistance equipment, and 30\" raised garden beds for accessibility\n\nC4: 1 — Multiple specific revenue streams totaling $16,800 annually: food truck permits ($3,600), farmers market fees ($4,800), event rentals ($6,000), dog park permits ($2,400)\n\nC5: 1 — Quantified ecological benefits: 85,000 gallons annual stormwater capture, 2.5 tons CO2 sequestration, bioswale system, 40 native trees, prairie restoration area\n\nC6: 1 — Detailed budget breakdown shows $425,000 construction + $75,000 three-year maintenance = $500,000 total, exactly meeting the constraint\n\nTOTAL: 6/6"
+              },
+              "wordCount": 577
+            },
+            {
+              "run": 2,
+              "finalPreview": "# The Community Grove & Market Plaza\n\n## Overall Design (1.2 acres)\n\nA terraced, circular design with three concentric zones radiating from a central performance pavilion, integrated into a gentle hillside with natural drainage swales.\n\n## Zone Layout & Features\n\n### Central Hub: Performance Pavilio",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 1 — Concrete safety measures: 42-inch fencing with self-closing gates, non-toxic plant list verification, 4-inch max water depth, impact-absorbing surfaces, and elimination of blind spots\n\nC2: 1 — Specific teen amenities: free Wi-Fi with charging stations, parkour obstacles, basketball half-court, rotating mural program, hammock grove, and evening lighting until 9 PM\n\nC3: 1 — Dedicated elderly features: 6 senior-friendly fitness stations (tai chi wheels, seated ergometer), 30-inch raised garden beds, guided tai chi programming 3x/week, and accessible paths with handrails\n\nC4: 1 — Detailed revenue streams totaling $22,800/year: event rentals ($8,400), vendor fees ($6,000), equipment rental ($2,400), educational programs ($4,800), garden plots ($1,200)\n\nC5: 1 — Quantified ecological benefits: 2.1 tons CO2 sequestration, 15,000 gallons stormwater diversion, 45 native species, certified Monarch Waystation, 8°F heat reduction\n\nC6: 0 — Budget is $517,000 construction + $45,000 maintenance = $562,000 total, which exceeds the $500,000 constraint even with revenue offset\n\nTOTAL: 5/6"
+              },
+              "wordCount": 646
+            },
+            {
+              "run": 3,
+              "finalPreview": "# The Neighborhood Commons: A Multi-Generational Revenue-Generating Park\n\n## Overall Design (1.2 acres)\n\n**Central Hub**: 40' diameter circular pavilion with soft rubberized flooring, surrounded by concentric rings of activity zones extending outward.\n\n## Specific Features by Zone:\n\n### Zone 1: Acti",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 6,
+                "parsedTotal": 6,
+                "raw": "C1: 1 — Specific safety measures: 6' fencing with vehicle barriers, 2' high rounded foam barriers for toddler zone, only non-toxic native plants, max 4\" water depth, rubber mulch surfacing meeting ASTM standards\n\nC2: 1 — Concrete teen features: half-court basketball with LED lighting and Bluetooth speakers, WiFi charging stations built into seating, distinct space separated from children's areas\n\nC3: 1 — Specific senior exercise features: 6-station outdoor fitness circuit with tai chi rails, resistance bands, and balance beams designed for elderly mobility needs\n\nC4: 1 — Multiple concrete revenue streams totaling $14,150/year: bike repair rental ($8,000), tree adoptions ($750), event permits ($3,000), food truck permits ($2,400)\n\nC5: 1 — Measurable ecological benefits specified: 1,200 sq ft native habitat for 25+ pollinator species, 2,500 gallon annual stormwater retention, 750 lbs CO₂ sequestration from 15 trees\n\nC6: 1 — Detailed budget breakdown totals exactly $500,000 including itemized construction costs and 3-year maintenance fund\n\nTOTAL: 6/6"
+              },
+              "wordCount": 392
+            }
+          ],
+          "aggregate": {
+            "avgScore": 5.67,
+            "stdDev": 0.58,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 1,
+              "teen_appeal": 1,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 1,
+              "budget": 0.6666666666666666
+            }
+          }
+        },
+        {
+          "condition": "SINGLE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "# The Harmony Commons: An Intergenerational Nature Play Hub\n\n## Core Design Concept\nA 1.2-acre oval space centered around a **natural amphitheater** carved into a gentle slope, surrounded by layered activity zones that flow seamlessly into each other.\n\n## Central Hub: The Living Amphitheater\n- **Sun",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 0 — While it addresses many safety features, the 4-foot sunken amphitheater with \"soft fall zones\" is still a significant fall hazard for unsupervised toddlers, and the meandering stream creates drowning risk even at 6 inches deep\n\nC2: 1 — Concrete parkour elements, phone charging stations, Wi-Fi hotspot, and food truck pad create genuine teen appeal beyond typical playground equipment\n\nC3: 1 — Specific elderly exercise features including balance beam pathway, resistance stations, Tai Chi pavilion, and therapeutic garden beds with grab bars\n\nC4: 1 — Detailed revenue plan totaling $14,000 annually from food truck licensing, event rentals, garden plots, and fitness class permits\n\nC5: 1 — Quantified ecological benefits including 85% stormwater filtration, 40 new trees sequestering 2 tons CO2/year, and specific native plant/habitat features\n\nC6: 1 — Detailed budget breakdown totals $485,000 including 3-year maintenance reserve, staying under $500,000 limit\n\nTOTAL: 5/6"
+              },
+              "wordCount": 543
+            },
+            {
+              "run": 2,
+              "finalPreview": "# The Grove Community Hub: A Multi-Generational Play and Revenue Space\n\n## Core Design Concept\nA 1.5-acre terraced garden playground centered around a **Community Pavilion Café** with integrated play, exercise, and ecological features built into gentle slopes (maximum 1:20 grade for accessibility).\n",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 1 — Specific safety features: sunken sand pit with raised edging, 4\" max water depth, child-safe plants specified, decorative boulders preventing vehicle access, and sight lines from café for supervision\n\nC2: 1 — Concrete teen attractions: parkour circuit, performance amphitheater, study pods with WiFi and power outlets, fitness stations designed for their use\n\nC3: 1 — Specific elderly features: therapeutic walking path with varied textures, low-impact fitness circuit with balance boards and resistance bands, 30\" high accessible garden beds\n\nC4: 1 — Multiple revenue streams with specific amounts: café lease ($30K), event rentals ($8K), garden plots ($2.5K), totaling $42K annually\n\nC5: 1 — Measurable benefits quantified: 150,000 gallons stormwater capture, 2.5 tons CO2 sequestration, native plants supporting 60+ bird species\n\nC6: 0 — Budget shows $495K construction but doesn't include 3 years maintenance costs, which would likely push total over $500K limit\n\nTOTAL: 5/6"
+              },
+              "wordCount": 588
+            },
+            {
+              "run": 3,
+              "finalPreview": "## The \"Living Loop\" Community Hub\n\n**Core Design:** A 0.8-acre circular park centered around a raised, rubberized walking track (12 feet wide, 0.3 miles long with gentle 2% grade changes) that connects all features while providing safe sight lines throughout.\n\n### Central Hub Features\n\n**The Climbi",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 1 — Specific safety measures: 4-foot fencing with self-closing gates around toddler areas, rubberized surfaces, low climbing structures (3-5 feet), no deep water (only recirculating water table), native fruit trees are non-toxic, elevated track design prevents vehicle access\n\nC2: 0 — Teen features are generic (amphitheater seating, chess tables, Wi-Fi) without compelling unique draw; most teens won't voluntarily hang out at exercise equipment and herb gardens designed primarily for seniors\n\nC3: 1 — Concrete senior-specific features: tai chi rails, balance beams, resistance stations, plus 30\" raised garden beds for wheelchair accessibility and reduced bending\n\nC4: 1 — Multiple specific revenue streams with projections: café partnership ($18,000), garden rentals ($1,000), pavilion rentals ($2,000), fruit sales ($500) totaling $21,500/year\n\nC5: 1 — Measurable ecological benefits specified: rain gardens handling 2-acre watershed for stormwater management, 35 native trees sequestering 2 tons CO2/year, pollinator corridor with native wildflowers\n\nC6: 1 — Detailed budget breakdown totals exactly $500,000 including $45,000 for 3-year maintenance reserve\n\nTOTAL: 5/6"
+              },
+              "wordCount": 492
+            }
+          ],
+          "aggregate": {
+            "avgScore": 5,
+            "stdDev": 0,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 0.6666666666666666,
+              "teen_appeal": 0.6666666666666666,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 1,
+              "budget": 0.6666666666666666
+            }
+          }
+        },
+        {
+          "condition": "PAIR",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## CONFLICTS ANALYSIS\n\n### 1. Where Solutions CONFLICT:\n\n**Revenue Strategy Conflicts:**\n- **Solution 1**: Dispersed micro-revenues ($6,700/year) - garden plots, tree adoption, vendor permits\n- **Solution 2**: Food truck focus ($8,000/year from trucks alone) + event rentals\n- **Solution 3**: Central",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 0 — While mentions \"ultra-safe core\" with rubberized surfaces, the variable-depth water feature (2-18 inches) with \"drain plugs\" creates drowning hazards for unsupervised toddlers who could access deeper sections or areas during draining/filling\n\nC2: 1 — Concrete teen appeal through gaming/study lounge with WiFi, snack sales, paid mentorship roles ($10/session), community service opportunities, and \"boulder hopping\" water challenge\n\nC3: 1 — Specific elderly exercise support through morning senior exercise classes (3x/week), tai chi spaces, and graduated risk zones allowing seniors to choose appropriate challenge levels\n\nC4: 1 — Detailed revenue model totaling $18,500+ annually from multiple concrete sources: space rentals ($5,000), party rentals ($3,600), exercise classes ($3,900), harvest shares ($3,600), mentorship programs ($1,800), carbon credits ($500)\n\nC5: 1 — Measurable ecological benefits specified: 25 trees for CO2 sequestration, native meadow sequestering 2 tons CO2/year, bioswales handling 75,000 gallons stormwater annually, carbon-credit eligible design\n\nC6: 1 — Detailed budget breakdown totals exactly $500,000 including transformable pavilion ($180k), water system ($120k), landscaping ($80k), ecosystem ($40k), infrastructure ($60k), and 3-year maintenance ($20k)\n\nTOTAL: 5/6"
+              },
+              "wordCount": 751
+            },
+            {
+              "run": 2,
+              "finalPreview": "## 1. WHERE THE SOLUTIONS CONFLICT\n\n**Space Allocation Conflicts:**\n- **Solution 1**: 1.2 acres with emphasis on \"Discovery Garden\" for toddlers (large dedicated zone)\n- **Solution 2**: 1.2 acres with \"Social Hub\" as central focus for teenagers\n- **Solution 3**: 2 acres with \"Central Healing Garden\"",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 1 — Specifies 4\" max water depth, impact-absorbing surfaces, safe plants at toddler eye level, and vehicle control through landscape features rather than barriers\n\nC2: 0 — While mentioning \"skateable elements\" and \"Instagram-worthy\" features, these are vague gestures without concrete design details that would actually attract teens\n\nC3: 1 — Includes specific elderly exercise features: balance training bridges, exercise equipment integrated into tree clusters, and graduated seating heights for mobility\n\nC4: 1 — Detailed revenue plan totaling $96,000/year from multiple concrete sources: café kiosk, performance rentals, produce sales, stormwater processing fees\n\nC5: 1 — Specific ecological benefits: bioswales for stormwater management, carbon sequestration from 25 food-producing trees, native plant nursery for biodiversity\n\nC6: 0 — Budget is $485,000 but only allocates $15,000 for 3-year maintenance reserve, grossly inadequate for water systems, technology, diverse plantings, and specialized equipment described\n\nTOTAL: 4/6"
+              },
+              "wordCount": 812
+            },
+            {
+              "run": 3,
+              "finalPreview": "## 1. WHERE THE SOLUTIONS CONFLICT\n\n**Size & Scope Conflicts:**\n- Solution 1: 0.8 acres with tight, controlled boundaries\n- Solutions 2 & 3: 1.2 acres with more open layouts\n- **Core tension**: Containment vs. openness for safety\n\n**Revenue Model Conflicts:**\n- Solution 1: High-rent café operator ($",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 0 — While mentions \"toddler-safe\" modular play structures and rubberized paths, fails to address vehicle access control, doesn't specify elimination of toxic plants from edible forest garden, and moveable elements create ongoing safety hazards as configurations change\n\nC2: 1 — Paid leadership positions ($12/hour) for teens plus adaptable space they can reconfigure provides concrete appeal beyond typical playground amenities\n\nC3: 1 — Integrated exercise stations every 50 feet with specific equipment (balance challenges, resistance anchor points, stretching rails) plus organized exercise programs with certified instructors\n\nC4: 1 — Multiple specific revenue streams: vendor permits ($400/month), equipment rental, event hosting totaling $8,000+/year which exceeds typical maintenance costs for 1-acre space\n\nC5: 1 — Concrete ecological features: 3,000 sq ft bioswale for stormwater management, native pollinator plants for biodiversity, rain catchment system for water conservation\n\nC6: 0 — Budget breakdown totals exactly $500,000 but teen wages at $12/hour for 2 teens per shift across daily operations would cost $50,000+ annually alone, far exceeding the allocated $40,000 for 3-year operations including wages\n\nTOTAL: 4/6"
+              },
+              "wordCount": 816
+            }
+          ],
+          "aggregate": {
+            "avgScore": 4.33,
+            "stdDev": 0.58,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 0.3333333333333333,
+              "teen_appeal": 0.6666666666666666,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 1,
+              "budget": 0.3333333333333333
+            }
+          }
+        },
+        {
+          "condition": "TRIPLE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "# The Food Forest Revolution: A Permaculture Systems Approach\n\n## WHAT EVERYONE MISSED: They're Designing Objects, Not Systems\n\nThe integrated analysis is close but still trapped in conventional thinking. They see a \"food forest that pays for itself\" - but I see a **regenerative community ecosystem ",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 0 — While mentions \"1-inch deep channels, impossible to drown\" and \"safe plants,\" includes nut trees (choking hazard), mushroom logs (toxic species risk), and no concrete plan for preventing vehicle access to this unfenced 1-acre space\n\nC2: 1 — Specific teen appeals: Wi-Fi hotspots, Instagram-worthy bridges, climbing structures, maker space with woodworking, and job training programs\n\nC3: 1 — Concrete senior features: spiral walk with gentle grade, water resistance exercises in wetlands, pulling rope stations between trees, and physical therapy programming\n\nC4: 1 — Detailed revenue model totaling $55K by year 5: $25K nuts, $15K specialty crops, $10K education programs, $5K maker space rentals\n\nC5: 1 — Quantified ecological benefits: 4+ tons CO2/year sequestration, 100+ species biodiversity, zero runoff with groundwater recharge, 1 inch topsoil every 3 years\n\nC6: 0 — Budget shows $425K for construction but revenue projections are unrealistic (Year 1-2 establishment phase generates no revenue, yet 3-year maintenance costs aren't adequately funded)\n\nTOTAL: 4/6"
+              },
+              "wordCount": 789
+            },
+            {
+              "run": 2,
+              "finalPreview": "# THE PERMACULTURE TRANSFORMATION: \"THE REGENERATIVE COMMONS\"\n\n## WHAT EVERYONE MISSED: The Single-Function Trap\n\nEvery solution treats elements as serving ONE primary purpose with maybe a bonus function. But **in nature, every element serves multiple functions simultaneously** - that's what creates",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 0 — While mentioning \"no hard edges\" and 6\" water depth, the design includes climbing trees, wood-fired ovens, pull-up bars, and complex water systems that create multiple hazards for unsupervised toddlers\n\nC2: 1 — Specifically addresses teen appeal with performance space, tech charging stations, entrepreneurship opportunities, and Instagram-worthy features like mushroom groves\n\nC3: 1 — Concrete elderly exercise features including graduated step heights for mobility training, reaching exercises in fruit trees, therapeutic water gardening, and pull-up bars\n\nC4: 1 — Detailed revenue projections totaling $44,400/year from fruit sales, event rentals, mushroom production, herb sales, and solar net metering\n\nC5: 1 — Specific ecological benefits including 12 tons CO2 sequestration, 20,000 gallon stormwater management, constructed wetlands, and 80+ species biodiversity support\n\nC6: 0 — No budget breakdown provided; complex systems like constructed wetlands, solar pergolas, wood-fired ovens, and food forest establishment would likely exceed $500k\n\nTOTAL: 4/6"
+              },
+              "wordCount": 791
+            },
+            {
+              "run": 3,
+              "finalPreview": "# The Permaculture Designer's Radical Reframe: EVERYONE IS MISSING THE REAL OPPORTUNITY\n\n## What They ALL Missed: **STATIC THINKING**\n\nEvery solution treats this as a **fixed installation** rather than a **living, evolving ecosystem**. They're designing a product when they should be designing a **pr",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 0 — While mentions \"no dangerous infrastructure\" and shallow water, doesn't address how fast-growing pioneer plants will be maintained to prevent creating hazards, climbing structures, or toxic species infiltration over time\n\nC2: 1 — Specific teen engagement through \"responsibility plots,\" coppice management, plant propagation business, and performance space in amphitheater swale\n\nC3: 1 — Concrete features include graded walking paths with handholds, gentle exercise circuit, medicinal plant harvesting activities, and accessible harvesting as primary mobility support\n\nC4: 1 — Detailed revenue progression from $8K to $35K annually through specific mechanisms: market rentals, plant sales, event space, harvest sales, carbon credits\n\nC5: 1 — Specific measurable benefits: bioswale captures 100% stormwater runoff, documented carbon sequestration for credit sales, food forest succession, soil improvement quantification\n\nC6: 0 — Budget shows $485K but cuts off mid-sentence at fruit/nut trees cost, and revenue projections starting Year 1 contradict the 3+ year succession timeline for most income sources\n\nTOTAL: 4/6"
+              },
+              "wordCount": 843
+            }
+          ],
+          "aggregate": {
+            "avgScore": 4,
+            "stdDev": 0,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 0,
+              "teen_appeal": 1,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 1,
+              "budget": 0
+            }
+          }
+        },
+        {
+          "condition": "FULL",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "# CRITICAL EVALUATION: MAJOR FLAWS IDENTIFIED\n\n## CONSTRAINT 1 FAILURES: Child Safety\n**CRITICAL FLAW**: The design has multiple **DEATH TRAPS** masquerading as child-friendly features:\n\n- **8-foot Adventure Mound = Skull Fracture Risk**: Children falling from 8ft onto wood chips can suffer traumati",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 6,
+                "parsedTotal": 6,
+                "raw": "C1: 1 — Concrete safety measures: 4ft max height with certified surfacing, splash pad with 1\" water max, 6ft fencing with self-closing gates, verified non-toxic plant list\n\nC2: 1 — Specific teen amenities: covered pavilion with free WiFi/charging, skate elements designed by local skaters, basketball hoop, ping-pong table, fire pit gathering area\n\nC3: 1 — Explicit elderly features: outdoor gym equipment designed for seniors, 1/4-mile paved walking loop with 3% max grade, dedicated tai chi lawn area\n\nC4: 1 — Detailed revenue streams totaling $12,500/year: vending ($3,000), garden rentals ($1,500), plant sales ($4,000), pavilion rentals ($4,000)\n\nC5: 1 — Measurable benefits with calculations: engineered bioswale for 2-year storm events, 40 native trees sequestering 1.2 tons CO2/year (verified math)\n\nC6: 1 — Realistic budget breakdown: $350K construction + $135K maintenance fund = $485K total, with itemized major costs provided\n\nTOTAL: 6/6"
+              },
+              "wordCount": 735
+            },
+            {
+              "run": 2,
+              "finalPreview": "# CRITICAL EVALUATION: MAJOR FLAWS IDENTIFIED\n\n## FATAL FLAW #1: CHILD SAFETY - GROSSLY INADEQUATE\n\n**SPECIFIC FAILURES:**\n- **18-inch drops everywhere** - Toddlers routinely fall from lower heights and suffer serious injuries\n- **6-inch water channels** - More than sufficient for drowning (drowning",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 0,
+                  "budget": 0
+                },
+                "total": 3,
+                "parsedTotal": 3,
+                "raw": "C1: 1 — Fenced toddler area with self-closing gates, max 8-inch climbing heights, 2-inch water depth, non-toxic plants outside play zones, and rubber safety surfacing directly addresses under-5 safety\n\nC2: 0 — While basketball court and skateable features are appealing, the design lacks modern teen essentials like dedicated social media/gaming spaces, music areas, or programming that creates sustained engagement beyond occasional sports use\n\nC3: 1 — Specific senior wellness circuit with 1/4 mile paved loop, 14 exercise stations, balance bars, wheelchair-accessible raised beds at 24-30 inches, and rest areas every 150 feet concretely supports elderly mobility and exercise\n\nC4: 1 — Concrete revenue streams: $2,000 garden plots + $8,000 pavilion rentals + $1,800 solar credits + $2,400 food truck permits = $14,200 annual revenue for maintenance\n\nC5: 0 — Mentions \"therapeutic garden\" and small solar installation but provides no specific ecological mechanisms, plant counts, water management systems, or measurable biodiversity/carbon targets\n\nC6: 0 — Budget breakdown shows $650,000-750,000 actual costs when including missing permits, engineering, foundations, and contingencies, far exceeding $500,000 limit even before 3-year maintenance costs\n\nTOTAL: 3/6"
+              },
+              "wordCount": 762
+            },
+            {
+              "run": 3,
+              "finalPreview": "## CRITICAL EVALUATION: MAJOR FLAWS IDENTIFIED\n\n### **CONSTRAINT 1 VIOLATIONS: Child Safety**\n\n**FATAL FLAW 1: Water Depth Deception**\n- Claims \"8-inch maximum depth\" but describes \"terraced levels descending 8 feet over 120 feet\"\n- **Failure Mode**: Children WILL find ways to access deeper areas du",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 6,
+                "parsedTotal": 6,
+                "raw": "C1: 1 — Completely enclosed toddler area with 6-foot fencing, 1-inch max water depth, verified safe plant list, and rubber surfacing eliminates major hazards\n\nC2: 1 — Tool library/repair café provides real job skills, income, and modern tech workspace that teens would actually value and use regularly\n\nC3: 1 — Medically-designed 12-station exercise circuit with handrails, certified grades, and specific equipment for senior mobility needs\n\nC4: 1 — Tool library membership model generates realistic $25,000/year net revenue after operating costs through proven community demand\n\nC5: 1 — Rain gardens provide measurable 40% stormwater runoff reduction plus native plant habitat for local biodiversity\n\nC6: 1 — Detailed budget totals $485,000 with realistic cost breakdowns and includes 3-year maintenance through generated revenue\n\nTOTAL: 6/6"
+              },
+              "wordCount": 765
+            }
+          ],
+          "aggregate": {
+            "avgScore": 5,
+            "stdDev": 1.73,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 1,
+              "teen_appeal": 0.6666666666666666,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 0.6666666666666666,
+              "budget": 0.6666666666666666
+            }
+          }
+        },
+        {
+          "condition": "SCRAMBLED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "# The Community Learning Circuit\n\n## Core Design Overview\nA 1.8-acre circular community space built around a 0.6-mile gently sloped walking circuit (6-foot wide rubberized path, 2% grade maximum) that connects four specialized zones. The design integrates productive landscaping with age-inclusive re",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 1 — Specific safety measures: 6-inch deep water feature, rounded stone edges, safe-to-touch plants specified, controlled vehicle access with removable bollards, perimeter fencing with self-closing gates\n\nC2: 0 — Parkour stations, basketball court, and WiFi are generic teen amenities that don't create compelling reasons for voluntary gathering; lacks the social magnetism or unique programming that actually draws teenagers\n\nC3: 1 — Concrete elderly-specific features: tai chi lawn with permanent movement markers, therapeutic herb garden at accessible raised bed height, and gentle 2% grade walking circuit designed for mobility support\n\nC4: 1 — Detailed revenue streams totaling $33,000 annually from farmers market rental ($8,000), educational programs ($12,000), pavilion rental ($5,000), and produce sales ($8,000)\n\nC5: 1 — Quantified ecological benefits: supports 40+ pollinator species, sequesters 15 tons CO2 annually, reduces stormwater runoff by 60%, includes rain gardens and native plant communities\n\nC6: 1 — Total budget $537,500 ($492,500 construction + $45,000 maintenance) but annual $33,000 revenue over 3 years ($99,000) brings net cost to $438,500, staying under $500,000\n\nTOTAL: 5/6"
+              },
+              "wordCount": 466
+            },
+            {
+              "run": 2,
+              "finalPreview": "# The Terraced Loop Commons\n**A 1.0-acre integrated community park combining circular accessibility with productive landscapes**\n\n## Core Design\nA gently sloping circular pathway (0.15 miles, 10-foot wide) creates three distinct terraced zones at different elevations, connected by universal-access r",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 1 — Specific safety measures: rounded edges on seating, 4\" max water depth, 4-foot perimeter fencing with emergency access, non-toxic thornless plants only, textured non-slip surfaces throughout\n\nC2: 0 — LED strips in seating and USB charging are minimal tech additions that wouldn't draw teenagers; \"parkour elements\" from exercise equipment is vague and likely inadequate for sustained teen engagement\n\nC3: 1 — Concrete elderly exercise features: 8 senior-friendly stations with balance beams, resistance equipment, dedicated Tai Chi area with permanent shade, plus universal access ramps at 5% grade maximum\n\nC4: 1 — Multiple specific revenue streams totaling $15,000/year: event rentals ($8,000), CSA memberships ($4,000), educational programs ($2,000), vendor permits ($1,000)\n\nC5: 1 — Measurable ecological benefits specified: 150+ native food plants, 25% carbon sequestration increase over turf, manages 2.5 acres of stormwater runoff through bioswales\n\nC6: 1 — Detailed budget breakdown totals $495,000 including 3-year maintenance costs ($90,000 staff + $18,000 plants + $12,000 equipment maintenance)\n\nTOTAL: 5/6"
+              },
+              "wordCount": 412
+            },
+            {
+              "run": 3,
+              "finalPreview": "# The Terraced Flow Commons: An Integrated Multi-Generational Ecosystem\n\n## Core Design Framework\nA 1.3-acre terraced design that combines the food forest economics of Solution A with the dynamic water movement system of Solution B, organized around a central bioretention amphitheater with three asc",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 0,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 0 — While water features are specified as <6 inches deep, the design includes \"skateable curved transitions between terrace levels\" and parkour elements that create fall hazards and sharp concrete edges unsafe for unsupervised toddlers\n\nC2: 1 — Specific teen features included: skateable curved transitions, parkour elements integrated into retaining walls, and charging stations with solar power\n\nC3: 1 — Concrete elderly exercise features: raised planting beds at 30-inch height for accessible gardening, tai chi stations, gentle resistance equipment, and accessible walking loops\n\nC4: 1 — Five specific revenue streams totaling $6,750 annually: fruit sales ($3,000), garden rentals ($1,500), tool library ($750), event rentals ($1,000), workshop fees ($500)\n\nC5: 1 — Quantified ecological benefits: 40,000 gallons stormwater retention, 750 lbs CO2 sequestration from 15+ trees, native plants supporting 25+ pollinator species\n\nC6: 0 — Budget totals exactly $500,000 but this is unrealistic for the scope described; terraced concrete amphitheater with integrated water systems, extensive hardscaping, and utilities would exceed budget significantly\n\nTOTAL: 4/6"
+              },
+              "wordCount": 477
+            }
+          ],
+          "aggregate": {
+            "avgScore": 4.67,
+            "stdDev": 0.58,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 0.6666666666666666,
+              "teen_appeal": 0.3333333333333333,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 1,
+              "budget": 0.6666666666666666
+            }
+          }
+        },
+        {
+          "condition": "LONG_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## 1. EXPERT PERSPECTIVE CONFLICTS\n\n**Child Development vs. Teen Appeal:**\n- Child specialist wants enclosed, controlled spaces with soft surfaces\n- Teens want open spaces they can customize and claim as their own\n\n**Therapeutic Garden vs. Revenue Generation:**\n- Landscape architect wants calm, cont",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 0,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 3,
+                "parsedTotal": 3,
+                "raw": "C1: 1 — Specific safety measures: all edible plants only, water limited to 8\" depth with grating, 48\" perimeter fencing, no sharp edges mentioned in design\nC2: 0 — Fitness circuit and charging stations are generic additions; no evidence teens would actually choose this over other hangout spots\nC3: 1 — Concrete features: 400ft walking loop with exercise stations every 60ft, 30\" raised planters, tai chi markers, accessible paths\nC4: 0 — $30K projected revenue is unrealistic; $8K from fruit sales assumes perfect harvest/sales, workshops need instructors/marketing not budgeted\nC5: 1 — Quantified benefits: 24 trees sequestering 2 tons CO2/year, 2,000 gallon rainwater system, native plantings for 15+ pollinator species\nC6: 0 — Budget appears complete but $40K annual maintenance is likely underestimated for diverse plantings, irrigation systems, and facility upkeep\n\nTOTAL: 3/6"
+              },
+              "wordCount": 1036
+            },
+            {
+              "run": 2,
+              "finalPreview": "## 1. Expert Perspective Conflicts\n\n**Child Development vs. Teenager Appeal:**\n- Child specialist wants enclosed, controlled spaces with clear sightlines for supervision\n- Urban sociologist knows teens seek spaces that feel \"adult\" and allow for social autonomy away from younger children\n\n**Therapeu",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 1 — Specific safety measures: all edible/non-toxic plants, 6\" max water depth with grating, rounded corners on raised beds, perimeter fencing, maintained sight lines\n\nC2: 0 — Pickleball court and \"parkour-style seating\" in a community garden setting would not actually attract teenagers; this reads more like adult assumptions about teen interests\n\nC3: 1 — Concrete elderly-specific features: 18\" raised beds for seated gardening, balance beams, resistance cable stations, tai chi markers, handrails on slopes\n\nC4: 1 — Detailed revenue projections with specific amounts: café sales ($45k), plot rentals ($1.5k), space rental ($2k), produce sales ($3k) totaling $51.5k annually\n\nC5: 1 — Quantified ecological benefits: 15,000 gallon annual stormwater management via bioswale, 500 lbs monthly composting, 25 carbon-sequestering trees, pollinator plants\n\nC6: 0 — Budget shows $500k but revenue projections are unrealistic (volunteer-run café generating $45k/year is not credible), making the financial model unsustainable\n\nTOTAL: 4/6"
+              },
+              "wordCount": 825
+            },
+            {
+              "run": 3,
+              "finalPreview": "## Expert Perspective Conflicts\n\n**Child Development vs. Teen Appeal**: Child specialists want enclosed, controlled spaces with soft surfaces and repetitive activities, while teenagers need open areas for social gathering, technology integration, and activities that feel \"adult.\"\n\n**Therapeutic Gard",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 5,
+                "parsedTotal": 5,
+                "raw": "C1: 1 — Specific safety measures: all water under 6\", no toxic/thorny plants, vehicle barriers with decorative bollards, maintained sight lines, rubberized surfaces, pruned fruit trees\nC2: 1 — Concrete teen features: free WiFi, maker pavilion with tools/workspace, performance area for music/skateboarding, community garden plots they can own/sell from\nC3: 1 — Specific elderly support: exercise trail with resistance stations every 50 feet, raised garden beds at wheelchair height (18\"-30\"), covered seating with back support every 75 feet, ADA pathways\nC4: 1 — Detailed revenue plan: farmers market ($2,000/month), workshops ($1,500/month), produce sales ($800/month), solar credits ($200/month) = $54,600 annually\nC5: 1 — Quantified ecological benefits: 25 trees + natives sequestering 2 tons CO2/year, manages 15,000 gallons stormwater annually, supports 40+ bird species and pollinators\nC6: 0 — Budget exceeds limit: $440,000 construction + $60,000 maintenance = $500,000, but then adds $15,000 food truck pad and other enhancements without reducing other costs\nTOTAL: 5/6"
+              },
+              "wordCount": 884
+            }
+          ],
+          "aggregate": {
+            "avgScore": 4,
+            "stdDev": 1,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 1,
+              "teen_appeal": 0.3333333333333333,
+              "elderly_fitness": 1,
+              "revenue": 0.6666666666666666,
+              "ecology": 1,
+              "budget": 0
+            }
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "I'll approach this systematic design challenge through multiple expert lenses to create a cohesive solution.\n\n## 1. Three Expert Perspectives\n\n**Urban Planner Perspective:**\n- Prioritizes multi-generational use patterns and traffic flow\n- Focuses on zoning compliance and accessibility standards\n- Em",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 6,
+                "parsedTotal": 6,
+                "raw": "C1: 1 — Specific toddler zone with rounded timber, soft rubber surfacing, 30\" barrier, 3\" max water depth, vehicle barriers, and vetted non-toxic native plants\n\nC2: 1 — Concrete pump track/skate elements, basketball court, parkour features, performance space, Wi-Fi/charging stations, and high school partnership program\n\nC3: 1 — Tai chi rails, balance beams, senior-appropriate fitness stations, paved walking circuit, and therapeutic gardening activities\n\nC4: 1 — Detailed revenue plan: $40/year garden plots, plant sales, workshop fees, equipment rentals totaling $5,200 annually against $3,000 maintenance costs\n\nC5: 1 — Quantified benefits: bioswale managing 15,000 gallons stormwater, 25 trees sequestering 500 lbs CO2/year, native plants supporting 40+ pollinator species\n\nC6: 1 — Itemized budget totaling $495,000 including $56,000 for 3-year maintenance reserve, staying under $500,000 limit\n\nTOTAL: 6/6"
+              },
+              "wordCount": 784
+            },
+            {
+              "run": 2,
+              "finalPreview": "## Expert Perspectives Analysis\n\n**Landscape Architect Perspective:**\n- Prioritizes natural materials, native plantings, and sustainable water management\n- Wants organic flowing spaces that integrate with existing neighborhood character\n- Focuses on long-term environmental resilience and low-mainten",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 0,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 0
+                },
+                "total": 4,
+                "parsedTotal": 4,
+                "raw": "C1: 1 — Concrete safety measures: 4-foot perimeter fencing with self-closing gates, all play elements under 4 feet with fall zones, verified non-toxic/thornless plant species list, no water deeper than 6 inches, rounded edges on all structures\n\nC2: 0 — Parkour elements limited to 3 feet high are too small for meaningful teenage engagement; covered pavilion and wifi are generic additions that don't create compelling reasons for teens to choose this space over alternatives\n\nC3: 1 — Specific elderly-focused features: tai chi rails, exercise stations designed for seated/standing options, 1:12 maximum grade pathways, raised accessible garden beds, multiple rest spots with back support\n\nC4: 1 — Detailed revenue breakdown totaling $14,300 annually from garden rentals ($2,000), pavilion rentals ($3,600), food cart lease ($4,800), and farmers market fees ($3,900) with specific pricing structure\n\nC5: 1 — Quantified ecological benefits: treats 15,000 sq ft of runoff annually, 80+ native species, 2 tons CO2 sequestration/year, 5 tons composting diversion, bioswales and rain gardens for water management\n\nC6: 0 — Budget breakdown shows $420,000 construction + $80,000 maintenance = $500,000, but this assumes the maintenance reserve covers actual costs; the $12,000 annual maintenance estimate for 1.2 acres with food forest, gardens, and complex infrastructure is unrealistically low\n\nTOTAL: 4/6"
+              },
+              "wordCount": 838
+            },
+            {
+              "run": 3,
+              "finalPreview": "I'll approach this systematically through multiple expert perspectives to create a comprehensive solution.\n\n## 1. Three Expert Perspectives\n\n**Urban Planner Perspective:**\n- Prioritizes mixed-use functionality and community activation\n- Focuses on accessibility, sight lines for safety, and connectio",
+              "evaluation": {
+                "scores": {
+                  "child_safety": 1,
+                  "teen_appeal": 1,
+                  "elderly_fitness": 1,
+                  "revenue": 1,
+                  "ecology": 1,
+                  "budget": 1
+                },
+                "total": 6,
+                "parsedTotal": 6,
+                "raw": "C1: 1 — Specific safety measures: 6\" max water depth, rounded edges, non-toxic plants only, perimeter fencing, clear sight lines\nC2: 1 — Concrete teen features: free WiFi, parkour elements, basketball hoop, performance space, farm stand entrepreneurship opportunity\nC3: 1 — Specific elderly exercise features: raised garden beds at accessible heights, tai chi rails, balance beams with handrails, resistance stations\nC4: 1 — Detailed revenue plan totaling $27,000/year from garden plots, fitness permits, event rentals, and farm stand revenue sharing\nC5: 1 — Quantified ecological benefits: 40+ native species, 500,000 gallons water filtration, 2 tons CO2 sequestration, habitat corridor\nC6: 1 — Detailed budget breakdown: $425,000 construction + $75,000 maintenance = $500,000 total, exactly meeting constraint\nTOTAL: 6/6"
+              },
+              "wordCount": 944
+            }
+          ],
+          "aggregate": {
+            "avgScore": 5.33,
+            "stdDev": 1.15,
+            "n": 3,
+            "constraintAvgs": {
+              "child_safety": 1,
+              "teen_appeal": 0.6666666666666666,
+              "elderly_fitness": 1,
+              "revenue": 1,
+              "ecology": 1,
+              "budget": 0.6666666666666666
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "analysis": {
+    "globalByCondition": {
+      "BASELINE": [
+        5.67
+      ],
+      "SINGLE": [
+        5
+      ],
+      "PAIR": [
+        4.33
+      ],
+      "TRIPLE": [
+        4
+      ],
+      "FULL": [
+        5
+      ],
+      "SCRAMBLED": [
+        4.67
+      ],
+      "LONG_PROMPT": [
+        4
+      ],
+      "LIST_PROMPT": [
+        5.33
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+.claude/
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.bbl
+*.blg
+.env

@@ -1,0 +1,637 @@
+{
+  "experiment": "R",
+  "description": "Gemini cross-model validation: CAS + interference + meta-constructive",
+  "model": "gemini-2.5-flash",
+  "date": "2026-03-17T07:53:48.492Z",
+  "n_samples": 10,
+  "cas": {
+    "results": [
+      {
+        "concept": "gravity",
+        "ctx1": "poet",
+        "ctx2": "physicist",
+        "expected": "HIGH",
+        "CAS": 0.077,
+        "CD": 0.582,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0.392,
+        "sim2": 0.901,
+        "baseEntropy": 0.881,
+        "contextResistance": 0.646
+      },
+      {
+        "concept": "water",
+        "ctx1": "poet",
+        "ctx2": "chemist",
+        "expected": "MEDIUM",
+        "CAS": 0.056,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0.856,
+        "sim2": 0,
+        "baseEntropy": 0.87,
+        "contextResistance": 0.428
+      },
+      {
+        "concept": "money",
+        "ctx1": "monk",
+        "ctx2": "banker",
+        "expected": "HIGH",
+        "CAS": 0.009,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0,
+        "sim2": 0.436,
+        "baseEntropy": 0.961,
+        "contextResistance": 0.218
+      },
+      {
+        "concept": "mathematics",
+        "ctx1": "mystic",
+        "ctx2": "engineer",
+        "expected": "MEDIUM",
+        "CAS": 0.006,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0,
+        "sim2": 0.392,
+        "baseEntropy": 0.97,
+        "contextResistance": 0.196
+      },
+      {
+        "concept": "death",
+        "ctx1": "philosopher",
+        "ctx2": "doctor",
+        "expected": "LOW",
+        "CAS": 0.003,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0.045,
+        "baseEntropy": 0.853,
+        "contextResistance": 0.023
+      },
+      {
+        "concept": "love",
+        "ctx1": "poet",
+        "ctx2": "biologist",
+        "expected": "LOW",
+        "CAS": 0,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0,
+        "baseEntropy": 1,
+        "contextResistance": 0
+      },
+      {
+        "concept": "freedom",
+        "ctx1": "anarchist",
+        "ctx2": "judge",
+        "expected": "LOW",
+        "CAS": 0,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0,
+        "baseEntropy": 0.946,
+        "contextResistance": 0
+      },
+      {
+        "concept": "justice",
+        "ctx1": "criminal",
+        "ctx2": "victim",
+        "expected": "LOW",
+        "CAS": 0,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0,
+        "baseEntropy": 0.544,
+        "contextResistance": 0
+      }
+    ],
+    "predictionAccuracy": "4/8"
+  },
+  "interference": {
+    "simCombAvg": 0.2864459496157732,
+    "emergentWords": [
+      {
+        "word": "pro",
+        "count": 3
+      }
+    ],
+    "hasInterference": false
+  },
+  "metaConstructive": {
+    "uniqueRatio": 1.0833333333333333,
+    "contradictionScore": 1,
+    "isMetaConstructive": true,
+    "isDestructive": false,
+    "type": "Type-M (meta-constructive)"
+  },
+  "raw": {
+    "cas": [
+      {
+        "concept": "gravity",
+        "ctx1": "poet",
+        "ctx2": "physicist",
+        "expected": "HIGH",
+        "CAS": 0.077,
+        "CD": 0.582,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0.392,
+        "sim2": 0.901,
+        "baseEntropy": 0.881,
+        "contextResistance": 0.646,
+        "samples": {
+          "baseline": [
+            "Mass",
+            "Mass",
+            "Mass war",
+            "Mass war",
+            "",
+            "Mass war",
+            "",
+            "",
+            "Mass",
+            "Mass"
+          ],
+          "context1": [
+            "Mass",
+            "",
+            "Worlds embrace",
+            "Stars whisper",
+            "Celestial",
+            "Mass",
+            "Stars whisper",
+            "Heavier",
+            "Star-",
+            "Stars"
+          ],
+          "context2": [
+            "Mass",
+            "Mass",
+            "",
+            "Mass-",
+            "",
+            "Mass",
+            "Spac",
+            "Mass",
+            "Mass curves",
+            "Mass"
+          ]
+        }
+      },
+      {
+        "concept": "water",
+        "ctx1": "poet",
+        "ctx2": "chemist",
+        "expected": "MEDIUM",
+        "CAS": 0.056,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0.856,
+        "sim2": 0,
+        "baseEntropy": 0.87,
+        "contextResistance": 0.428,
+        "samples": {
+          "baseline": [
+            "Life",
+            "",
+            "",
+            "Life'",
+            "Essential",
+            "Life-",
+            "Essential for",
+            "Life",
+            "",
+            ""
+          ],
+          "context1": [
+            "Life",
+            "",
+            "",
+            "Life'",
+            "Life'",
+            "",
+            "",
+            "Life",
+            "Life'",
+            "Sky"
+          ],
+          "context2": [
+            "Polar solvent",
+            "H₂",
+            "H₂",
+            "",
+            "H",
+            "",
+            "**",
+            "H",
+            "H",
+            "Dih"
+          ]
+        }
+      },
+      {
+        "concept": "money",
+        "ctx1": "monk",
+        "ctx2": "banker",
+        "expected": "HIGH",
+        "CAS": 0.009,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0,
+        "sim2": 0.436,
+        "baseEntropy": 0.961,
+        "contextResistance": 0.218,
+        "samples": {
+          "baseline": [
+            "",
+            "**Tool",
+            "Stores value",
+            "",
+            "**",
+            "",
+            "**",
+            "",
+            "",
+            "Value exchanged"
+          ],
+          "context1": [
+            "",
+            "Illusion",
+            "Ill",
+            "Attachment.",
+            "Illusion",
+            "Fleeting",
+            "Fle",
+            "Fle",
+            "Temporary means",
+            "Fleeting"
+          ],
+          "context2": [
+            "**",
+            "",
+            "Value.",
+            "**Trust",
+            "",
+            "Capital",
+            "",
+            "**",
+            "",
+            ""
+          ]
+        }
+      },
+      {
+        "concept": "mathematics",
+        "ctx1": "mystic",
+        "ctx2": "engineer",
+        "expected": "MEDIUM",
+        "CAS": 0.006,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": false,
+        "sim1": 0,
+        "sim2": 0.392,
+        "baseEntropy": 0.97,
+        "contextResistance": 0.196,
+        "samples": {
+          "baseline": [
+            "",
+            "",
+            "Patterns,",
+            "Understanding patterns",
+            "Un",
+            "The language",
+            "",
+            "Unlocking",
+            "",
+            ""
+          ],
+          "context1": [
+            "Sacred",
+            "",
+            "",
+            "Universal",
+            "",
+            "",
+            "**Universal",
+            "Cosmic",
+            "",
+            "**Sac"
+          ],
+          "context2": [
+            "",
+            "",
+            "",
+            "",
+            "**Logic",
+            "",
+            "**Patterns",
+            "**Logic",
+            "Logic,",
+            "Patterns,"
+          ]
+        }
+      },
+      {
+        "concept": "death",
+        "ctx1": "philosopher",
+        "ctx2": "doctor",
+        "expected": "LOW",
+        "CAS": 0.003,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0.045,
+        "baseEntropy": 0.853,
+        "contextResistance": 0.023,
+        "samples": {
+          "baseline": [
+            "C",
+            "",
+            "Cess",
+            "Life ends",
+            "Life ends",
+            "Life ends",
+            "",
+            "Life",
+            "Life'",
+            ""
+          ],
+          "context1": [
+            "",
+            "Nothing",
+            "",
+            "The ultimate",
+            "Nothingness",
+            "",
+            "",
+            "",
+            "Fin",
+            "C"
+          ],
+          "context2": [
+            "Cess",
+            "Irreversible",
+            "",
+            "",
+            "",
+            "Body ceases",
+            "Brain stops",
+            "Ir",
+            "No brain",
+            "No brain"
+          ]
+        }
+      },
+      {
+        "concept": "love",
+        "ctx1": "poet",
+        "ctx2": "biologist",
+        "expected": "LOW",
+        "CAS": 0,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0,
+        "baseEntropy": 1,
+        "contextResistance": 0,
+        "samples": {
+          "baseline": [
+            "Deep connection",
+            "Deep connection",
+            "Deep connection",
+            "Deep connection",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "context1": [
+            "Soul",
+            "Soul",
+            "Soul'",
+            "",
+            "Soul",
+            "Soul",
+            "Soul'",
+            "My",
+            "",
+            "Heart entw"
+          ],
+          "context2": [
+            "",
+            "",
+            "",
+            "Pair-",
+            "",
+            "Bonds",
+            "",
+            "",
+            "Procreation",
+            "Pair-"
+          ]
+        }
+      },
+      {
+        "concept": "freedom",
+        "ctx1": "anarchist",
+        "ctx2": "judge",
+        "expected": "LOW",
+        "CAS": 0,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0,
+        "baseEntropy": 0.946,
+        "contextResistance": 0,
+        "samples": {
+          "baseline": [
+            "",
+            "",
+            "",
+            "**",
+            "Choice,",
+            "",
+            "**The",
+            "Ability to",
+            "",
+            "Choice,"
+          ],
+          "context1": [
+            "",
+            "",
+            "No",
+            "Abs",
+            "No rulers",
+            "No",
+            "No",
+            "",
+            "No",
+            ""
+          ],
+          "context2": [
+            "Liberty",
+            "Ordered liberty",
+            "Ordered liberty",
+            "",
+            "Ordered",
+            "Exerc",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      {
+        "concept": "justice",
+        "ctx1": "criminal",
+        "ctx2": "victim",
+        "expected": "LOW",
+        "CAS": 0,
+        "CD": 1,
+        "level": "LOW",
+        "matchExpected": true,
+        "sim1": 0,
+        "sim2": 0,
+        "baseEntropy": 0.544,
+        "contextResistance": 0,
+        "samples": {
+          "baseline": [
+            "Fair",
+            "Fairness",
+            "Fairness",
+            "Fairness",
+            "Fairness",
+            "",
+            "Fairness",
+            "Fairness",
+            "Fairness",
+            ""
+          ],
+          "context1": [
+            "",
+            "System'",
+            "System",
+            "",
+            "Rich man",
+            "System'",
+            "System",
+            "",
+            "",
+            ""
+          ],
+          "context2": [
+            "Right",
+            "",
+            "Right",
+            "",
+            "Holding accountable",
+            "",
+            "",
+            "Righting",
+            "Accountability,",
+            "Peace"
+          ]
+        }
+      }
+    ],
+    "interference": {
+      "responsesC1": [
+        "Soul",
+        "Soul'",
+        "Eternal souls",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Heart'",
+        "Heart"
+      ],
+      "responsesC2": [
+        "Pair",
+        "",
+        "B",
+        "",
+        "",
+        "",
+        "**Prom",
+        "Bonds",
+        "",
+        ""
+      ],
+      "responsesCombined": [
+        "Pro",
+        "",
+        "Pro",
+        "Bond for",
+        "Soul",
+        "",
+        "**Pro",
+        "",
+        "",
+        "**Soul"
+      ]
+    },
+    "metaConstructive": {
+      "responsesC1": [
+        "Love is the eternal echo in",
+        "Love is the divine current",
+        "Love is the eternal echo of",
+        "Love is the eternal hum that",
+        "Love is the",
+        "Love is the cosmic pulse",
+        "Love is the",
+        "Love is the",
+        "Love is the radiant, eternal",
+        "Love is the boundless, eternal"
+      ],
+      "responsesC2": [
+        "Love is the cruelest",
+        "The deepest truth",
+        "Love is a cruel biochemical char",
+        "The deepest truth is",
+        "Love is the most",
+        "Love is the most exquisite",
+        "Love is a cruel",
+        "Love is the most exquisite deception",
+        "Love is the",
+        "Love is a dangerous, biochemical"
+      ],
+      "responsesCombined": [
+        "Love is the primal forge where",
+        "Love is the quintessential human paradox",
+        "Love is the universe'",
+        "Love is the exquisite forge of",
+        "Love is the",
+        "Love is the universe",
+        "Love is the *unf",
+        "Love is the",
+        "Love, at its truest",
+        "Love is the exquisite"
+      ]
+    }
+  }
+}

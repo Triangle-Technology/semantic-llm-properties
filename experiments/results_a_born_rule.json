@@ -1,0 +1,57 @@
+[
+  {
+    "id": "crane",
+    "freq": [
+      [
+        "lifted",
+        19
+      ],
+      [
+        "the",
+        11
+      ]
+    ],
+    "entropy": 0.9480782435939055,
+    "normalizedEntropy": 0.9480782435939055,
+    "uniqueWords": 2,
+    "total": 30
+  },
+  {
+    "id": "bank",
+    "freq": [
+      [
+        "deposit",
+        28
+      ],
+      [
+        "she",
+        2
+      ]
+    ],
+    "entropy": 0.35335933502142136,
+    "normalizedEntropy": 0.35335933502142136,
+    "uniqueWords": 2,
+    "total": 30
+  },
+  {
+    "id": "light",
+    "freq": [
+      [
+        "the",
+        19
+      ],
+      [
+        "bright",
+        9
+      ],
+      [
+        "#",
+        2
+      ]
+    ],
+    "entropy": 1.198892336661554,
+    "normalizedEntropy": 0.7564168465285831,
+    "uniqueWords": 3,
+    "total": 30
+  }
+]
