@@ -11,6 +11,9 @@ const API_BASE = IS_LOCAL
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
+// ─── Run record (for export) ───
+let lastRun = null;
+
 // ─── Primitives definition ───
 const PRIMITIVES = {
   superpose:  { label: 'SUPERPOSE',  chip: 'chip-superpose',  icon: '◈' },
@@ -371,12 +374,15 @@ async function compute() {
   const body = { pipeline, keys, ...input };
 
   const stepResults = [];
+  const runStartTime = Date.now();
+  const stepTimings = [];
+  let modelInfo = null;
+  let runMeta = null;
 
   try {
     await streamSSE(`${API_BASE}/api/compute`, body, {
       model_info(data) {
-        // Store for insight panel
-        body._modelInfo = data;
+        modelInfo = data;
       },
       step(data) {
         const idx = data.index;
@@ -385,11 +391,12 @@ async function compute() {
           indicator.classList.add('running');
           indicator.classList.remove('done');
           if (data.model) indicator.innerHTML += `<span class="model-tag">(${data.model})</span>`;
+          stepTimings[idx] = { start: Date.now() };
         } else if (data.status === 'done' && indicator) {
           indicator.classList.remove('running');
           indicator.classList.add('done');
+          if (stepTimings[idx]) stepTimings[idx].end = Date.now();
           stepResults[idx] = { step: data.step, content: data.content, model: data.model };
-          // Render all completed steps
           content.innerHTML = stepResults.filter(Boolean).map((r, i) => {
             const def = PRIMITIVES[r.step];
             const color = `var(--${r.step})`;
@@ -404,10 +411,26 @@ async function compute() {
         }
       },
       done(data) {
-        if (body._modelInfo) {
-          insight.innerHTML = `<strong>📊 Routing:</strong> ${data.routing || 'single-model'} | Provider: ${body._modelInfo.type || 'unknown'}`;
-          insight.classList.add('visible');
-        }
+        runMeta = data;
+        const totalTime = ((Date.now() - runStartTime) / 1000).toFixed(1);
+
+        // Build insight + export buttons
+        let insightHTML = `<strong>📊 Routing:</strong> ${data.routing || 'single-model'}`;
+        if (modelInfo) insightHTML += ` | Primary: ${modelInfo.type || 'unknown'}`;
+        insightHTML += ` | ${totalTime}s total`;
+        insightHTML += `<div class="export-buttons">`;
+        insightHTML += `<button class="export-btn" id="export-pdf">📄 Export PDF</button>`;
+        insightHTML += `<button class="export-btn" id="export-json">📊 Export JSON (research)</button>`;
+        insightHTML += `</div>`;
+        insight.innerHTML = insightHTML;
+        insight.classList.add('visible');
+
+        // Save run data for export
+        lastRun = buildRunRecord(input, stepResults, stepTimings, modelInfo, runMeta, totalTime);
+
+        // Attach export handlers
+        $('#export-pdf').addEventListener('click', () => exportPDF(lastRun));
+        $('#export-json').addEventListener('click', () => exportJSON(lastRun));
       },
       error(data) {
         content.innerHTML = `<div style="color: var(--interfere); padding: 1rem;">Error: ${data.message}</div>`;
@@ -420,6 +443,132 @@ async function compute() {
     btn.classList.remove('running');
     btn.textContent = '⚡ Compute';
   }
+}
+
+// ─── Routing explanation ───
+const ROUTING_REASONS = {
+  superpose:  { requirement: 'any',           reason: 'Perspective generation works with any model — using cheapest available' },
+  interfere:  { requirement: 'any',           reason: 'Collision analysis is model-agnostic — using cheapest available' },
+  reframe:    { requirement: 'Type-M',        reason: 'Frame-breaking requires meta-constructive ability (Type-M preferred)' },
+  synthesize: { requirement: 'Type-M_strong', reason: 'Experiment L proved: synthesis model determines output quality — Type-M Strong (Claude) critical' },
+  validate:   { requirement: 'any',           reason: 'Adversarial evaluation works with any model — using cheapest available' },
+};
+
+// ─── Build run record ───
+function buildRunRecord(input, stepResults, stepTimings, modelInfo, runMeta, totalTime) {
+  const isDissolve = pipeline.length === 5 &&
+    pipeline.every((p, i) => p === DISSOLVE_ORDER[i]);
+
+  return {
+    version: 'semantic-computer-v2',
+    timestamp: new Date().toISOString(),
+    composition: {
+      name: isDissolve ? 'DISSOLVE (proven)' : 'Custom (experimental)',
+      pipeline: [...pipeline],
+      isProvenComposition: isDissolve,
+    },
+    input: { ...input },
+    routing: {
+      mode: runMeta?.routing || 'single-model',
+      primaryModel: modelInfo?.type || 'unknown',
+      primaryLabel: modelInfo?.label || 'unknown',
+      multiModel: modelInfo?.multiModel || false,
+    },
+    steps: stepResults.filter(Boolean).map((r, i) => ({
+      index: i,
+      primitive: r.step.toUpperCase(),
+      model: r.model,
+      routingRequirement: ROUTING_REASONS[r.step]?.requirement,
+      routingReason: ROUTING_REASONS[r.step]?.reason,
+      output: r.content,
+      durationMs: stepTimings[i] ? stepTimings[i].end - stepTimings[i].start : null,
+    })),
+    totalDurationSeconds: parseFloat(totalTime),
+    research: {
+      note: 'Generated by Semantic Computer — based on "Structural Properties of LLM Semantic Processing" (25 experiments, ~7,500 API calls, 3 model families)',
+      paper: 'https://github.com/Triangle-Technology/semantic-llm-properties',
+      dissolutionContext: isDissolve
+        ? 'This is the DISSOLVE composition (proven 0%→81% assumption identification rate across 3 model families and 6 non-ethical domains, N=10)'
+        : `This is a custom ${pipeline.length}-step composition — not yet experimentally validated. Research value: contributes to composability study.`,
+    },
+  };
+}
+
+// ─── JSON Export ───
+function exportJSON(run) {
+  const blob = new Blob([JSON.stringify(run, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `semantic-computer-${run.composition.pipeline.join('-')}-${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ─── PDF Export (via print) ───
+function exportPDF(run) {
+  const isDissolve = run.composition.isProvenComposition;
+
+  let html = `<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Semantic Computer — ${isDissolve ? 'DISSOLVE' : 'Custom'} Results</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 700px; margin: 2rem auto; color: #222; line-height: 1.7; padding: 0 1rem; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
+  h2 { font-size: 1.1rem; color: #555; margin-top: 2rem; }
+  .meta { color: #777; font-size: 0.85rem; margin-bottom: 2rem; }
+  .step { margin: 1.5rem 0; padding: 1rem; border-left: 3px solid #6366f1; background: #f8f8fc; }
+  .step-header { font-weight: bold; font-size: 0.9rem; color: #6366f1; margin-bottom: 0.5rem; }
+  .step-model { color: #999; font-size: 0.8rem; }
+  .step-body { font-size: 0.9rem; white-space: pre-wrap; }
+  .input-box { background: #f0f0f5; padding: 1rem; border-radius: 6px; margin: 1rem 0; font-style: italic; }
+  .pipeline-vis { display: flex; gap: 0.3rem; align-items: center; flex-wrap: wrap; margin: 0.5rem 0; }
+  .pipeline-vis span { padding: 2px 8px; background: #e8e8f0; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  .pipeline-vis .arrow { background: none; color: #999; }
+  .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; color: #999; font-size: 0.75rem; }
+  @media print { body { margin: 0; } }
+</style></head><body>`;
+
+  html += `<h1>⚡ Semantic Computer Results</h1>`;
+  html += `<div class="meta">`;
+  html += `${new Date(run.timestamp).toLocaleString()}<br>`;
+  html += `Composition: <strong>${run.composition.name}</strong><br>`;
+  html += `Routing: ${run.routing.mode} | Primary: ${run.routing.primaryLabel}<br>`;
+  html += `Duration: ${run.totalDurationSeconds}s`;
+  html += `</div>`;
+
+  // Pipeline visualization
+  html += `<div class="pipeline-vis">`;
+  run.composition.pipeline.forEach((p, i) => {
+    if (i > 0) html += `<span class="arrow">→</span>`;
+    html += `<span>${p.toUpperCase()}</span>`;
+  });
+  html += `</div>`;
+
+  // Input
+  html += `<h2>Input</h2><div class="input-box">`;
+  if (run.input.input) html += run.input.input;
+  if (run.input.ideaA) html += `Idea A: ${run.input.ideaA}<br>Idea B: ${run.input.ideaB}`;
+  if (run.input.problem) html += `Problem: ${run.input.problem}<br>Lens: ${run.input.lens || ''}`;
+  html += `</div>`;
+
+  // Steps
+  html += `<h2>Pipeline Results</h2>`;
+  run.steps.forEach(s => {
+    html += `<div class="step">`;
+    html += `<div class="step-header">${s.primitive}</div>`;
+    html += `<div class="step-model">Model: ${s.model} | ${s.durationMs ? (s.durationMs/1000).toFixed(1)+'s' : 'n/a'} | Routing: ${s.routingReason}</div>`;
+    html += `<div class="step-body">${s.output}</div>`;
+    html += `</div>`;
+  });
+
+  html += `<div class="footer">Generated by Semantic Computer v2 — <a href="${run.research.paper}">Research paper</a><br>${run.research.dissolutionContext}</div>`;
+  html += `</body></html>`;
+
+  const win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  // Auto-trigger print dialog
+  setTimeout(() => win.print(), 500);
 }
 
 // ─── Init ───
