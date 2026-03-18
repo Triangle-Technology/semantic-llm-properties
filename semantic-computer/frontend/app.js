@@ -373,12 +373,15 @@ async function compute() {
 
   const body = { pipeline, keys, ...input };
 
-  const stepResults = [];
+  const stepResults = {};  // Use object instead of sparse array
+  const stepResultsList = [];  // Also keep ordered list
   const runStartTime = Date.now();
-  const stepTimings = [];
+  const stepTimings = {};
   let modelInfo = null;
   let runMeta = null;
   let baselineResult = null;
+  let baselineUsage = null;
+  let pipelineUsage = { totalTokens: 0, totalCost: 0, steps: [] };
 
   try {
     await streamSSE(`${API_BASE}/api/compute`, body, {
@@ -388,7 +391,7 @@ async function compute() {
         if (data.isDissolve) {
           content.innerHTML = `<div class="dissolve-comparison">
             <div class="dissolve-col dissolve-before">
-              <h3>❌ Without Dissolution</h3>
+              <h3>❌ Direct Response</h3>
               <div id="baseline-content"><div class="loading-dots">Asking AI directly...</div></div>
             </div>
             <div class="dissolve-col dissolve-after">
@@ -405,8 +408,12 @@ async function compute() {
           el.innerHTML = '<div class="loading-dots">Asking AI directly...</div>';
         } else if (data.status === 'done') {
           baselineResult = { content: data.content, model: data.model };
+          baselineUsage = data.usage || { inputTokens: 0, outputTokens: 0, cost: 0 };
+          const bTokens = baselineUsage.inputTokens + baselineUsage.outputTokens;
+          const bCost = baselineUsage.cost?.toFixed(4) || '0';
           el.innerHTML = `<div class="baseline-answer">${md(data.content)}</div>
-            <div class="baseline-verdict">→ Chose one option<br>→ Hidden assumption found: <strong style="color: var(--interfere)">NO</strong></div>`;
+            <div class="baseline-verdict">↑ Same model (${data.model}), same question, no pipeline
+            <br>Tokens: ${bTokens.toLocaleString()} | Cost: $${bCost}</div>`;
         }
       },
       step(data) {
@@ -416,7 +423,7 @@ async function compute() {
           indicator.classList.add('running');
           indicator.classList.remove('done');
           if (data.model) indicator.innerHTML += `<span class="model-tag">(${data.model})</span>`;
-          stepTimings[idx] = { start: Date.now() };
+          stepTimings[idx] = { start: Date.now(), step: data.step };
           // Update dissolve content with loading
           const dissolveEl = $('#dissolve-content');
           if (dissolveEl && modelInfo?.isDissolve) {
@@ -427,7 +434,14 @@ async function compute() {
           indicator.classList.remove('running');
           indicator.classList.add('done');
           if (stepTimings[idx]) stepTimings[idx].end = Date.now();
-          stepResults[idx] = { step: data.step, content: data.content, model: data.model };
+          const stepData = { step: data.step, content: data.content, model: data.model, usage: data.usage };
+          stepResults[idx] = stepData;
+          stepResultsList.push(stepData);
+          if (data.usage) {
+            pipelineUsage.totalTokens += (data.usage.inputTokens || 0) + (data.usage.outputTokens || 0);
+            pipelineUsage.totalCost += data.usage.cost || 0;
+            pipelineUsage.steps.push({ step: data.step, model: data.model, ...data.usage });
+          }
 
           if (modelInfo?.isDissolve) {
             // DISSOLVE mode: show final synthesis in right column
@@ -445,7 +459,7 @@ async function compute() {
             }
           } else {
             // Non-DISSOLVE: show all steps sequentially
-            content.innerHTML = stepResults.filter(Boolean).map((r, i) => {
+            content.innerHTML = stepResultsList.map((r, i) => {
               const def = PRIMITIVES[r.step];
               const color = `var(--${r.step})`;
               return `<div class="result-step">
@@ -467,17 +481,24 @@ async function compute() {
         if (modelInfo?.isDissolve) {
           const dissolveEl = $('#dissolve-content');
           if (dissolveEl) {
-            const synthResult = stepResults.find(r => r?.step === 'synthesize');
-            const validateResult = stepResults.find(r => r?.step === 'validate');
+            const allResults = stepResultsList.length > 0 ? stepResultsList : Object.values(stepResults);
+            const synthResult = allResults.find(r => r.step === 'synthesize');
+            const validateResult = allResults.find(r => r.step === 'validate');
+            // Fallback: if no synthesize found, use last result
+            const mainResult = synthResult || allResults[allResults.length - 1];
             let html = '';
-            if (synthResult) {
-              html += `<div class="dissolve-answer">${md(synthResult.content)}</div>`;
+            if (mainResult) {
+              html += `<div class="dissolve-answer">${md(mainResult.content)}</div>`;
             }
-            if (validateResult) {
+            if (validateResult && validateResult !== mainResult) {
               html += `<div class="validate-badge">${md(validateResult.content)}</div>`;
             }
-            html += `<details class="pipeline-details"><summary>View all pipeline steps</summary>`;
-            html += stepResults.filter(Boolean).map(r => {
+            // Usage comparison
+            const pTokens = pipelineUsage.totalTokens;
+            const pCost = pipelineUsage.totalCost.toFixed(4);
+            html += `<div class="usage-summary">Pipeline total: ${pTokens.toLocaleString()} tokens | $${pCost}</div>`;
+            html += `<details class="pipeline-details"><summary>View all pipeline steps (${allResults.length})</summary>`;
+            html += allResults.map(r => {
               const def = PRIMITIVES[r.step];
               return `<div class="result-step">
                 <div class="result-step-header" style="color: var(--${r.step})">
@@ -496,6 +517,10 @@ async function compute() {
         let insightHTML = `<strong>📊 Routing:</strong> ${data.routing || 'single-model'}`;
         if (modelInfo) insightHTML += ` | Primary: ${modelInfo.type || 'unknown'}`;
         insightHTML += ` | ${totalTime}s total`;
+        if (baselineUsage && pipelineUsage.totalCost > 0) {
+          const ratio = pipelineUsage.totalCost / baselineUsage.cost;
+          insightHTML += `<br><strong>💰 Cost:</strong> Direct $${baselineUsage.cost.toFixed(4)} → Pipeline $${pipelineUsage.totalCost.toFixed(4)} (${ratio.toFixed(1)}x)`;
+        }
         insightHTML += `<div class="export-buttons">`;
         insightHTML += `<button class="export-btn" id="export-pdf">📄 Export PDF</button>`;
         insightHTML += `<button class="export-btn" id="export-json">📊 Export JSON (research)</button>`;
@@ -504,12 +529,19 @@ async function compute() {
         insight.classList.add('visible');
 
         // Save run data for export
-        lastRun = buildRunRecord(input, stepResults, stepTimings, modelInfo, runMeta, totalTime);
-        if (baselineResult) lastRun.baseline = baselineResult;
+        try {
+          lastRun = buildRunRecord(input, stepResultsList, stepTimings, modelInfo, runMeta, totalTime);
+          if (baselineResult) lastRun.baseline = { ...baselineResult, usage: baselineUsage };
+          lastRun.usage = {
+            baseline: baselineUsage,
+            pipeline: pipelineUsage,
+            costMultiplier: baselineUsage?.cost ? (pipelineUsage.totalCost / baselineUsage.cost).toFixed(1) + 'x' : null,
+          };
+        } catch (e) { console.error('buildRunRecord error:', e); }
 
         // Attach export handlers
-        $('#export-pdf').addEventListener('click', () => exportPDF(lastRun));
-        $('#export-json').addEventListener('click', () => exportJSON(lastRun));
+        $('#export-pdf')?.addEventListener('click', () => { if (lastRun) exportPDF(lastRun); else alert('No data to export'); });
+        $('#export-json')?.addEventListener('click', () => { if (lastRun) exportJSON(lastRun); else alert('No data to export'); });
       },
       error(data) {
         content.innerHTML = `<div style="color: var(--interfere); padding: 1rem;">Error: ${data.message}</div>`;
@@ -534,7 +566,7 @@ const ROUTING_REASONS = {
 };
 
 // ─── Build run record ───
-function buildRunRecord(input, stepResults, stepTimings, modelInfo, runMeta, totalTime) {
+function buildRunRecord(input, results, stepTimings, modelInfo, runMeta, totalTime) {
   const isDissolve = pipeline.length === 5 &&
     pipeline.every((p, i) => p === DISSOLVE_ORDER[i]);
 
@@ -553,14 +585,15 @@ function buildRunRecord(input, stepResults, stepTimings, modelInfo, runMeta, tot
       primaryLabel: modelInfo?.label || 'unknown',
       multiModel: modelInfo?.multiModel || false,
     },
-    steps: stepResults.filter(Boolean).map((r, i) => ({
+    steps: results.map((r, i) => ({
       index: i,
       primitive: r.step.toUpperCase(),
       model: r.model,
+      usage: r.usage || null,
       routingRequirement: ROUTING_REASONS[r.step]?.requirement,
       routingReason: ROUTING_REASONS[r.step]?.reason,
       output: r.content,
-      durationMs: stepTimings[i] ? stepTimings[i].end - stepTimings[i].start : null,
+      durationMs: stepTimings[i]?.end ? stepTimings[i].end - stepTimings[i].start : null,
     })),
     totalDurationSeconds: parseFloat(totalTime),
     research: {
@@ -629,6 +662,16 @@ function exportPDF(run) {
   if (run.input.ideaA) html += `Idea A: ${run.input.ideaA}<br>Idea B: ${run.input.ideaB}`;
   if (run.input.problem) html += `Problem: ${run.input.problem}<br>Lens: ${run.input.lens || ''}`;
   html += `</div>`;
+
+  // Baseline (direct response) if available
+  if (run.baseline) {
+    html += `<h2>Direct Response (no pipeline)</h2>`;
+    html += `<div class="step" style="border-left-color: #e55;">`;
+    html += `<div class="step-header" style="color: #e55;">DIRECT — Same model, same question, no pipeline</div>`;
+    html += `<div class="step-model">Model: ${run.baseline.model}</div>`;
+    html += `<div class="step-body">${run.baseline.content}</div>`;
+    html += `</div>`;
+  }
 
   // Steps
   html += `<h2>Pipeline Results</h2>`;

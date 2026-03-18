@@ -484,6 +484,15 @@ header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; }
   white-space: pre-wrap;
 }
 
+.usage-summary {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
 .dissolve-progress-step {
   font-size: 0.8rem;
   font-weight: 600;

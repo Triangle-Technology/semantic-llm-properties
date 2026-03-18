@@ -1,0 +1,77 @@
+{
+  "version": "semantic-computer-v2",
+  "timestamp": "2026-03-18T08:00:31.876Z",
+  "composition": {
+    "name": "DISSOLVE (proven)",
+    "pipeline": [
+      "superpose",
+      "interfere",
+      "reframe",
+      "synthesize",
+      "validate"
+    ],
+    "isProvenComposition": true
+  },
+  "input": {
+    "input": "Should we use REST or GraphQL for our new microservice API that serves 3 internal consumers?"
+  },
+  "routing": {
+    "mode": "cross-model orchestrated",
+    "primaryModel": "Type-M_strong",
+    "primaryLabel": "Claude (Meta-Constructive Strong)",
+    "multiModel": true
+  },
+  "steps": [
+    {
+      "index": 0,
+      "primitive": "SUPERPOSE",
+      "model": "openai",
+      "routingRequirement": "any",
+      "routingReason": "Perspective generation works with any model — using cheapest available",
+      "output": "**Expert 1 — Systems thinker who sees interconnections:**  \nFrom a systems perspective, the choice between REST and GraphQL should be informed by the broader architecture and the interdependencies among services. REST provides a stable, resource-oriented approach that can simplify interactions with multiple consumers, particularly if they have overlapping data needs. However, if the internal consumers require highly specific data sets that differ significantly, GraphQL's flexibility in querying can enhance efficiency and reduce unnecessary data transfer.\n\n**Expert 2 — Contrarian who challenges conventional wisdom:**  \nWhile REST is often favored for its simplicity and widespread understanding, I argue that these traits can lead to complacency and missed opportunities for innovation. GraphQL, with its ability to allow clients to request exactly what they need, challenges the traditional client-server model and promotes a more dynamic API interaction. This shift can provoke a better understanding of how data is consumed and encourage thoughtful design, rather than just adhering to established norms.\n\n**Expert 3 — Pragmatist focused on hidden constraints:**  \nWhen deciding between REST and GraphQL, it's crucial to consider the team's existing expertise and the infrastructure constraints. If the team is more familiar with REST, the initial development might be faster and less error-prone, thereby reducing time to market. Conversely, if future scalability and flexibility are critical due to anticipated changes in data requirements, investing in GraphQL might pay off in the long run, despite the initial learning curve.",
+      "durationMs": 5389
+    },
+    {
+      "index": 1,
+      "primitive": "INTERFERE",
+      "model": "openai",
+      "routingRequirement": "any",
+      "routingReason": "Collision analysis is model-agnostic — using cheapest available",
+      "output": "### Collision Points\n\n1. **Contradictions:**\n   - **Complexity vs. Simplicity:** Expert 1 advocates for REST due to its simplicity when serving multiple consumers, while Expert 2 challenges this notion by suggesting that REST's simplicity can lead to complacency and inhibit innovation. This highlights a contradiction between valuing straightforwardness and acknowledging that it may also limit creative solutions.\n   - **Flexibility vs. Familiarity:** Expert 2 emphasizes the need for innovation and flexibility offered by GraphQL, whereas Expert 3 suggests that the team's familiarity with REST might be more beneficial in the short term. This creates a contradiction between advocating for a new approach versus relying on established practices for immediate effectiveness.\n\n2. **Shared Agreements:**\n   - **Importance of Data Needs:** All experts implicitly agree that understanding the data needs of the internal consumers is crucial. While they differ in their approaches, they all recognize that the choice between REST and GraphQL should be influenced by how consumers require and interact with data.\n   - **Impact of Team Expertise:** There is an underlying consensus that the team's existing knowledge and skills play a significant role in the decision-making process. Each expert acknowledges that the team's proficiency can affect the success and speed of the API's development.\n\n3. **Hidden Assumption:**\n   - **Static Consumer Needs:** All perspectives seem to operate under the assumption that the internal consumers' data requirements are relatively stable or predictable. This assumption may overlook the potential for evolving needs over time, which could significantly impact the choice between REST and GraphQL. The analysis does not fully grapple with the dynamic nature of internal consumer requirements and how that might influence the long-term viability of either approach.",
+      "durationMs": 6805
+    },
+    {
+      "index": 2,
+      "primitive": "REFRAME",
+      "model": "anthropic",
+      "routingRequirement": "Type-M",
+      "routingReason": "Frame-breaking requires meta-constructive ability (Type-M preferred)",
+      "output": "## The Hidden Frame\n\n**1. What hidden assumption makes the original framing misleading?**\n\nThe original question assumes that **API architecture is a binary technical choice** rather than recognizing it as a **organizational design decision**. The frame treats \"3 internal consumers\" as a simple constraint rather than understanding that these are actually **3 evolving relationships** with different power dynamics, communication patterns, and change velocities.\n\nThe question presupposes that we're designing for a static system when we're actually designing for a **living ecosystem of dependencies**.\n\n**2. What question SHOULD we be asking instead?**\n\n*\"How do we want our internal service relationships to evolve, and what API strategy supports the organizational dynamics we're trying to create?\"*\n\nThis reframe reveals the real decisions:\n- Do we want tight coupling with predictable interfaces (REST's contract-first approach)?\n- Do we want to enable consumer autonomy and rapid iteration (GraphQL's query flexibility)?\n- Are we optimizing for organizational learning, delivery speed, or operational stability?\n- How do we want to handle the inevitable evolution of these 3 consumer relationships?\n\n**3. Why does the original framing make this assumption invisible?**\n\nThe technical framing creates a **false objectivity** that obscures the human and organizational dimensions. By focusing on \"REST vs GraphQL\" and treating consumers as numerical entities (\"3 internal consumers\"), it:\n\n- **Abstracts away politics**: Which teams have more influence? Who drives requirements?\n- **Hides time dynamics**: How do these relationships change? Who adapts to whom?\n- **Masks learning opportunities**: What capabilities do we want to build in our organization?\n- **Obscures feedback loops**: How will this choice shape future architectural decisions?\n\nThe technical frame makes us think we're solving an engineering problem when we're actually **designing the nervous system** of our organizational communication. The \"right\" API choice depends entirely on what kind of organizational behavior we want to incentivize.",
+      "durationMs": 13825
+    },
+    {
+      "index": 3,
+      "primitive": "SYNTHESIZE",
+      "model": "anthropic",
+      "routingRequirement": "Type-M_strong",
+      "routingReason": "Experiment L proved: synthesis model determines output quality — Type-M Strong (Claude) critical",
+      "output": "## Final Synthesis\n\n**1. Hidden Assumption:** \nThe question assumes API choice is a technical optimization problem when it's actually an organizational relationship design decision that will shape how teams communicate, evolve, and share power over time.\n\n**2. Alternative Approach:**\nInstead of choosing between REST and GraphQL, **map your consumer relationships first**:\n- Identify which of the 3 consumers drives requirements vs. adapts to them\n- Determine if you want to encourage consumer independence (GraphQL) or enforce consistent contracts (REST)\n- Choose based on whether you're optimizing for organizational learning/flexibility or operational predictability\n- Start with the approach that matches your team's current capabilities, but design migration paths for when relationships inevitably change\n\n**3. Why It Was Invisible:**\nTechnical framing creates false objectivity that makes human dynamics disappear—we naturally gravitate toward measurable constraints (performance, features) while the real drivers (team relationships, power structures, communication patterns) remain hidden in plain sight.",
+      "durationMs": 11093
+    },
+    {
+      "index": 4,
+      "primitive": "VALIDATE",
+      "model": "openai",
+      "routingRequirement": "any",
+      "routingReason": "Adversarial evaluation works with any model — using cheapest available",
+      "output": "1. **Genuine or Artificial?** Score: 3  \nWhile the insights presented are relevant and encourage a broader perspective, they are not groundbreaking and can be considered common wisdom in organizational design discussions.\n\n2. **Hidden Weaknesses:** \n   - The argument heavily relies on the assumption that organizational dynamics are more important than technical efficiency, which may not hold in all scenarios, particularly in high-stakes environments where performance and responsiveness are critical.\n   - It oversimplifies the complexity of consumer relationships and the decision-making process involved in choosing an API by suggesting a linear mapping approach.\n   - It fails to address the potential for a hybrid model, which might provide the benefits of both REST and GraphQL, rather than forcing a binary choice.\n\n3. **Counter-evidence:** \n   - Case studies where organizations successfully implemented REST or GraphQL without significant consideration of team dynamics or relationships, achieving excellent results.\n   - Evidence that technical performance and efficiency can lead to better organizational outcomes, independent of the underlying communication structures.\n\n4. **Circular Reasoning Check:** \n   - The argument implies that focusing on organizational relationships will lead to better API choices, but it does not provide concrete evidence that this approach is universally more effective than a purely technical evaluation.\n\n5. **Verdict:** PARTIALLY GENUINE - while it raises valid points about the importance of organizational dynamics, it lacks sufficient depth and concrete evidence to fully support its claims.",
+      "durationMs": 9002
+    }
+  ],
+  "totalDurationSeconds": 46.5,
+  "research": {
+    "note": "Generated by Semantic Computer — based on \"Structural Properties of LLM Semantic Processing\" (25 experiments, ~7,500 API calls, 3 model families)",
+    "paper": "https://github.com/Triangle-Technology/semantic-llm-properties",
+    "dissolutionContext": "This is the DISSOLVE composition (proven 0%→81% assumption identification rate across 3 model families and 6 non-ethical domains, N=10)"
+  }
+}

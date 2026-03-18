@@ -26,15 +26,22 @@ function detectProvider(apiKey) {
   return null;
 }
 
-// ─── LLM API Call ───
+// ─── Pricing per 1M tokens (USD) ───
+const PRICING = {
+  'claude-sonnet-4-20250514': { input: 3.0, output: 15.0 },
+  'gpt-4o-mini':              { input: 0.15, output: 0.6 },
+  'gemini-2.0-flash':         { input: 0.1, output: 0.4 },
+};
+
+// ─── LLM API Call — returns { text, usage: { inputTokens, outputTokens, cost } } ───
 async function callLLM(provider, apiKey, systemPrompt, userPrompt, options = {}) {
   const temp = options.temperature ?? 0.7;
   const maxTokens = options.maxTokens ?? 2000;
 
   if (provider === 'anthropic') {
+    const model = options.model || 'claude-sonnet-4-20250514';
     const body = {
-      model: options.model || 'claude-sonnet-4-20250514',
-      max_tokens: maxTokens, temperature: temp,
+      model, max_tokens: maxTokens, temperature: temp,
       messages: [{ role: 'user', content: userPrompt }],
     };
     if (systemPrompt) body.system = systemPrompt;
@@ -44,25 +51,41 @@ async function callLLM(provider, apiKey, systemPrompt, userPrompt, options = {})
       body: JSON.stringify(body),
     });
     if (!res.ok) throw new Error(`Anthropic: ${res.status} ${(await res.text()).slice(0, 200)}`);
-    return (await res.json()).content[0].text;
+    const data = await res.json();
+    const inputTokens = data.usage?.input_tokens || 0;
+    const outputTokens = data.usage?.output_tokens || 0;
+    const price = PRICING[model] || { input: 3.0, output: 15.0 };
+    return {
+      text: data.content[0].text,
+      usage: { inputTokens, outputTokens, cost: (inputTokens * price.input + outputTokens * price.output) / 1_000_000 },
+    };
   }
 
   if (provider === 'openai') {
+    const model = options.model || 'gpt-4o-mini';
     const messages = [];
     if (systemPrompt) messages.push({ role: 'system', content: systemPrompt });
     messages.push({ role: 'user', content: userPrompt });
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({ model: options.model || 'gpt-4o-mini', messages, temperature: temp, max_tokens: maxTokens }),
+      body: JSON.stringify({ model, messages, temperature: temp, max_tokens: maxTokens }),
     });
     if (!res.ok) throw new Error(`OpenAI: ${res.status} ${(await res.text()).slice(0, 200)}`);
-    return (await res.json()).choices[0].message.content;
+    const data = await res.json();
+    const inputTokens = data.usage?.prompt_tokens || 0;
+    const outputTokens = data.usage?.completion_tokens || 0;
+    const price = PRICING[model] || { input: 0.15, output: 0.6 };
+    return {
+      text: data.choices[0].message.content,
+      usage: { inputTokens, outputTokens, cost: (inputTokens * price.input + outputTokens * price.output) / 1_000_000 },
+    };
   }
 
   if (provider === 'google') {
+    const model = options.model || 'gemini-2.0-flash';
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${options.model || 'gemini-2.0-flash'}:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -73,7 +96,15 @@ async function callLLM(provider, apiKey, systemPrompt, userPrompt, options = {})
       }
     );
     if (!res.ok) throw new Error(`Google: ${res.status} ${(await res.text()).slice(0, 200)}`);
-    return (await res.json()).candidates[0].content.parts[0].text;
+    const data = await res.json();
+    const meta = data.usageMetadata || {};
+    const inputTokens = meta.promptTokenCount || 0;
+    const outputTokens = meta.candidatesTokenCount || 0;
+    const price = PRICING[model] || { input: 0.1, output: 0.4 };
+    return {
+      text: data.candidates[0].content.parts[0].text,
+      usage: { inputTokens, outputTokens, cost: (inputTokens * price.input + outputTokens * price.output) / 1_000_000 },
+    };
   }
 
   throw new Error(`Unknown provider: ${provider}`);
@@ -221,14 +252,16 @@ async function handleCompute(request) {
       // If DISSOLVE: run baseline "direct response" first for comparison
       if (isDissolve && originalInput.input) {
         await write('baseline', { status: 'running' });
-        const baselineProvider = multiModel ? routeStep('superpose', keys) : primaryProvider;
+        // Use the SAME model as SYNTHESIZE for fair comparison
+        // Difference should come from pipeline, not model quality
+        const baselineProvider = multiModel ? routeStep('synthesize', keys) : primaryProvider;
         const baselineResult = await callLLM(
           baselineProvider, keys[baselineProvider],
-          'You are a helpful advisor. Answer the question directly. You MUST recommend one of the given options. Do not question the framing of the question.',
-          originalInput.input,
+          'You are a helpful advisor. Think carefully and provide your best recommendation.',
+          originalInput.input + '\n\nWhat would you recommend and why?',
           { temperature: 0.7 }
         );
-        await write('baseline', { status: 'done', content: baselineResult, model: baselineProvider });
+        await write('baseline', { status: 'done', content: baselineResult.text, model: baselineProvider, usage: baselineResult.usage });
       }
 
       const stepOutputs = [];
@@ -243,8 +276,8 @@ async function handleCompute(request) {
         const { system, user } = buildPrompt(step, originalInput, stepOutputs);
         const result = await callLLM(provider, apiKey, system, user);
 
-        stepOutputs.push({ step, content: result });
-        await write('step', { index: i, step, status: 'done', content: result, model: provider });
+        stepOutputs.push({ step, content: result.text });
+        await write('step', { index: i, step, status: 'done', content: result.text, model: provider, usage: result.usage });
       }
 
       await write('done', {
