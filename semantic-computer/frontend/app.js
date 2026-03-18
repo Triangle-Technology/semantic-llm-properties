@@ -2,7 +2,12 @@
 // SEMANTIC COMPUTER — Frontend Application
 // ═══════════════════════════════════════════════════════════
 
-const API_BASE = 'http://localhost:8787';
+// Auto-detect: use deployed worker in production, localhost in dev
+const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  || window.location.protocol === 'file:';
+const API_BASE = IS_LOCAL
+  ? 'http://localhost:8787'
+  : 'https://semantic-computer.triangle-me.workers.dev';
 
 // ─── State ───
 let currentMode = 'dissolve';
