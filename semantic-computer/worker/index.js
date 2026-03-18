@@ -222,13 +222,23 @@ function buildPrompt(step, originalInput, prevOutputs) {
 // MAIN HANDLER — Dynamic pipeline execution
 // ═══════════════════════════════════════════════════════════
 
-async function handleCompute(request) {
+async function handleCompute(request, env) {
   const body = await request.json();
-  const { pipeline, keys } = body;
+  const { pipeline } = body;
 
   if (!pipeline || pipeline.length === 0) return new Response('Empty pipeline', { status: 400 });
-  const providers = Object.entries(keys || {}).filter(([, v]) => v);
-  if (providers.length === 0) return new Response('No API keys', { status: 400 });
+
+  // Merge user keys with defaults — user keys take priority
+  const userKeys = body.keys || {};
+  const keys = {
+    anthropic: userKeys.anthropic || env?.DEFAULT_ANTHROPIC_KEY || '',
+    openai: userKeys.openai || env?.DEFAULT_OPENAI_KEY || '',
+    google: userKeys.google || env?.DEFAULT_GEMINI_KEY || '',
+  };
+  const usingDefault = !userKeys.anthropic && !userKeys.openai && !userKeys.google;
+
+  const providers = Object.entries(keys).filter(([, v]) => v);
+  if (providers.length === 0) return new Response('No API keys configured', { status: 400 });
 
   const primaryProvider = providers.map(([k]) => k).find(k => keys[k]) || providers[0][0];
   const modelInfo = MODEL_TYPES[primaryProvider] || {};
@@ -254,7 +264,7 @@ async function handleCompute(request) {
   const run = async () => {
     try {
       const strategy = useListShortcut ? 'list-prompt-shortcut' : (multiModel ? 'cross-model orchestrated' : 'single-model');
-      await write('model_info', { ...modelInfo, multiModel, isDissolve, strategy });
+      await write('model_info', { ...modelInfo, multiModel, isDissolve, strategy, usingDefault });
 
       // If DISSOLVE: run baseline "direct response" first for comparison
       if (isDissolve && originalInput.input) {
@@ -338,7 +348,7 @@ STEP 4 — SYNTHESIZE: Now provide your final answer:
 
 // ─── Router ───
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
 
     if (request.method === 'OPTIONS') {
@@ -358,7 +368,7 @@ export default {
     }
 
     if (request.method === 'POST' && url.pathname === '/api/compute') {
-      return handleCompute(request);
+      return handleCompute(request, env);
     }
 
     return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });

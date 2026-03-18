@@ -345,7 +345,7 @@ async function compute() {
   if (pipeline.length === 0) return;
 
   const keys = getKeys();
-  if (getActiveProviders().length === 0) return alert('Please enter at least one API key');
+  // Allow empty keys — backend will use defaults
 
   let input;
   try { input = gatherInput(); } catch (e) { return alert(e.message); }
@@ -389,10 +389,13 @@ async function compute() {
         modelInfo = data;
         // If DISSOLVE, show comparison layout
         if (data.isDissolve) {
+          const demoNote = data.usingDefault
+            ? '<div class="demo-note">🎯 Demo mode — enter your own API keys for unlimited use</div>'
+            : '';
           const strategyNote = data.strategy === 'list-prompt-shortcut'
             ? '<div class="strategy-note">Claude detected — using LIST_PROMPT (proven 100%, faster than pipeline)</div>'
             : '';
-          content.innerHTML = `<div class="dissolve-comparison">
+          content.innerHTML = `${demoNote}<div class="dissolve-comparison">
             <div class="dissolve-col dissolve-before">
               <h3>❌ Direct Response</h3>
               <div id="baseline-content"><div class="loading-dots">Asking AI directly...</div></div>
