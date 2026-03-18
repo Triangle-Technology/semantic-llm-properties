@@ -346,6 +346,33 @@ STEP 4 — SYNTHESIZE: Now provide your final answer:
   });
 }
 
+// ─── Research Data Contribution ───
+async function handleContribute(request, env) {
+  try {
+    const data = await request.json();
+    // Strip any API keys that might have been accidentally included
+    if (data.keys) delete data.keys;
+    if (data.routing?.keys) delete data.routing.keys;
+
+    const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    data.contributedAt = new Date().toISOString();
+    data.contributionId = id;
+
+    if (env?.RESEARCH_DATA) {
+      await env.RESEARCH_DATA.put(id, JSON.stringify(data));
+    }
+
+    return new Response(JSON.stringify({ success: true, id }), {
+      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+    });
+  } catch (err) {
+    return new Response(JSON.stringify({ success: false, error: err.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+    });
+  }
+}
+
 // ─── Router ───
 export default {
   async fetch(request, env) {
@@ -369,6 +396,10 @@ export default {
 
     if (request.method === 'POST' && url.pathname === '/api/compute') {
       return handleCompute(request, env);
+    }
+
+    if (request.method === 'POST' && url.pathname === '/api/contribute') {
+      return handleContribute(request, env);
     }
 
     return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });

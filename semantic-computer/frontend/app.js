@@ -549,6 +549,17 @@ async function compute() {
         // Attach export handlers
         $('#export-pdf')?.addEventListener('click', () => { if (lastRun) exportPDF(lastRun); else alert('No data to export'); });
         $('#export-json')?.addEventListener('click', () => { if (lastRun) exportJSON(lastRun); else alert('No data to export'); });
+
+        // Share for research if opted in
+        if ($('#contribute-check')?.checked && lastRun) {
+          try {
+            await fetch(`${API_BASE}/api/contribute`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(lastRun),
+            });
+          } catch (e) { /* silent — don't interrupt user experience */ }
+        }
       },
       error(data) {
         content.innerHTML = `<div style="color: var(--interfere); padding: 1rem;">Error: ${data.message}</div>`;
