@@ -408,6 +408,35 @@ async function compute() {
           </div>`;
         }
       },
+      prefilter(data) {
+        if (data.status === 'running') {
+          content.innerHTML = '<div class="prefilter-status"><div class="loading-dots">Analyzing input type...</div></div>';
+        } else if (data.status === 'done') {
+          if (data.verdict === 'DIRECT_SUFFICIENT') {
+            // Show filter result — pipeline skipped
+            content.innerHTML = `<div class="prefilter-result direct-sufficient">
+              <div class="prefilter-verdict">📋 Direct answer sufficient</div>
+              <div class="prefilter-reason">${data.reason}</div>
+              <div class="prefilter-type">Input type: <strong>${data.type}</strong></div>
+              <div class="prefilter-note">Pipeline skipped — this question has a defined output space. Semantic Computing adds most value when the answer space is hidden or undefined.</div>
+              <hr style="border-color: var(--border); margin: 1rem 0;">
+              <div id="baseline-content"><div class="loading-dots">Getting answer...</div></div>
+            </div>`;
+          } else {
+            // PIPELINE_RECOMMENDED — show brief note then continue
+            const filterNote = `<div class="prefilter-result pipeline-recommended">
+              <span class="prefilter-badge">✓ ${data.type.replace('_', ' ')}</span> — pipeline recommended
+            </div>`;
+            // Prepend to existing content or show before comparison
+            const existing = content.innerHTML;
+            if (existing.includes('prefilter-status')) {
+              content.innerHTML = filterNote;
+            } else {
+              content.insertAdjacentHTML('afterbegin', filterNote);
+            }
+          }
+        }
+      },
       baseline(data) {
         const el = $('#baseline-content');
         if (!el) return;

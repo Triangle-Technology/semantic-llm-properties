@@ -136,6 +136,43 @@ function routeStep(step, keys) {
 function sse(event, data) { return `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`; }
 
 // ═══════════════════════════════════════════════════════════
+// PRE-FILTER — Detect if input has undefined output space
+// Uses cheapest available model (1 lightweight call)
+// ═══════════════════════════════════════════════════════════
+
+const PREFILTER_PROMPT = {
+  system: `You classify questions into two categories based on whether Semantic Computing (a pipeline of perspective-generation, collision, and synthesis) would add value.
+
+PIPELINE_RECOMMENDED when:
+- False binary / dilemma ("A or B?" where hidden option C may exist)
+- Anchored thinking (number/reference constraining the analysis)
+- False constraint (budget, timeline, or scope assumed as fixed)
+- Stale problem (conventional wisdom dominates, novel thinking needed)
+- Complex strategy where framing may hide better options
+
+DIRECT_SUFFICIENT when:
+- Factual question with a known answer (dates, definitions, data)
+- Calculation or conversion
+- How-to / tutorial request with well-known steps
+- Simple lookup or reference
+- Creative writing request (poem, story) — creative but output space is open by design, not hidden
+
+Respond with EXACTLY one line in this format:
+VERDICT: PIPELINE_RECOMMENDED or DIRECT_SUFFICIENT
+TYPE: [false_binary | anchoring | false_constraint | stale_problem | complex_strategy | factual | calculation | howto | creative | other]
+REASON: [one sentence explaining why]`,
+
+  user: (input) => `Classify this input:\n\n"${input}"`,
+};
+
+function parsePrefilter(text) {
+  const verdict = text.match(/VERDICT:\s*(PIPELINE_RECOMMENDED|DIRECT_SUFFICIENT)/i)?.[1]?.toUpperCase() || 'PIPELINE_RECOMMENDED';
+  const type = text.match(/TYPE:\s*(\S+)/i)?.[1] || 'other';
+  const reason = text.match(/REASON:\s*(.+)/i)?.[1] || '';
+  return { verdict, type, reason };
+}
+
+// ═══════════════════════════════════════════════════════════
 // PROMPT GENERATORS — Each primitive creates a prompt from
 // the user's original input + previous step outputs
 // ═══════════════════════════════════════════════════════════
@@ -265,6 +302,59 @@ async function handleCompute(request, env) {
     try {
       const strategy = useListShortcut ? 'list-prompt-shortcut' : (multiModel ? 'cross-model orchestrated' : 'single-model');
       await write('model_info', { ...modelInfo, multiModel, isDissolve, strategy, usingDefault });
+
+      // ─── PRE-FILTER: detect if pipeline adds value ───
+      const inputText = originalInput.input || originalInput.problem || '';
+      if (inputText && pipeline.length > 1) {
+        await write('prefilter', { status: 'running' });
+        try {
+          // Use cheapest available model for filter (lightweight call)
+          const filterProvider = routeStep('superpose', keys); // 'any' → cheapest
+          const filterResult = await callLLM(
+            filterProvider, keys[filterProvider],
+            PREFILTER_PROMPT.system,
+            PREFILTER_PROMPT.user(inputText),
+            { temperature: 0, maxTokens: 200 }
+          );
+          const filter = parsePrefilter(filterResult.text);
+          await write('prefilter', {
+            status: 'done',
+            ...filter,
+            model: filterProvider,
+            usage: filterResult.usage,
+          });
+
+          // If DIRECT_SUFFICIENT: run direct only, skip pipeline
+          if (filter.verdict === 'DIRECT_SUFFICIENT') {
+            await write('baseline', { status: 'running' });
+            const directProvider = multiModel ? routeStep('synthesize', keys) : primaryProvider;
+            const directResult = await callLLM(
+              directProvider, keys[directProvider],
+              'You are a helpful advisor. Think carefully and provide your best answer.',
+              inputText,
+              { temperature: 0.7 }
+            );
+            await write('baseline', {
+              status: 'done',
+              content: directResult.text,
+              model: directProvider,
+              usage: directResult.usage,
+            });
+            await write('done', {
+              success: true,
+              routing: 'direct-only (pre-filter)',
+              steps: 0,
+              filterVerdict: 'DIRECT_SUFFICIENT',
+              filterReason: filter.reason,
+              filterType: filter.type,
+            });
+            return;
+          }
+        } catch (filterErr) {
+          // If filter fails, continue with pipeline (fail open)
+          await write('prefilter', { status: 'error', message: filterErr.message });
+        }
+      }
 
       // If DISSOLVE: run baseline "direct response" first for comparison
       if (isDissolve && originalInput.input) {

@@ -548,6 +548,58 @@ header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; }
   text-align: center;
 }
 
+/* ─── Pre-filter ─── */
+.prefilter-status {
+  padding: 1rem;
+  text-align: center;
+}
+
+.prefilter-result {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.prefilter-result.direct-sufficient {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--text);
+}
+
+.prefilter-result.pipeline-recommended {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--proven);
+}
+
+.prefilter-verdict {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--experimental);
+}
+
+.prefilter-reason {
+  margin-bottom: 0.4rem;
+}
+
+.prefilter-type {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+
+.prefilter-note {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.prefilter-badge {
+  font-weight: 600;
+}
+
 .strategy-note {
   padding: 0.4rem 0.6rem;
   background: rgba(16, 185, 129, 0.1);
