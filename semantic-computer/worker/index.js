@@ -210,9 +210,26 @@ async function handleCompute(request) {
 
   const originalInput = { input: body.input, ideaA: body.ideaA, ideaB: body.ideaB, problem: body.problem, lens: body.lens };
 
+  // Detect DISSOLVE composition
+  const DISSOLVE_ORDER = ['superpose', 'interfere', 'reframe', 'synthesize', 'validate'];
+  const isDissolve = pipeline.length === 5 && pipeline.every((p, i) => p === DISSOLVE_ORDER[i]);
+
   const run = async () => {
     try {
-      await write('model_info', { ...modelInfo, multiModel });
+      await write('model_info', { ...modelInfo, multiModel, isDissolve });
+
+      // If DISSOLVE: run baseline "direct response" first for comparison
+      if (isDissolve && originalInput.input) {
+        await write('baseline', { status: 'running' });
+        const baselineProvider = multiModel ? routeStep('superpose', keys) : primaryProvider;
+        const baselineResult = await callLLM(
+          baselineProvider, keys[baselineProvider],
+          'You are a helpful advisor. Answer the question directly. You MUST recommend one of the given options. Do not question the framing of the question.',
+          originalInput.input,
+          { temperature: 0.7 }
+        );
+        await write('baseline', { status: 'done', content: baselineResult, model: baselineProvider });
+      }
 
       const stepOutputs = [];
 

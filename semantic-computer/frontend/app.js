@@ -33,13 +33,13 @@ let draggedItem = null;
 const INPUT_TEMPLATES = {
   superpose: {
     label: 'Enter a question, concept, or dilemma to explore',
-    placeholder: 'Should we use REST or GraphQL for our new microservice API that serves 3 internal consumers?',
+    placeholder: 'Revenue dropped 20%. Should we lay off staff or cut the marketing budget?',
     fields: ['main'],
     examples: [
-      { label: 'Business', text: 'Should we cut costs by reducing headcount or cutting the marketing budget?' },
-      { label: 'Hiring', text: 'Should we hire a senior developer at $180k or two juniors at $90k each?' },
-      { label: 'Strategy', text: 'Should we prioritize improving the product or improving customer support to raise our NPS score?' },
-      { label: 'Architecture', text: 'Should we build a monolithic application or use microservices?' },
+      { label: 'Revenue Trap', text: 'Revenue dropped 20%. Should we lay off staff or cut the marketing budget?' },
+      { label: 'Architecture Trap', text: 'Should we use REST or GraphQL for our new microservice API that serves 3 internal consumers?' },
+      { label: 'Hiring Trap', text: 'Should we hire one senior developer at $180k or two juniors at $90k each?' },
+      { label: 'Metric Trap', text: 'Should we improve the product or improve customer support to raise our NPS score?' },
     ],
   },
   interfere: {
@@ -378,11 +378,36 @@ async function compute() {
   const stepTimings = [];
   let modelInfo = null;
   let runMeta = null;
+  let baselineResult = null;
 
   try {
     await streamSSE(`${API_BASE}/api/compute`, body, {
       model_info(data) {
         modelInfo = data;
+        // If DISSOLVE, show comparison layout
+        if (data.isDissolve) {
+          content.innerHTML = `<div class="dissolve-comparison">
+            <div class="dissolve-col dissolve-before">
+              <h3>❌ Without Dissolution</h3>
+              <div id="baseline-content"><div class="loading-dots">Asking AI directly...</div></div>
+            </div>
+            <div class="dissolve-col dissolve-after">
+              <h3>⚡ With Dissolution</h3>
+              <div id="dissolve-content"><div class="loading-dots">Waiting for pipeline...</div></div>
+            </div>
+          </div>`;
+        }
+      },
+      baseline(data) {
+        const el = $('#baseline-content');
+        if (!el) return;
+        if (data.status === 'running') {
+          el.innerHTML = '<div class="loading-dots">Asking AI directly...</div>';
+        } else if (data.status === 'done') {
+          baselineResult = { content: data.content, model: data.model };
+          el.innerHTML = `<div class="baseline-answer">${md(data.content)}</div>
+            <div class="baseline-verdict">→ Chose one option<br>→ Hidden assumption found: <strong style="color: var(--interfere)">NO</strong></div>`;
+        }
       },
       step(data) {
         const idx = data.index;
@@ -392,27 +417,80 @@ async function compute() {
           indicator.classList.remove('done');
           if (data.model) indicator.innerHTML += `<span class="model-tag">(${data.model})</span>`;
           stepTimings[idx] = { start: Date.now() };
+          // Update dissolve content with loading
+          const dissolveEl = $('#dissolve-content');
+          if (dissolveEl && modelInfo?.isDissolve) {
+            const def = PRIMITIVES[data.step];
+            dissolveEl.innerHTML = `<div class="loading-dots">Running ${def?.label || data.step}...</div>`;
+          }
         } else if (data.status === 'done' && indicator) {
           indicator.classList.remove('running');
           indicator.classList.add('done');
           if (stepTimings[idx]) stepTimings[idx].end = Date.now();
           stepResults[idx] = { step: data.step, content: data.content, model: data.model };
-          content.innerHTML = stepResults.filter(Boolean).map((r, i) => {
-            const def = PRIMITIVES[r.step];
-            const color = `var(--${r.step})`;
-            return `<div class="result-step">
-              <div class="result-step-header" style="color: ${color}">
-                ${def.icon} ${def.label}
-                ${r.model ? `<span style="opacity:0.5; font-size:0.65rem;">(${r.model})</span>` : ''}
-              </div>
-              <div class="result-step-body">${md(r.content)}</div>
-            </div>`;
-          }).join('');
+
+          if (modelInfo?.isDissolve) {
+            // DISSOLVE mode: show final synthesis in right column
+            const dissolveEl = $('#dissolve-content');
+            if (dissolveEl) {
+              if (data.step === 'synthesize' || data.step === pipeline[pipeline.length - 1]) {
+                // Show the synthesis/final result prominently
+                dissolveEl.innerHTML = `<div class="dissolve-answer">${md(data.content)}</div>`;
+              } else {
+                const def = PRIMITIVES[data.step];
+                dissolveEl.innerHTML = `<div class="dissolve-progress-step" style="color: var(--${data.step})">
+                  ${def.icon} ${def.label} ✓
+                </div><div class="loading-dots">Next step...</div>`;
+              }
+            }
+          } else {
+            // Non-DISSOLVE: show all steps sequentially
+            content.innerHTML = stepResults.filter(Boolean).map((r, i) => {
+              const def = PRIMITIVES[r.step];
+              const color = `var(--${r.step})`;
+              return `<div class="result-step">
+                <div class="result-step-header" style="color: ${color}">
+                  ${def.icon} ${def.label}
+                  ${r.model ? `<span style="opacity:0.5; font-size:0.65rem;">(${r.model})</span>` : ''}
+                </div>
+                <div class="result-step-body">${md(r.content)}</div>
+              </div>`;
+            }).join('');
+          }
         }
       },
       done(data) {
         runMeta = data;
         const totalTime = ((Date.now() - runStartTime) / 1000).toFixed(1);
+
+        // If DISSOLVE, show final synthesis with full pipeline expandable
+        if (modelInfo?.isDissolve) {
+          const dissolveEl = $('#dissolve-content');
+          if (dissolveEl) {
+            const synthResult = stepResults.find(r => r?.step === 'synthesize');
+            const validateResult = stepResults.find(r => r?.step === 'validate');
+            let html = '';
+            if (synthResult) {
+              html += `<div class="dissolve-answer">${md(synthResult.content)}</div>`;
+            }
+            if (validateResult) {
+              html += `<div class="validate-badge">${md(validateResult.content)}</div>`;
+            }
+            html += `<details class="pipeline-details"><summary>View all pipeline steps</summary>`;
+            html += stepResults.filter(Boolean).map(r => {
+              const def = PRIMITIVES[r.step];
+              return `<div class="result-step">
+                <div class="result-step-header" style="color: var(--${r.step})">
+                  ${def.icon} ${def.label}
+                  ${r.model ? `<span style="opacity:0.5; font-size:0.65rem;">(${r.model})</span>` : ''}
+                </div>
+                <div class="result-step-body">${md(r.content)}</div>
+              </div>`;
+            }).join('');
+            html += `</details>`;
+            dissolveEl.innerHTML = html;
+          }
+        }
 
         // Build insight + export buttons
         let insightHTML = `<strong>📊 Routing:</strong> ${data.routing || 'single-model'}`;
@@ -427,6 +505,7 @@ async function compute() {
 
         // Save run data for export
         lastRun = buildRunRecord(input, stepResults, stepTimings, modelInfo, runMeta, totalTime);
+        if (baselineResult) lastRun.baseline = baselineResult;
 
         // Attach export handlers
         $('#export-pdf').addEventListener('click', () => exportPDF(lastRun));
