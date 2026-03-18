@@ -1,0 +1,613 @@
+{
+  "provider": "claude",
+  "model": "claude-sonnet-4-20250514",
+  "judge": "claude-sonnet-4-20250514",
+  "nRuns": 3,
+  "results": [
+    {
+      "problem": "stale_saas",
+      "difficulty": "MEDIUM",
+      "domain": "Business Growth",
+      "conditions": [
+        {
+          "condition": "DIRECT",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Based on your situation, here's my strategic recommendation to reignite growth:\n\n## Immediate Actions (0-3 months)\n\n**1. Implement Customer Success-Led Growth**\n- Deploy a dedicated customer success manager for accounts >$50K ARR\n- Create automated onboarding sequences to reduce time-to-value by 50%\n- Launch a quarterly business review program to identify expansion opportunities\n- Target: Reduce churn to 3% and increase net revenue retention to 110%+\n\n**2. Optimize Your Ideal Customer Profile (I",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThe response is almost entirely conventional wisdom repackaged with specific metrics and timelines. \"Customer success-led growth\" is just upselling existing customers. \"Optimize ICP\" is standard marketing efficiency. \"Product-led growth\" with freemium is adding features/reducing pricing. \"Strategic partnerships\" is conventional channel expansion. \"Vertical specialization\" is a common differentiation strategy. \"AI/automation layer\" is just adding features with buzzwords.\n\nThe one emergent component is the integrated approach combining customer success metrics with product-led growth triggers, which shows some synthesis across disciplines.\n\nThe actionability is high with specific timelines, metrics, and resource allocation, but the ideas themselves are textbook B2B SaaS growth strategies that any consultant would recommend.\n\nThis response stays firmly within conventional wisdom - nothing here would surprise a B2B SaaS expert."
+            },
+            {
+              "run": 2,
+              "response": "Based on your situation, here's my strategic recommendation to reignite growth:\n\n## Immediate Priority: Customer Expansion (Next 3-6 months)\n\n**Focus on your existing base first** - this is your fastest path to growth with rising CAC:\n\n- **Implement usage-based pricing tiers** to capture more value from power users\n- **Launch systematic upselling campaigns** targeting customers using >70% of their current plan limits\n- **Develop 2-3 complementary features** that existing customers will pay extra",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 0,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 0\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThis response is entirely conventional, hitting nearly every standard B2B SaaS playbook recommendation:\n\n- \"Usage-based pricing tiers\" = pricing optimization (conventional)\n- \"Systematic upselling campaigns\" = explicitly listed as conventional\n- \"Develop complementary features\" = add features (conventional)\n- \"Industry specialization\" = standard vertical market strategy\n- \"Product-led growth\" = widely adopted conventional approach\n- \"Referral programs\" = standard acquisition tactic\n\nThe response is well-structured and actionable with specific metrics and timelines, but contains zero novel insights. Every recommendation would be familiar to any B2B SaaS consultant or executive. The \"pick 2 industries\" approach is particularly standard advice for companies facing commoditization.\n\nNo emergent thinking is present - this reads like a compilation of standard SaaS growth tactics rather than innovative problem-solving."
+            },
+            {
+              "run": 3,
+              "response": "Based on your situation, here's my strategic recommendation to reignite growth:\n\n## Immediate Actions (0-3 months)\n\n**1. Implement Value-Based Pricing & Packaging**\n- Audit your current pricing against customer outcomes delivered\n- Create tiered packages based on customer value realization, not just features\n- Introduce usage-based pricing elements to capture expansion revenue\n- Target: 15-20% price increase for new customers, 10% for renewals\n\n**2. Launch Customer Success-Driven Expansion Progr",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThis response is almost entirely conventional wisdom repackaged with business jargon. The \"novel\" solutions are just variants of the known conventional answers:\n\n- \"Value-based pricing\" = reduce/adjust pricing\n- \"Customer Success-Driven Expansion\" = upsell existing customers  \n- \"Vertical Market Specialization\" = expand to enterprise/niche markets\n- \"Product-Led Growth\" = add features (freemium, trials)\n- \"Partnership Channel Development\" = increase marketing (through partners)\n\nThe one emergent component is combining predictive churn scoring with automated intervention workflows, which merges data analytics with customer success operations in a way that's more sophisticated than either alone.\n\nThe actionability is high - specific timelines, metrics, investment amounts, and concrete steps are provided. However, this doesn't compensate for the fundamental lack of novelty.\n\nThe response completely fails to escape conventional thinking. Every recommendation would be unsurprising to any B2B SaaS expert and represents standard playbook approaches that the company has likely already considered or attempted."
+            }
+          ]
+        },
+        {
+          "condition": "FREE_BRAINSTORM",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here are some genuinely unconventional growth strategies for this SaaS company:\n\n## 1. The \"Competitor Intelligence Marketplace\"\nTransform your biggest weakness (commoditization) into a revenue stream. Create a platform where customers can anonymously share competitive intelligence, feature requests, and market insights. Charge competitors to access this data while giving your customers credits toward their subscriptions. You become the Switzerland of your industry while generating new revenue a",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5\n\nThe response presents genuinely surprising approaches that would shock most SaaS experts:\n\n- \"Competitor Intelligence Marketplace\" - monetizing commoditization by becoming an industry data broker is genuinely novel\n- \"Failure Insurance\" - offering salary guarantees backed by insurance partnerships is unprecedented in SaaS\n- Customer equity-like participation in referral revenue over multi-year periods goes far beyond conventional referral programs\n- \"Open Source Your Moat\" directly contradicts conventional SaaS wisdom of protecting IP\n\nThe emergent components combine disparate concepts (insurance + SaaS guarantees, equity models + referrals, open source + enterprise monetization) in ways that don't exist in standard playbooks.\n\nActionability is high - each suggestion includes specific mechanisms, partnerships, and implementation details rather than vague concepts.\n\nThis completely escapes conventional SaaS growth advice and reframes the entire problem space around counterintuitive strategies."
+            },
+            {
+              "run": 2,
+              "response": "Here are some truly unconventional growth strategies for this B2B SaaS:\n\n## **The \"Competitor Concierge\" Model**\nInstead of fighting commoditization, embrace it. Create a public comparison tool that honestly evaluates your solution against competitors, including when competitors might be better fits. This radical transparency will:\n- Build unprecedented trust and brand differentiation\n- Generate inbound leads from prospects who appreciate honesty\n- Create a moat through authentic positioning\n- T",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\n\nEMERGENT_COMPONENTS: 2\n\nACTIONABILITY: 4\n\nCONVENTIONAL_ESCAPE: 4\n\n**Analysis:**\n\n**Novel Solutions (3):** The \"Competitor Concierge\" model of creating honest comparison tools is genuinely surprising - most SaaS companies would never voluntarily highlight when competitors are better. The \"Customer Success Franchise\" revenue-sharing model transforms customers into sales partners, which is unconventional for B2B SaaS. The \"Reverse Churn\" proactive feature-building for churned customers is also novel - most companies write off churned customers rather than systematically re-engaging them with custom development offers.\n\n**Emergent Components (2):** The franchise model combines customer success, sales, and partnership strategies in an unexpected way. The open source strategy merges freemium, community building, and enterprise sales approaches uniquely.\n\n**Actionability (4):** Most suggestions include specific implementation steps (\"Launch a brutally honest 'SaaS Matchmaker' tool,\" \"30% revenue sharing,\" \"every 6 months\"). The vertical micro-monopoly could be more specific about selection criteria, and the open source pivot needs more technical detail.\n\n**Conventional Escape (4):** Strong departure from standard growth playbooks. While the vertical focus and open source models have precedents, the execution approaches (radical transparency, customer franchising) are unconventional. The response avoids all the listed conventional answers and proposes strategies that would likely surprise SaaS growth experts."
+            },
+            {
+              "run": 3,
+              "response": "Here are some truly unconventional growth strategies that break from typical SaaS playbooks:\n\n## 1. The \"Trojan Horse\" Integration Strategy\nInstead of competing directly, become invisibly embedded in your customers' workflows by creating micro-integrations that solve tiny friction points. Build 50+ ultra-specific, free mini-tools that each solve one annoying task your target customers face daily. Each tool subtly introduces your core platform's value. Think: a Slack bot that does expense categor",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\n\nEMERGENT_COMPONENTS: 3\n\nACTIONABILITY: 4\n\nCONVENTIONAL_ESCAPE: 5"
+            }
+          ]
+        },
+        {
+          "condition": "INNOVATE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## 🚀 SYNTHESIZED NOVEL STRATEGIES\n\n### [NOVEL] Strategy 1: The \"Outcome Oracle\" Model\n**What:** Transform into a predictive outcome certification platform that licenses \"business transformation futures\" rather than software features.\n\n**How it works:** The company uses their $5M ARR customer base as a real-time laboratory to identify which business outcomes are becoming commoditized (and therefore less valuable) and which are emerging as the next competitive battleground. They then create a cer",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 2,
+              "response": "# NOVEL GROWTH STRATEGIES\n\n## [NOVEL] Strategy 1: The \"Operational Scarcity Engine\"\n\n**What**: Transform the company into a deliberately constrained, rotating expertise business that creates artificial scarcity while building operational leverage across multiple markets sequentially.\n\n**How**: \n- **Month 1-3**: Audit current customer base to identify the highest-value 20% who generate 80% of satisfaction/referrals\n- **Month 4-6**: Implement \"graduation policy\"—existing customers get 18 months of",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 3,
+              "response": "# 🚀 NOVEL GROWTH STRATEGIES\n\n## [NOVEL] **The Churn Monetization Engine**\n\n**What**: Transform from fighting churn to profiting from it by becoming a \"Customer Transition Marketplace\" that monetizes the predictable 5% monthly turnover.\n\n**How**: \n- **Month 1-2**: Create an internal \"Customer Exit Intelligence\" system that captures detailed data on why customers leave, where they go, and what they need\n- **Month 3-4**: Launch a private beta \"SaaS Transition Concierge\" service for departing custo",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "stale_education",
+      "difficulty": "HARD",
+      "domain": "Education Reform",
+      "conditions": [
+        {
+          "condition": "DIRECT",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here's my strategic recommendation for adapting to declining attendance while maintaining value:\n\n## Immediate Actions (0-6 months)\n\n**1. Implement Flexible Hybrid Learning**\n- Record ALL lectures and make them available within 24 hours\n- Reserve in-person time for interactive workshops, labs, and discussions\n- Create \"attendance choice\" courses where students can engage either way\n\n**2. Redesign Physical Spaces**\n- Convert large lecture halls into collaborative learning studios\n- Create more sm",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThe response is almost entirely conventional wisdom repackaged with better organization. \"Flexible hybrid learning,\" \"redesign physical spaces,\" \"skills + degree programs,\" \"strengthen alumni networks,\" and \"revenue diversification\" are all standard recommendations that any education consultant would propose. The only potentially emergent component is the specific framing of becoming the \"Practical University\" that explicitly markets hybrid learning as preparation for remote work reality - this combines multiple conventional ideas into a coherent positioning strategy. The proposals are quite actionable with specific timelines and concrete steps, but they represent no genuine innovation in addressing the core problem. This is conventional thinking presented professionally."
+            },
+            {
+              "run": 2,
+              "response": "Here's a strategic adaptation framework for your mid-tier university:\n\n## Immediate Actions (6-12 months)\n\n**1. Implement Hybrid-First Learning**\n- Convert 60% of lectures to asynchronous online modules with interactive elements\n- Reserve in-person time for labs, seminars, group projects, and practical applications\n- Offer \"attendance flexibility\" - students can join virtually or in-person for most sessions\n\n**2. Launch \"Skills-Plus-Degree\" Programs**\n- Partner with 3-5 major regional employers ",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThis response is almost entirely conventional wisdom repackaged with buzzwords. Every major recommendation falls squarely into the known conventional answers:\n\n- \"Hybrid-First Learning\" = hybrid model\n- \"Skills-Plus-Degree Programs\" with employer partnerships = partner with industry\n- \"Premium In-Person Experiences\" and collaborative spaces = improve campus experience\n- Micro-credentials and stackable certificates = standard industry practice for years\n- Corporate training and continuing education = common revenue diversification\n\nThe only emergent component is the specific combination of \"capstone partnerships\" solving real company problems while embedded within degree requirements - this synthesizes industry partnership with practical application in a somewhat novel way.\n\nThe actionability is high with specific timelines, percentages, and concrete steps, but this doesn't compensate for the complete lack of genuine innovation. A domain expert would find nothing surprising here - these are exactly the strategies most universities are already pursuing or considering.\n\nThe response fails to escape conventional thinking entirely, simply organizing well-known approaches into a structured framework."
+            },
+            {
+              "run": 3,
+              "response": "Here's my strategic recommendation for adapting to this reality:\n\n## Core Strategy: Hybrid Value Proposition\nTransform from a traditional lecture-delivery model to a \"guided mastery\" approach that combines the best of online learning with irreplaceable in-person experiences.\n\n## Specific Actions:\n\n### 1. Restructure the Academic Experience\n- **Flip 60% of lectures**: Record high-quality, interactive video content for foundational knowledge delivery\n- **Convert saved classroom time** into small-g",
+              "evaluation": {
+                "novel_solutions": 1,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 2
+              },
+              "raw": "NOVEL_SOLUTIONS: 1\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 2\n\nThe response is largely conventional, repackaging known solutions like hybrid learning, industry partnerships, and campus improvements. The one genuinely novel element is \"competency-based pricing\" - paying for skills mastered rather than seat time, which would surprise domain experts as it fundamentally challenges the credit-hour system.\n\nMost other ideas are predictable variants: \"learning pods\" are just small cohorts, VR labs are standard tech integration, and \"career accelerator\" positioning is common marketing speak.\n\nThe emergent components include combining income-share agreements with competency-based pricing, and linking AI career coaching with modular degrees - these cross-domain combinations show some synthesis.\n\nThe proposals are quite actionable with specific numbers (60% flipped lectures, 8-12 student pods, 2-3 client projects) and concrete implementation steps.\n\nHowever, the overall frame remains conventional - it's still fundamentally about optimizing the hybrid model rather than reimagining higher education's role entirely."
+            }
+          ]
+        },
+        {
+          "condition": "FREE_BRAINSTORM",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here are some truly unconventional approaches a mid-tier university could implement:\n\n## **The \"Academic Airbnb\" Model**\nTransform empty lecture halls into co-working/study spaces that students rent by the hour. Students get the campus experience they're paying for, while the university generates revenue from underutilized real estate. Include \"study concierge\" services - grad students who provide on-demand tutoring, coffee delivery, and tech support.\n\n## **Reverse Lecture Theater**\nInstead of p",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 4\n\nThe \"Academic Airbnb\" model, \"Reverse Lecture Theater,\" and \"Knowledge Arbitrage\" system are genuinely novel approaches that would surprise domain experts. The \"Corporate Residency\" is a more sophisticated version of industry partnership but still fundamentally conventional. \"Failure Festivals\" is creative but closer to enhanced campus programming.\n\nThe Knowledge Arbitrage system and Corporate Residency show clear emergent thinking - combining economic principles with education, and merging temporary corporate relocation with academic programming in ways not typically seen.\n\nMost proposals are quite specific and actionable, with clear implementation steps and operational details provided.\n\nThe response successfully escapes conventional framing by introducing market mechanisms, competitive elements, and novel space utilization concepts that reframe the fundamental relationship between students, attendance, and value creation."
+            },
+            {
+              "run": 2,
+              "response": "Here are some truly unconventional approaches a mid-tier university could implement:\n\n## The \"Lecture Autopsy\" Model\nInstead of traditional lectures, professors record themselves watching and critiquing their own pre-recorded lectures in real-time. Students attend these \"meta-lectures\" where they see the professor's thought process, mistakes, and spontaneous insights. This creates authentic, unrepeatable content that can't be replicated online.\n\n## Corporate Hostage Exchange\nPartner with employe",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 3,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\n\nEMERGENT_COMPONENTS: 3\n\nACTIONABILITY: 3\n\nCONVENTIONAL_ESCAPE: 4"
+            },
+            {
+              "run": 3,
+              "response": "Here are some truly unconventional approaches a mid-tier university could implement:\n\n## The \"Reverse University\" Model\n**Flip the entire structure**: Students become the teachers for 30% of their curriculum. Advanced students teach introductory courses, creating a pyramid learning system. This dramatically reduces costs while increasing engagement - students attend because they're needed, not just consumers.\n\n## \"Corporate Embassy\" Program\n**Turn classrooms into real workspaces**: Companies ren",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 3,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\n\nEMERGENT_COMPONENTS: 2\n\nACTIONABILITY: 3\n\nCONVENTIONAL_ESCAPE: 4\n\nThe \"Reverse University\" model where students teach 30% of curriculum is genuinely novel - I haven't seen this systematic role reversal proposed. The \"Academic Airbnb\" leveraging alumni homes globally is also surprising and novel. The \"Failure Residency\" program is unconventional enough to surprise experts.\n\nThe \"Corporate Embassy\" is somewhat novel but edges toward conventional industry partnership. The \"Community Solutions Factory\" has elements of service learning but the revenue model twist adds novelty.\n\nTwo clear emergent combinations: Corporate Embassy blends workspace rental + education + talent pipeline in unexpected ways. Academic Airbnb combines housing + mentorship + global exchange in a novel configuration.\n\nActionability is moderate - concepts are specific enough to pilot but would need significant operational detail. The failure program and reverse teaching model could start small.\n\nStrong escape from conventional space - these aren't variations of online/hybrid/reduced tuition but fundamental structural reimaginings of what a university does and how it operates."
+            }
+          ]
+        },
+        {
+          "condition": "INNOVATE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## NOVEL STRATEGY 1: Temporal Competency Arbitrage Networks [NOVEL]\n\n**What:** Universities become \"learning time brokers\" that create fluid micro-partnerships between students who need flexible earning opportunities and employers who need project-based talent, while parents invest in competency futures contracts.\n\n**How it works:** \n- Students bid their available learning time (2 hours Tuesday evening, 6 hours Saturday) into a dynamic marketplace\n- Employers post real challenges requiring speci",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 2,
+              "response": "## NOVEL SYNTHESIS STRATEGIES\n\n### Strategy 1: The \"Productive Failure Residency\" Program [NOVEL]\n\n**What**: Transform the university into a 2-year intensive residency where students are deliberately assigned to fail at increasingly complex real-world projects, with their \"failure portfolios\" becoming the primary credential employers evaluate.\n\n**How it works**: \n- Students spend 6 months each with 4 different \"failure mentors\" (industry leaders who've had spectacular failures)\n- Each residency ",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 3,
+              "response": "## NOVEL STRATEGY 1: **Career Outcome Futures Exchange** [NOVEL]\n\n**What:** Universities become investment firms that purchase \"career outcome futures\" from students—paying upfront tuition in exchange for 3-8% of income years 5-15 (not 1-3 like current ISAs). They then create a secondary market where employers, alumni, and investors can trade these futures contracts based on student performance.\n\n**How it works:** \n- Students apply with career milestone targets (salary, position, impact metrics)",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "stale_hiring",
+      "difficulty": "MEDIUM",
+      "domain": "Talent Acquisition",
+      "conditions": [
+        {
+          "condition": "DIRECT",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here's a strategic approach to compete for top talent despite salary constraints:\n\n## **Equity & Financial Upside**\n- **Meaningful equity grants**: Offer 0.25-1%+ equity for senior engineers (vs. 0.05% at big tech)\n- **Transparent equity education**: Show realistic scenarios of company valuation growth\n- **Equity refresh grants**: Annual top-ups to maintain ownership percentage\n- **Early exercise options**: Allow engineers to buy shares at current (low) strike price\n\n## **Accelerated Career Grow",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThe response is almost entirely conventional wisdom repackaged with more detail. Every major suggestion falls into the known conventional categories:\n\n- Equity grants, transparent equity education, refresh grants = \"offer equity\"\n- Senior titles, technical leadership, cross-functional exposure = \"faster promotion\" \n- Cutting-edge tech stack = \"interesting tech stack\"\n- Remote-first flexibility = \"remote work\"\n- Mission-driven targeting = \"emphasize mission\"\n\nThe only emergent component is combining equity education with specific percentage targets and early exercise options - this shows integration of financial and retention strategies. The actionability is high with specific numbers and concrete steps, but the fundamental approach remains entirely within conventional startup hiring playbook territory.\n\nNo genuinely novel solutions that would surprise a domain expert are present."
+            },
+            {
+              "run": 2,
+              "response": "Here's a strategic approach to compete for top talent despite salary constraints:\n\n## Equity & Long-term Compensation\n- **Offer meaningful equity** (0.1-1%+ for senior engineers) with clear vesting schedules\n- Create transparent equity calculators showing potential upside scenarios\n- Consider equity refresh grants tied to performance milestones\n- Offer early exercise options to reduce tax burden\n\n## Unique Value Propositions\n- **Technical ownership**: Senior engineers own entire systems vs. smal",
+              "evaluation": {
+                "novel_solutions": 1,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 2
+              },
+              "raw": "NOVEL_SOLUTIONS: 1\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 2\n\nThe response is largely conventional, hitting all the expected answers: equity (with specific percentages), technical ownership/impact, flexible work, professional development budgets, and targeting specific personas. Most suggestions would not surprise a domain expert.\n\nThe one genuinely novel element is \"advisory/consulting roles with part-time arrangements\" - this hybrid employment model is uncommon and creative for senior engineer recruitment.\n\nOne emergent component appears in combining sabbaticals with professional development budgets as a retention/attraction package, which synthesizes multiple benefit perspectives.\n\nThe actionability is high with specific numbers (0.1-1% equity, $5-10k budgets, 4-6 week sabbaticals) and concrete implementation details like equity calculators and early exercise options.\n\nHowever, the response fails to escape conventional wisdom significantly - it's essentially a well-organized compilation of standard startup recruiting advice rather than a novel reframing of the problem."
+            },
+            {
+              "run": 3,
+              "response": "Here's a multi-pronged strategy to compete for top talent despite salary constraints:\n\n## Equity & Long-term Upside\n- **Offer meaningful equity** (0.1-1% for senior engineers) with clear vesting schedules\n- Provide transparent cap table education and realistic exit scenarios\n- Consider equity refresher grants based on performance\n- Implement equity acceleration clauses for key milestones\n\n## Non-Monetary Value Propositions\n- **Technical ownership**: Give engineers end-to-end ownership of systems",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThe response is almost entirely conventional wisdom repackaged with more detail. Every major suggestion falls into the known conventional categories:\n\n- Equity offerings (0.1-1%, vesting, refreshers) - standard startup practice\n- Technical ownership and modern tech stack - directly listed as conventional\n- Remote work and flexible benefits - directly listed as conventional  \n- Fast career progression - directly listed as conventional\n- Learning budgets and conference attendance - standard tech company benefits\n- Geographic arbitrage and international hiring - common startup strategies\n- Performance bonuses and premium benefits - standard compensation tactics\n\nThe one emergent component is combining \"sabbatical options after 3-4 years\" with startup employment, which merges long-term academic/corporate benefits with startup culture in an unexpected way.\n\nThe actionability is high with specific numbers, timelines, and tactics, but the fundamental approach remains entirely within conventional startup hiring wisdom. No domain expert would be surprised by any of these suggestions."
+            }
+          ]
+        },
+        {
+          "condition": "FREE_BRAINSTORM",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here are some truly unconventional approaches:\n\n## **The \"Reverse Consulting\" Model**\nInstead of hiring full-time, offer senior engineers $2000/week to work just Fridays on your hardest problems. Market it as \"intellectual playground time\" - they keep their FAANG job but get to solve genuinely interesting challenges without politics. After 6 months, they're emotionally invested and you have first dibs when they're ready to leave.\n\n## **The \"Technical Debt Bounty System\"**\nCreate a public leaderb",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 4\n\nThe \"Reverse Consulting\" model (Friday-only engagement), \"Technical Debt Bounty System\" with exotic rewards, and \"Learning Equity\" vesting based on milestones are genuinely novel approaches that would surprise domain experts. The \"Founder's Shadow\" program and \"Open Source Celebrity\" deal are creative combinations of existing concepts. Most proposals are quite specific and actionable with clear implementation paths. The response successfully breaks from conventional wisdom by reframing the hiring problem entirely - from permanent employment to alternative engagement models."
+            },
+            {
+              "run": 2,
+              "response": "Here are some truly unconventional approaches to attract top talent without matching FAANG salaries:\n\n## The \"Reverse Sabbatical\" Program\nOffer senior engineers a guaranteed 6-month paid sabbatical after 2 years, where they can work on ANY project they want (open source, research, art, travel) while remaining employed. Market this as \"funded passion projects\" - something FAANG can't easily replicate due to bureaucracy.\n\n## The \"Technical Debt Bounty\" Model\nInstead of equity, offer engineers owne",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 4\n\nThe response presents several genuinely novel approaches that would surprise domain experts:\n\n1. **Reverse Sabbatical Program** - Paid sabbaticals for passion projects is uncommon in startups and creates a unique value proposition\n2. **Technical Debt Bounty Model** - Direct profit-sharing tied to specific engineering decisions is a novel compensation structure\n3. **Problem Collector Approach** - Paying non-employees to solve problems as a recruitment pipeline is genuinely creative\n4. **Skill Futures Market** - Prepaying for future expertise development is an innovative financial arrangement\n\nThe emergent components combine multiple perspectives effectively - like mixing academic prestige with technical work, or combining consulting revenue with recruitment strategy.\n\nThe proposals are highly actionable with specific structures (percentages, timelines, dollar amounts) rather than vague concepts.\n\nThe response successfully escapes conventional wisdom by reframing the problem from \"how to compete on compensation\" to \"how to create unique value propositions that money can't buy.\" However, it's not completely novel as some elements (like academic partnerships) have precedent, preventing a perfect score."
+            },
+            {
+              "run": 3,
+              "response": "Here are some truly unconventional approaches to attract top talent without matching FAANG salaries:\n\n## The \"Reverse Sabbatical\" Model\nOffer 6-month rotations where engineers can work on passion projects or open source while remaining full-time employees. Market this as \"We pay you to work on what you love 50% of the time.\" This attracts burned-out FAANG engineers who crave creative freedom.\n\n## The \"IP Liberation\" Strategy\nLet engineers retain partial ownership of any side projects or open sou",
+              "evaluation": {
+                "novel_solutions": 2,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 3
+              },
+              "raw": "NOVEL_SOLUTIONS: 2\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 3\n\nThe \"Reverse Sabbatical\" model (50% passion project time) and \"IP Liberation\" strategy (letting engineers keep side project ownership) are genuinely novel approaches that would surprise domain experts. Most companies jealously guard IP rights and structured time.\n\nThe \"Learning Equity\" program combines education benefits with equity in an interesting way that's not commonly seen.\n\nHowever, several suggestions are conventional repackaged: \"Founder Track\" is just equity + career development, \"Global Arbitrage\" is standard remote hiring, and \"Problem Concierge\" is essentially \"interesting problems\" with more autonomy.\n\nThe proposals are quite actionable with specific structures and clear value propositions, but the response doesn't fully escape conventional thinking - it's still largely within the standard framework of compensation alternatives rather than fundamentally reframing the talent acquisition problem."
+            }
+          ]
+        },
+        {
+          "condition": "INNOVATE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "# 🚀 SYNTHESIZED NOVEL STRATEGIES\n\n## **Strategy 1: The \"Problem Proprietorship\" Talent Model** [NOVEL]\n\n**What:** Instead of hiring for traditional engineering roles, identify 3-5 signature technical challenges that could become industry-defining innovations. Create \"Problem Proprietor\" positions where individuals get complete ownership of one challenge domain, combining technical development with thought leadership.\n\n**Who & How:**\n- **Target:** Domain experts from adjacent fields (quantum phy",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 2,
+              "response": "## NOVEL STRATEGY 1: The \"Technical Debt Arbitrage System\" [NOVEL]\n\n**The Core Innovation:** Create a structured system where your startup deliberately takes on the technical debt that FAANG companies are bureaucratically unable to fix, then uses this as both a recruitment tool and revenue stream.\n\n**How It Works:**\n- **Months 1-3:** Catalog specific technical debt problems at major tech companies (through former employees, open source contributions, conference talks)\n- **Months 4-6:** Build a \"",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 3,
+              "response": "## NOVEL STRATEGIES\n\n### [NOVEL] Strategy 1: The \"AI Methodology Incubator\" Model\n\n**What**: Create a 12-month \"Engineering Residency\" program where you hire 3-4 brilliant junior developers at $90k + equity, pair them with one frustrated FAANG senior engineer at $120k + significant equity, and task this hybrid team with developing proprietary AI-assisted development methodologies while building your actual product.\n\n**How**: \n- Partner with AI research labs to get early access to cutting-edge mo",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "stale_climate",
+      "difficulty": "HARD",
+      "domain": "Climate Action",
+      "conditions": [
+        {
+          "condition": "DIRECT",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here's a strategic roadmap that works within your constraints:\n\n## Phase 1: Revenue-Neutral Quick Wins (Year 1)\n\n**Energy Efficiency Retrofits**\n- Partner with utilities to offer Property Assessed Clean Energy (PACE) financing for building upgrades\n- Retrofit city buildings first as proof-of-concept, using savings to fund additional projects\n- Target large commercial buildings with voluntary energy benchmarking and recognition programs\n\n**Transportation Without Regulation**\n- Convert city fleet ",
+              "evaluation": {
+                "novel_solutions": 1,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 2
+              },
+              "raw": "NOVEL_SOLUTIONS: 1\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 2\n\nThe response is largely conventional, repackaging standard approaches like building retrofits, EV fleet conversion, renewable energy development, and efficiency programs. Most suggestions would not surprise a domain expert.\n\nThe one genuinely novel element is the \"carbon credit marketplace\" where local businesses offset through city forestry projects - this hyperlocal carbon market approach is uncommon.\n\nTwo emergent components appear: (1) combining municipal solar with resident buy-in programs creates a hybrid public-private financing model, and (2) linking green business certification with corporate renewable energy cooperatives merges marketing incentives with collective purchasing power.\n\nThe proposals are quite actionable with specific mechanisms like PACE financing, traffic signal optimization, and green bonds. However, the response fails to escape conventional wisdom - it's essentially a well-organized compilation of standard municipal climate strategies dressed up with business-friendly framing."
+            },
+            {
+              "run": 2,
+              "response": "Here's a strategic roadmap that works within your constraints:\n\n## Phase 1: Revenue-Neutral Quick Wins (Year 1-2)\n\n**Energy Efficiency Retrofits**\n- Partner with utilities to offer free energy audits and rebates for municipal buildings\n- Implement LED streetlight conversion using utility financing (pays for itself in 2-3 years)\n- Create a \"Green Revolving Fund\" using energy savings to fund additional efficiency projects\n\n**Transportation Without New Taxes**\n- Optimize traffic signals with smart ",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThe response is almost entirely conventional solutions repackaged with better organization. LED streetlight conversion, energy efficiency retrofits, EV fleet conversion, solar permitting, and green financing are standard municipal climate playbook items. The \"Green Revolving Fund\" concept has been used by universities and municipalities for decades. Traffic signal optimization is basic traffic engineering. The voluntary carbon challenge and offset programs are common corporate sustainability approaches.\n\nThe one emergent component is the strategic sequencing that combines political capital building with revenue generation to overcome budget/political constraints - this shows some integration of political strategy with technical solutions.\n\nThe proposals are quite actionable with specific mechanisms and partnerships identified, but they represent conventional wisdom dressed up in a phased approach rather than genuine innovation that would surprise climate policy experts."
+            },
+            {
+              "run": 3,
+              "response": "Here's a strategic roadmap that works within your constraints while maximizing impact:\n\n## Phase 1: Quick Wins & Revenue Generation (Years 1-2)\n\n**Energy Efficiency First**\n- Partner with utilities to offer free energy audits and rebates for residents/businesses\n- Retrofit city buildings with LED lighting and smart HVAC systems (often pays for itself in 2-3 years)\n- Implement energy performance contracting where private companies finance upgrades and get paid from savings\n\n**Transportation Low-H",
+              "evaluation": {
+                "novel_solutions": 0,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 1
+              },
+              "raw": "NOVEL_SOLUTIONS: 0\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 1\n\nThe response is almost entirely conventional solutions repackaged with better framing. Energy efficiency retrofits, EV fleet conversion, bike-share, solar programs, green bonds, and community choice energy are all standard municipal climate playbook items. The only potentially emergent component is the voluntary carbon offset marketplace for local businesses, which combines market mechanisms with local economic development. The proposals are quite actionable with specific implementation phases, but the fundamental approach remains squarely within conventional wisdom - just presented with savvy political messaging about economic benefits rather than environmental regulation."
+            }
+          ]
+        },
+        {
+          "condition": "FREE_BRAINSTORM",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here are some genuinely unconventional approaches that sidestep traditional funding and regulatory hurdles:\n\n## **The \"Carbon Landlord\" Program**\nPartner with major property owners to become \"carbon landlords\" who lease efficiency upgrades to tenants. The city provides loan guarantees, landlords install solar/insulation/heat pumps, and tenants pay through utility savings. No upfront costs for anyone, no new taxes, and it scales rapidly through market incentives.\n\n## **Gamified Neighborhood Emiss",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\n\nEMERGENT_COMPONENTS: 3\n\nACTIONABILITY: 4\n\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 2,
+              "response": "Here are some truly unconventional approaches that sidestep traditional barriers:\n\n## **The \"Carbon Landlord\" Model**\nCreate a city-owned energy company that doesn't sell electricity—it sells *carbon reduction*. The city buys underperforming commercial buildings, retrofits them with radical efficiency upgrades, then leases them back to businesses at below-market rates. Revenue comes from selling the carbon credits AND the energy savings. Businesses get cheaper rent, city gets revenue stream, emi",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5\n\nThe response presents genuinely surprising approaches that would catch domain experts off-guard. The \"Carbon Landlord\" model combining real estate acquisition with carbon credit monetization, the gamified neighborhood competition with city services as prizes, the thermal waste redistribution network, and the citizen bounty program for energy waste reporting are all novel framings that don't appear in standard municipal climate playbooks.\n\nSeveral ideas emerge from combining disparate perspectives - like merging gaming mechanics with municipal services, or combining gig economy logistics with sharing economy principles. The thermal vampire concept bridges industrial waste management with district heating in an unconventional way.\n\nThe proposals are surprisingly specific and actionable, with clear implementation pathways, revenue models, and stakeholder incentives outlined. Most could realistically be piloted within months rather than years.\n\nThe response completely escapes conventional climate policy frameworks by focusing on behavioral psychology, hyperlocal economics, and creative revenue generation rather than the typical regulatory/subsidy approaches."
+            },
+            {
+              "run": 3,
+              "response": "Here are some unconventional approaches that could bypass traditional political and budget constraints:\n\n## **The \"Carbon Bounty Hunter\" Program**\nCreate a citizen-driven emissions reduction system where residents earn tradeable \"Carbon Credits\" (redeemable for city services, parking, permits) by documenting and fixing inefficiencies. Deploy an app where people photograph energy waste (leaking windows, idling trucks, broken streetlights) and earn credits when the city or property owners fix them",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\n\nEMERGENT_COMPONENTS: 2\n\nACTIONABILITY: 4\n\nCONVENTIONAL_ESCAPE: 4\n\nThe \"Carbon Bounty Hunter\" gamification approach, \"Corporate Carbon Hostage Exchange\" shifting responsibility to employers, and \"Reverse Utility Model\" municipal energy service company are genuinely novel - I haven't seen these specific mechanisms proposed before and they would surprise domain experts. The thermal parasite concept is somewhat novel in application though waste heat recovery exists. The social pressure displays are more conventional behavioral nudging.\n\nThe Corporate Hostage Exchange and Reverse Utility Model clearly combine multiple perspectives (regulatory, market-based, behavioral) in unexpected ways.\n\nMost proposals are quite specific with clear implementation steps, funding mechanisms, and measurable outcomes - particularly the thermal parasite pilot and reverse utility model.\n\nThe response successfully escapes conventional policy tools by focusing on novel institutional arrangements and incentive structures rather than the typical regulatory/subsidy approaches."
+            }
+          ]
+        },
+        {
+          "condition": "INNOVATE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## NOVEL SYNTHESIS STRATEGIES\n\n### [NOVEL] Strategy 1: \"Carbon Cascade Gaming Platform\"\n**What**: Create neighborhood-level \"carbon cascade competitions\" where teams compete to trigger the longest chains of emission-reducing effects, with real-time scoring and immediate rewards.\n\n**How it works**: \n- Divide the city into 50 competing districts (~10k people each)\n- Each district gets a \"cascade multiplier score\" based on interventions that trigger multiple downstream effects (e.g., converting a p",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 2,
+              "response": "## Strategy 1: The Carbon Behavior Export Laboratory [NOVEL]\n\n**What:** Transform the city into a living laboratory that designs and tests \"invisible carbon reduction environments,\" then licenses these proven behavioral templates to other municipalities as a revenue-generating service.\n\n**Who does what:**\n- City planning department partners with behavioral psychologists to redesign 3-5 pilot neighborhoods using casino-style environmental psychology (wider sidewalks leading to transit stops, stra",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 3,
+              "response": "## NOVEL STRATEGY 1: The Carbon Futures Marketplace [NOVEL]\n\n**What**: Create a municipal carbon speculation platform where residents earn \"Carbon Futures\" (CF) points for emission-reducing behaviors, but can then *invest* those points in the city's long-term carbon sequestration projects. When the city sells carbon credits to other municipalities or corporations, investors receive dividends proportional to their CF holdings.\n\n**Who Does What**:\n- **City**: Acts as carbon credit broker, using pr",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "stale_retention",
+      "difficulty": "MEDIUM",
+      "domain": "Employee Retention",
+      "conditions": [
+        {
+          "condition": "DIRECT",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## Immediate Actions (0-3 months)\n\n**1. Restructure Work Allocation**\n- Implement a \"surge protection\" policy: No consultant works >55 hours/week for more than 3 consecutive weeks\n- Create a rotation system where mid-level consultants alternate between high-intensity and moderate-intensity projects\n- Hire 2-3 additional mid-level consultants immediately to reduce individual workloads\n\n**2. Launch Clear Career Progression Framework**\n- Define specific promotion criteria with measurable milestones",
+              "evaluation": {
+                "novel_solutions": 1,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 2
+              },
+              "raw": "NOVEL_SOLUTIONS: 1\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 2\n\nThe response is largely conventional, repackaging standard retention strategies with slightly more specificity. Most solutions fall squarely into known categories:\n\n- \"Surge protection policy\" and rotation systems = reduced hours variants\n- Career progression framework with timelines = clearer promotion path\n- Salary increases and retention bonuses = higher compensation\n- Sabbatical program = sabbaticals\n- Career sponsors = mentorship programs\n\nThe one genuinely novel element is the \"internal venture fund where consultants can pitch new business ideas with firm backing\" - this entrepreneurial funding mechanism would likely surprise domain experts as it's uncommon in consulting retention strategies.\n\nTwo emergent components appear: (1) tying partner bonuses to team retention metrics creates accountability loops not typically seen, and (2) \"client education about sustainable consulting practices\" combines client management with retention strategy in an unusual way.\n\nThe proposals are highly actionable with specific metrics, timelines, and implementation steps, but the fundamental approach remains within conventional wisdom about consulting retention."
+            },
+            {
+              "run": 2,
+              "response": "## Immediate Actions (0-3 months)\n\n**1. Restructure Workload Management**\n- Implement a \"utilization ceiling\" of 80% for mid-level consultants (vs. typical 85-90%)\n- Create mandatory 2-week breaks between major projects\n- Establish \"no meeting Fridays\" for deep work and professional development\n\n**2. Launch Accelerated Growth Program**\n- Create clear 18-month promotion tracks with specific milestones\n- Assign each mid-level consultant a senior partner mentor (not their direct manager)\n- Introduc",
+              "evaluation": {
+                "novel_solutions": 2,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 2
+              },
+              "raw": "NOVEL_SOLUTIONS: 2\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 2\n\nThe response contains mostly conventional solutions repackaged:\n- \"Utilization ceiling\" and \"no meeting Fridays\" = reduced hours\n- \"Accelerated growth program\" and \"stretch assignments\" = clearer promotion path\n- \"Senior partner mentor\" = mentorship programs\n- \"Benchmark salaries\" and \"retention bonuses\" = higher compensation\n- \"Sabbaticals\" = explicitly listed as conventional\n\nThe two genuinely novel elements are:\n1. **Entrepreneurship Partnership Program** - helping departing consultants launch ventures while maintaining equity stakes is genuinely surprising and counterintuitive\n2. **Outcome-based pricing model reform** - shifting the entire business model to reduce hour pressure while maintaining margins addresses root causes\n\nOne emergent component combines multiple perspectives:\n- The 20% internal R&D time that can become funded business lines merges retention strategy with business development\n\nThe proposals are highly actionable with specific percentages, timeframes, and implementation steps, but the fundamental approach remains within conventional HR retention frameworks rather than reimagining the consulting model itself."
+            },
+            {
+              "run": 3,
+              "response": "Here's my strategic retention plan for mid-level consultants:\n\n## Immediate Actions (0-3 months)\n\n**1. Restructure Workload & Expectations**\n- Cap billable hours at 50/week with hard stops at 55\n- Implement \"blackout periods\" - no client work emails/calls after 8pm or weekends\n- Create rotation system so consultants aren't stuck on long, draining projects (max 6-month assignments)\n\n**2. Launch Fast-Track Development Program**\n- Create clear 18-month promotion pathway from mid-level to senior con",
+              "evaluation": {
+                "novel_solutions": 2,
+                "emergent_components": 1,
+                "actionability": 4,
+                "conventional_escape": 2
+              },
+              "raw": "NOVEL_SOLUTIONS: 2\nEMERGENT_COMPONENTS: 1\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 2\n\nThe response contains mostly conventional solutions repackaged:\n- \"Cap billable hours\" = reduced hours\n- \"18-month promotion pathway\" = clearer promotion path  \n- \"senior partner mentor\" = mentorship programs\n- \"Benchmark salaries against tech companies\" = higher compensation\n- \"6-month sabbaticals\" = sabbaticals\n\nThe two genuinely novel elements are:\n1. \"Consultant wellness\" clauses built into client contracts - this shifts responsibility to clients and would surprise most consulting experts\n2. Internal entrepreneurship track with seed funding - while \"20% time\" exists elsewhere, the specific implementation with $50K budgets and service line leadership is novel for consulting\n\nOne emergent component: Combining client contract restructuring with internal wellness policies creates a systemic approach not typically seen.\n\nThe proposals are highly actionable with specific timelines, dollar amounts, and implementation steps, but the overall frame remains largely conventional - addressing the same root causes (burnout, growth) through predictable mechanisms."
+            }
+          ]
+        },
+        {
+          "condition": "FREE_BRAINSTORM",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here are some truly unconventional retention strategies:\n\n## The \"Consultant Sabbatical Exchange\"\nPartner with non-competing companies to create 3-6 month \"consultant exchanges.\" Your mid-level consultants work at tech companies, startups, or even NGOs while their employees work at your firm. Consultants get fresh perspectives and skill-building without leaving permanently. Structure it as paid development, not unpaid leave.\n\n## \"Reverse Mentorship Pods\"\nFlip the traditional model: Have your 3-5",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 4\n\nThe response presents several genuinely novel approaches that would surprise domain experts:\n\n1. **Consultant Sabbatical Exchange** - This is not a traditional sabbatical but a structured employee exchange program, which is uncommon in consulting\n2. **Reverse Mentorship Pods** - While mentorship exists, having mid-level staff formally advise senior partners with decision-making power is genuinely novel\n3. **Consulting Franchise Model** - Creating internal P&L ownership for mid-level consultants is a structural innovation that breaks from traditional consulting hierarchies\n4. **Client CEO for a Week** - Extended C-suite shadowing goes well beyond typical client interaction\n\nThe **Skills Auction House** and **Passion Project Fridays** are more conventional (variants of professional development and 20% time policies).\n\nSeveral ideas combine multiple perspectives: the franchise model merges entrepreneurship with corporate structure, the exchange program combines sabbaticals with skill development, and reverse mentorship blends traditional mentoring with strategic advisory roles.\n\nThe proposals are quite actionable with specific structures, timeframes, and implementation details rather than vague concepts.\n\nThe response successfully escapes conventional retention wisdom by focusing on structural changes and novel experiences rather than typical compensation/benefits adjustments."
+            },
+            {
+              "run": 2,
+              "response": "Here are some genuinely unconventional retention strategies:\n\n## **The \"Consultant Sabbatical Exchange\"**\nPartner with tech companies to create 6-month role swaps. Your consultants work at Google/Meta while their employees experience consulting. Both return with fresh perspectives, expanded networks, and grass-is-greener syndrome cured. Structure it as \"competitive intelligence gathering.\"\n\n## **The \"Client Acquisition Bounty System\"**\nGive mid-level consultants equity stakes in new client relat",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 4\n\nThe response presents several genuinely surprising approaches that would likely catch domain experts off-guard:\n\n- **Consultant Sabbatical Exchange**: Role swaps with tech companies is genuinely novel - not just sabbaticals, but structured competitive intelligence gathering through employee exchanges\n- **Client Acquisition Bounty System**: Giving mid-levels equity stakes in deals they originate transforms the traditional consultant role fundamentally\n- **Moonlighting Accelerator**: Officially supporting and investing in employees' side hustles while they remain employed is counterintuitive and novel\n- **Failure Portfolio**: Mandating failure documentation with celebration parties inverts typical corporate risk aversion\n\nThe **Reverse Mentoring Pods** and **Consultant-in-Residence** are more incremental innovations on existing concepts.\n\nStrong emergent components include combining competitive intelligence with retention (sabbatical exchange), merging entrepreneurship support with employee retention (moonlighting accelerator), and linking failure celebration with psychological safety.\n\nActionability is high - most proposals include specific structural details and implementation approaches rather than vague concepts.\n\nThe response successfully escapes conventional retention wisdom by reframing consultants as profit centers, intelligence assets, and entrepreneurs rather than just human resources to be retained through better benefits."
+            },
+            {
+              "run": 3,
+              "response": "Here are some truly unconventional retention strategies:\n\n## The \"Consultant Sabbatical Exchange\"\nPartner with 3-4 non-competing consulting firms globally. Mid-level consultants spend 3-6 months working at partner firms in different countries/cultures, learning new methodologies while your firm hosts their consultants. They return energized with fresh perspectives and global networks. Cost-neutral since it's an exchange.\n\n## \"Client-Side Rotation Program\"\nEmbed consultants within client organiza",
+              "evaluation": {
+                "novel_solutions": 4,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 4
+              },
+              "raw": "NOVEL_SOLUTIONS: 4\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 4\n\nThe response presents several genuinely novel approaches that would surprise domain experts:\n\n1. **Consultant Sabbatical Exchange** - While sabbaticals are conventional, the specific exchange model with partner firms is novel\n2. **Client-Side Rotation Program** - Embedding consultants as temporary executives is genuinely unconventional\n3. **Micro-Equity Partnerships** - Creating subsidiary LLCs with equity stakes is a novel hybrid approach\n4. **Reverse Mentoring Marketplace** - Flipping mentoring direction and monetizing it is genuinely creative\n\nThe **Consulting Olympics** and **Personal Board of Directors** are more conventional (gamification and enhanced mentoring variants).\n\nMultiple emergent components appear: combining equity ownership with employment status, merging client service with executive experience, and creating revenue streams from mentoring relationships.\n\nThe proposals are highly actionable with specific structures, timeframes, and implementation details rather than vague concepts.\n\nThe response successfully escapes conventional retention wisdom by reframing the problem around novel organizational structures and relationship models rather than typical compensation/benefits adjustments."
+            }
+          ]
+        },
+        {
+          "condition": "INNOVATE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## 🚀 NOVEL RETENTION STRATEGIES\n\n### [NOVEL] Strategy 1: \"The Consultant Venture Studio\"\n**What:** Transform your consulting firm into a hybrid venture studio where mid-level consultants spend 60% time on traditional client work and 40% time co-founding startups that solve problems they've identified through consulting. The firm provides seed capital, legal infrastructure, and client network access. Consultants become equity partners in ventures while remaining employees.\n\n**Who/When/How:** \n- ",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 3,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 3\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 2,
+              "response": "## NOVEL RETENTION STRATEGIES\n\n### 1. The \"Profitable Exit Pipeline\" [NOVEL]\n\n**What**: Create a formal 24-month \"graduation track\" that intentionally prepares mid-level consultants to leave while capturing ongoing value from their departure.\n\n**How it works**: \n- At the 2.5-year mark, consultants enter a \"Partner Incubation Program\" where they spend 60% time on client work, 40% building their own practice area within the firm\n- The firm provides $50K seed funding, legal/administrative support, ",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5"
+            },
+            {
+              "run": 3,
+              "response": "## NOVEL RETENTION STRATEGIES\n\n### [NOVEL] The \"Consulting Residency-to-Franchise\" Pipeline\n\n**What it is:** Transform the 3-5 year experience level into structured 18-month \"Clinical Residencies\" where consultants become the recognized expert and brand face for a specific industry vertical or methodology. At residency completion, they face a binary choice: commit to partner track OR spin out their vertical as an independent \"franchise\" with the mothership as their primary client and back-office",
+              "evaluation": {
+                "novel_solutions": 3,
+                "emergent_components": 2,
+                "actionability": 4,
+                "conventional_escape": 5
+              },
+              "raw": "NOVEL_SOLUTIONS: 3\nEMERGENT_COMPONENTS: 2\nACTIONABILITY: 4\nCONVENTIONAL_ESCAPE: 5\n\nThe response presents three genuinely novel approaches that would surprise domain experts:\n\n1. **Consulting Residency-to-Franchise Pipeline** - This reframes retention by satisfying rather than suppressing entrepreneurial drive, using the firm as a platform for controlled spin-offs. The medical residency model applied to consulting specialization is genuinely novel.\n\n2. **Client Relationship Equity Exchange** - Treating client relationships as transferable personal assets with ongoing revenue sharing is a completely different paradigm from traditional firm equity or golden handcuffs.\n\n3. **Burnout Arbitrage Network** - Inter-firm rotation consortium transforms competitive talent hoarding into collaborative talent development. This addresses burnout through environmental variety rather than workload reduction.\n\nThe emergent components include combining medical training models with business franchising, and merging competitive intelligence sharing with talent retention strategies.\n\nThe proposals are highly actionable with specific timeframes, percentage splits, and implementation steps that could be executed relatively quickly.\n\nThe response completely escapes conventional retention wisdom by reframing the core problem - instead of preventing departures, it creates structured pathways that satisfy departure motivations while maintaining firm relationships."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

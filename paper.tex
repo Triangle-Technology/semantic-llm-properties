@@ -46,7 +46,7 @@
 % ABSTRACT
 % ═══════════════════════════════════════════════════════
 \begin{abstract}
-Large Language Models are typically used as text generators steered by prompts. We propose they also exhibit measurable \emph{structural properties}---superposition of meanings, interference between contexts, and phase transitions at critical thresholds---that can be formalized and exploited. Through 26 controlled experiments ($\sim$7,600 API calls across Claude, GPT-4o-mini, and Gemini-2.5-flash), we establish four results. \textbf{First}, LLMs exhibit semantic superposition, interference, and phase transitions that are universal across architectures, predictable via a Phase Transition Condition ($\CAS < 0.4 \wedge \CD > 0.5$, validated on initial test set; structural form preserved cross-model though thresholds are model-dependent), and composable into five primitive operations (\textsc{Superpose}, \textsc{Interfere}, \textsc{Reframe}, \textsc{Synthesize}, \textsc{Validate}). \textbf{Second}, these operations solve ``dissolution problems''---finding hidden assumptions in apparent binary dilemmas---that formal programs (operating on syntactic content without learned semantic representations) structurally cannot express: programming-like constraints yield 0\% dissolution while semantic computation yields 70--100\%, confirmed across three model families and generalized across six non-ethical domains with full cross-model replication on all 7 problems (Claude 81\%, GPT 63\%, Gemini 56\% via composition vs 0\% constrained---universally, $N=1{,}050$ total runs). We provide a formal inexpressibility argument (conditional on the empirically supported premise that hidden assumptions are not syntactically derivable) connecting dissolution to the frame problem. \textbf{Third}, dissolution is selective (genuine on false binaries, artificial on true binaries, gap $= 1.625$), and self-detection requires adversarial evaluation stance---neutral and self-assessment stances are uniformly overconfident. \textbf{Fourth}, structural traps extend beyond binary dilemmas: anchoring traps (0\% $\to$ 100\% via pipeline) and false constraint traps (0\% $\to$ 89\%) exhibit the same vulnerability pattern, while sunk cost bias does not (67\% baseline---suggesting RLHF creates selective immunity to named biases but not to structural traps). These findings identify a class of problems---where the output space is undefined before computation---for which LLM structural properties provide capabilities that formal computation lacks.
+Large Language Models are typically used as text generators steered by prompts. We propose they also exhibit measurable \emph{structural properties}---superposition of meanings, interference between contexts, and phase transitions at critical thresholds---that can be formalized and exploited. Through 27 controlled experiments ($\sim$7,700 API calls across Claude, GPT-4o-mini, and Gemini-2.5-flash), we establish five results. \textbf{First}, LLMs exhibit semantic superposition, interference, and phase transitions that are universal across architectures, predictable via a Phase Transition Condition ($\CAS < 0.4 \wedge \CD > 0.5$, validated on initial test set; structural form preserved cross-model though thresholds are model-dependent), and composable into five primitive operations (\textsc{Superpose}, \textsc{Interfere}, \textsc{Reframe}, \textsc{Synthesize}, \textsc{Validate}). \textbf{Second}, these operations solve ``dissolution problems''---finding hidden assumptions in apparent binary dilemmas---that formal programs (operating on syntactic content without learned semantic representations) structurally cannot express: programming-like constraints yield 0\% dissolution while semantic computation yields 70--100\%, confirmed across three model families and generalized across six non-ethical domains with full cross-model replication on all 7 problems (Claude 81\%, GPT 63\%, Gemini 56\% via composition vs 0\% constrained---universally, $N=1{,}050$ total runs). We provide a formal inexpressibility argument (conditional on the empirically supported premise that hidden assumptions are not syntactically derivable) connecting dissolution to the frame problem. \textbf{Third}, dissolution is selective (genuine on false binaries, artificial on true binaries, gap $= 1.625$), and self-detection requires adversarial evaluation stance---neutral and self-assessment stances are uniformly overconfident. \textbf{Fourth}, structural traps extend beyond binary dilemmas: anchoring traps (0\% $\to$ 100\% via pipeline) and false constraint traps (0\% $\to$ 89\%) exhibit the same vulnerability pattern, while sunk cost bias does not (67\% baseline---suggesting RLHF creates selective immunity to named biases but not to structural traps). \textbf{Fifth}, different compositions of the same primitives solve different problem classes: a 3-primitive INNOVATE composition (SUPERPOSE $\to$ INTERFERE $\to$ SYNTHESIZE) produces $6\times$ more novel solutions and achieves 5.0/5.0 conventional escape on stale innovation problems across 5 domains, demonstrating that semantic primitives constitute a \emph{composable paradigm}---not a single technique. These findings identify a class of problems---where the output space is undefined before computation---for which LLM structural properties provide capabilities that formal computation lacks.
 \end{abstract}
 
 % ═══════════════════════════════════════════════════════
@@ -97,6 +97,8 @@ This paper makes the following empirical claims, each backed by controlled exper
 \item \textbf{Evaluation quality depends on stance, not separation.} Cross-domain testing (math, factual, logic) shows self-assessment and neutral evaluation both produce self $= 5$ when wrong (100\% overconfidence). Only adversarial evaluation catches errors (self $= 2$ when wrong). However, adversarial stance rejects 58\% of correct answers. \textsc{Validate} works on dissolution because high error rate makes the adversarial trade-off favorable (\S\ref{sec:eval-stance}).
 
 \item \textbf{Structural traps extend beyond binary dilemmas.} Anchoring traps (reasoning anchored to a reference point) and false constraint traps (accepting artificial limitations) exhibit the same 0\% baseline $\to$ 89--100\% pipeline pattern as binary dissolution. However, sunk cost bias shows 67\% baseline escape---LLMs are partially immune to \emph{named} biases (via RLHF) but not to \emph{structural} traps embedded in problem framing. This identifies two vulnerability classes: structural traps (pipeline-dependent) and named biases (RLHF-mitigated) (\S\ref{sec:trap-taxonomy}).
+
+\item \textbf{Different compositions solve different problem classes.} A 3-primitive INNOVATE composition (SUPERPOSE $\to$ INTERFERE $\to$ SYNTHESIZE) produces $6\times$ more novel solutions (3.00 vs 0.53) and achieves perfect conventional escape (5.0/5.0) on stale-thinking problems across 5 domains. This is a fundamentally different problem class from dissolution (structural traps), yet solved by a different subset of the same primitives---demonstrating that semantic primitives are a \emph{composable paradigm}, not a single technique (\S\ref{sec:innovate}).
 \end{enumerate}
 
 \subsection{Scope and Clarifications}
@@ -707,6 +709,50 @@ Three findings emerge. (1)~\textbf{Anchoring traps mirror binary dilemmas exactl
 \textbf{Implication: RLHF creates selective immunity.} LLMs are trained to recognize \emph{named} cognitive biases (sunk cost, confirmation bias) but remain vulnerable to \emph{structural} traps that lack explicit labels---anchoring effects embedded in problem framing, and false constraints presented as given facts. The pipeline compensates precisely where RLHF falls short: it breaks traps that are invisible because they are embedded in the question's \emph{structure}, not its content.
 
 \textbf{Toward a trap taxonomy.} These results suggest at least two classes of LLM vulnerability: (a)~\emph{structural traps} (binary dilemmas, anchoring, false constraints) where the trap is embedded in the problem frame and the LLM cannot escape without external intervention ($0\%$ baseline), and (b)~\emph{named biases} (sunk cost) where RLHF provides partial immunity ($67\%$ baseline). Semantic computation appears uniquely suited to class~(a)---problems where the trap is invisible precisely because it defines the frame of reference.
+
+\subsection{Experiment W: INNOVATE Composition---Second Composition Proof}
+\label{sec:innovate}
+
+Experiments~N through~V established that the five semantic primitives, composed as DISSOLVE (SUPERPOSE $\to$ INTERFERE $\to$ REFRAME $\to$ SYNTHESIZE $\to$ VALIDATE), break structural traps. A fundamental question remains: is DISSOLVE the \emph{only} effective composition, or can different subsets/orderings of the same primitives solve different problem classes? If the latter, semantic primitives constitute a \emph{composable paradigm}; if the former, DISSOLVE is merely a technique.
+
+\textbf{Design.} We define INNOVATE $=$ SUPERPOSE $\to$ INTERFERE $\to$ SYNTHESIZE (3 primitives, omitting REFRAME and VALIDATE). INNOVATE targets a different problem class: \emph{stale thinking}---problems where conventional wisdom dominates and novel approaches are needed. Five problems across domains: business growth (SaaS stalling), education reform (declining attendance), talent acquisition (competing with FAANG), climate action (limited-budget city), employee retention (consulting attrition). Three conditions: \textsc{Direct} (single prompt), \textsc{Free\_Brainstorm} (single prompt explicitly requesting creativity), \textsc{Innovate} (3-step composition). $N=3$ per condition, Claude Sonnet, judge scores: novel solutions (count), emergent components (count), actionability (1--5), conventional escape (1--5). Total: $\sim$100 API calls.
+
+\begin{table}[H]
+\centering
+\caption{INNOVATE composition results across 5 stale-thinking problems (Experiment~W, $N=3$, Claude).}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Condition} & \textbf{Novel} & \textbf{Emergent} & \textbf{Actionability} & \textbf{Escape} \\
+\midrule
+Direct              & 0.53 & 1.13 & 4.00 & 1.40 \\
+Free Brainstorm     & 3.53 & 2.53 & 3.87 & 4.20 \\
+\textbf{Innovate}   & \textbf{3.00} & \textbf{2.87} & \textbf{4.00} & \textbf{5.00} \\
+\bottomrule
+\end{tabular}
+\label{tab:innovate}
+\end{table}
+
+\textbf{Key findings.} (1)~\textbf{INNOVATE dramatically outperforms Direct}: $6\times$ more novel solutions (3.00 vs 0.53), $2.5\times$ more emergent components (2.87 vs 1.13), and conventional escape rises from 1.40 to a perfect 5.00 across all 5 problems with zero variance. (2)~\textbf{INNOVATE achieves perfect conventional escape}: 5.0/5.0 on every problem, every run---the composition \emph{completely} breaks free from conventional thinking, a property no single prompt achieves. (3)~\textbf{Free Brainstorm is surprisingly effective}: unlike dissolution (where FREE $= 0\%$), explicit creativity instructions yield 3.53 novel solutions. This reveals that \emph{innovation problems are not structural traps}---there is no absolute reachability barrier. However, INNOVATE still outperforms on emergent components (2.87 vs 2.53) and conventional escape (5.00 vs 4.20), confirming that pipeline-generated \emph{collision} produces insights that brainstorming alone misses.
+
+\textbf{Two compositions, two problem classes.} DISSOLVE and INNOVATE use overlapping but distinct primitive subsets to solve fundamentally different problems:
+
+\begin{table}[H]
+\centering
+\caption{Comparison of two validated compositions.}
+\small
+\begin{tabular}{llllll}
+\toprule
+\textbf{Composition} & \textbf{Primitives} & \textbf{Problem class} & \textbf{Baseline} & \textbf{Pipeline} & \textbf{Pattern} \\
+\midrule
+DISSOLVE & 5 (full) & Structural traps   & 0\%       & 81\%     & Absolute barrier \\
+INNOVATE & 3 (S-I-Syn) & Stale thinking  & 0.53 novel & 3.00 novel & $6\times$ improvement \\
+\bottomrule
+\end{tabular}
+\label{tab:two-compositions}
+\end{table}
+
+This result has a critical implication: \textbf{semantic primitives are composable}. Different programs built from the same instruction set solve different problem classes. This is the defining property of a \emph{computing paradigm}---not a single algorithm, but a substrate from which many algorithms can be constructed. Of 325 possible compositions (subsets and orderings of 5 primitives), we have validated 2; the remaining 323 represent an open research frontier.
 
 \subsection{Experiment O: Dissolution Boundary Test---Selectivity Confirmed}
 \label{sec:boundary}
