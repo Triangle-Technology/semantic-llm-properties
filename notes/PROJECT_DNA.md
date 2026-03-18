@@ -8,7 +8,7 @@
 > quyết định quan trọng, hoặc insight bất ngờ. Đây là bộ gen — nó phải tiến hóa
 > cùng dự án.
 
-*Last updated: 2026-03-18 · Version: 2.0*
+*Last updated: 2026-03-19 · Version: 3.0*
 
 ---
 
@@ -30,7 +30,7 @@
 ## II. Trạng thái hiện tại — Đọc phần này để biết dự án đang ở đâu
 
 ### Paper v1: ĐÃ XUẤT BẢN trên GitHub
-- **26 experiments**, ~7,600 API calls, 3 model families (Claude, GPT-4o-mini, Gemini-2.5-flash)
+- **27 experiments**, ~7,700 API calls, 3 model families (Claude, GPT-4o-mini, Gemini-2.5-flash)
 - **Repo:** https://github.com/Triangle-Technology/semantic-llm-properties
 - Chưa submit arXiv
 
@@ -45,6 +45,9 @@
 | **Difficulty is model-dependent** | api_choice: Claude 100% GPT 10%; cost_reduction: GPT 100% Claude 80% | Abstract→Type-M, Practical→Type-D OK |
 | **Structural traps beyond binary** | Exp V: anchoring 0%→100%, false constraint 0%→89% | Pipeline phá NHIỀU loại trap, không chỉ binary |
 | **RLHF selective immunity** | Sunk cost: 67% baseline (LLM tự thoát) | RLHF vaccine named biases, NOT structural traps |
+| **INNOVATE = 2nd composition** | Exp W: DIRECT 0.53 novel → INNOVATE 3.0 novel, escape 5.0/5.0 | Paradigm confirmed, not just technique |
+| **Composability proven** | 2/325 compositions validated (DISSOLVE + INNOVATE) | Different compositions → different problem classes |
+| **Innovation ≠ structural trap** | FREE_BRAINSTORM = 3.53 novel (≠ 0% like dissolution) | No reachability barrier, but pipeline adds emergent |
 | **CAS metric hoạt động** | CAS = 1 - AvgShift, cross-model validated | Đo concept stability, predict phase transitions |
 | **Phase Transition Condition** | CAS < 0.4 ∧ CD > 0.5 | Predict khi nào meaning sẽ shift |
 | **Type taxonomy** | Type-M (Claude) > Type-M_mod (Gemini) > Type-D (GPT) | Models khác nhau về meta-constructive capability |
@@ -74,12 +77,15 @@
 |------|-----------|---------|
 | ~~Resume GPT/Gemini U2~~ | ✅ DONE | GPT 7/7 (63%), Gemini 7/7 (56%) — ALL COMPLETE |
 | ~~Exp V: Structural Traps~~ | ✅ DONE | Anchoring 0%→100%, False constraint 0%→89%, Sunk cost 67% baseline |
-| Semantic Computer "With Dissolution" rendering | BUG | Synthesis result sometimes doesn't display in right column |
-| Exp V N=10 full run | OPTIONAL | N=3 đủ significant cho qualitative findings |
+| ~~Exp W: INNOVATE~~ | ✅ DONE | 2nd composition confirmed (6× novel, 5.0 escape, 5 domains) |
+| ~~Pre-filter~~ | ✅ DONE | Detects undefined output space, skips pipeline for factual/calculation |
+| Semantic Computer rendering bugs | BUG | "With Dissolution" sometimes doesn't display synthesis |
+| Exp W cross-model (GPT, Gemini) | RECOMMENDED | Test INNOVATE universality |
 | Exp V cross-model (GPT, Gemini) | RECOMMENDED | Test trap taxonomy universality |
-| Test new trap types | FUTURE | Framing effect, availability bias, status quo bias |
-| Composability study | FUTURE | Which of 325 primitive combinations work? |
-| Submit arXiv | PENDING | Paper sẵn sàng (26 experiments), cần quyết định timing |
+| Composability rules study | HIGH PRIORITY | Test 3 composability rules (EXPAND before COLLIDE, etc.) |
+| More trap types | FUTURE | Framing effect, availability bias, status quo bias |
+| Domain-specific pilots | FUTURE | Product/innovation, negotiation (see APPLICATION_DOMAINS.md) |
+| Submit arXiv | PENDING | Paper ready (27 experiments), cần quyết định timing |
 | SDK v1.0 + Profiler | DEFERRED | Ưu tiên paper + tool trước |
 | API keys rotation | RECOMMENDED | Keys bị paste trong chat, nên regenerate |
 
@@ -89,13 +95,14 @@
 
 ```
 Claude's languages/
-├── paper.tex              # PAPER CHÍNH (26 experiments, ~1020 lines)
+├── paper.tex              # PAPER CHÍNH (27 experiments, ~1060 lines)
 ├── references.bib         # 20 citations
 ├── figures/               # 5 figures (SVG + PDF)
 ├── experiments/           # 25 experiment scripts + results JSON
 │   ├── experiment_a_born_rule.mjs    ... experiment_q2_stance.mjs
 │   ├── experiment_u2_dissolution_generalized.mjs  # Cross-domain dissolution
-│   ├── experiment_v_structural_traps.mjs          # MỚI NHẤT — trap taxonomy
+│   ├── experiment_v_structural_traps.mjs          # Trap taxonomy
+│   ├── experiment_w_innovate.mjs                  # MỚI NHẤT — 2nd composition proof
 │   ├── results_*.json               # Raw data
 │   └── analyze_*.mjs / generate_figures.mjs
 ├── sdk/                   # SDK v0.1 (cần nâng cấp)
@@ -143,6 +150,7 @@ Claude's languages/
 | U1 | Multi-Constraint | ❌ FAILED: baseline beat composition |
 | U2 | **Cross-Domain Dissolution** | **✓ Claude 81%, GPT 63%, Gemini 56% vs 0% (ALL 7/7 complete)** |
 | V | **Structural Trap Taxonomy** | **✓ Anchoring 0%→100%, False constraint 0%→89%, Sunk cost 67% (RLHF immune)** |
+| W | **INNOVATE Composition** | **✓ 2nd composition: 6× novel solutions, 5.0/5.0 escape → PARADIGM confirmed** |
 
 ---
 
@@ -197,6 +205,10 @@ Two vulnerability classes:
 | 13 | 2026-03-18 | Chạy Exp V: structural trap taxonomy | Prediction #11: traps beyond binary. CONFIRMED — anchoring 0%→100% |
 | 14 | 2026-03-18 | Accept N=3 cho Exp V | Qualitative findings clear, N=10 optional. Tiết kiệm credit |
 | 15 | 2026-03-18 | Default API keys trên Cloudflare Worker | Users không cần key để thử tool. Keys = Worker secrets (encrypted) |
+| 16 | 2026-03-19 | Chạy Exp W: INNOVATE composition | Chứng minh 2nd composition → paradigm, not technique |
+| 17 | 2026-03-19 | Breadth over depth (N=3 × 5 problems thay vì N=5 × 1) | Variance=0 → thêm N vô ích, generalization quan trọng hơn |
+| 18 | 2026-03-19 | Pre-filter cho Semantic Computer | Detect undefined output space trước khi chạy pipeline — tránh lãng phí |
+| 19 | 2026-03-19 | Tạo APPLICATION_DOMAINS.md | La bàn ứng dụng — rà soát sau mỗi đột phá |
 
 ---
 
@@ -228,8 +240,20 @@ LLMs được RLHF "vaccine" cho **named biases** (sunk cost = 67% tự thoát) 
 ### 8. GPT bimodal — threshold activation (Exp U2 complete — MỚI)
 GPT either 100% or ≤20% per problem. Không có trung gian. Claude degrade gracefully (70-100%). Thực tiễn: GPT users cần retry logic hoặc fallback to Claude.
 
-### 9. Difficulty is model × problem interaction (Exp U2 — MỚI)
+### 9. Difficulty is model × problem interaction (Exp U2)
 api_choice (abstract): Claude 100%, GPT 10%. cost_reduction (practical): GPT 100%, Claude 80%. "Khó" không phải tuyệt đối — phụ thuộc model type × assumption type. Abstract assumptions → Type-M. Practical assumptions → Type-D OK.
+
+### 10. PARADIGM, not technique (Exp W — MỚI NHẤT)
+Hai compositions khác nhau giải hai lớp bài toán khác nhau:
+- DISSOLVE (5 primitives) → structural traps (0%→81%) — absolute reachability barrier
+- INNOVATE (3 primitives: S→I→Syn) → stale thinking (0.53→3.0 novel, escape 5.0/5.0)
+Điều này chứng minh primitives là COMPOSABLE — giống instruction set, không phải single algorithm. 325 compositions khả dĩ, mới validate 2.
+
+### 11. Innovation ≠ structural trap (Exp W — MỚI NHẤT)
+FREE_BRAINSTORM = 3.53 novel — khác hẳn dissolution (FREE = 0%). LLM CÓ THỂ sáng tạo khi được yêu cầu. Nhưng INNOVATE pipeline tạo thêm emergent components (2.87 vs 2.53) và conventional escape (5.0 vs 4.2). Pipeline adds COLLISION — ideas từ va chạm perspectives mà brainstorm đơn lẻ không có.
+
+### 12. Undefined output space = ranh giới paradigm (Theoretical — MỚI)
+Semantic Computing hiệu quả KHI VÀ CHỈ KHI output space undefined. Defined output ("2+2=?") → vô ích. Undefined output ("REST hay GraphQL?" — hidden option C exists) → pipeline phá frame. Đây là ranh giới giữa Classical Computing và Semantic Computing — bổ sung, không thay thế.
 
 ---
 
@@ -289,6 +313,7 @@ api_choice (abstract): Claude 100%, GPT 10%. cost_reduction (practical): GPT 100
 |------|---------|
 | 2026-03-18 | v1.0 — Tạo file DNA với toàn bộ kiến thức tích lũy từ 3 sessions |
 | 2026-03-18 | v2.0 — Exp U2 complete (3 models 7/7), Exp V (structural traps), GPT bimodal insight, RLHF selective immunity, Semantic Computer v2.1 deployed |
+| 2026-03-19 | v3.0 — Exp W (INNOVATE = 2nd composition → PARADIGM confirmed), pre-filter, APPLICATION_DOMAINS.md, insights #10-12 |
 
 ---
 

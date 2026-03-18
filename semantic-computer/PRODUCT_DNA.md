@@ -6,7 +6,7 @@
 > **Quy tắc:** CẬP NHẬT sau mỗi feature mới, design decision, user feedback,
 > hoặc khi research cung cấp data mới ảnh hưởng đến tool.
 
-*Last updated: 2026-03-18 · Version: 2.0*
+*Last updated: 2026-03-19 · Version: 2.2*
 
 ---
 
@@ -49,9 +49,11 @@ semantic-computer/
 ```
 
 Backend thực thi pipeline step-by-step:
-1. Mỗi step nhận output của step trước làm input
-2. Mỗi step được route tới optimal model (nếu multi-model)
-3. Kết quả stream qua SSE
+1. **PRE-FILTER** (1 lightweight call): classify input → PIPELINE_RECOMMENDED or DIRECT_SUFFICIENT
+2. Nếu DIRECT_SUFFICIENT → skip pipeline, trả direct answer + lý do
+3. Nếu PIPELINE_RECOMMENDED → mỗi step nhận output của step trước làm input
+4. Mỗi step được route tới optimal model (nếu multi-model)
+5. Kết quả stream qua SSE
 
 ### Frontend: Pipeline Builder
 
@@ -112,6 +114,11 @@ VALIDATE   → cheapest
 - **Status: ✅ PROVEN** (0%→81%, N=10, 3 models, 6 domains)
 - Default pipeline
 - Khi user giữ đúng order này → UI hiển thị "= DISSOLVE — proven composition"
+
+### INNOVATE = SUPERPOSE → INTERFERE → SYNTHESIZE
+- **Status: ✅ PROVEN** (6× novel solutions, 5.0/5.0 escape, 5 domains, N=3)
+- Solves "stale thinking" problems — different class from DISSOLVE
+- Confirms paradigm: 2 compositions → 2 problem classes
 
 ### Tất cả combination khác
 - **Status: 🔬 EXPERIMENTAL**
@@ -247,6 +254,8 @@ Tool KHÔNG tự tạo research claims. Tool implement những gì research đã
 | 2026-03-18 | v2.0 | **Redesign**: single pipeline builder, drag-drop reorder, dynamic input, PDF+JSON export, routing reasons |
 | 2026-03-18 | v2.1 | Default API keys (Worker secrets), research contribution (KV), LIST_PROMPT shortcut, fair baseline comparison |
 | 2026-03-18 | v2.1 | Exp V data: anchoring trap 0%→100%, false constraint 0%→89%, sunk cost 67% (RLHF immune) |
+| 2026-03-19 | v2.2 | Pre-filter: detect undefined output space before pipeline. Skip pipeline for factual/calculation questions. |
+| 2026-03-19 | v2.2 | Exp W: INNOVATE composition confirmed (6× novel, 5.0 escape) → PARADIGM, not technique |
 
 ---
 
