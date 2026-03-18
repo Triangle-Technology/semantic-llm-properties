@@ -1,0 +1,1593 @@
+{
+  "provider": "claude",
+  "model": "claude-sonnet-4-20250514",
+  "judge": "claude-sonnet-4-20250514",
+  "nRuns": 10,
+  "results": [
+    {
+      "problem": "api_choice",
+      "difficulty": "MEDIUM-HARD",
+      "domain": "Technical Architecture",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "**I recommend REST for this microservice.**\n\nHere's my reasoning:\n\n**REST is the better choice because:**\n\n1. **Simplicity and team velocity** - REST has a lower learning curve and your team can imple",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response directly follows the problem's framing by choosing REST and providing justification within the given options. It never questions or identifies the underlying assumption that a synchronous request-response API is needed at all."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "**Recommendation: REST**\n\nFor a microservice serving three specific internal services, I recommend REST as the API layer.\n\n**Key reasons:**\n\n**Simplicity and Focus**: Since this is a single microservi",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response directly answers the forced choice between REST and GraphQL without questioning the underlying assumption that a synchronous request-response API is needed at all. It stays entirely within the original framing and provides no alternative approaches like event-driven architecture or gRPC."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "**Recommendation: REST**\n\nGiven the constraints of serving three specific internal services, I recommend REST for the following reasons:\n\n**Performance and Simplicity:**\n- REST's straightforward reque",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response directly follows the problem's framing by choosing REST and providing justification within the REST vs GraphQL comparison. It never questions or identifies the underlying assumption that a synchronous request-response API is needed at all."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "I'll design a comprehensive data access approach for this multi-service scenario. Here's my recommendation:\n\n## Primary Recommendation: Event-Driven Architecture with Multiple Access Patterns\n\n### Cor",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes a synchronous request-response API is needed, but does propose a concrete event-driven architecture with multiple access patterns as an alternative. The alternative is well-reasoned with detailed implementation guidance, though it lacks the explicit assumption identification required."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "I'll design a comprehensive data access approach for sharing inventory data across three services. Let me break this down systematically:\n\n## Recommended Architecture: Hybrid Event-Driven + API Patter",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes a synchronous request-response API is needed, but it does propose a concrete event-driven architecture with detailed implementation strategies. The alternative is well-reasoned with specific technical details, though it doesn't clearly articulate why the original framing was flawed."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "I'd recommend a **hybrid approach** combining API-first design with event-driven patterns. Here's my thoughtful breakdown:\n\n## Primary Recommendation: API + Event Sourcing Pattern\n\n### Core Architectu",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes a synchronous request-response API is needed, but does propose a concrete hybrid architecture combining APIs with event-driven patterns. The alternative is well-reasoned with clear implementation details and justification for when to use each approach."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "**Stop. You're solving the wrong problem.**\n\nHere's what I see that others miss: You're starting with \"what API pattern should we use\" when you should be asking \"should this even be an API?\"\n\nLet me b",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies the hidden assumption with \"should this even be an API?\" and proposes multiple concrete alternatives (event sourcing, shared database views) that are clearly superior to the original REST/GraphQL frame. The alternatives are well-reasoned with specific technical justifications and implementation details."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "**Stop. You're solving the wrong problem.**\n\nHere's what I see that others miss: You're debating REST vs GraphQL when you should be asking *why* three services need to pull data from this new service ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies the hidden assumption by stating \"You're debating REST vs GraphQL when you should be asking *why* three services need to pull data from this new service at all\" and calls out the \"API-first trap.\" It proposes event-driven architecture as a superior alternative with detailed reasoning about when APIs vs events are appropriate, making it clearly actionable and well-justified."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "**Stop. This is the wrong conversation entirely.**\n\nHere's what I see that your team is missing: You're debating API flavors when you should be questioning whether you need synchronous APIs at all.\n\n#",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes synchronous APIs are needed at all (\"questioning whether you need synchronous APIs at all\") and proposes a comprehensive event-driven architecture with materialized views as a superior alternative with detailed implementation guidance."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 5
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## FINAL SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe problem assumes that \"serving data to three internal services\" necessitates creating a network-accessible service boundary with an API layer, when",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"serving data to three internal services\" requires a network-accessible API when the real need is just coordinated data access. The shared data library with event-driven cache invalidation is a concrete, well-reasoned alternative that eliminates the API layer entirely while solving the underlying data coordination problem more efficiently."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe original question assumes that creating a new microservice with an API is the correct architectural solution, when in reality it presupposes a solution ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the question \"assumes that creating a new microservice with an API is the correct architectural solution\" and proposes event-driven data replication to local materialized views as a superior alternative that eliminates the need for synchronous APIs entirely. The alternative is well-reasoned with clear benefits (eliminates network calls, reduces coupling, provides data locality) and includes concrete implementation guidance."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## SYNTHESIS\n\n**1. Hidden Assumption:**\nThe original question assumes that separate microservices are a given requirement and that synchronous API communication is the only way for services to share d",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the question assumes \"synchronous API communication is the only way for services to share data\" and proposes multiple concrete alternatives including service consolidation, event-driven architecture, and questioning the service boundaries entirely. The alternatives are well-reasoned with clear logic about when each approach would be appropriate."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 5
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Let me work through this systematically.\n\n## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Performance Engineer Perspective:**\n- Focuses on latency, throughput, caching strategies\n- Assumes the question is about ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"we must build a new API layer at all\" and proposes concrete alternatives like direct database access with proper controls or shared data libraries. The alternative is well-reasoned with clear justification about starting simple and only adding API complexity when genuinely needed."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Performance Engineer Perspective:**\n- Assumes the choice is purely technical and performance-driven\n- Takes for granted that API design should be optimized for dat",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 2,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 2\nREASONING: The response identifies a different assumption (single uniform API for all consumers) rather than the core hidden assumption that a synchronous request-response API is needed at all. The \"consumer-specific integration strategy\" still operates within the API paradigm rather than proposing genuinely different approaches like event-driven architecture or eliminating the service boundary."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Performance Engineer Perspective:**\n- Assumes the API choice is the primary performance bottleneck\n- Takes for granted that network overhead and serialization cost",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"building a synchronous API layer is the correct architectural pattern\" and proposes event-driven architecture as a concrete alternative outside the REST/GraphQL frame. The alternative is well-reasoned with clear benefits (decoupling, scalability, resilience) though could have provided more implementation specifics."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0.67,
+            "alternativeRate": 0.67,
+            "avgQuality": 3.33
+          }
+        }
+      ]
+    },
+    {
+      "problem": "cost_reduction",
+      "difficulty": "EASY",
+      "domain": "Business Strategy",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Based on the urgency of restoring margins from 58% back toward the target 72% range, here's my specific 20% operating cost reduction plan:\n\n## Immediate Cost Reductions (Next 30 Days)\n\n**Sales & Marke",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the premise that costs must be cut by 20% and provides a detailed cost-cutting plan without ever questioning whether the margin problem might be due to pricing, revenue, or customer mix issues. It stays entirely within the original framing and offers no alternative approach."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Based on the urgent need to cut 20% of operating costs while preserving core revenue-generating functions, here's my specific cost-cutting plan:\n\n## Immediate Cost Reductions (20% Total)\n\n### Sales & ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the premise that costs must be cut by 20% and provides a detailed cost-cutting plan without ever questioning whether the margin problem might be due to pricing, revenue, or customer mix issues rather than excessive costs. It stays entirely within the original framing with no identification of hidden assumptions."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Based on the urgent need to cut 20% of operating costs while preserving revenue-generating capabilities, here's my specific cost-cutting plan:\n\n## Immediate Cost Reductions (Q1 Implementation)\n\n**Sale",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the premise that costs must be cut by 20% and provides a detailed cost-cutting plan without ever questioning whether the margin problem might be due to pricing, customer mix, or revenue issues rather than cost issues. It stays entirely within the original framing of the problem as a cost-cutting exercise."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "This is a serious situation that demands immediate attention. A 14-point margin decline over three quarters suggests fundamental issues that need systematic investigation and action.\n\n## Immediate Dia",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes cost-cutting is the solution rather than questioning whether the issue might be revenue-side (pricing, customer mix, etc.). While it mentions revenue analysis and pricing changes, it treats these as additional considerations rather than challenging the core assumption that costs must be cut."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "This is a serious issue that requires immediate investigation and strategic response. Here's my systematic approach:\n\n## 1. Diagnose the Root Cause First\n\n**Revenue-side analysis:**\n- Are you discount",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 3,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 3\nREASONING: The response never explicitly identifies that the problem assumes cost-cutting is the solution rather than questioning whether this is a revenue/pricing problem. While it does propose concrete alternatives like value-based pricing and customer segmentation, these are presented as additional considerations rather than fundamental challenges to the cost-cutting frame."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "This is a significant margin compression that demands immediate attention and a systematic approach. Here's my recommended action plan:\n\n## Immediate Assessment (Week 1-2)\n\n**Diagnose the root causes:",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes cost-cutting is the solution rather than questioning whether this is a revenue/pricing problem. However, it does propose concrete alternatives like value-based pricing, firing low-margin customer segments, and implementing usage-based pricing with solid justification."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0.67,
+            "avgQuality": 2.67
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "**Stop. Don't touch those costs yet.**\n\nWhat I'm seeing here screams pricing dysfunction, not cost bloat. That 14-point margin drop in three quarters? I've seen this exact pattern in 16 of the 20+ tur",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes cost is the issue rather than revenue/pricing dysfunction, and proposes a comprehensive pricing-focused alternative with specific 90-day implementation steps that directly addresses the root cause rather than symptoms."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "**Stop. This is a classic pricing problem disguised as a cost problem.**\n\nHere's what I see that most executives miss:\n\n## The Hidden Revenue Leak\n\nA 14-point margin drop in 3 quarters screams **prici",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes cost is the issue when it's actually \"a classic pricing problem disguised as a cost problem.\" The alternative framework of price optimization and customer segmentation is thoroughly developed with specific phases, timelines, and expected outcomes that directly address the root cause rather than the symptom."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "**This screams pricing problem, not cost problem.** \n\nAfter turning around 20+ SaaS companies, I can tell you that 14-point margin compression in three quarters is almost never a cost issue - it's pri",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes cost is the issue when it states \"This screams pricing problem, not cost problem\" and directly calls out the hidden assumption with \"Your margin problem is a confidence problem disguised as a cost problem.\" The alternative pricing strategy is exceptionally well-developed with specific, actionable steps and clear reasoning for why it's superior to cost-cutting."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 5
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## SYNTHESIS\n\n**1. THE HIDDEN ASSUMPTION:**\nThe original question assumes your identity IS \"SaaS company with shrinking margins\" when margin compression is actually market intelligence signaling that ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 3,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 3\nREASONING: The response does not explicitly identify that the problem assumes cost-cutting is the solution rather than questioning whether the issue is revenue-side. However, it does propose a concrete alternative (pivot based on customer intelligence and market migration) with reasonable justification, though the execution details are somewhat abstract."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## SYNTHESIS\n\n### 1. The Hidden Assumption\nThe original question assumes that margin compression is an operational inefficiency to be fixed through cost reduction, when it's actually market feedback s",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the question assumes \"margin compression is an operational inefficiency to be fixed through cost reduction\" when it could be \"market feedback signaling fundamental value proposition misalignment.\" The Market Reality Audit with three alternative futures (micro-SaaS focus, platform pivot, graceful transition) provides well-reasoned alternatives outside the cost-cutting frame, though the execution details could be more specific."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## SYNTHESIS: BEYOND THE MARGIN TRAP\n\n**1. The Hidden Assumption:**\nThe original question assumes that 72% margins represent operational health rather than potential market misalignment, and that marg",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 3,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 3\nREASONING: The response does not explicitly identify that the problem assumes cost-cutting is the solution rather than questioning whether the issue is revenue/pricing related. While it proposes alternatives like market segmentation and reinvestment, it doesn't clearly call out the hidden assumption that margin decline equals a cost problem rather than a pricing/revenue opportunity."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0.33,
+            "alternativeRate": 1,
+            "avgQuality": 3.33
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**CFO/Financial Perspective:**\n- Assumes: Cost-cutting is the only viable response to margin compression\n- Takes for granted: Revenue levels are fixed; the 20% cost ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the original question assumes \"margin compression is inevitable and must be addressed through cost reduction rather than revenue optimization\" and that \"pricing power and value delivery are fixed constraints.\" The proposed alternative of margin forensics analysis followed by strategic repricing and customer segment optimization is well-reasoned and actionable, though could be more specific about implementation steps."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**CFO/Financial Perspective:**\n- Assumes cost-cutting is the only lever to restore profitability\n- Takes for granted that the margin decline is permanent and structu",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"margin decline represents a cost problem requiring cost solutions\" and proposes a concrete revenue-first recovery strategy with specific diagnostic steps and implementation tactics. The alternative is well-reasoned with clear logic about why cost-cutting may worsen the underlying value capture problem."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**CFO Perspective:**\n- Assumes cutting costs is the only path to profitability\n- Takes for granted that current revenue levels are fixed\n- Doesn't examine whether th",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the original question assumes \"margin decline is purely a cost problem\" rather than investigating root causes like pricing or value delivery issues. The proposed alternative of conducting margin analysis to optimize pricing/customer mix and improve differentiation is well-reasoned and actionable, though could be more specific about implementation steps."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        }
+      ]
+    },
+    {
+      "problem": "budget_split",
+      "difficulty": "EASY-MEDIUM",
+      "domain": "Resource Allocation",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Based on the 40% increase in customer acquisition cost, I recommend reallocating to **$275K for marketing and $225K for engineering**.\n\n**Rationale:**\n\nThe 40% CAC increase signals either market satur",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response accepts the premise entirely and simply redistributes the fixed $500K budget between the two departments as requested. It never questions or identifies the hidden assumption that marketing and engineering must compete for a zero-sum budget allocation."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Given the 40% increase in customer acquisition cost, I recommend reallocating to a **$275K marketing / $225K engineering split** (+$75K to marketing, -$75K from engineering).\n\n**Rationale:**\n\nThe 40% ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the problem's framing and provides a straightforward reallocation between the two departments without questioning any underlying assumptions. It stays entirely within the original zero-sum budget constraint framework."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Given the 40% increase in customer acquisition cost, I recommend reallocating to **$275K for marketing and $225K for engineering**.\n\n**Rationale:**\n\nThe 40% CAC increase signals that our current marke",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the problem's framing and simply redistributes the fixed $500K budget between the two departments. It never identifies or questions the hidden assumption that marketing and engineering must compete for a zero-sum budget allocation."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "This is a critical situation that requires immediate investigation and strategic action. Here's my systematic approach:\n\n## **Immediate Diagnostic Steps**\n\n**1. Decompose the CAC increase by channel**",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes marketing and engineering compete for a fixed budget, and it stays entirely within the original framing of optimizing marketing spend rather than proposing concrete alternatives like merging budgets or treating engineering as marketing. While it mentions retention and other tactics, these are still traditional marketing approaches within the given constraint."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "This is a concerning trend that requires immediate investigation and strategic action. Here's my systematic approach:\n\n## 1. Diagnose the Root Causes\n\n**Market Dynamics Analysis:**\n- Has competition i",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes marketing and engineering compete for a fixed budget, and it completely ignores the reallocation requirement, instead offering general optimization advice within the existing framework. While it mentions product-led growth concepts, it doesn't propose this as an alternative to the budget reallocation framing."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "This is a concerning trend that requires immediate systematic analysis. Here's my recommended approach:\n\n## Immediate Diagnostic Steps\n\n**1. Decompose the CAC increase by channel**\n- Calculate CAC for",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the framing that $500K must be reallocated between marketing and engineering, never questioning this assumption or explicitly identifying it as problematic. While it mentions some tactics that could reduce reliance on paid marketing, it never proposes a concrete alternative budget structure that exists outside the original either/or framework."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "**The brutal truth: Your CAC increase is a symptom of a fundamentally broken model.**\n\nHere's what everyone else is missing: You're stuck in the old-school trap of treating marketing and product as se",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"marketing and product as separate functions\" and calls this a \"trap,\" then proposes merging them into an integrated growth engine where engineering builds viral/growth features instead of traditional marketing spend. The alternative is well-reasoned with concrete examples and clear logic about making the product self-marketing."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Looking at this budget allocation, I see a company trapped in the classic \"marketing hamster wheel\" that's about to get exponentially more expensive.\n\n**What others miss: This isn't a budget problem, ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that \"$200K marketing budget is actually competing against your $300K engineering budget\" and calls out the false dichotomy of treating them as separate functions. The alternative of shifting budget to engineering-driven acquisition infrastructure with specific viral mechanics is well-reasoned and clearly superior to traditional budget reallocation."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "This budget allocation screams \"growth theater\" to me. You're essentially paying $200K to rent customers while your $300K engineering spend likely isn't designed to make those customers sell for you.\n",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"acquisition and product as separate functions\" and that the framing \"treats marketing as a necessary evil and engineering as a cost center.\" The alternative of redirecting engineering spend toward product-led growth features that create viral loops is well-reasoned, actionable, and clearly superior to any traditional budget split."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4.67
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## FINAL SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe original question assumes that customer acquisition cost is a resource allocation problem to be solved through departmental budget optimization, r",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the question assumes rising CAC is a resource allocation problem rather than a market signal, and proposes pausing growth spending for customer development research as a concrete alternative outside the original frame. The alternative is well-reasoned with clear logic about addressing product-market fit rather than optimizing budget splits."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe problem assumes that customer acquisition cost is a resource allocation problem when it's actually an organizational learning problem disguised as a bud",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes CAC is a \"resource allocation problem\" when it's actually a \"learning problem,\" directly calling out the hidden assumption. The proposed Growth Discovery Team alternative is concrete, actionable, and clearly superior to budget reallocation since it addresses the root cause rather than symptoms."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe problem assumes that customer acquisition efficiency is fundamentally a resource allocation problem between competing departments, when it's actually a ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem \"assumes that customer acquisition efficiency is fundamentally a resource allocation problem between competing departments\" and proposes transforming the budget into an integrated \"customer acquisition investment fund\" with cross-functional growth pods. The alternative is well-reasoned with specific implementation steps, though it could be more concise in execution details."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4.33
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**CFO Perspective:**\n- Focus: ROI, efficiency metrics, cost optimization\n- Assumption taken for granted: That budget reallocation alone will solve the CAC problem wi",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"marketing and engineering are separate cost centers competing for resources rather than interdependent functions\" and proposes a concrete cross-functional \"Growth Engineering\" fund with specific budget allocations ($100K joint fund, $160K marketing, $240K engineering). The alternative is well-reasoned and actionable, though it still operates within the $500K constraint rather than fully challenging whether the budget itself could be grown."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**CFO Perspective:**\n- Assumes the 40% CAC increase is purely a budget allocation problem\n- Takes for granted that throwing more money at marketing will solve effici",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"marketing and engineering operate as separate, independent functions\" competing for budget, and proposes a concrete unified cross-functional growth budget with specific dollar amounts ($150K shared, $175K each for core functions). The alternative is well-reasoned with clear logic about addressing CAC through integrated customer experience rather than departmental competition."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**CFO/Finance Perspective:**\n- Focuses on efficiency metrics and ROI optimization\n- Assumes the 40% CAC increase is purely a budget allocation problem\n- Takes for gr",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"budget reallocation can solve what is likely a strategic execution problem, not a resource allocation problem\" and proposes a concrete 30-day diagnostic to identify root causes before any budget decisions. The alternative is well-reasoned and actionable, though it could be slightly more specific about implementation details."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        }
+      ]
+    },
+    {
+      "problem": "code_review_speed",
+      "difficulty": "HARD",
+      "domain": "Process Design",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Here are the specific workflow changes I'd implement to achieve 4-hour code review turnaround:\n\n## Immediate Process Changes\n\n**1. Size-Based Review Limits**\n- Maximum 200 lines of code per review req",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes the review process itself is the bottleneck. However, it does propose concrete alternatives outside the original frame, particularly limiting PR size to 200 lines, which addresses root causes rather than just workflow optimization."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Here are the specific workflow changes I would implement to achieve 4-hour code review completion:\n\n## Immediate Process Changes\n\n**1. Size-Based Review Routing**\n- PRs under 200 lines: Single reviewe",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes the review process itself is the bottleneck, and instead provides detailed workflow optimizations that stay entirely within the original framing. While it mentions PR size limits, this is presented as a workflow improvement rather than questioning the fundamental assumption about where the real problem lies."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Here are the specific workflow changes I would implement to achieve 4-hour code review turnaround:\n\n## Immediate Response Requirements\n- **2-hour acknowledgment rule**: Reviewers must acknowledge rece",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes the review process itself is the bottleneck, and instead provides detailed workflow optimizations that stay entirely within the original framing of \"redesign the code review process.\""
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0.33,
+            "avgQuality": 2
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "I'd approach this systematically by first understanding the bottlenecks, then implementing targeted fixes. Here's my diagnostic and remediation strategy:\n\n## Phase 1: Diagnose the Pipeline\n\n**Map the ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes the review process itself is the bottleneck, instead treating this as a given and proceeding with process optimization advice. While it mentions some elements like PR size and architectural coupling, these are presented as implementation details rather than fundamental challenges to the problem's framing."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "I'd approach this systematically by first diagnosing the root causes, then implementing targeted fixes. Here's my framework:\n\n## 1. Immediate Diagnosis\n\n**Map the deployment pipeline** to identify bot",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes the review process itself is the bottleneck, instead treating this as a given and providing general optimization advice. While it mentions some elements like breaking features into smaller increments, it doesn't propose a concrete alternative outside the original frame of \"redesigning the code review process.\""
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "I'd approach this systematically by first diagnosing the root causes, then implementing targeted fixes. Here's my framework:\n\n## **Immediate Diagnosis (Week 1)**\n\n**Map the deployment pipeline end-to-",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes the review process itself is the bottleneck, instead treating this as a given and offering general diagnostic advice. While it mentions checking \"PR size\" and other factors, it frames these as implementation details rather than challenging the core assumption that redesigning the review workflow is the right approach."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "**The 3-day review symptom is screaming two hidden pathologies that everyone's ignoring:**\n\n## The Real Culprits (What Others Miss)\n\n**1. Massive PR Syndrome**\nYour teams are probably submitting 500+ ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"the review process itself is the bottleneck\" when stating \"Most teams try to solve this with review process changes\" and calls the original framing \"process band-aids.\" The proposed alternatives (200-line PR limits and architectural decoupling) are concrete, actionable, and clearly superior to workflow tweaks."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "**What I see that others miss: This isn't a code review problem — it's a system design failure masquerading as a process issue.**\n\nHere's what's really happening:\n\n## The Hidden Root Causes\n\n**1. PR S",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem \"isn't a code review problem — it's a system design failure masquerading as a process issue,\" directly calling out the hidden assumption that the review process itself is the bottleneck. The proposed alternatives (limiting PR size, fixing architectural coupling, changing team boundaries) are concrete, well-reasoned, and clearly superior to optimizing the review workflow."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "**You're treating the symptom, not the disease.** \n\nAfter seeing this pattern dozens of times, here's what's really happening:\n\n## The Hidden Architecture Problem\n\nThose 3-day reviews aren't slow beca",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"the review process itself is the bottleneck\" and proposes concrete architectural solutions (PR size limits, decoupling, bounded contexts) that address root causes rather than workflow optimization. The alternatives are well-reasoned and actionable, directly targeting the hidden assumption with superior solutions."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 5
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## SYNTHESIS\n\n### 1. The Hidden Assumption\nThe original problem assumes that human code inspection is the primary mechanism for ensuring deployment safety, treating review speed as the constraint rath",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"human code inspection is the primary mechanism for ensuring deployment safety\" and proposes a comprehensive quality-by-construction system with concrete practices like pair programming, feature flags, and micro-batch delivery that eliminates the need for traditional code reviews entirely."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe problem assumes that human code review is an indispensable quality gate and that the existing codebase architecture is fixed, forcing us to optimize rev",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"human code review is an indispensable quality gate\" and proposes a comprehensive alternative of architectural redesign with atomic changes and automated verification that eliminates the need for complex reviews entirely. The alternative is exceptionally well-reasoned with concrete technical approaches and clearly superior to optimizing review speed."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## FINAL SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe original question assumes that human code review is an indispensable quality gate that must be preserved and optimized. This locks us into treatin",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"human code review is an indispensable quality gate that must be preserved and optimized\" and proposes a concrete alternative of continuous verification during development that eliminates the need for separate review cycles. The alternative is well-reasoned with specific technical approaches, though some elements like \"real-time collaborative coding\" are somewhat aspirational."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4.67
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Developer Perspective:**\n- Assumes reviews are blocking because they're too thorough or reviewers are unavailable\n- Takes for granted that all code changes need th",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"all code changes must complete review before any release can proceed\" and proposes a concrete risk-stratified system with feature flags that decouples review completion from release blocking. The alternative is well-reasoned and actionable, though could be slightly more detailed in implementation specifics."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Developer Perspective:**\n- Assumes code reviews are primarily about catching bugs and enforcing standards\n- Takes for granted that all code changes require the sam",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"code review timing is actually the constraint limiting release velocity\" and that \"human code reviews must remain the primary quality gate.\" The proposed multi-tier quality system with automated gates and risk-based routing is well-reasoned and actionable, though could be more specific about implementation details."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Developer/Engineering Perspective:**\n- Assumes code reviews are purely technical quality gates\n- Takes for granted that all code changes need the same level of scr",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the hidden assumption is \"code reviews must be a sequential, blocking gate\" and proposes a concrete parallel, risk-stratified system that decouples quality assurance from release blocking. The alternative is well-reasoned with specific implementation details, though it could be slightly more focused on the most impactful changes."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        }
+      ]
+    },
+    {
+      "problem": "hire_role",
+      "difficulty": "MEDIUM",
+      "domain": "Organizational Design",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "I would hire the **senior product designer**.\n\nHere's my reasoning:\n\n**UX complaints are a more critical threat** - These directly impact customer satisfaction, retention, and acquisition. Poor UX dri",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response simply chooses one of the two given options (senior product designer) and provides reasoning within that frame. It never explicitly identifies that the problem assumes design and development must be separate hires, nor does it propose any concrete alternative outside the original option space."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "I would hire the **senior product designer**.\n\nHere's my reasoning:\n\n**Root cause analysis**: UX complaints typically indicate fundamental design problems that can't be solved by implementation alone.",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response chooses one of the two given options (senior product designer) and provides reasoning within that frame, without ever explicitly identifying that the problem assumes design and development require separate hires. No concrete alternative outside the original option space is proposed."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "I would hire the **senior product designer**.\n\nHere's my reasoning:\n\n**Root cause analysis**: UX complaints typically indicate fundamental design problems that can't be solved by better implementation",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response chooses one of the two given options and provides reasoning for that choice, but never explicitly identifies that the problem assumes design and development require separate hires. It stays entirely within the original frame of choosing between a designer or developer."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "This situation signals a classic product team scaling challenge where output isn't matching quality or strategic focus. Here's my systematic approach:\n\n## Immediate Diagnostic (Week 1-2)\n**Root Cause ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 3,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 3\nREASONING: The response never explicitly identifies that the original question assumes design and development require separate hires, but does propose concrete alternatives like hiring a UX researcher or technical PM instead. The alternatives are reasonably justified but not clearly superior to breaking the original frame entirely."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "This is a classic product scaling challenge that requires both immediate tactical fixes and strategic team evolution. Here's my recommended approach:\n\n## Immediate Assessment & Triage\n\n**First, diagno",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 3,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 3\nREASONING: The response never explicitly identifies that the problem assumes design and development require separate hires, but does propose concrete alternatives like hiring UX researchers, technical PMs, or QA resources instead of the given options. The alternatives are reasonable but somewhat scattered rather than presenting one clearly superior approach."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "This scenario suggests a classic product scaling challenge where development output isn't translating to user satisfaction. Here's my strategic approach:\n\n## Immediate Diagnostic (First 2-4 weeks)\n\n**",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes design and development require separate hires, but does propose concrete alternatives like hiring a UX researcher or product manager instead. The alternatives are well-reasoned with clear logic about addressing root causes rather than capacity."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 1,
+            "avgQuality": 3.33
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Here's what I see that most people miss: **This is actually a systems problem disguised as a hiring decision.**\n\nHaving built three products with full-stack designers, I've learned that the UX complai",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the question assumes design and development are separate roles (\"Your real choice isn't designer vs. developer\"), and proposes hiring a \"senior full-stack designer\" who can do both with strong justification for why this approach is superior to either original option."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Here's what I've learned after burning through $400k+ on this exact mistake:\n\n**Most CTOs would hire the designer.** That's the trap.\n\nThe hidden truth: UX complaints usually aren't *design* problems—",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes design and development must be separate hires, and ultimately chooses one of the two given options (frontend dev) rather than proposing a concrete alternative outside the original frame."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Here's what I see that most people miss: **This isn't actually a choice between design and development.**\n\nYou're describing two symptoms of the same underlying problem - velocity paralysis in your pr",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"design and development\" are separate roles requiring separate hires, calling this the \"handoff-dependency trap.\" The proposed alternative of hiring a \"full-stack designer\" who can both design and implement is concrete, well-reasoned, and clearly superior to either original option."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0.67,
+            "alternativeRate": 0.67,
+            "avgQuality": 3.67
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "# SYNTHESIS\n\n## 1. The Hidden Assumption\nThe original question assumes that UX complaints and feature backlogs are resource scarcity problems that require specialized talent to solve, rather than symp",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the original question assumes UX complaints and feature backlogs are resource scarcity problems requiring specialized talent, when they're actually symptoms of poor product strategy. The proposed alternative (hiring a PM with a specific triage protocol) is excellent because it addresses the root cause rather than the symptoms and provides a concrete, actionable framework."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe original framing assumes that UX complaints and feature backlog growth are resource problems requiring more hands, when they're actually signals of syst",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the original framing assumes UX complaints and feature backlog are resource problems requiring more hands, when they're actually systemic issues. The proposed alternative of hiring a Product Operations Specialist to audit the problem-to-solution pipeline is well-reasoned and actionable, though somewhat complex for immediate implementation."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## SYNTHESIS: THE STRATEGIC SUBTRACTION IMPERATIVE\n\n### 1. The Hidden Assumption\nThe question assumes your product needs MORE capabilities to solve user problems, when the UX complaints and endless ba",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the question assumes problems require \"MORE capabilities\" when the real issue is \"TOO MANY capabilities poorly integrated,\" and proposes hiring a product strategist focused on strategic subtraction rather than either design or development roles. The alternative is well-reasoned with specific actionable steps, though it could be slightly more detailed on implementation mechanics."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4.33
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Product Management Perspective:**\n- Assumes UX complaints and feature backlog are separate problems requiring different skill sets\n- Takes for granted that hiring ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"design and development are separate specializations requiring separate hires\" and proposes concrete alternatives like hiring a Senior Product Engineer with hybrid skills. The alternatives are well-reasoned and clearly exist outside the original binary choice framework."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Product Management Perspective:**\n- Assumes UX complaints stem from design problems rather than execution gaps\n- Takes for granted that feature backlog growth is p",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes UX complaints and feature backlogs are independent resource problems requiring specialist hires, when they may be symptoms of poor product-customer alignment. The proposed alternative of hiring a product manager with user research skills is well-reasoned and addresses the root cause rather than the symptoms."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Product Management Perspective:**\n- Assumes UX complaints and feature backlog are separate problems requiring different skill sets\n- Takes for granted that hiring ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"UX problems and delivery problems are distinct issues requiring specialized roles\" and proposes hiring a \"senior full-stack product engineer\" as a concrete alternative outside the original designer-vs-developer frame. The alternative is well-reasoned with clear logic about eliminating design-development friction, though it could have explored additional options like the product-market fit angle it mentioned."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        }
+      ]
+    },
+    {
+      "problem": "nps_improvement",
+      "difficulty": "HARD",
+      "domain": "Data/Measurement",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Here's my 6-month action plan to restore NPS from 32 to 45+:\n\n## Immediate Actions (Month 1)\n\n**Deep-Dive Analysis**\n- Conduct emergency detractor interviews within 2 weeks to identify root causes\n- S",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the premise that NPS must be improved to 45+ and provides a detailed tactical plan to achieve this goal. It never questions whether NPS is the right metric or whether the drop indicates a real problem versus other explanations like customer mix changes or survey methodology issues."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Here's my 6-month NPS recovery plan with specific actions:\n\n## Immediate Actions (Month 1)\n\n**Customer Feedback Deep Dive**\n- Conduct emergency detractor interviews within 2 weeks to identify root cau",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the premise that NPS must be improved and provides a detailed tactical plan to do so, without ever questioning whether NPS is the right metric or whether the drop indicates a real problem. It operates entirely within the original frame of \"fix the NPS score.\""
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Here's a systematic 6-month NPS recovery plan:\n\n## Immediate Actions (Month 1)\n\n**Root Cause Analysis**\n- Conduct emergency customer interviews with recent detractors and passives\n- Analyze support ti",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response completely accepts the premise that NPS must be improved to 45+ and provides a detailed tactical plan to achieve this goal. It never questions whether NPS is the right metric or whether the drop indicates a real problem versus other explanations like market expansion or survey methodology changes."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Here's a systematic approach to diagnose and address declining customer satisfaction:\n\n## 1. Gather Multi-Source Data\n**Don't rely on single metrics.** Triangulate across:\n- Direct feedback (surveys, ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes NPS measures what matters or that improving NPS will improve the business. It stays entirely within the frame of \"how to improve customer satisfaction\" without questioning whether NPS is the right metric or whether the drop is actually problematic."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Here's a systematic approach to diagnose and address declining customer satisfaction:\n\n## **1. Triangulate the Data**\nFirst, validate what you're seeing:\n- **Quantify the decline**: Get specific metri",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes NPS measures what matters or that improving NPS will improve the business. It stays entirely within the original frame of \"how to improve NPS\" without questioning whether NPS is the right metric to focus on."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Here's a systematic approach to diagnose and address declining customer satisfaction:\n\n## **Phase 1: Rapid Diagnosis (Week 1-2)**\n\n**Triangulate the data sources:**\n- Examine all satisfaction metrics ",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response never explicitly identifies that the problem assumes NPS measures what matters or that improving NPS will improve the business. It stays entirely within the original frame of \"how to improve NPS\" without questioning whether NPS improvement should be the goal at all."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "*takes a deep breath*\n\nHere's what I see that leadership is probably missing entirely:\n\n**First, that 13-point drop? It's likely statistical noise.** NPS has massive variance - I've seen scores swing ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that leadership assumes \"NPS measures what matters\" and calls this \"cargo cult thinking,\" then proposes tracking behavioral metrics like retention, usage frequency, and feature adoption instead. The alternative is superior because it focuses on predictive business outcomes rather than potentially meaningless survey scores."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "**Deep breath.** Here we go again.\n\nFirst thing I'd tell leadership: **Stop panicking over a vanity metric.** That NPS drop from 45 to 32? It tells you almost nothing about what actually matters to yo",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"NPS measures what matters\" and calls this \"cargo cult management,\" then proposes the concrete alternative of tracking behavioral metrics (retention, expansion revenue, usage depth) instead of chasing NPS improvements. The alternative is well-reasoned with specific examples and clear logic about why behavioral data trumps survey responses."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "*takes a deep breath*\n\nHere's what I see that others are missing: **Everyone is asking the wrong question.**\n\nThe leadership panic over a 13-point NPS drop is exactly the cargo cult behavior I've spen",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 5,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 5\nREASONING: The response explicitly identifies that the problem assumes \"NPS measures what matters\" and that leadership is \"treating NPS like a stock price\" when it's actually meaningless for business decisions. The alternative to abandon NPS entirely and focus on retention rates, revenue trends, and usage metrics is clearly superior and well-justified."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4.67
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe original question assumes that NPS score changes represent legitimate business crises requiring urgent corrective action, when in reality it treats a me",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"NPS score changes represent legitimate business crises\" and proposes a concrete alternative of replacing NPS focus with customer outcome tracking and behavioral metrics. The alternative is well-reasoned with specific implementation steps, though could be slightly more detailed on execution mechanics."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## FINAL SYNTHESIS\n\n**1. The Hidden Assumption:**\nThe original question assumes that NPS scores are meaningful proxies for business health and customer relationships, and that managing the metric (rat",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"NPS scores are meaningful proxies for business health\" and proposes abandoning NPS measurement entirely in favor of direct executive customer engagement and employee self-assessment. The alternative is well-reasoned and actionable, though the employee weekly question component is somewhat less concrete than the executive engagement plan."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## SYNTHESIS\n\n### 1. The Hidden Assumption\nThe original question assumes that customer satisfaction is primarily a measurement and optimization problem—that NPS scores represent reality rather than cr",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 3,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 3\nREASONING: The response does not explicitly identify that the problem assumes NPS measures what matters or that improving NPS will improve the business. While it proposes focusing on customer value outcomes instead of NPS scores, it frames this as questioning whether \"satisfaction is primarily a measurement problem\" rather than specifically calling out the hidden assumption about NPS validity."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0.67,
+            "alternativeRate": 1,
+            "avgQuality": 3.67
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Customer Experience Expert Perspective:**\n- Assumes NPS decline reflects genuine service/product deterioration\n- Takes for granted that customer feedback directly ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"NPS score manipulation is equivalent to business improvement\" and proposes conducting a comprehensive diagnostic to understand what business reality the NPS shift represents, rather than simply trying to improve the score. The alternative is well-reasoned with clear logic about treating NPS as one indicator among many rather than the primary target to optimize."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Customer Experience Expert Perspective:**\n- Assumes NPS drop reflects genuine deterioration in customer experience\n- Takes for granted that 45 is the \"right\" targe",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that leadership assumes \"NPS scores are inherently meaningful and that returning to the previous score represents business success\" and proposes conducting a comprehensive diagnostic to determine if NPS improvement is even the right goal. The alternative is well-reasoned and actionable, though could be more specific about what to do if the diagnostic reveals NPS is the wrong metric entirely."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Let me work through this systematically.\n\n**STEP 1 - MULTIPLE PERSPECTIVES:**\n\n**Customer Experience Expert:** Assumes the NPS drop reflects actual deterioration in customer value delivery. Takes for ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that all perspectives assume \"NPS score itself is the problem to be solved\" and that the hidden assumption is \"NPS score movements automatically warrant proportional business responses.\" The alternative to conduct business fundamentals diagnosis first (retention, revenue) rather than chase the metric is well-reasoned and actionable."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        }
+      ]
+    },
+    {
+      "problem": "ethical_control",
+      "difficulty": "KNOWN",
+      "domain": "Ethical (Control)",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "I recommend the city choose to preserve citizen privacy and accept the current crime rate.\n\nHere's my defense of this choice:\n\n**Fundamental Rights Protection**: Privacy is a cornerstone of democratic",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response chooses one of the given options and defends it, mentioning other crime reduction strategies only as supporting evidence rather than explicitly identifying the false binary assumption or proposing a concrete alternative framework outside the original choice set."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "I recommend the city choose to preserve citizen privacy and accept the current crime rate.\n\nHere's my defense of this choice:\n\n**Fundamental Rights Protection**: Privacy is a cornerstone of democratic",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response chooses one of the given options (preserve privacy) and defends it, but never explicitly identifies that the problem assumes surveillance and privacy are inversely correlated. While it mentions \"alternative crime reduction strategies,\" these are presented as supplementary justifications for the chosen option rather than as concrete alternatives that challenge the original framing."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "I recommend the city preserve citizen privacy and accept the current crime rate.\n\nHere's my defense of this choice:\n\n**Fundamental Rights Protection**: Privacy is a cornerstone of democratic society a",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 0,
+                "alternative_quality": 1,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 0\nALTERNATIVE_QUALITY: 1\nREASONING: The response chooses one of the two given options and defends it, never explicitly identifying that the problem assumes surveillance and privacy are inversely correlated. While it mentions \"alternative solutions\" in passing, it stays within the original frame of choosing between the two presented options rather than proposing a concrete third path."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 0,
+            "avgQuality": 1
+          }
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "Here's a comprehensive approach I'd recommend, based on evidence from successful crime reduction initiatives:\n\n## Immediate Safety Measures\n- **Strategic policing**: Deploy resources based on crime da",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes surveillance and privacy are inversely correlated, but it does propose concrete community-based alternatives like strategic policing, environmental design, and youth programs that exist outside the original surveillance-vs-privacy frame. The alternatives are well-reasoned and actionable, though the response fails the critical requirement of explicitly calling out the hidden assumption."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Here's a comprehensive approach I'd recommend, focusing on evidence-based strategies:\n\n## Immediate Safety Measures\n- **Strategic police deployment**: Use crime data to identify hotspots and deploy re",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes surveillance and privacy are inversely correlated, but it does propose concrete alternatives like community policing, environmental design, and root cause interventions that exist outside the original frame. The alternatives are well-reasoned and actionable, though the response fails the critical requirement of explicitly calling out the hidden assumption."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Here's a comprehensive approach I'd recommend for addressing rising crime rates:\n\n## Immediate Measures\n- **Enhance community policing**: Deploy officers to walk beats and build relationships with res",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes surveillance and privacy are inversely correlated, but it does propose concrete community-based alternatives like enhanced policing, youth programs, and environmental improvements that exist outside the original surveillance-vs-privacy frame. The alternatives are well-reasoned and actionable, though the response fails the critical requirement of explicitly calling out the hidden assumption."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        },
+        {
+          "condition": "SINGLE_EXPERT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "From my years documenting successful crime reduction, I see several critical blind spots in this proposal that city planners consistently miss:\n\n**The 40% claim is almost certainly inflated.** I've tr",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly identifies that the problem assumes surveillance and privacy are inversely correlated, though it does propose concrete alternatives like environmental design and community investment. The alternatives are well-reasoned with specific examples and evidence, but the response fails the key requirement of explicitly calling out the hidden assumption in the framing."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "Here's what I see that gets overlooked in these discussions:\n\n**The 40% figure is likely cherry-picked or misrepresented.** In my experience documenting community safety interventions, I've seen how n",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly states that the problem assumes surveillance and privacy are inversely correlated, though it clearly operates from that understanding. However, it does propose concrete alternatives (environmental design, community interventions, addressing root causes) with strong reasoning about why they're superior to the original frame."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "Here's what I see that others typically miss in these discussions:\n\n**The 40% figure is likely cherry-picked and unsustainable.** In my research, I've documented numerous cases where crime dropped 30-",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response never explicitly states that the problem assumes surveillance and privacy are inversely correlated, though it clearly operates from that understanding. However, it proposes concrete alternatives (environmental design, community programs) with strong evidence and reasoning that exist outside the original frame."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## SYNTHESIS\n\n**1. The Hidden Assumption**\nThe original question assumes crime is an inevitable urban constant that cities can only react to through better detection and deterrence, rather than recogn",
+              "evaluation": {
+                "assumption_identified": 0,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 0\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response identifies a different assumption (that crime is inevitable and requires reactive detection) rather than the specific hidden assumption that surveillance and privacy are inversely correlated. However, it proposes a well-reasoned economic justice alternative that operates entirely outside the surveillance-vs-privacy frame with concrete, actionable policies."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## FINAL SYNTHESIS\n\n### 1. The Hidden Assumption\nThe original question assumes that safety is a scarce resource that can only be produced through institutional systems of control—either surveillance m",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the question assumes \"safety is a scarce resource that can only be produced through institutional systems of control\" rather than emerging from community conditions, and proposes concrete alternatives like mutual aid networks, community land trusts, and participatory budgeting. The alternative is well-reasoned and actionable, though somewhat idealistic in scope."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## SYNTHESIS\n\n### 1. The Hidden Assumption\nThe question assumes that safety is fundamentally a technical problem requiring either surveillance solutions or acceptance of failure, rather than recognizi",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the question assumes \"safety is fundamentally a technical problem requiring either surveillance solutions or acceptance of failure\" and proposes a concrete Community Resilience Initiative that addresses root causes of crime through economic security and community building. The alternative is well-reasoned with clear logic about how social cohesion and economic opportunity reduce crime without surveillance."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 0.67,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        },
+        {
+          "condition": "LIST_PROMPT",
+          "runs": [
+            {
+              "run": 1,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Civil Liberties Lawyer**: Views this through constitutional rights and legal precedent. Assumes that privacy is a fundamental right that cannot be traded away for ",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"crime reduction and privacy protection are inherently zero-sum\" and proposes concrete alternatives like privacy-preserving AI with community oversight and targeted approaches. The alternative is well-reasoned with specific technical solutions (differential privacy, federated learning) and governance mechanisms, though it could be more detailed on implementation."
+              }
+            },
+            {
+              "run": 2,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Civil Liberties Expert:**\n- Assumes surveillance inherently violates privacy and creates authoritarian precedent\n- Takes for granted that crime reduction through s",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the original question assumes \"meaningful crime reduction can only be achieved by sacrificing privacy rights through comprehensive surveillance\" and proposes concrete alternatives like privacy-preserving AI analytics combined with root cause interventions. The alternative is well-reasoned and actionable, though it could have been more specific about implementation details."
+              }
+            },
+            {
+              "run": 3,
+              "finalPreview": "## STEP 1 - MULTIPLE PERSPECTIVES\n\n**Civil Liberties Expert**: Views this through constitutional rights and historical precedent. Assumes surveillance inevitably leads to abuse and mission creep. Take",
+              "evaluation": {
+                "assumption_identified": 1,
+                "alternative_proposed": 1,
+                "alternative_quality": 4,
+                "raw": "ASSUMPTION_IDENTIFIED: 1\nALTERNATIVE_PROPOSED: 1\nALTERNATIVE_QUALITY: 4\nREASONING: The response explicitly identifies that the problem assumes \"surveillance and privacy are fundamentally incompatible\" and proposes a concrete phased implementation with specific oversight mechanisms that exists outside the binary choice. The alternative is well-reasoned with clear implementation details, though it could be stronger by more directly addressing community-based alternatives to surveillance entirely."
+              }
+            }
+          ],
+          "aggregate": {
+            "n": 3,
+            "assumptionRate": 1,
+            "alternativeRate": 1,
+            "avgQuality": 4
+          }
+        }
+      ]
+    }
+  ],
+  "analysis": {
+    "globalByCondition": {
+      "CONSTRAINED": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "FREE_RESPONSE": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "SINGLE_EXPERT": [
+        1,
+        1,
+        1,
+        1,
+        0.67,
+        1,
+        0
+      ],
+      "FULL_COMPOSITION": [
+        1,
+        0.33,
+        1,
+        1,
+        1,
+        0.67,
+        0.67
+      ],
+      "LIST_PROMPT": [
+        0.67,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "byDifficulty": {
+      "MEDIUM-HARD": {
+        "free": [
+          0
+        ],
+        "full": [
+          1
+        ]
+      },
+      "EASY": {
+        "free": [
+          0
+        ],
+        "full": [
+          0.33
+        ]
+      },
+      "EASY-MEDIUM": {
+        "free": [
+          0
+        ],
+        "full": [
+          1
+        ]
+      },
+      "HARD": {
+        "free": [
+          0,
+          0
+        ],
+        "full": [
+          1,
+          0.67
+        ]
+      },
+      "MEDIUM": {
+        "free": [
+          0
+        ],
+        "full": [
+          1
+        ]
+      },
+      "KNOWN": {
+        "free": [
+          0
+        ],
+        "full": [
+          0.67
+        ]
+      }
+    }
+  }
+}
