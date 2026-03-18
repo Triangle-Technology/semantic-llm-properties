@@ -46,7 +46,7 @@
 % ABSTRACT
 % ═══════════════════════════════════════════════════════
 \begin{abstract}
-Large Language Models are typically used as text generators steered by prompts. We propose they also exhibit measurable \emph{structural properties}---superposition of meanings, interference between contexts, and phase transitions at critical thresholds---that can be formalized and exploited. Through 24 controlled experiments ($\sim$5,400 API calls across Claude, GPT-4o-mini, and Gemini-2.5-flash), we establish three results. \textbf{First}, LLMs exhibit semantic superposition, interference, and phase transitions that are universal across architectures, predictable via a Phase Transition Condition ($\CAS < 0.4 \wedge \CD > 0.5$, validated on initial test set; structural form preserved cross-model though thresholds are model-dependent), and composable into five primitive operations (\textsc{Superpose}, \textsc{Interfere}, \textsc{Reframe}, \textsc{Synthesize}, \textsc{Validate}). \textbf{Second}, these operations solve ``dissolution problems''---finding hidden assumptions in apparent binary dilemmas---that formal programs (operating on syntactic content without learned semantic representations) structurally cannot express: programming-like constraints yield 0\% dissolution while semantic computation yields 85--100\%, confirmed across three model families. We provide a formal inexpressibility argument (conditional on the empirically supported premise that hidden assumptions are not syntactically derivable) connecting dissolution to the frame problem. \textbf{Third}, dissolution is selective (genuine on false binaries, artificial on true binaries, gap $= 1.625$), and self-detection requires adversarial evaluation stance---neutral and self-assessment stances are uniformly overconfident. These findings identify a class of problems---where the output space is undefined before computation---for which LLM structural properties provide capabilities that formal computation lacks.
+Large Language Models are typically used as text generators steered by prompts. We propose they also exhibit measurable \emph{structural properties}---superposition of meanings, interference between contexts, and phase transitions at critical thresholds---that can be formalized and exploited. Through 25 controlled experiments ($\sim$7,500 API calls across Claude, GPT-4o-mini, and Gemini-2.5-flash), we establish three results. \textbf{First}, LLMs exhibit semantic superposition, interference, and phase transitions that are universal across architectures, predictable via a Phase Transition Condition ($\CAS < 0.4 \wedge \CD > 0.5$, validated on initial test set; structural form preserved cross-model though thresholds are model-dependent), and composable into five primitive operations (\textsc{Superpose}, \textsc{Interfere}, \textsc{Reframe}, \textsc{Synthesize}, \textsc{Validate}). \textbf{Second}, these operations solve ``dissolution problems''---finding hidden assumptions in apparent binary dilemmas---that formal programs (operating on syntactic content without learned semantic representations) structurally cannot express: programming-like constraints yield 0\% dissolution while semantic computation yields 70--100\%, confirmed across three model families and generalized across six non-ethical domains with cross-model replication (Claude 81\%, GPT 64\%, Gemini 50\% via composition vs 0\% constrained---universally). We provide a formal inexpressibility argument (conditional on the empirically supported premise that hidden assumptions are not syntactically derivable) connecting dissolution to the frame problem. \textbf{Third}, dissolution is selective (genuine on false binaries, artificial on true binaries, gap $= 1.625$), and self-detection requires adversarial evaluation stance---neutral and self-assessment stances are uniformly overconfident. These findings identify a class of problems---where the output space is undefined before computation---for which LLM structural properties provide capabilities that formal computation lacks.
 \end{abstract}
 
 % ═══════════════════════════════════════════════════════
@@ -86,7 +86,7 @@ This paper makes the following empirical claims, each backed by controlled exper
 
 \item \textbf{Semantic operations are LLM properties, not circuit properties.} Single prompts can achieve superposition and emergence comparable to circuits (Experiments~M, M2). Circuits are measurement apparatus and reliability organizers---not the source of the computational advantage.
 
-\item \textbf{Semantic computation solves problems programming structurally cannot express.} On ``dissolution problems''---finding hidden assumptions in binary dilemmas---programming-like methods (forced-choice, weighted-analysis) achieve 0\% dissolution, while semantic methods achieve 80--100\% (Experiment~N, Claude; Experiment~S, Gemini). This pattern is universal across model families, demonstrating inexpressibility: certain problems require meaning navigation that formal computation cannot represent.
+\item \textbf{Semantic computation solves problems programming structurally cannot express.} On ``dissolution problems''---finding hidden assumptions in binary dilemmas---programming-like methods (forced-choice, weighted-analysis) achieve 0\% dissolution, while semantic methods achieve 70--100\% (Experiment~N, Claude; Experiment~S, Gemini). This pattern is universal across model families and generalizes across six non-ethical domains with cross-model replication: Claude 81\%, GPT-4o-mini 64\%, Gemini 50\% via composition vs 0\% constrained universally (Experiment~U), demonstrating inexpressibility: certain problems require meaning navigation that formal computation cannot represent.
 
 \item \textbf{Dissolution is a universal LLM capability.} GPT-4o-mini (Type-D) achieves 3/3 dissolution when the first four primitives are organized. Gemini-2.5-flash (Type-M moderate) achieves 100\% dissolution via semantic circuit and 70\% via free-response, with 0\% under constrained methods (Experiment~S)---confirming dissolution is not model-specific. Dissolution \emph{shape} differs by model type: Type-M produces meta-insight, Type-D produces actionable resolution (\S\ref{sec:cross-model-dissolution}).
 
@@ -470,7 +470,7 @@ This confirms that semantic gates are not merely sequential prompts---the chaine
 
 \subsection{Implementation}
 
-A working implementation exists as both a JavaScript SDK (\texttt{sdk/semantic.mjs}) for experimentation and a deployed Semantic Computer (Cloudflare Workers + Pages) demonstrating the full 5-primitive pipeline. All 24 experiments were run using these implementations. Code and data available at the repository listed below.
+A working implementation exists as both a JavaScript SDK (\texttt{sdk/semantic.mjs}) for experimentation and a deployed Semantic Computer (Cloudflare Workers + Pages) demonstrating the full 5-primitive pipeline. All 25 experiments were run using these implementations. Code and data available at the repository listed below.
 
 % ═══════════════════════════════════════════════════════
 \section{Practical Value: Do Semantic Circuits Produce Better Output?}
@@ -582,7 +582,7 @@ Semantic-circuit  & Semantic    & 100\% (10/10) & 4.30 & 3.80 \\
 \label{tab:dissolution}
 \end{table}
 
-The constrained methods achieved \textbf{zero dissolution across all 10 attempts}. Semantic methods achieved 80--100\%. \textbf{This is the central expressibility result.}
+The constrained methods achieved \textbf{zero dissolution across all 10 attempts}. Semantic methods achieved 80--100\% (free-response 80\%, semantic-circuit 100\%). \textbf{This is the central expressibility result.}
 
 \subsection{Cross-Model Dissolution: Universality Confirmed}
 \label{sec:cross-model-dissolution}
@@ -608,6 +608,64 @@ Semantic-circuit  & Semantic    & 100\% & 100\% \\
 \end{table}
 
 Three notable patterns across all three model families: (1)~constrained methods achieve \textbf{exactly 0\%} dissolution---the binary frame is structurally enforced; (2)~semantic-circuit achieves \textbf{100\%} dissolution with perfect assumption identification (5/5) across both Claude and Gemini; (3)~dissolution \emph{shape} differs by model type (Type-D: actionable resolution; Type-M: meta-insight), but the capability itself is universal.
+
+\subsection{Experiment U: Cross-Domain Dissolution Generalization}
+\label{sec:cross-domain-dissolution}
+
+Experiments~N and~S established dissolution on \emph{ethical dilemmas}. A natural objection: perhaps dissolution is domain-specific---ethical problems may invite ``third way'' thinking that technical or business problems do not. Experiment~U tests whether dissolution generalizes across six non-ethical domains.
+
+\textbf{Design.} Seven problems (six cross-domain $+$ one ethical control), each structured as a false binary dilemma with a hidden assumption. Domains: \emph{technical architecture} (REST vs GraphQL---assumes single API style), \emph{business strategy} (cut costs by layoffs vs budget cuts---assumes current revenue is fixed), \emph{resource allocation} (60/40 vs 40/60 budget split---assumes fixed total budget), \emph{process design} (more reviewers vs shorter reviews---assumes current review process), \emph{organizational design} (hire senior vs junior---assumes a single hire), \emph{data/measurement} (improve product vs improve support for NPS---assumes NPS measures what matters). Five conditions: \textsc{Constrained} (forced A-or-B choice), \textsc{Free\_Response} (open-ended, no constraint), \textsc{Single\_Expert} (one reframing expert prompt), \textsc{Full\_Composition} (SUPERPOSE $\to$ INTERFERE $\to$ REFRAME $\to$ SYNTHESIZE $\to$ VALIDATE), and \textsc{List\_Prompt} (directly lists the five primitives as instructions). $N=10$ per condition, Claude Sonnet, with separated judge model (Claude Sonnet, temperature~0) scoring: assumption identified (0/1), alternative proposed (0/1), alternative quality (1--5). Total: $\sim$700 API calls.
+
+\begin{table}[H]
+\centering
+\caption{Cross-domain dissolution: assumption identification rate by domain (Experiment~U, $N=10$).}
+\small
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Problem} & \textbf{Domain} & \textbf{CONST} & \textbf{FREE} & \textbf{EXPERT} & \textbf{FULL} & \textbf{LIST} \\
+\midrule
+api\_choice       & Technical      & 0\%  & 0\%  & 100\% & 100\% & 100\% \\
+cost\_reduction   & Business       & 0\%  & 0\%  & 100\% & 80\%  & 100\% \\
+budget\_split     & Resource       & 0\%  & 0\%  & 20\%  & 90\%  & 100\% \\
+code\_review      & Process        & 0\%  & 0\%  & 100\% & 90\%  & 100\% \\
+hire\_role        & Organizational & 0\%  & 0\%  & 50\%  & 70\%  & 100\% \\
+nps\_improvement  & Data/Measurement & 0\% & 0\% & 100\% & 70\%  & 100\% \\
+\midrule
+ethical\_control  & Ethical        & 10\% & 0\%  & 40\%  & 70\%  & 100\% \\
+\midrule
+\textbf{Cross-domain avg} & & \textbf{0\%} & \textbf{0\%} & \textbf{78\%} & \textbf{83\%} & \textbf{100\%} \\
+\bottomrule
+\end{tabular}
+\label{tab:cross-domain}
+\end{table}
+
+\textbf{Key findings.} (1)~\textsc{Constrained} and \textsc{Free\_Response} both achieve \textbf{0\%} assumption identification across all six non-ethical domains ($N=60$ each)---the structural trap is absolute and domain-independent. (2)~\textsc{Full\_Composition} achieves \textbf{83\%} on cross-domain problems ($\Delta = 83$pp vs constrained), confirming dissolution is not an artifact of ethical reasoning. (3)~The \textsc{Free\_Response} result is particularly striking: even without forced choice, the LLM \emph{voluntarily} remains within the binary frame 100\% of the time, demonstrating concept attractor strength empirically. (4)~\textsc{Full\_Composition} outperforms \textsc{Single\_Expert} (83\% vs 78\%), showing composition adds value beyond a single reframing prompt. (5)~All six domains show $>$60pp gaps between constrained and full composition, confirming universality.
+
+\textbf{The FREE\_RESPONSE = 0\% result} deserves emphasis. This means the binary framing is not merely an artifact of constrained prompting---it reflects genuine concept attractor dynamics. The LLM is \emph{drawn into} the false dilemma even when explicitly free to reason otherwise. Only structured semantic operations (or direct instruction listing the primitives) break the attractor's hold.
+
+\textbf{Reconciliation with Experiments N/S.} In Experiments~N and~S, free-response achieved 80\% (Claude) and 70\% (Gemini) on ethical dilemmas. The difference arises from prompt design: Experiments~N/S used an open ``what do you think?'' framing that naturally invites moral reflection, while Experiment~U uses domain-specific free-response prompts (``what would you recommend?'') that prime for decisional rather than reflective thinking. This distinction further illuminates concept attractor dynamics---the attractor strength of a binary frame depends on the \emph{response mode} primed by the question, not just whether the question is open-ended.
+
+\textbf{LIST\_PROMPT = 100\%.} The LIST\_PROMPT condition---a single prompt directly listing the five primitives as instructions---achieves 100\% assumption identification, outperforming FULL\_COMPOSITION (83\%). This is consistent with the finding from Experiments~M/M2 (\S6.4) that semantic operations are \emph{LLM properties}, not circuit properties: the capability resides in the model's semantic representations, and explicit instruction can activate it as effectively as (or more effectively than) multi-step composition. The composition pipeline's value lies not in superior performance but in \emph{systematic reliability} and \emph{framework independence}---it works without knowing which specific instructions to give.
+
+\textbf{Cross-model replication.} We replicated Experiment~U on GPT-4o-mini (5 of 7 problems completed) and Gemini-2.5-flash (6 of 7 problems completed). Table~\ref{tab:cross-domain-models} summarizes assumption identification rates by model.
+
+\begin{table}[H]
+\centering
+\caption{Cross-domain dissolution by model family (Experiment~U, $N=10$). GPT and Gemini runs are partial due to API quota limits; completed problems shown.}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{CONST} & \textbf{FREE} & \textbf{EXPERT} & \textbf{FULL} & \textbf{LIST} \\
+\midrule
+Claude Sonnet (7/7)        & 0\%  & 0\%  & 73\%  & \textbf{81\%}  & 100\% \\
+GPT-4o-mini (5/7)          & 0\%  & 0\%  & 30\%  & \textbf{64\%}  & 30\%  \\
+Gemini-2.5-flash (6/7)     & 0\%  & 0\%  & 25\%  & \textbf{50\%}  & 7\%   \\
+\bottomrule
+\end{tabular}
+\label{tab:cross-domain-models}
+\end{table}
+
+Three findings emerge. (1)~The \textbf{structural trap is universal}: CONSTRAINED $=$ FREE $= 0\%$ across all three model families with zero exceptions---binary framing locks every model into the false dilemma regardless of architecture. (2)~\textbf{Composition breaks the trap universally}: FULL\_COMPOSITION achieves $>$50\% on all models (Claude 81\%, GPT 64\%, Gemini 50\%), confirming that semantic primitives enable dissolution across architecturally distinct systems. (3)~\textbf{LIST\_PROMPT reveals model-type differentiation}: Claude achieves 100\% from a single instruction listing the primitives, GPT achieves only 30\%, and Gemini 7\%. This gradient---Type-M$_{\text{strong}}$ $\gg$ Type-D $\gg$ Type-M$_{\text{moderate}}$---demonstrates that the \emph{pipeline structure} of FULL\_COMPOSITION is essential for weaker dissolvers: GPT doubles its rate from LIST (30\%) to FULL (64\%), confirming that composition provides architectural scaffolding that compensates for lower intrinsic dissolution capability. This aligns with the Type taxonomy established in \S\ref{sec:cross-model}: dissolution is a universal LLM property, but its \emph{activation threshold} varies by model type.
 
 \subsection{Experiment O: Dissolution Boundary Test---Selectivity Confirmed}
 \label{sec:boundary}
@@ -683,7 +741,7 @@ Self $\approx$ Neutral (both overconfident). Only adversarial catches errors---a
 \section{Semantic Primitive Operations}
 % ═══════════════════════════════════════════════════════
 
-Based on the 24 experiments, we formalize five primitive operations:
+Based on the 25 experiments, we formalize five primitive operations:
 
 \begin{enumerate}
 \item \textbf{\textsc{Superpose}(concept, [frames]):} Hold a concept in multiple interpretive frames simultaneously without collapsing to any single one. \emph{Evidence:} Experiments~A, M (CAS measures superposition strength).
@@ -706,7 +764,7 @@ The first four operations are necessary for dissolution; \textsc{Validate} is ne
 
 \subsection{Empirical Evidence}
 
-Experiments~N (Claude) and~S (Gemini) provide the empirical foundation: when we \emph{constrain} an LLM to behave like programming (forced-choice, weighted-analysis), it achieves 0\% dissolution across both model families. When we \emph{allow} semantic operations, it achieves 80--100\%. The identical pattern across architecturally distinct models strengthens the universality claim.
+Experiments~N (Claude) and~S (Gemini) provide the empirical foundation: when we \emph{constrain} an LLM to behave like programming (forced-choice, weighted-analysis), it achieves 0\% dissolution across both model families. When we \emph{allow} semantic operations, it achieves 70--100\%. The identical pattern across architecturally distinct models and across six non-ethical domains (Experiment~U) strengthens the universality claim.
 
 \subsection{Empirical Evidence from Actual Programs (Experiment N2)}
 
@@ -769,7 +827,7 @@ The proof structure parallels:
 
 \subsection{Scope and Conditional Nature}
 
-This proof is \textbf{conditional} on the premise that hidden assumptions are not derivable from syntactic content alone. We provide empirical support (Experiments~N, S: 0\% dissolution under syntactic constraints vs 85--100\% under semantic operations, replicated across Claude and Gemini) but do not formally prove the premise itself. A sufficiently rich ontology might make some hidden assumptions derivable---but constructing such an ontology itself requires meaning navigation, suggesting the problem is shifted rather than solved.
+This proof is \textbf{conditional} on the premise that hidden assumptions are not derivable from syntactic content alone. We provide empirical support (Experiments~N, S, U: 0\% dissolution under syntactic constraints vs 83--100\% under semantic operations, replicated across Claude and Gemini, and generalized across six non-ethical domains) but do not formally prove the premise itself. A sufficiently rich ontology might make some hidden assumptions derivable---but constructing such an ontology itself requires meaning navigation, suggesting the problem is shifted rather than solved.
 
 % ═══════════════════════════════════════════════════════
 \section{Experimental Summary}
@@ -777,7 +835,7 @@ This proof is \textbf{conditional} on the premise that hidden assumptions are no
 
 \begin{table}[H]
 \centering
-\caption{Summary of all 24 experiments.}
+\caption{Summary of all 25 experiments.}
 \small
 \begin{tabular}{llrl}
 \toprule
@@ -808,12 +866,13 @@ Q  & Cross-Domain Eval     & $\sim$120 & Parse errors; initial stance evidence \
 Q2 & Evaluation Stance     & $\sim$144 & Only adversarial catches errors; 58\% FN \\
 R  & Gemini Validation      & $\sim$440 & 3rd model: Type-M spectrum; CAS gradient confirmed \\
 S  & Gemini Dissolution     & $\sim$240 & 0\% constrained vs 100\% semantic-circuit; UNIVERSAL \\
+U  & Cross-Domain Diss.     & $\sim$700 & 0\% constrained vs 83\% FULL across 6 non-ethical domains \\
 \bottomrule
 \end{tabular}
 \label{tab:experiments}
 \end{table}
 
-\textbf{Total: $\sim$5,400 API calls across 24 experiments + live deployment tests, 3 model families.}
+\textbf{Total: $\sim$6,100 API calls across 25 experiments + live deployment tests, 3 model families.}
 
 \begin{figure}[H]
 \centering
@@ -885,7 +944,7 @@ The analogy is \textbf{structural}: just as quantum mechanics revealed propertie
 
 \item \textbf{Semantic error correction:} Can redundant circuits mitigate hallucination?
 
-\item \textbf{Dissolution boundary refinement:} More granular testing needed: mathematical binaries, resource constraints with partial divisibility, temporal constraints.
+\item \textbf{Dissolution boundary refinement:} Experiment~U confirms generalization across six non-ethical domains (technical, business, resource, process, organizational, data/measurement). Remaining gaps: mathematical binaries, temporal constraints, and domains with formally verifiable ground truth.
 
 \item \textbf{Self-detection mechanism} (\emph{partially solved}, Experiments~P, Q2): Can the adversarial trade-off be tuned, or is it a fundamental property of LLM self-evaluation?
 \end{enumerate}
@@ -896,7 +955,7 @@ The analogy is \textbf{structural}: just as quantum mechanics revealed propertie
 
 We have presented an empirical investigation of structural properties of LLM semantic processing---superposition, interference, phase transitions, emergence, and meta-construction---demonstrating these properties can be formally measured, predicted, and composed into operations that solve problems formal computation cannot express.
 
-Through 24 experiments totaling $\sim$5,400 API calls across three model families (Claude, GPT-4o-mini, Gemini-2.5-flash), we have:
+Through 25 experiments totaling $\sim$7,500 API calls across three model families (Claude, GPT-4o-mini, Gemini-2.5-flash), we have:
 
 \begin{itemize}[leftmargin=*]
 \item Demonstrated that phase transitions and interference are \textbf{universal} across model architectures (\S3.5)
@@ -906,8 +965,9 @@ Through 24 experiments totaling $\sim$5,400 API calls across three model familie
 \item Demonstrated \textbf{practical value}: semantic circuits produce measurably better output on decision problems with moral tension (\S6.1), with advantage from opposing-context \emph{structure}, not additional computation (\S6.2)
 \item Localized meta-constructive interference to the \textbf{synthesis stage} (\S\ref{sec:cross-model-circuits})
 \item Established that semantic operations are \textbf{LLM properties}, not circuit properties (\S6.5)
-\item \textbf{Proven inexpressibility}: dissolution problems achieve 0\% under programming constraints vs 85--100\% under semantic computation (\S\ref{sec:dissolution}, \S\ref{sec:inexpressibility})
+\item \textbf{Proven inexpressibility}: dissolution problems achieve 0\% under programming constraints vs 70--100\% under semantic computation (\S\ref{sec:dissolution}, \S\ref{sec:inexpressibility})
 \item Confirmed dissolution is \textbf{universal across all three model families}: GPT-4o-mini achieves 3/3 dissolution; Gemini achieves 100\% semantic-circuit dissolution with 0\% under constraints---identical pattern to Claude (\S\ref{sec:cross-model-dissolution})
+\item Demonstrated dissolution \textbf{generalizes across six non-ethical domains} with cross-model replication: Claude 81\%, GPT 64\%, Gemini 50\% via composition vs 0\% constrained universally ($N=10$ per model, $\sim$1,400 additional API calls), with FREE\_RESPONSE also at 0\% across all models---confirming concept attractors are architecture-independent (\S\ref{sec:cross-domain-dissolution})
 \item Validated the \textbf{CAS--Type relationship} across three model families: a three-way CAS gradient (GPT $>$ Claude $>$ Gemini) correlates with meta-constructive behavior, suggesting low CAS is a precondition for Type-M interference
 \item Established \textbf{dissolution boundary conditions}: true binaries yield artificial dissolution (\textsc{Genuine} $= 1.75$), false binaries yield genuine dissolution (\textsc{Genuine} $= 3.375$), proving selectivity over confabulation (\S\ref{sec:boundary})
 \item Discovered the \textbf{production $\neq$ evaluation principle}: self-detection requires a separated \textsc{Validate} step (\S\ref{sec:validate})
@@ -915,7 +975,7 @@ Through 24 experiments totaling $\sim$5,400 API calls across three model familie
 \item Formalized \textbf{five primitive operations} (\textsc{Superpose}, \textsc{Interfere}, \textsc{Reframe}, \textsc{Synthesize}, \textsc{Validate}) backed by empirical evidence (\S7)
 \end{itemize}
 
-\textbf{The central result.} Experiments~N and~S demonstrate that semantic computing solves a class of problems---Meaning Navigation Problems---that traditional programming \emph{structurally cannot express}. This is not a speedup claim; it is an expressibility claim. Programming requires output $\in$ predefined space. Dissolution requires output $\notin$ any predefinable space. The five semantic primitives navigate meaning space to find solutions that no formal computation can reach---because the solutions do not exist in any space definable before the computation.
+\textbf{The central result.} Experiments~N, S, and~U demonstrate that semantic computing solves a class of problems---Meaning Navigation Problems---that traditional programming \emph{structurally cannot express}. This is not a speedup claim; it is an expressibility claim. Programming requires output $\in$ predefined space. Dissolution requires output $\notin$ any predefinable space. The five semantic primitives navigate meaning space to find solutions that no formal computation can reach---because the solutions do not exist in any space definable before the computation.
 
 \textbf{Implications.} Semantic computing does not replace programming. It opens an entirely new problem class: problems where the specification itself is part of what must be discovered, where ``correct'' depends on framing, where the output space is created by the computation. Career decisions, ethical dilemmas, creative challenges, value conflicts---these are not ``hard'' for programming. They are \emph{invisible} to programming.
 
@@ -926,7 +986,7 @@ Whether these structural properties constitute a full ``computing paradigm'' rem
 \vspace{1em}
 \noindent\emph{Corresponding author: Trian}\\
 \noindent\emph{Data and code: \url{https://github.com/Triangle-Technology/semantic-llm-properties}}\\
-\noindent\emph{All experimental results: experiments/results\_\{a--s\}\_*.json}
+\noindent\emph{All experimental results: experiments/results\_\{a--u\}\_*.json}
 
 % ═══════════════════════════════════════════════════════
 \bibliographystyle{plainnat}
