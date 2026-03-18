@@ -245,15 +245,21 @@ async function handleCompute(request) {
   const DISSOLVE_ORDER = ['superpose', 'interfere', 'reframe', 'synthesize', 'validate'];
   const isDissolve = pipeline.length === 5 && pipeline.every((p, i) => p === DISSOLVE_ORDER[i]);
 
+  // Smart strategy selection based on Exp U2 findings:
+  // - Claude-only + DISSOLVE: LIST_PROMPT (100%) is better than pipeline (81%)
+  // - GPT/Gemini: Must use full pipeline (LIST only 33%/7%)
+  // - Multi-model: orchestrate steps to optimal models
+  const useListShortcut = isDissolve && !multiModel && primaryProvider === 'anthropic';
+
   const run = async () => {
     try {
-      await write('model_info', { ...modelInfo, multiModel, isDissolve });
+      const strategy = useListShortcut ? 'list-prompt-shortcut' : (multiModel ? 'cross-model orchestrated' : 'single-model');
+      await write('model_info', { ...modelInfo, multiModel, isDissolve, strategy });
 
       // If DISSOLVE: run baseline "direct response" first for comparison
       if (isDissolve && originalInput.input) {
         await write('baseline', { status: 'running' });
         // Use the SAME model as SYNTHESIZE for fair comparison
-        // Difference should come from pipeline, not model quality
         const baselineProvider = multiModel ? routeStep('synthesize', keys) : primaryProvider;
         const baselineResult = await callLLM(
           baselineProvider, keys[baselineProvider],
@@ -264,26 +270,54 @@ async function handleCompute(request) {
         await write('baseline', { status: 'done', content: baselineResult.text, model: baselineProvider, usage: baselineResult.usage });
       }
 
-      const stepOutputs = [];
+      if (useListShortcut) {
+        // Claude-only DISSOLVE: single LIST_PROMPT (proven 100%, faster than 81% pipeline)
+        await write('step', { index: 0, step: 'dissolve-list', status: 'running', model: 'anthropic' });
+        const listResult = await callLLM('anthropic', keys.anthropic,
+          'You are a deep analytical thinker. Follow the analytical steps described precisely.',
+          `Consider this question: "${originalInput.input}"
 
-      for (let i = 0; i < pipeline.length; i++) {
-        const step = pipeline[i];
-        const provider = multiModel ? routeStep(step, keys) : primaryProvider;
-        const apiKey = keys[provider];
+Before answering, follow these steps PRECISELY:
 
-        await write('step', { index: i, step, status: 'running', model: provider });
+STEP 1 — MULTIPLE PERSPECTIVES: Consider this question from at least 3 very different expert angles. For each, briefly note what they would focus on.
 
-        const { system, user } = buildPrompt(step, originalInput, stepOutputs);
-        const result = await callLLM(provider, apiKey, system, user);
+STEP 2 — FIND HIDDEN AGREEMENTS: What do ALL perspectives secretly agree on? What assumption do they all share that none of them question? Look for the invisible frame that makes this seem like an either/or choice.
 
-        stepOutputs.push({ step, content: result.text });
-        await write('step', { index: i, step, status: 'done', content: result.text, model: provider, usage: result.usage });
+STEP 3 — CHALLENGE THE FRAME: Based on the hidden assumption you found, how would you REFRAME the entire question? The original question assumes something that may not be true. What is it, and what question SHOULD we be asking instead?
+
+STEP 4 — SYNTHESIZE: Now provide your final answer:
+- Name the hidden assumption explicitly
+- Propose an alternative approach that transcends the original binary
+- Explain why this assumption was invisible (why do people naturally miss it?)`,
+          { temperature: 0.7 }
+        );
+        await write('step', {
+          index: 0, step: 'dissolve-list', status: 'done',
+          content: listResult.text, model: 'anthropic', usage: listResult.usage,
+        });
+      } else {
+        // Full pipeline execution
+        const stepOutputs = [];
+
+        for (let i = 0; i < pipeline.length; i++) {
+          const step = pipeline[i];
+          const provider = multiModel ? routeStep(step, keys) : primaryProvider;
+          const apiKey = keys[provider];
+
+          await write('step', { index: i, step, status: 'running', model: provider });
+
+          const { system, user } = buildPrompt(step, originalInput, stepOutputs);
+          const result = await callLLM(provider, apiKey, system, user);
+
+          stepOutputs.push({ step, content: result.text });
+          await write('step', { index: i, step, status: 'done', content: result.text, model: provider, usage: result.usage });
+        }
       }
 
       await write('done', {
         success: true,
-        routing: multiModel ? 'cross-model orchestrated' : 'single-model',
-        steps: pipeline.length,
+        routing: strategy,
+        steps: useListShortcut ? 1 : pipeline.length,
       });
     } catch (err) {
       await write('error', { message: err.message });

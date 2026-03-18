@@ -389,6 +389,9 @@ async function compute() {
         modelInfo = data;
         // If DISSOLVE, show comparison layout
         if (data.isDissolve) {
+          const strategyNote = data.strategy === 'list-prompt-shortcut'
+            ? '<div class="strategy-note">Claude detected — using LIST_PROMPT (proven 100%, faster than pipeline)</div>'
+            : '';
           content.innerHTML = `<div class="dissolve-comparison">
             <div class="dissolve-col dissolve-before">
               <h3>❌ Direct Response</h3>
@@ -396,7 +399,8 @@ async function compute() {
             </div>
             <div class="dissolve-col dissolve-after">
               <h3>⚡ With Dissolution</h3>
-              <div id="dissolve-content"><div class="loading-dots">Waiting for pipeline...</div></div>
+              ${strategyNote}
+              <div id="dissolve-content"><div class="loading-dots">${data.strategy === 'list-prompt-shortcut' ? 'Running LIST_PROMPT...' : 'Waiting for pipeline...'}</div></div>
             </div>
           </div>`;
         }
@@ -447,13 +451,13 @@ async function compute() {
             // DISSOLVE mode: show final synthesis in right column
             const dissolveEl = $('#dissolve-content');
             if (dissolveEl) {
-              if (data.step === 'synthesize' || data.step === pipeline[pipeline.length - 1]) {
+              if (data.step === 'dissolve-list' || data.step === 'synthesize' || data.step === pipeline[pipeline.length - 1]) {
                 // Show the synthesis/final result prominently
                 dissolveEl.innerHTML = `<div class="dissolve-answer">${md(data.content)}</div>`;
               } else {
                 const def = PRIMITIVES[data.step];
                 dissolveEl.innerHTML = `<div class="dissolve-progress-step" style="color: var(--${data.step})">
-                  ${def.icon} ${def.label} ✓
+                  ${def?.icon || '⚡'} ${def?.label || data.step} ✓
                 </div><div class="loading-dots">Next step...</div>`;
               }
             }
