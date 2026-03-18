@@ -187,13 +187,18 @@ VALIDATE   → cheapest
 
 | Việc | Trạng thái | Chi tiết |
 |------|-----------|---------|
-| Test với API keys thực | BLOCKED | Anthropic API hết credit |
+| Default API keys deployed | ✅ DONE | Cloudflare Worker secrets — user không cần nhập key để thử |
+| Research contribution checkbox | ✅ DONE | Opt-in, anonymous, stored in KV (RESEARCH_DATA binding) |
+| LIST_PROMPT shortcut for Claude | ✅ DONE | DISSOLVE + Claude-only → LIST_PROMPT (100% vs 81% pipeline) |
+| Baseline uses SAME model as SYNTHESIZE | ✅ DONE | Fair comparison — Exp L insight |
+| "With Dissolution" rendering | BUG | Sometimes synthesis result doesn't display in right column |
+| Token count shows 0 | BUG | Usage data not always populated from API responses |
 | Mobile drag-and-drop | KNOWN ISSUE | Touch events chưa implement cho pipeline reorder |
-| LIST_PROMPT optimization cho Claude | PENDING | Khi detect full DISSOLVE + Claude only → dùng LIST_PROMPT thay vì FULL pipeline (100% vs 81%) |
 | Save/load custom pipelines | FUTURE | localStorage hoặc URL params |
-| Usage analytics | FUTURE | Aggregate JSON exports → composability research data |
-| Rate limiting | FUTURE | Prevent abuse trên free-tier worker |
-| Custom expert personas | FUTURE | User chọn 3 experts cho SUPERPOSE thay vì default |
+| GPT retry logic for bimodal failures | FUTURE | Auto-retry khi GPT fails (bimodal: 100% or ≤20%) |
+| Problem-type detection → smart routing | FUTURE | Abstract→Claude, Practical→GPT OK |
+| Rate limiting on default keys | FUTURE | Prevent abuse |
+| Custom expert personas | FUTURE | User chọn 3 experts cho SUPERPOSE |
 
 ---
 
@@ -221,6 +226,15 @@ Research (notes/PROJECT_DNA.md)
         └─→ Feed back vào research: composability study
 ```
 
+### Latest Research Impact (Exp V — Structural Trap Taxonomy)
+
+Pipeline không chỉ phá binary dilemmas — nó phá CẢ MỘT HỌ structural traps:
+- **Anchoring**: 0% → 100% (giống hệt binary dissolution)
+- **False Constraint**: 0% → 89%
+- **Sunk Cost**: 67% baseline → RLHF đã "vaccine" trap này
+
+**Insight for tool:** Future compositions có thể nhắm vào specific trap types, không chỉ dissolution.
+
 Tool KHÔNG tự tạo research claims. Tool implement những gì research đã chứng minh (DISSOLVE) và cho phép khám phá thực nghiệm (custom pipelines) mà research sẽ validate sau.
 
 ---
@@ -231,6 +245,8 @@ Tool KHÔNG tự tạo research claims. Tool implement những gì research đã
 |------|---------|---------|
 | 2026-03-18 | v1.0 | 6 separate modes (dissolve + 5 primitives), multi-model |
 | 2026-03-18 | v2.0 | **Redesign**: single pipeline builder, drag-drop reorder, dynamic input, PDF+JSON export, routing reasons |
+| 2026-03-18 | v2.1 | Default API keys (Worker secrets), research contribution (KV), LIST_PROMPT shortcut, fair baseline comparison |
+| 2026-03-18 | v2.1 | Exp V data: anchoring trap 0%→100%, false constraint 0%→89%, sunk cost 67% (RLHF immune) |
 
 ---
 
