@@ -480,7 +480,7 @@ async function compute() {
           }
         }
       },
-      done(data) {
+      async done(data) {
         runMeta = data;
         const totalTime = ((Date.now() - runStartTime) / 1000).toFixed(1);
 
