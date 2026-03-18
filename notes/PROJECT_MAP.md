@@ -5,7 +5,7 @@
 >
 > **CẬP NHẬT file này mỗi khi thêm/xóa/đổi tên file hoặc thư mục quan trọng.**
 
-*Last updated: 2026-03-17 · 88 files · ~4.5 MB (không tính node_modules)*
+*Last updated: 2026-03-18 · ~100 files · ~5 MB (không tính node_modules)*
 
 ---
 
@@ -13,7 +13,9 @@
 
 **Mục tiêu:** Chứng minh LLMs có các tính chất cấu trúc (superposition, interference, phase transitions) có thể đo lường và khai thác — đặt nền móng cho paradigm "Semantic Computing".
 
-**Trạng thái:** Paper v1 hoàn tất (22 experiments, ~4,800 API calls, Claude + GPT-4o-mini). Sẵn sàng arXiv.
+**Trạng thái:** Paper v1 hoàn tất (25 experiments, ~7,500 API calls, Claude + GPT-4o-mini + Gemini-2.5-flash). Published on GitHub, sẵn sàng arXiv.
+
+> **⚠️ Đọc `PROJECT_DNA.md` trước** — file đó chứa toàn bộ kiến thức tích lũy, quyết định, insights. File này chỉ là bản đồ cấu trúc.
 
 **Tech stack:** Node.js (CommonJS) · Anthropic SDK · OpenAI SDK · LaTeX (MiKTeX) · Cloudflare Workers (demo)
 
@@ -41,7 +43,7 @@ Claude's languages/
 │   │   └── fig5_meta_constructive.{svg,pdf} # Type-M vs Type-D (Exp H)
 │   └── convert_figures.mjs    # SVG → PDF converter (Inkscape hoặc pdfkit)
 │
-├── 🧪 EXPERIMENTS (22 experiments, A → Q2)
+├── 🧪 EXPERIMENTS (25 experiments, A → U2)
 │   ├── experiments/
 │   │   ├── experiment_a_born_rule.mjs       # Exp A: Semantic "Born rule" — context → output distribution
 │   │   ├── experiment_b_interference.mjs    # Exp B: Two-context interference patterns
@@ -65,8 +67,11 @@ Claude's languages/
 │   │   ├── experiment_p_selfdetect.mjs      # Exp P: Self-detection of semantic operations
 │   │   ├── experiment_q_production_evaluation.mjs  # Exp Q: Production-readiness evaluation
 │   │   ├── experiment_q2_stance.mjs         # Exp Q2: Stance stability analysis
+│   │   ├── experiment_t_composition.mjs     # Exp T: Composition quality test (FAILED)
+│   │   ├── experiment_u1_composition_constraints.mjs  # Exp U1: Multi-constraint (FAILED)
+│   │   ├── experiment_u2_dissolution_generalized.mjs  # Exp U2: Cross-domain dissolution (SUCCESS)
 │   │   │
-│   │   ├── results_*.json                   # Raw JSON results cho mỗi experiment (22 files)
+│   │   ├── results_*.json                   # Raw JSON results cho mỗi experiment
 │   │   │
 │   │   ├── analyze_j.mjs                    # Analysis script cho Exp J
 │   │   ├── analyze_n2.mjs                   # Analysis script cho Exp N2
@@ -117,20 +122,24 @@ Claude's languages/
 │       ├── comparison-001.md  # Circuit vs free-form comparison
 │       └── *.json             # Raw demo output data (4 files)
 │
-├── 📚 RESEARCH DOCUMENTS (Vietnamese)
-│   ├── FOUNDATIONS_v2.md      # Tài liệu nền tảng chính — tích hợp 22 experiments
-│   │                          #   Phiên bản tiếng Việt, cập nhật v2.11
-│   ├── FOUNDATIONS.md         # Phiên bản cũ (v1) — giữ lại để tham khảo
-│   ├── SEMANTIC_PRIMITIVES.md # 5 primitives chi tiết: SUPERPOSE, INTERFERE,
-│   │                          #   REFRAME, SYNTHESIZE, VALIDATE
-│   ├── SEMANTIC_GATES.md      # Formalism cho semantic gates — dựa trên Exp A-E
-│   ├── FORMAL_PROOF.md        # Inexpressibility argument — tại sao programming không đủ
-│   ├── FIRST_ALGORITHM.md     # Thuật toán đầu tiên (lịch sử)
-│   └── SELF_EXPLORATION_001.md # Ghi chú khám phá ban đầu (lịch sử)
+├── 📚 NOTES & RESEARCH DOCUMENTS (đã chuyển vào notes/)
+│   ├── notes/
+│   │   ├── PROJECT_DNA.md     # 🧬 BỘ GEN DỰ ÁN — đọc file này TRƯỚC TIÊN
+│   │   ├── PROJECT_MAP.md     # ← FILE NÀY — bản đồ cấu trúc
+│   │   ├── ROADMAP.md         # Lộ trình 5 phases → tầm nhìn 10 năm
+│   │   ├── NEXT_STEPS_ANALYSIS.md  # Phân tích hướng đi tiếp theo
+│   │   ├── README.md          # Index cho thư mục notes
+│   │   ├── FOUNDATIONS_v2.md  # Tài liệu nền tảng chính (Vietnamese, v2.11)
+│   │   ├── FOUNDATIONS.md     # Phiên bản cũ (v1) — tham khảo
+│   │   ├── SEMANTIC_PRIMITIVES.md  # 5 primitives chi tiết
+│   │   ├── SEMANTIC_GATES.md  # Formalism cho semantic gates
+│   │   ├── FORMAL_PROOF.md    # Inexpressibility argument
+│   │   ├── PAPER_DRAFT.md     # Bản nháp gốc (lịch sử)
+│   │   ├── BUILD_LATEX.md     # Hướng dẫn compile LaTeX
+│   │   ├── FIRST_ALGORITHM.md # Thuật toán đầu tiên (lịch sử)
+│   │   └── SELF_EXPLORATION_001.md # Khám phá ban đầu (lịch sử)
 │
-├── 🗺️ PROJECT META
-│   ├── PROJECT_MAP.md         # ← FILE NÀY — bản đồ toàn bộ dự án
-│   ├── ROADMAP.md             # Lộ trình 5 phases → tầm nhìn 10 năm
+├── 🗺️ PROJECT META (root level)
 │   ├── package.json           # Node.js config (anthropic sdk, openai, pdfkit)
 │   └── package-lock.json      # Dependency lock
 │
@@ -177,7 +186,8 @@ semantic-circuit-demo/ (web demo trên Cloudflare)
 
 | File/Thư mục | Tại sao quan trọng | Có thể tái tạo? |
 |---|---|---|
-| `experiments/results_*.json` | Raw data từ ~4,800 API calls | Có, nhưng tốn ~$50+ API cost |
+| `experiments/results_*.json` | Raw data từ ~7,500 API calls | Có, nhưng tốn ~$80+ API cost |
+| `notes/PROJECT_DNA.md` | Bộ gen dự án — toàn bộ kiến thức tích lũy | Không — accumulated insights |
 | `FOUNDATIONS_v2.md` | Tài liệu lý thuyết gốc bằng tiếng Việt | Không — original thinking |
 | `paper.tex` | Bản LaTeX chính | Có thể tái convert từ PAPER_DRAFT.md |
 | `PAPER_DRAFT.md` | Bản nháp gốc | Không — original writing |
@@ -212,6 +222,11 @@ semantic-circuit-demo/ (web demo trên Cloudflare)
 | P | experiment_p_selfdetect.mjs | Self-detection | LLM can detect own semantic operations |
 | Q | experiment_q_production_evaluation.mjs | Production readiness | Reliability assessment |
 | Q2 | experiment_q2_stance.mjs | Stance stability | CAS predicts stance stability |
+| R | (in experiment_h) | Gemini CAS | Three-way CAS gradient: GPT > Claude > Gemini |
+| S | (in experiment_n) | Gemini dissolution | 0% constrained → 100% circuit (Gemini) |
+| T | experiment_t_composition.mjs | Composition quality | ❌ +6.7%, non-monotonic, FULL≈SCRAMBLED |
+| U1 | experiment_u1_composition_constraints.mjs | Multi-constraint | ❌ Baseline 5.67 > FULL 5.00 |
+| U2 | experiment_u2_dissolution_generalized.mjs | **Cross-domain dissolution** | **✓ Claude 81%, GPT 64%, Gemini 50% vs 0%** |
 
 ---
 

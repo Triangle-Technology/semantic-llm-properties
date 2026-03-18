@@ -2,7 +2,15 @@
 
 Working notes, drafts, and internal documentation from the development of this research project. These files capture the thinking process, early formulations, and intermediate steps that led to the published paper.
 
-## Contents
+## Start Here
+
+| File | Description |
+|------|-------------|
+| **`PROJECT_DNA.md`** | **START HERE** — Living memory of the project. All key findings, decisions, insights, and current status. Read this first in any new session. |
+| `PROJECT_MAP.md` | Complete file/folder structure and conventions |
+| `ROADMAP.md` | 5-phase development roadmap with 10-year vision |
+
+## Research Documents
 
 | File | Description |
 |------|-------------|
