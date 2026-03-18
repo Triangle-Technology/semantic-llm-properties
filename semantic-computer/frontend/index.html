@@ -8,17 +8,36 @@
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
     <header>
       <h1>⚡ Semantic Computer</h1>
-      <p class="subtitle">The first implementation of Semantic Computing</p>
+      <p class="subtitle">Compose semantic primitives to compute meaning</p>
     </header>
 
-    <!-- API Keys -->
-    <section class="api-keys">
-      <h3>API Keys <span class="hint">(stored in browser only)</span></h3>
+    <!-- Pipeline Builder -->
+    <section class="pipeline-builder">
+      <div class="pipeline-header">
+        <span>Pipeline</span>
+        <button id="reset-btn" class="reset-btn" title="Reset to default DISSOLVE order">Reset</button>
+      </div>
+      <div class="pipeline" id="pipeline">
+        <!-- Filled by JS — draggable primitive chips -->
+      </div>
+      <div class="pipeline-bank" id="pipeline-bank">
+        <!-- Removed primitives go here -->
+      </div>
+      <p class="pipeline-hint" id="pipeline-hint"></p>
+    </section>
+
+    <!-- Dynamic Input -->
+    <section class="input-section" id="input-section">
+      <!-- Changes based on first primitive in pipeline -->
+    </section>
+
+    <!-- API Keys (collapsible) -->
+    <details class="api-keys">
+      <summary>API Keys <span class="hint">(stored in browser only)</span></summary>
       <div class="key-row">
-        <label>Claude <span class="type-badge type-m-strong">Type-M Strong</span></label>
+        <label>Claude <span class="type-badge type-m-strong">Type-M</span></label>
         <input type="password" id="key-anthropic" placeholder="sk-ant-..." />
       </div>
       <div class="key-row">
@@ -26,120 +45,25 @@
         <input type="password" id="key-openai" placeholder="sk-..." />
       </div>
       <div class="key-row">
-        <label>Gemini <span class="type-badge type-m-mod">Type-M Mod</span></label>
+        <label>Gemini <span class="type-badge type-m-mod">Type-M mod</span></label>
         <input type="password" id="key-google" placeholder="AIza..." />
       </div>
       <div id="routing-info" class="routing-info"></div>
-    </section>
+    </details>
 
-    <!-- Mode Selector -->
-    <section class="modes">
-      <div class="mode-group">
-        <span class="mode-label">COMPOSITIONS</span>
-        <button class="mode-btn active" data-mode="dissolve">
-          DISSOLVE <span class="maturity proven">PROVEN</span>
-        </button>
-      </div>
-      <div class="mode-group">
-        <span class="mode-label">PRIMITIVES</span>
-        <button class="mode-btn" data-mode="superpose">SUPERPOSE <span class="maturity experimental">EXP</span></button>
-        <button class="mode-btn" data-mode="interfere">INTERFERE <span class="maturity experimental">EXP</span></button>
-        <button class="mode-btn" data-mode="reframe">REFRAME <span class="maturity experimental">EXP</span></button>
-        <button class="mode-btn" data-mode="synthesize">SYNTHESIZE <span class="maturity experimental">EXP</span></button>
-        <button class="mode-btn" data-mode="validate">VALIDATE <span class="maturity experimental">EXP</span></button>
-      </div>
-    </section>
-
-    <!-- Input Area (changes per mode) -->
-    <section class="input-area" id="input-area">
-      <!-- Dissolve (default) -->
-      <div class="mode-input" id="input-dissolve">
-        <label>Enter a binary dilemma — "A or B?"</label>
-        <textarea id="dissolve-question" rows="3" placeholder="Should we use REST or GraphQL for our new microservice API that serves 3 internal consumers?"></textarea>
-        <div class="examples">
-          <span>Examples:</span>
-          <button class="example-btn" data-target="dissolve-question" data-text="Should we cut costs by reducing headcount or cutting the marketing budget?">Business</button>
-          <button class="example-btn" data-target="dissolve-question" data-text="Should we hire a senior developer at $180k or two juniors at $90k each?">Hiring</button>
-          <button class="example-btn" data-target="dissolve-question" data-text="Should we prioritize improving the product or improving customer support to raise our NPS score?">Strategy</button>
-          <button class="example-btn" data-target="dissolve-question" data-text="Should we build a monolithic application or use microservices?">Architecture</button>
-        </div>
-      </div>
-
-      <!-- Superpose -->
-      <div class="mode-input hidden" id="input-superpose">
-        <label>Concept or question to explore from multiple angles</label>
-        <textarea id="superpose-concept" rows="3" placeholder="What is the nature of consciousness?"></textarea>
-        <label>Frames (optional — leave empty for auto-generate)</label>
-        <input type="text" id="superpose-frames" placeholder="e.g. neuroscientist, philosopher, AI researcher" />
-      </div>
-
-      <!-- Interfere -->
-      <div class="mode-input hidden" id="input-interfere">
-        <label>Idea A</label>
-        <textarea id="interfere-a" rows="2" placeholder="Remote-first culture enables deep work and global talent"></textarea>
-        <label>Idea B</label>
-        <textarea id="interfere-b" rows="2" placeholder="Office-centric culture enables spontaneous collaboration and culture building"></textarea>
-      </div>
-
-      <!-- Reframe -->
-      <div class="mode-input hidden" id="input-reframe">
-        <label>Problem</label>
-        <textarea id="reframe-problem" rows="2" placeholder="Our team velocity has dropped 30% this quarter"></textarea>
-        <label>New lens to view it through</label>
-        <input type="text" id="reframe-lens" placeholder="e.g. organizational psychology, systems thinking, evolutionary biology" />
-      </div>
-
-      <!-- Synthesize -->
-      <div class="mode-input hidden" id="input-synthesize">
-        <label>Multiple perspectives to synthesize (one per line)</label>
-        <textarea id="synthesize-perspectives" rows="5" placeholder="Perspective 1: We should focus on growth...&#10;Perspective 2: We should focus on profitability...&#10;Perspective 3: We should focus on customer retention..."></textarea>
-      </div>
-
-      <!-- Validate -->
-      <div class="mode-input hidden" id="input-validate">
-        <label>Conclusion or argument to evaluate adversarially</label>
-        <textarea id="validate-conclusion" rows="4" placeholder="AI will replace most knowledge workers within 5 years because LLMs can already pass professional exams."></textarea>
-      </div>
-    </section>
-
-    <!-- Compute Button -->
+    <!-- Compute -->
     <button id="compute-btn" class="compute-btn">⚡ Compute</button>
 
     <!-- Results -->
     <section class="results hidden" id="results">
-      <!-- Dissolve results -->
-      <div class="result-panel" id="result-dissolve">
-        <div class="comparison">
-          <div class="result-col before">
-            <h3>❌ Without Dissolution</h3>
-            <div class="result-content" id="direct-result">
-              <div class="loading"></div>
-            </div>
-          </div>
-          <div class="result-col after">
-            <h3>⚡ With Dissolution</h3>
-            <div class="pipeline-steps" id="pipeline-steps"></div>
-            <div class="result-content" id="dissolve-result">
-              <div class="loading"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Primitive results -->
-      <div class="result-panel hidden" id="result-primitive">
-        <div class="result-content" id="primitive-result">
-          <div class="loading"></div>
-        </div>
-      </div>
-
-      <!-- Model Insight -->
+      <div class="steps-progress" id="steps-progress"></div>
+      <div class="result-content" id="result-content"></div>
       <div class="model-insight" id="model-insight"></div>
     </section>
   </div>
 
   <footer>
-    <p>Based on <a href="https://github.com/Triangle-Technology/semantic-llm-properties" target="_blank">Structural Properties of LLM Semantic Processing</a> — 25 experiments, ~7,500 API calls, 3 model families</p>
+    <p>Based on <a href="https://github.com/Triangle-Technology/semantic-llm-properties" target="_blank">25 experiments, ~7,500 API calls, 3 model families</a></p>
   </footer>
 
   <script src="app.js"></script>
