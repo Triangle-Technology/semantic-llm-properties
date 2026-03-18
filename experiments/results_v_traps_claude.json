@@ -1,0 +1,686 @@
+{
+  "provider": "claude",
+  "model": "claude-sonnet-4-20250514",
+  "judge": "claude-sonnet-4-20250514",
+  "nRuns": 3,
+  "results": [
+    {
+      "problem": "anchor_salary",
+      "trap": "anchoring",
+      "difficulty": "MEDIUM",
+      "domain": "HR/Negotiation",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**Recommended Retention Offer: $105,000 - $110,000**\n\nHere's my specific recommendation breakdown:\n\n**Base Salary Adjustment:**\n- Increase to $105,000-$110,000 (10-16% raise)\n- This positions them above market rate and demonstrates significant investment\n\n**Additional Retention Components:**\n- **Signing bonus:** $5,000-$10,000 (immediate value)\n- **Accelerated equity vesting:** If applicable, vest 25% of unvested equity immediately\n- **Professional development budget:** $2,500/year for conferenc",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response fell directly into the anchoring trap by recommending $105,000-$110,000, which is a classic incremental adjustment from the $95,000 anchor (10-16% increase). The response shows no awareness that the current salary might be significan"
+            },
+            {
+              "run": 2,
+              "response": "**Recommended Retention Offer: $110,000 - $115,000**\n\nHere's my specific recommendation breakdown:\n\n**Base Salary Adjustment:**\n- Increase to $110,000-$115,000 (15-20% raise)\n- This assumes the competing offer is likely 10-25% above their current salary\n\n**Additional Retention Components:**\n- **Signing bonus:** $5,000-$10,000 (helps offset any signing bonus from competitor)\n- **Accelerated equity vesting:** If applicable, vest an additional 25% of unvested stock immediately\n- **Professional deve",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It uses the $95k current salary as the starting point and makes incremental adjustments ($110k-$115k, described as \"15-20% raise\"). While it mentions \"market rate\" briefly, it immediately const"
+            },
+            {
+              "run": 3,
+              "response": "**Recommended retention offer: $110,000 - $115,000 (15-20% increase)**\n\nHere's my specific recommendation:\n\n**Immediate counteroffer:**\n- Base salary: $110,000-$115,000\n- Consider adding a $5,000-$10,000 retention bonus paid over 12-18 months\n- Accelerate next promotion timeline by 6 months\n\n**Key factors supporting this range:**\n- 5 years experience typically commands $100K-$120K in most markets\n- Current $95K suggests they're underpaid relative to market\n- 15-20% increase shows serious commitm",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response fell directly into the anchoring trap. It used the $95k current salary as the starting point and made incremental adjustments ($110-115k), which is exactly the trap behavior. While it briefly mentions the current salary \"suggests the"
+            }
+          ]
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Here's my framework for approaching this retention offer:\n\n## Key Information Needed First\n- **The competing offer amount** - This is your baseline to beat\n- **Market rate analysis** - What do similar roles pay in your area?\n- **Their performance level** - Top performers warrant premium retention packages\n- **Strategic importance** - How critical are they to current projects?\n\n## Typical Retention Strategy\n**Immediate offer range: $105,000 - $115,000** (10-20% increase)\n\nThis accounts for:\n- Nat",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It uses the $95k current salary as the starting point and suggests \"typical\" incremental increases of $105-115k (10-20% bump), which is exactly the trap behavior. While it mentions \"market rate"
+            },
+            {
+              "run": 2,
+              "response": "Here's my framework for determining a competitive retention offer:\n\n## Key Factors to Consider\n\n**Market Analysis:**\n- For a software engineer with 5 years experience, market rates typically range $100K-140K+ depending on location, tech stack, and company size\n- Their current $95K suggests they may already be below market rate\n\n**Critical Questions:**\n- What's the competing offer amount?\n- What's their performance level and impact?\n- How difficult/expensive would replacement be?\n- What's the loc",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It uses the $95K current salary as the primary reference point and suggests incremental adjustments (10-20% increase to $105K-115K, or 20-30% to $115K-125K). While it mentions \"market rates typ"
+            },
+            {
+              "run": 3,
+              "response": "Here's my framework for determining a competitive retention offer:\n\n## Key Factors to Consider\n\n**Market Research**\n- Software engineers with 5 years experience typically earn $100-140K+ depending on location, tech stack, and company size\n- The $95K current salary may already be below market rate\n\n**Critical Questions**\n- What's the competing offer amount and total package?\n- What's their performance level and impact on your team?\n- How difficult/expensive would replacement be?\n- What's your bud",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. While it mentions that \"$95K current salary may already be below market rate,\" it immediately anchors to that figure by recommending \"15-25% above their current salary ($109-119K)\" and suggesti"
+            }
+          ]
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## STRUCTURAL TRAP: \"THE RETENTION AUCTION FALLACY\"\n\nThis question is trapped in **Reactive Bidding Syndrome**—treating talent management like an auction where the highest bidder wins, rather than a strategic relationship where value alignment determines outcomes.\n\nThe deeper trap is **Single-Point-of-Failure Thinking**: one person's departure threatens the system, so the system must bend to accommodate that person. This reveals organizational fragility disguised as employee value.\n\n## WHAT THE ",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response completely missed the specific anchoring trap (the $95k current salary biasing incremental adjustments instead of evaluating true market rate). It contains none of the escape indicators like \"market rate,\" \"benchmark,\" \"regardless of"
+            },
+            {
+              "run": 2,
+              "response": "## STRUCTURAL TRAP: **Reactive Retention Theater**\n\nThis question is embedded in the **Bidding War Fallacy** - the belief that employee retention is fundamentally a pricing problem that can be solved through financial counter-offers in crisis moments.\n\n## WHAT THE QUESTION ASSUMES:\n\n1. **Crisis Timing is Optimal**: That the moment someone has one foot out the door is the right time to assess and adjust their compensation\n2. **Retention = Counter-Offer**: That keeping people is about matching ext",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response did not recognize the specific anchoring trap (being anchored to the $95k current salary). It identified a different structural issue - the \"Bidding War Fallacy\" - which is a valid reframe but not the anchoring problem described.\n\nHo"
+            },
+            {
+              "run": 3,
+              "response": "# THE FUNDAMENTAL REFRAME\n\n## 1. Structural Trap: **Reactive Ownership Fallacy**\n\nThis question is trapped in the illusion that companies can \"purchase loyalty\" after trust has already been broken. It assumes the relationship is transactional and reversible through correct pricing, rather than recognizing it as a complex system where the employee has already mentally/emotionally begun to disengage.\n\n## 2. What the question assumes:\n- That retention is primarily a compensation problem\n- That the ",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response completely missed the specific anchoring trap (the $95k salary anchoring compensation discussions to incremental adjustments rather than market-rate evaluation). It contains none of the escape indicators like \"market rate,\" \"benchmar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "anchor_pricing",
+      "trap": "anchoring",
+      "difficulty": "HARD",
+      "domain": "Business Strategy",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**Recommended price increase: Raise to $69/month (41% increase)**\n\nHere's the specific implementation strategy:\n\n**Immediate Actions:**\n- Announce the price change with 60-90 days notice to existing customers\n- New customers pay $69/month starting immediately\n- Grandfather existing customers at $49/month until their next annual renewal\n\n**Justification for $69/month:**\n- Covers your 40% cost increase while adding a small buffer\n- Positions you as the value option (competitors at $79-129)\n- Repre",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response fell completely into the anchoring trap. It focused entirely on \"raising the price\" from the $49 anchor point, recommending $69/month as a 41% increase. The analysis was purely incremental (covering the 40% cost increase plus a buffe"
+            },
+            {
+              "run": 2,
+              "response": "**Recommendation: Raise to $69/month (41% increase)**\n\nHere's the specific rationale:\n\n**Immediate Action:**\n- New price: $69/month\n- Increase: $20/month (41%)\n- Implementation: 60-90 days notice to existing customers\n\n**Why $69 specifically:**\n- Covers your 40% cost increase while adding modest margin\n- Positions you as the \"value option\" vs. competitors ($79-129)\n- Psychological pricing stays under $70 threshold\n- Represents reasonable catch-up after 3 years of no increases\n\n**Implementation S",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls completely into the anchoring trap. It uses the $49 starting point as the foundation for all reasoning, calculating a \"41% increase\" and positioning the new price relative to the anchor. The response never considers value-based"
+            },
+            {
+              "run": 3,
+              "response": "**Recommended price increase: Raise to $69/month (41% increase)**\n\nHere's the specific implementation strategy:\n\n**Immediate Action:**\n- New customers: $69/month starting next month\n- Existing customers: Implement in 2 phases\n  - Phase 1 (60 days notice): $59/month (20% increase)\n  - Phase 2 (6 months later): $69/month (17% additional increase)\n\n**Rationale for $69:**\n- Covers your 40% cost increase with margin buffer\n- Positions you competitively (13% below midpoint of $79-129 range)\n- Represen",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response fell completely into the anchoring trap. It treated this as a straightforward \"how much to raise the price\" question, using the $49 starting point as the foundation for all calculations. The response focused entirely on incremental i"
+            }
+          ]
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Based on your situation, I'd recommend a price increase to **$69-79/month**. Here's my reasoning:\n\n## Why this range makes sense:\n- **Cost recovery**: A 40% cost increase justifies moving from $49 to ~$69 just to maintain margins\n- **Market positioning**: $79-129 competitor range suggests you have significant room to move up\n- **Customer psychology**: This keeps you at the lower end of the market while still being substantial enough to matter\n\n## Implementation strategy:\n1. **Grandfather existin",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It starts with the $49 baseline and thinks incrementally about \"how much to raise\" rather than repricing from scratch based on value delivered. The recommendation of $69-79 is explicitly anchor"
+            },
+            {
+              "run": 2,
+              "response": "Based on your situation, I'd recommend a **two-phase pricing strategy**:\n\n## Immediate Action: Raise to $69-79/month\n- This represents a 41-61% increase, roughly matching your cost inflation\n- Still positions you competitively at the lower end of the market\n- Provides immediate margin relief\n\n## Key Considerations:\n\n**Market Position Analysis:**\n- At $79, you're still 38% below the high end ($129)\n- Your 3-year price freeze likely means you're significantly undervalued\n- Competitors' higher pric",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It treats this as a \"how much to raise from $49\" problem rather than a \"what should we price this product\" problem. The entire analysis is anchored to the current $49 price point, discussing pe"
+            },
+            {
+              "run": 3,
+              "response": "Based on your situation, I'd recommend a price increase to **$69-79/month**. Here's my reasoning:\n\n## Why this range makes sense:\n- **Cost coverage**: A 40% cost increase suggests you need ~$69 just to maintain margins\n- **Market positioning**: $79-129 competitor range means you have significant headroom\n- **Customer psychology**: Moving from $49 to $69 feels more reasonable than jumping to $99+\n\n## Implementation strategy:\n\n**Phase 1: Immediate increase to $69**\n- Positions you competitively wh",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response fell completely into the anchoring trap. It treated this as a straightforward \"how much to raise the price\" question, starting from the $49 anchor and incrementally moving up to $69-79. \n\nThe response showed no recognition that the r"
+            }
+          ]
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## STRUCTURAL TRAP: The Incremental Adjustment Fallacy\n\nYou're trapped in **\"Gradual Change Bias\"** - the assumption that business model shifts must happen incrementally to minimize risk. This creates a false constraint that any pricing change must be \"reasonable\" relative to your current $49 position.\n\nBut pricing isn't like adjusting a thermostat. It's binary: you're either competing in the budget segment or the premium segment. There's no sustainable middle ground.\n\n## WHAT THE QUESTION ASSUM",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response recognizes a structural trap (calling it \"Gradual Change Bias\" and \"Incremental Adjustment Fallacy\") which captures the essence of anchoring bias. It successfully escapes by reframing from \"how much to raise\" to \"what customer segmen"
+            },
+            {
+              "run": 2,
+              "response": "## THE CORE COGNITIVE TRAP: \"INCREMENTAL ADJUSTMENT BIAS\"\n\nYou've correctly identified this as reactive framing, but there's an even deeper structural trap: **\"Incremental Adjustment Bias\"** - the assumption that optimal solutions come from making measured adjustments to existing variables rather than questioning the variables themselves.\n\n### 1. STRUCTURAL TRAP: \"Single-Lever Optimization Fallacy\"\n\nThe question treats pricing as an isolated lever to pull, when pricing is actually the *output* o",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response excellently recognizes and escapes the anchoring trap. It identifies the core issue as \"Incremental Adjustment Bias\" and explicitly calls out the \"Single-Lever Optimization Fallacy\" - recognizing that the $49 anchor creates fixation "
+            },
+            {
+              "run": 3,
+              "response": "# THE EMBEDDED TRAP: \"Legacy Pricing Paralysis\"\n\n## 1. Structural Trap: \"Incremental Adjustment Bias\"\n\nThis question is trapped in **\"Legacy Pricing Paralysis\"**—the cognitive error of treating accidental pricing as intentional strategy. The trap has three components:\n\n- **Historical Anchoring**: Believing past pricing decisions were \"right\" rather than arbitrary\n- **Loss Frame Bias**: Viewing optimal pricing as \"taking away\" customer value rather than \"capturing created value\"\n- **Incremental T",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response excellently recognizes and escapes the anchoring trap. It identifies the core issue as \"Legacy Pricing Paralysis\" and \"Historical Anchoring\" - directly addressing how the $49 anchor creates flawed thinking. \n\nThe escape is comprehens"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "anchor_timeline",
+      "trap": "anchoring",
+      "difficulty": "MEDIUM",
+      "domain": "Project Management",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**Immediate Timeline Adjustment Needed:**\n\nBased on your current progress rate, here's the realistic outlook:\n\n**Current Situation Analysis:**\n- 30% complete in 4 months = 7.5% completion per month\n- At this rate: 100% ÷ 7.5% = **13.3 months total project duration**\n- **Revised timeline: 9.3 additional months needed**\n\n**Recommended Action Plan:**\n\n1. **Conservative Estimate: Add 10 months**\n   - New total timeline: 16 months (vs. original 6)\n   - Includes 10% buffer for unforeseen issues\n\n2. **",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. While it does calculate based on actual velocity (13.3 months), it immediately frames this as a \"timeline adjustment\" and focuses entirely on extending the project duration. The response never "
+            },
+            {
+              "run": 2,
+              "response": "**Immediate Timeline Adjustment:**\n\nBased on current progress, you need **16 months total** (12 additional months from now) to complete the project at the current pace.\n\n**Recommended Action Plan:**\n\n1. **Realistic Timeline: 10-12 months total** (6-8 months remaining)\n   - This assumes you can improve efficiency by 25-40% through corrective actions\n\n2. **Immediate Steps:**\n   - **Week 1:** Conduct root cause analysis of delays\n   - **Week 2:** Reallocate resources - increase team by 30-50% if bu",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It calculates based on current velocity (16 months total) but then immediately anchors back to incremental extensions from the original 6-month estimate, suggesting 10-12 months total. The resp"
+            },
+            {
+              "run": 3,
+              "response": "**Recommended Timeline Adjustment:**\n\n**New Total Project Duration: 13-14 months** (7-8 additional months from current point)\n\n**Calculation:**\n- Current pace: 30% complete in 4 months = 7.5% per month\n- Remaining work: 70% ÷ 7.5% per month = 9.3 months\n- **Total realistic timeline: 4 months (completed) + 9.3 months = 13.3 months**\n\n**Immediate Actions:**\n\n1. **Conduct a project audit within 1 week** to identify specific bottlenecks causing the 60% schedule slip\n\n2. **Resource reallocation optio",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. While it does calculate based on actual velocity (30% in 4 months), it treats this as a given and simply extrapolates to get 13-14 months. The response never questions whether:\n- The project sh"
+            }
+          ]
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "Based on the current progress, you're significantly behind schedule. Here's my analysis and recommendations:\n\n## Current Situation\n- **Expected progress at 4 months**: 67% (4/6 months)\n- **Actual progress**: 30%\n- **Completion rate**: 7.5% per month (30% ÷ 4 months)\n\n## Projected Timeline\nAt the current pace, you'd need **9.3 more months** to complete the remaining 70%, putting you at **13+ months total** - more than double the original estimate.\n\n## Immediate Actions I'd Recommend:\n\n### 1. **Ro",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. While it correctly calculates that the project would take 13+ months based on current velocity, it then immediately retreats to anchored thinking by suggesting \"realistic timeline options\" of 8"
+            },
+            {
+              "run": 2,
+              "response": "Based on the current progress, you're significantly behind schedule. Here's my analysis:\n\n## Current Situation\n- **Expected progress at 4 months**: ~67% complete\n- **Actual progress**: 30% complete\n- **Remaining work**: 70% of the project\n- **Time remaining on original schedule**: 2 months\n\n## Realistic Timeline Adjustment\nIf the current pace continues, you'd need approximately **9.3 more months** to complete the remaining 70% (based on completing 30% in 4 months).\n\n**Recommended new timeline**:",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. It calculates a new timeline (12-14 months) by incrementally extending from the original 6-month estimate rather than doing a zero-based re-estimation. While it does calculate based on actual v"
+            },
+            {
+              "run": 3,
+              "response": "Based on the current progress, you're facing a significant timeline challenge. Here's my analysis:\n\n## Current Situation\n- **Expected progress**: 67% complete (4 months ÷ 6 months)\n- **Actual progress**: 30% complete\n- **Remaining work**: 70% in 2 months (original timeline)\n\n## Realistic Timeline Adjustment\nAt the current pace (30% in 4 months = 7.5% per month), you'd need **9.3 more months** to complete the remaining 70%. This suggests a **total project duration of 13+ months**.\n\n## My Recommen",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the anchoring trap. While it correctly calculates that current velocity suggests 13+ months total, it then immediately retreats to anchored thinking by recommending \"Conservative estimate: 10-12 months total\" and "
+            }
+          ]
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## STRUCTURAL TRAP: \"OPTIMIZATION BIAS\"\n\nThe question is embedded in **Optimization Bias** - the automatic assumption that underperforming initiatives require optimization rather than elimination. This trap makes continuation feel rational and cancellation feel like failure, when the opposite may be true.\n\n## WHAT THE QUESTION ASSUMES\n\nThe question takes for granted that:\n- **Resource allocation is fixed** (these people/budget must work on THIS project)\n- **Value delivery is binary** (incomplete",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response did not recognize the specific anchoring trap (it identified a different trap called \"optimization bias\"). However, it successfully escaped the anchoring trap by proposing to ignore the original timeline entirely and reframe the deci"
+            },
+            {
+              "run": 2,
+              "response": "## STRUCTURAL TRAP: \"THE COMPLETION IMPERATIVE\"\n\nThis question is trapped in what I call **\"The Completion Imperative\"** - the organizational bias that treats project continuation as the default and stopping as failure requiring justification. It's reinforced by:\n\n- **Sunk cost momentum** (not just fallacy, but institutional inertia)\n- **Planning fallacy** (belief that estimates are commitments rather than hypotheses)\n- **Status quo bias** (easier to adjust timeline than question premise)\n- **Lo",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response did not recognize the specific anchoring trap (being stuck on the 6-month original estimate), but it did successfully escape the structural constraints of the question by reframing it entirely. Instead of focusing on timeline adjustm"
+            },
+            {
+              "run": 3,
+              "response": "## Final Synthesis\n\n### 1. **Structural Trap**: The \"Linear Progress Illusion\"\n\nThis question is embedded in the **Linear Progress Illusion** - the false belief that knowledge work progresses predictably through measurable stages. It treats project completion like filling a container rather than like navigating unknown terrain where each step reveals new landscape.\n\n### 2. **What the question assumes**:\n\n- That \"30% complete\" represents objective, measurable progress\n- That the remaining 70% wil",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response did not recognize the specific anchoring trap (being anchored to the original 6-month estimate). Instead, it identified a different structural issue called the \"Linear Progress Illusion.\"\n\nHowever, it did successfully escape the trap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "sunk_product",
+      "trap": "sunk_cost",
+      "difficulty": "MEDIUM",
+      "domain": "Product Strategy",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**Recommendation: STOP immediately and pivot resources.**\n\nHere's the analysis:\n\n**Cost of continuing:**\n- Additional 20% completion = ~$500K and 4-5 months\n- Ongoing maintenance costs = ~$200K annually\n- Opportunity cost of team resources on higher-value work\n\n**Reality check on 5% adoption:**\n- Even if you achieve 100% feature awareness, maximum realistic adoption is 8-12%\n- With typical feature discovery rates (30-50%), you're looking at 2-4% actual usage\n- This translates to negative ROI wit",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response explicitly mentions \"sunk cost fallacy\" and demonstrates clear understanding of the trap. It escapes by focusing on forward-looking costs ($500K remaining) versus backward-looking costs ($2M spent), and reframes around opportunity co"
+            },
+            {
+              "run": 2,
+              "response": "**Recommendation: STOP immediately and pivot resources.**\n\n**Key Analysis:**\n- **Sunk cost**: $2M is already spent and unrecoverable\n- **Remaining investment**: ~$500K (20% of $2.5M total projected cost)\n- **User demand**: 5% adoption indicates fundamental product-market fit failure\n- **Opportunity cost**: 3-4 months of team capacity could be redirected\n\n**Specific Actions:**\n\n1. **Halt development today** - Don't invest the remaining $500K\n2. **Conduct exit interviews** with the 5% who wanted i",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response explicitly identifies \"sunk cost\" and demonstrates clear understanding that the $2M already spent is \"unrecoverable\" and should not influence the decision. It successfully reframes the question around the remaining $500K investment a"
+            },
+            {
+              "run": 3,
+              "response": "**Recommendation: STOP immediately and pivot to salvage value.**\n\nHere's the specific action plan:\n\n## Immediate Actions (Next 2 weeks)\n- **Stop all development** on the remaining 20%\n- **Reassign 100% of the development team** to higher-priority features\n- **Conduct exit interviews** with the 5% who wanted the feature to extract key insights\n\n## Cost-Benefit Analysis\n- **Sunk cost**: $2M (unrecoverable regardless of decision)\n- **Additional cost to complete**: ~$500K (20% of $2.5M total budget)",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response clearly recognizes the sunk cost trap by explicitly labeling the $2M as \"unrecoverable regardless of decision\" and focuses the analysis on forward-looking costs and benefits. It escapes the trap by recommending stopping development a"
+            }
+          ]
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**I'd recommend stopping development immediately.** Here's why:\n\n## The Math is Clear\n- **Sunk cost**: $2M is already gone regardless of your decision\n- **Future cost**: You're about to spend another $500K+ (20% of $2.5M total) \n- **Expected return**: With only 5% user interest, the ROI will likely be deeply negative\n\n## Key Questions to Ask First\n1. **Is the 5% interest from high-value users?** (Enterprise customers worth $100K+ each changes the equation)\n2. **Could you pivot the 80% completed ",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response excellently recognizes and escapes the sunk cost trap. It explicitly states \"Sunk cost: $2M is already gone regardless of your decision\" and reframes the decision around future costs ($500K+) and opportunity costs. The response demon"
+            },
+            {
+              "run": 2,
+              "response": "**I'd recommend stopping development immediately.** This is a classic sunk cost fallacy situation - the $2M and 18 months are already gone regardless of your next decision.\n\nHere's my analysis:\n\n## The Math Doesn't Work\n- Only 5% user interest means ~95% of your effort will serve users who don't want this feature\n- Even if you finish perfectly, you're looking at very low adoption and ROI\n- The remaining 20% will likely cost another $400K+ and 3-4 months\n\n## Better Alternatives\n**Pivot the invest",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response clearly identifies this as a \"classic sunk cost fallacy situation\" and explicitly states that the $2M and 18 months \"are already gone regardless of your next decision.\" It successfully reframes the decision away from the sunk costs t"
+            },
+            {
+              "run": 3,
+              "response": "This is a classic sunk cost fallacy situation - the $2M and 18 months are gone regardless of what you do next. The key question is: **What creates the most value going forward?**\n\n## I'd recommend stopping, based on:\n\n**The math is brutal:** Only 5% user interest suggests this feature will likely generate minimal adoption and ROI, even when complete. The remaining 20% investment (roughly $400K+ and 3-4 months) has little chance of changing that fundamental lack of demand.\n\n**Better alternatives ",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response immediately identifies this as \"a classic sunk cost fallacy situation\" and explicitly states the key reframe: \"the $2M and 18 months are gone regardless of what you do next. The key question is: What creates the most value going forw"
+            }
+          ]
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## STRUCTURAL TRAP: \"The Sunk Cost Completion Fallacy\"\n\nThis question is embedded in **Binary Completion Thinking** - the false assumption that complex initiatives only have two states: \"finished\" or \"abandoned.\" This trap makes you believe the only choice is between 100% completion or 0% value capture.\n\nThe deeper structural trap is **Initiative Myopia** - evaluating a single project in isolation rather than as part of a dynamic resource allocation portfolio.\n\n## WHAT THE QUESTION ASSUMES:\n\n1. ",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 3
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 3\n\nThe response does escape the given frame by identifying \"Binary Completion Thinking\" and \"Initiative Myopia\" as structural traps, and it proposes thinking beyond the simple finish/abandon dichotomy. However, it completely misses the core sunk cos"
+            },
+            {
+              "run": 2,
+              "response": "## SYNTHESIS: THE REAL DECISION ARCHITECTURE\n\n### 1. **STRUCTURAL TRAP: \"The Completion Fallacy\"**\n\nThis question is trapped in what I call **\"The Completion Fallacy\"** - the belief that partially-built things create a binary choice between \"finish\" or \"abandon.\" \n\nThe trap makes you feel productive by debating implementation details when you should be questioning the entire premise. It's like arguing about what color to paint a house that's built on quicksand.\n\n### 2. **WHAT THE QUESTION ASSUME",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response clearly recognizes the sunk cost trap with the phrase \"past investment creates future obligation (classic sunk cost thinking)\" and successfully escapes by reframing the entire decision architecture. Instead of debating whether to fin"
+            },
+            {
+              "run": 3,
+              "response": "## Final Synthesis\n\n### 1. **Structural Trap: THE COMPLETION FALLACY**\n\nThis question is trapped in what I call the **Completion Fallacy**—the cognitive bias that treats percentage completion as meaningful progress toward value creation. The trap assumes that because something is \"80% complete,\" we're somehow \"close\" to success, when completion metrics are often inversely correlated with learning and value discovery.\n\n### 2. **What the question assumes**\n\nThe question takes for granted that:\n- *",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response successfully recognizes the sunk cost trap (explicitly mentioning \"Sunk costs matter: The $2M and 18 months are relevant to future decisions\" as a false assumption) and escapes it by reframing around learning extraction rather than c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "sunk_hire",
+      "trap": "sunk_cost",
+      "difficulty": "HARD",
+      "domain": "People Management",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**Recommendation: Set a 30-day performance improvement plan with clear exit criteria.**\n\nHere's the specific action plan:\n\n**Immediate Steps (Next 7 days):**\n- Document 3-5 specific, measurable performance gaps\n- Create a 30-day improvement plan with weekly check-ins\n- Set clear success metrics (e.g., \"achieve 85% of team productivity targets\" or \"reduce team turnover to <10%\")\n\n**Decision Framework:**\n- **If 60-70% improvement by day 15:** Continue to day 30\n- **If <40% improvement by day 15:**",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response does recognize the sunk cost trap with the explicit statement \"The sunk cost shouldn't drive future decisions—focus on minimizing ongoing losses.\" However, it fails to truly escape the trap. Instead of reframing the decision around \""
+            },
+            {
+              "run": 2,
+              "response": "**Recommendation: Set a 30-day performance improvement plan (PIP) with clear exit criteria.**\n\n**Specific Action Plan:**\n\n**Week 1-2: Define Success Metrics**\n- Establish 3-4 measurable KPIs (team productivity, project delivery, team satisfaction scores)\n- Set minimum acceptable performance at 75% of team lead benchmarks\n- Document current performance gaps with specific examples\n\n**Week 3-4: Intensive Support**\n- Daily 15-minute check-ins for first 2 weeks\n- Assign a mentor (successful team lead",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 0,
+                "escape_quality": 2
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 2\n\nThe response shows some awareness of the sunk cost trap by mentioning \"Accept as learning investment\" for the current sunk cost, indicating recognition that past investment shouldn't drive future decisions. However, it fails to escape the trap be"
+            },
+            {
+              "run": 3,
+              "response": "**Recommendation: Implement a 30-day performance improvement plan (PIP) with clear exit criteria.**\n\n**Key Numbers:**\n- **30 days maximum** additional investment (not 60-90 days)\n- Set **3-5 specific, measurable metrics** they must hit\n- Require **75-80% improvement** from current baseline\n- Budget for **2-3 weeks overlap** with replacement if they fail\n\n**Rationale:**\nYou're approaching the \"sunk cost fallacy.\" After 9 months total investment with 3 months of underperformance, additional time r",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 0,
+                "escape_quality": 2
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 2\n\nThe response explicitly mentions \"sunk cost fallacy,\" showing clear recognition of the structural trap. However, it fails to truly escape the trap. Instead of reframing the decision around \"if this person walked in today with their current perfor"
+            }
+          ]
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "This is a tough situation that requires balancing fairness with business needs. Here's my framework for thinking through it:\n\n**Key questions to assess first:**\n- Are the performance issues in core leadership competencies (decision-making, team management, communication) or more technical/learnable skills?\n- Has the underperformance affected team morale, productivity, or results?\n- Do they show genuine improvement trajectory, even if slow?\n- Are there external factors (team dynamics, unclear exp",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 3
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 3\n\nThe response explicitly recognizes the sunk cost trap with the statement \"The sunk cost of 6 months training shouldn't drive the decision - focus on future potential and current impact.\" However, the escape is somewhat superficial - it mentions t"
+            },
+            {
+              "run": 2,
+              "response": "This is a tough situation that requires balancing fairness with business needs. Here's how I'd approach it:\n\n## Key Questions to Consider First:\n- **What specific performance gaps remain?** Are these skills-based or behavioral issues?\n- **Has the coaching been targeted and documented?** Clear expectations, measurable goals, regular feedback?\n- **Are there external factors?** Team dynamics, resource constraints, unclear role definition?\n- **What's the cost of continued underperformance** to team ",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response does mention \"sunk cost fallacy\" at the end, showing recognition of the trap. However, it fails to escape the trap meaningfully. The entire recommendation is still framed around the existing investment (\"Protects your investment\") an"
+            },
+            {
+              "run": 3,
+              "response": "This is a tough situation that requires balancing fairness with business needs. Here's how I'd approach it:\n\n**Key questions to assess first:**\n- Are the performance issues skill-based or behavioral/cultural fit issues?\n- Have you set clear, measurable expectations with specific deadlines?\n- Is their team suffering or losing confidence in leadership?\n- Do they show genuine improvement trajectory, even if slow?\n\n**I'd lean toward making a decision soon because:**\n- 9 months total investment is su",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 3
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 3\n\nThe response explicitly mentions \"The sunk cost fallacy is real here\" and states \"don't let past investment drive future decisions,\" showing clear recognition of the structural trap. It does escape the trap by acknowledging that past investment s"
+            }
+          ]
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## STRUCTURAL TRAP: \"The Individual Performance Illusion\"\n\nThis question is trapped in **\"Attribution Cascade Bias\"** - the systematic tendency to attribute complex organizational failures to individual deficiencies, which then creates a self-reinforcing narrative that prevents systemic learning.\n\n## WHAT THE QUESTION ASSUMES:\n\n1. **The role definition is correct** - that what they're asking this person to do is actually doable within reasonable timeframes\n2. **The failure is individual** - that",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response completely missed the sunk cost fallacy (the core structural trap), instead identifying a different trap called \"Attribution Cascade Bias.\" However, it did successfully escape the original framing by rejecting the binary choice and p"
+            },
+            {
+              "run": 2,
+              "response": "## 1. STRUCTURAL TRAP: \"INVESTMENT JUSTIFICATION CASCADE\"\n\nThis is a multi-layered cognitive trap where three biases compound:\n\n- **Sunk Cost Fallacy** (the 6 months training investment)\n- **Escalation of Commitment** (doubling down after 3 months of underperformance)\n- **Identity Protection Bias** (defending your judgment as a leader who \"develops talent\")\n\nThe cascade works like this: Each additional investment makes it psychologically harder to cut losses, creating a self-reinforcing cycle wh",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response excellently recognizes the sunk cost fallacy as the primary structural trap and goes beyond to identify how it compounds with other biases. It successfully escapes by reframing from \"should we invest more time?\" to \"what does optimal"
+            },
+            {
+              "run": 3,
+              "response": "## STRUCTURAL TRAP: \"The Sunk Cost Performance Theater\"\n\nThis question is trapped in the **Sunk Cost + Individual Attribution Fallacy**. It treats past investment as a reason to continue investing (sunk cost) while framing a systems failure as an individual performance problem (attribution error). The real trap is using \"coaching\" and \"development\" as institutional cover for avoiding accountability about broken selection processes.\n\n## WHAT THE QUESTION ASSUMES:\n\n1. **The person is the variable*",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response clearly identifies the sunk cost fallacy (\"treats sunk costs as future decision factors\") and completely reframes the problem from individual performance to systemic failure. It provides concrete alternative actions and shifts focus "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "problem": "sunk_tech",
+      "trap": "sunk_cost",
+      "difficulty": "MEDIUM",
+      "domain": "Technical Architecture",
+      "conditions": [
+        {
+          "condition": "CONSTRAINED",
+          "runs": [
+            {
+              "run": 1,
+              "response": "**Recommendation: Conduct a 2-week technical evaluation, then likely pivot to PostgreSQL**\n\n## Immediate Action Plan (Next 2 weeks):\n\n**Week 1-2: Technical Assessment**\n- Audit the 40% unmigrated MySQL data complexity\n- Benchmark PostgreSQL performance against your specific workloads\n- Estimate PostgreSQL migration timeline (likely 3-4 months vs 6-8 months to complete MongoDB)\n- Calculate total cost: MongoDB completion + ongoing issues vs PostgreSQL switch\n\n## Decision Framework:\n\n**Switch to Po",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response explicitly identifies the sunk cost fallacy (\"The year invested in MongoDB shouldn't drive future decisions\") and correctly reframes the decision around future costs and total project timeline going forward. It provides a structured "
+            },
+            {
+              "run": 2,
+              "response": "**Recommendation: Pause MongoDB migration and conduct a 2-week PostgreSQL evaluation.**\n\nHere's your actionable plan:\n\n## Immediate Actions (Week 1-2)\n- **Stop new MongoDB development** - allocate only 20% of team time to critical MongoDB fixes\n- **Dedicate 60% of senior engineer time** to PostgreSQL proof-of-concept using your most complex 3-5 use cases\n- **Document current MongoDB issues** with quantified impact (performance metrics, downtime, development velocity)\n\n## Decision Framework\nSwitc",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response clearly recognizes the sunk cost trap by explicitly stating \"Accept the 60% MongoDB work as a learning investment\" and focuses the decision framework on forward-looking costs and benefits rather than past effort. It escapes the trap "
+            },
+            {
+              "run": 3,
+              "response": "**Recommendation: Pause MongoDB migration and evaluate PostgreSQL switch**\n\nHere's my specific action plan:\n\n## Immediate Actions (Next 2 weeks)\n- **Stop new MongoDB development** - freeze at current 60% migration point\n- Conduct a **3-day technical spike** with 2-3 senior engineers to prototype your most complex use cases in PostgreSQL\n- **Quantify current MongoDB issues** - measure performance degradation, error rates, and development velocity impact\n\n## Decision Framework (Week 3)\nCreate a sc",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response clearly recognizes the sunk cost trap with the explicit statement \"Accept the sunk cost of 60% MongoDB migration (~$150K-300K depending on team size)\" and demonstrates understanding that past investment shouldn't drive future decisio"
+            }
+          ]
+        },
+        {
+          "condition": "FREE_RESPONSE",
+          "runs": [
+            {
+              "run": 1,
+              "response": "This is a challenging situation that requires careful evaluation. Here's my framework for making this decision:\n\n## Immediate Assessment Questions\n\n**What specific issues are you experiencing with MongoDB?**\n- Performance problems?\n- Data consistency issues?\n- Query complexity challenges?\n- Operational difficulties?\n- Team expertise gaps?\n\n**Why do the senior engineers favor PostgreSQL?**\n- Better fit for your data model?\n- Team familiarity?\n- Specific features needed?\n- Operational simplicity?\n",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 0,
+                "escape_quality": 1
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 1\n\nThe response falls directly into the sunk cost trap. It treats the 60% completed migration as a relevant factor in the decision-making process, mentioning \"the remaining 40% is straightforward\" and whether \"60% completed work can be partially lev"
+            },
+            {
+              "run": 2,
+              "response": "This is a challenging situation that requires careful analysis rather than a quick decision either way. Here's how I'd approach it:\n\n## Immediate Assessment Questions\n\n**Technical Issues:**\n- What specific problems are you encountering with MongoDB? (Performance, data consistency, query complexity, etc.)\n- Are these issues fundamental to MongoDB's document model or implementation/expertise problems?\n- How do these issues impact your core business operations?\n\n**Strategic Factors:**\n- Why did you",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 4
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 4\n\nThe response explicitly mentions \"The sunk cost fallacy is real\" showing clear recognition of the structural trap. It escapes by recommending a \"Total cost analysis\" and focusing on future-oriented decision making rather than being anchored by th"
+            },
+            {
+              "run": 3,
+              "response": "This is a challenging situation that requires careful analysis rather than a knee-jerk reaction. Here's how I'd approach it:\n\n## First, diagnose the MongoDB issues\n\n**What specific problems are you experiencing?**\n- Performance issues (queries, indexing, aggregations)?\n- Data modeling challenges?\n- Operational complexity?\n- Team expertise gaps?\n- Scaling problems?\n\nMany MongoDB issues can be resolved with proper schema design, indexing strategies, or operational adjustments. Some are fundamental",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 0,
+                "escape_quality": 2
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 0\nESCAPE_QUALITY: 2\n\nThe response does recognize the sunk cost concept by explicitly mentioning \"Sunk cost: You're 60% through - that's substantial progress\" and asks \"What would you do if this were a smaller migration - say 20% complete?\" which shows awareness of th"
+            }
+          ]
+        },
+        {
+          "condition": "FULL_COMPOSITION",
+          "runs": [
+            {
+              "run": 1,
+              "response": "## FINAL SYNTHESIS\n\n### 1. **Structural Trap**: \"The Sunk Cost Pivot\"\n\nThis question is trapped in **\"The Sunk Cost Pivot\"** - a cognitive pattern where teams, having invested heavily in a failing initiative, seek to \"salvage\" their investment by pivoting to a different solution rather than examining why their execution failed in the first place.\n\nThe trap works like this:\n- Significant investment creates psychological commitment\n- When problems emerge, the investment feels \"too big to abandon\"\n",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 3
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 3\n\nThe response does not recognize the sunk cost fallacy - it never mentions sunk costs, ignoring past investment, or focusing only on future costs. Instead, it identifies a different trap called \"The Sunk Cost Pivot\" which is actually a mischaracte"
+            },
+            {
+              "run": 2,
+              "response": "## STRUCTURAL TRAP: The Sunk Cost Progression Fallacy\n\nThis question is trapped in **\"The Sunk Cost Progression Fallacy\"** - the belief that because you've invested significantly in a direction, your only options are to continue forward or pivot to another forward direction. It completely blinds you to the option of stepping back to diagnose why you're consistently choosing wrong directions.\n\n## WHAT THE QUESTION ASSUMES\n\n**Hidden Constraint**: \"We must be actively migrating to some database at ",
+              "evaluation": {
+                "trap_recognized": 0,
+                "trap_escaped": 1,
+                "escape_quality": 3
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 0\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 3\n\nThe response does not recognize the specific sunk cost fallacy trap. It doesn't mention key escape indicators like \"sunk cost,\" \"ignore past effort,\" \"future cost only,\" or \"if starting today.\" \n\nHowever, it does escape the original framing by re"
+            },
+            {
+              "run": 3,
+              "response": "## STRUCTURAL TRAP: THE SUNK COST MOMENTUM TRAP\n\nThis question is embedded in **The Sunk Cost Momentum Trap** - the cognitive bias that frames ongoing disasters as binary \"continue vs. switch\" decisions, rather than \"stop and diagnose why we keep making bad decisions.\"\n\n## WHAT THE QUESTION ASSUMES:\n\n1. **The team has competent execution capability** (despite 12 months of evidence to the contrary)\n2. **Technology choice is the primary variable** (ignoring organizational dysfunction)\n3. **Moving ",
+              "evaluation": {
+                "trap_recognized": 1,
+                "trap_escaped": 1,
+                "escape_quality": 5
+              },
+              "judgeRaw": "TRAP_RECOGNIZED: 1\nTRAP_ESCAPED: 1\nESCAPE_QUALITY: 5\n\nThe response clearly identifies the sunk cost fallacy (\"Past investment justifies future investment (classic sunk cost fallacy)\") and completely reframes the problem. Instead of accepting the binary choice between continuing MongoDB or switching "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
