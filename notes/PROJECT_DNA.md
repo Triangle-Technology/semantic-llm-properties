@@ -57,6 +57,14 @@
 
 **Critical insight từ thất bại:** Composition's value = **REACHABILITY** (mở khóa solution space mà baseline KHÔNG THỂ đến), KHÔNG PHẢI quality (làm answer hay hơn). Dissolution works vì 0% → 81% = REACHABILITY BARRIER. Multi-constraint fails vì baseline đã ở trong solution space rồi.
 
+### Semantic Computer v2 — Production Tool
+- **URL:** https://semantic-computer.pages.dev
+- **DNA riêng:** `semantic-computer/PRODUCT_DNA.md`
+- Dynamic pipeline builder: user compose 5 primitives tùy ý
+- Default = DISSOLVE (proven), mọi combination khác = experimental
+- Multi-model routing, BYOK, PDF+JSON export
+- 325 possible compositions, mới validate 1/325
+
 ### Còn thiếu / Cần làm
 
 | Việc | Trạng thái | Chi tiết |
@@ -64,6 +72,7 @@
 | ⚠️ Nạp credit Anthropic API | BLOCKED | GPT thiếu 2/7 problems, Gemini thiếu 1/7 trong Exp U2 |
 | Resume GPT U2 | PENDING | `node experiments/experiment_u2_dissolution_generalized.mjs gpt all 10` |
 | Resume Gemini U2 | PENDING | `node experiments/experiment_u2_dissolution_generalized.mjs gemini all 10` |
+| Test Semantic Computer | BLOCKED | Cần API credit để test tool |
 | Submit arXiv | PENDING | Paper sẵn sàng, cần quyết định timing |
 | SDK v1.0 + Profiler | DEFERRED | Ưu tiên paper trước |
 | API keys rotation | RECOMMENDED | Keys bị paste trong chat, nên regenerate |
@@ -165,6 +174,9 @@ Dissolution Gradient (Exp U2, cross-domain, FULL_COMPOSITION):
 | 7 | 2026-03-18 | Push paper 1 as-is, rồi chạy U2 | Không chờ feedback, tiến lên |
 | 8 | 2026-03-18 | Chạy cross-model (GPT, Gemini) song song | Strengthen universality claim |
 | 9 | 2026-03-18 | Accept partial data (GPT 5/7, Gemini 6/7) | API quota hit; data đủ strong cho publication |
+| 10 | 2026-03-18 | Xây Semantic Computer v2 — production tool | Kết hợp dissolution + type taxonomy thành tool thực tiễn |
+| 11 | 2026-03-18 | Redesign: pipeline builder thay vì separate modes | 325 compositions khả dĩ → mở cánh cửa composability research |
+| 12 | 2026-03-18 | Tạo PRODUCT_DNA.md riêng cho tool | Tool phát triển độc lập với research, cần DNA riêng |
 
 ---
 
