@@ -341,11 +341,25 @@ async function compute() {
       done(data) {
         const totalTime = ((Date.now() - runStartTime) / 1000).toFixed(1);
 
+        // Non-DISSOLVE: ensure final results are rendered
+        if (!modelInfo?.isDissolve && stepResultsList.length > 0) {
+          content.innerHTML = stepResultsList.map(r => {
+            const def = PRIMITIVES[r.step];
+            return `<div class="result-step">
+              <div class="result-step-header" style="color: ${def?.color || '#888'}">
+                ${def?.icon || ''} ${def?.label || r.step}
+                ${r.model ? `<span style="opacity:0.5; font-size:0.65rem;">(${r.model})</span>` : ''}
+              </div>
+              <div class="result-step-body">${md(r.content)}</div>
+            </div>`;
+          }).join('');
+        }
+
         // DISSOLVE: ensure final synthesis is shown
         if (modelInfo?.isDissolve) {
           const dissolveEl = $('#dissolve-content');
           if (dissolveEl) {
-            const synthResult = stepResultsList.find(r => r.step === 'synthesize');
+            const synthResult = stepResultsList.find(r => r.step === 'synthesize' || r.step === 'dissolve-list');
             const validateResult = stepResultsList.find(r => r.step === 'validate');
             const mainResult = synthResult || stepResultsList[stepResultsList.length - 1];
 
