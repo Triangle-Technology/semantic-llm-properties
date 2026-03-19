@@ -9,29 +9,20 @@
 <body>
   <div class="container">
     <header>
-      <h1>⚡ Semantic Computer</h1>
+      <h1>Semantic Computer</h1>
       <p class="subtitle">Compose semantic primitives to compute meaning</p>
     </header>
 
-    <!-- Pipeline Builder -->
-    <section class="pipeline-builder">
-      <div class="pipeline-header">
-        <span>Pipeline</span>
-        <button id="reset-btn" class="reset-btn" title="Reset to default DISSOLVE order">Reset</button>
-      </div>
-      <div class="pipeline" id="pipeline">
-        <!-- Filled by JS — draggable primitive chips -->
-      </div>
-      <div class="pipeline-bank" id="pipeline-bank">
-        <!-- Removed primitives go here -->
-      </div>
-      <p class="pipeline-hint" id="pipeline-hint"></p>
+    <!-- Composition Selector -->
+    <section class="composition-selector" id="composition-selector">
+      <!-- Filled by JS — composition cards -->
     </section>
 
+    <!-- Pipeline Preview (read-only) -->
+    <div class="pipeline-preview" id="pipeline-preview"></div>
+
     <!-- Dynamic Input -->
-    <section class="input-section" id="input-section">
-      <!-- Changes based on first primitive in pipeline -->
-    </section>
+    <section class="input-section" id="input-section"></section>
 
     <!-- API Keys (collapsible) -->
     <details class="api-keys">
@@ -53,7 +44,7 @@
 
     <!-- Compute -->
     <div class="compute-row">
-      <button id="compute-btn" class="compute-btn">⚡ Compute</button>
+      <button id="compute-btn" class="compute-btn">Compute</button>
       <label class="contribute-label">
         <input type="checkbox" id="contribute-check" checked />
         Share for research <span class="hint">(anonymous)</span>
@@ -69,7 +60,7 @@
   </div>
 
   <footer>
-    <p>Based on <a href="https://github.com/Triangle-Technology/semantic-llm-properties" target="_blank">25 experiments, ~7,500 API calls, 3 model families</a></p>
+    <p>Based on <a href="https://github.com/Triangle-Technology/semantic-llm-properties" target="_blank">27 experiments, ~7,700 API calls, 3 model families</a></p>
   </footer>
 
   <script src="app.js"></script>
