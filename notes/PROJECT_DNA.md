@@ -30,7 +30,7 @@
 ## II. Trạng thái hiện tại — Đọc phần này để biết dự án đang ở đâu
 
 ### Paper v1: ĐÃ XUẤT BẢN trên GitHub
-- **27 experiments**, ~7,700 API calls, 3 model families (Claude, GPT-4o-mini, Gemini-2.5-flash)
+- **28 experiments**, ~8,000 API calls, 3 model families (Claude, GPT-4o-mini, Gemini-2.5-flash)
 - **Repo:** https://github.com/Triangle-Technology/semantic-llm-properties
 - Chưa submit arXiv
 
@@ -151,6 +151,7 @@ Claude's languages/
 | U2 | **Cross-Domain Dissolution** | **✓ Claude 81%, GPT 63%, Gemini 56% vs 0% (ALL 7/7 complete)** |
 | V | **Structural Trap Taxonomy** | **✓ Anchoring 0%→100%, False constraint 0%→89%, Sunk cost 67% (RLHF immune)** |
 | W | **INNOVATE Composition** | **✓ 2nd composition: 6× novel solutions, 5.0/5.0 escape → PARADIGM confirmed** |
+| X | **Composability Rules** | **Creativity order-independent, SYNTHESIZE must be last (actionability -50% if not)** |
 
 ---
 
@@ -252,8 +253,11 @@ Hai compositions khác nhau giải hai lớp bài toán khác nhau:
 ### 11. Innovation ≠ structural trap (Exp W — MỚI NHẤT)
 FREE_BRAINSTORM = 3.53 novel — khác hẳn dissolution (FREE = 0%). LLM CÓ THỂ sáng tạo khi được yêu cầu. Nhưng INNOVATE pipeline tạo thêm emergent components (2.87 vs 2.53) và conventional escape (5.0 vs 4.2). Pipeline adds COLLISION — ideas từ va chạm perspectives mà brainstorm đơn lẻ không có.
 
-### 12. Undefined output space = ranh giới paradigm (Theoretical — MỚI)
+### 12. Undefined output space = ranh giới paradigm (Theoretical)
 Semantic Computing hiệu quả KHI VÀ CHỈ KHI output space undefined. Defined output ("2+2=?") → vô ích. Undefined output ("REST hay GraphQL?" — hidden option C exists) → pipeline phá frame. Đây là ranh giới giữa Classical Computing và Semantic Computing — bổ sung, không thay thế.
+
+### 13. Composability Rule: SYNTHESIZE must be last (Exp X — MỚI NHẤT)
+Creativity (novel, emergent, escape) KHÔNG phụ thuộc thứ tự primitives — LLM tự tổ chức lại. Nhưng actionability YÊU CẦU SYNTHESIZE ở cuối (4.0 vs 2.0 nếu không). Rule: convergent primitive phải terminate pipeline. Divergent primitives (SUPERPOSE, INTERFERE) có thể hoán đổi tự do.
 
 ---
 

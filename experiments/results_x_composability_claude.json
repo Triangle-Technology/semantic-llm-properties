@@ -1,0 +1,412 @@
+{
+  "stale_saas": {
+    "innovate": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 4,
+        "escape": 4
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_1": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_2": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ],
+    "scramble_3": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 2,
+        "escape": 4
+      }
+    ]
+  },
+  "stale_education": {
+    "innovate": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_1": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_2": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 3,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ],
+    "scramble_3": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ]
+  },
+  "stale_hiring": {
+    "innovate": [
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 4,
+        "escape": 4
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_1": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 5,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_2": [
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 2,
+        "escape": 4
+      }
+    ],
+    "scramble_3": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ]
+  },
+  "stale_climate": {
+    "innovate": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_1": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_2": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ],
+    "scramble_3": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 4,
+        "actionability": 2,
+        "escape": 4
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ]
+  },
+  "stale_retention": {
+    "innovate": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_1": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 4,
+        "escape": 5
+      }
+    ],
+    "scramble_2": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ],
+    "scramble_3": [
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      },
+      {
+        "novel": 4,
+        "emergent": 5,
+        "actionability": 2,
+        "escape": 5
+      }
+    ]
+  }
+}
